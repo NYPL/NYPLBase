@@ -1,0 +1,672 @@
+$color1: #d62828;
+$color2: #f0731f;
+$color3: #acb737;
+$color4: #0090c4;
+$color5: #aa137e;
+$color6: #62656c;
+$color7: #acb1b7;
+$black: #222;
+$white: #fff;
+
+$gridunit: 30px;
+$gutter: 10px;
+
+//$mainfont: LatoRegular;
+//$titlefont: LatoRegular;
+$mainfont: "Myriad Pro";
+$titlefont: "Myriad Pro";
+
+@import "compass/reset";
+@import "compass/utilities";
+@import "blueprint";
+@import "css3-mixins";
+@import "960";
+@import "media-queries";
+@import "button-mixins";
+
+@function unitize ($unit:1) {
+	@return ($unit * $gridunit) + (($unit - 1) * $gutter);
+}
+
+body {
+
+	a {
+		color: $color4;
+
+		&:visited {
+			color: $color4;
+		}
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	h2 {
+		font-family: $titlefont;
+		font-size: 24px;
+		line-height: 1.2em;
+	}
+
+	h3 {
+		font-family: $titlefont;
+		font-size: 18px;
+		line-height: 1em;
+		// font-weight: bold;
+	}
+
+	p {
+		font-size: 12px;
+		line-height: 1.5em;
+	}
+
+	strong {
+		font-weight: bold;
+	}
+
+	.yetmore {
+		z-index: 10;
+		position: absolute;
+		bottom: 0;
+		height: 0;
+		overflow: hidden;
+		width: 100%;
+
+		@include box-shadow(0, 3px, 10px);
+
+		@include transition(all, .2s);
+
+		a {
+			display: block;
+			padding: 5px;
+			color: $white;
+			background: $color4;
+			text-decoration: none;
+
+			&:hover {
+				background: $color1
+			}
+		}
+	}
+
+	.extracontent {
+		height: 0;
+		overflow: hidden;
+		@include opacity(0);
+
+		@include transition(all, .7s);
+
+		&.visible {
+			height: auto;
+			@include opacity(1);
+		}
+
+		.extraitem {
+			margin-bottom: $gutter;
+		}
+	}
+
+	.top {
+		@include clearfix;
+		border-bottom: 1px solid $color6;
+		background: #000;
+		letter-spacing: .03em;
+
+
+		p.header {
+		color: #fff;
+		//font-weight: bold;
+		float: left;
+		text-transform: uppercase;
+		}
+
+		p.more {
+			float: right;
+		}
+	}
+
+	form a.find {
+		background: $color4;
+		text-decoration: none;
+		color: $white;
+		padding: 5px 10px;
+		@include rounded-corners(5px);
+		border: none;
+		font-size: 12px;
+		text-transform: uppercase;
+
+
+		@include transition(background-color, 0.2s);
+
+		&:hover {
+			background: $color1;
+		}
+	}
+
+}
+
+#page {
+	background: rgba(244, 244, 244, 0.3);
+	font-family: $mainfont;
+	font-size: 12px;
+
+	header {
+		@include clearfix;
+		// width: unitize(24);
+		height: unitize(6);
+		clear: both;
+		margin-bottom: $gutter;
+		position: relative;
+		background: $white;
+		// padding-top: $gutter;
+		background: $color4 url('/images/backphoto1.png') no-repeat;
+
+		@media screen and (min-width: 0px) and (max-width: 960px) {
+			width: auto;
+		}
+
+		#social {
+			height: 25px;
+			padding-top: 5px;
+			margin-right: 5px;
+			background: url('/images/social.png') no-repeat;
+			background-position: right;
+		}
+
+		#nypl_logo {
+			width: unitize(4);
+			height: unitize(3);
+			background: url('/images/main-logo.png') no-repeat;
+			background-size: 100%;
+			text-indent: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+			margin-left: $gutter;
+		}
+
+		#nav {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			font-size: 16px;
+			// background: $white;
+			
+			@media screen and (min-width: 0px) and (max-width: 870px) {
+				font-size: 12px;
+			}
+
+			@media screen and (min-width: 0px) and (max-width: 696px) {
+				display: none;
+			}
+
+			ul {
+				text-align: center;
+				li {
+					color: $black;
+					float: left;
+					// font-size: 14px;
+					a {
+						color: $black;
+						text-decoration: none;
+						display: block;
+						padding: 10px 12px;
+						background-color: $white;
+
+						&:hover {
+							color: $white;
+							background-color: transparent;
+							@include text-shadow(-2px, 1px, 2px, $black);
+						}
+					}
+				}
+			}
+		}
+
+		#nav2 {
+			display: none;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			font-size: 16px;
+			padding: $gutter;
+			background: $color7;
+			color: $white;
+			@media screen and (min-width: 0px) and (max-width: 696px) {
+				display: block;
+			}
+		}
+
+		#search {
+			position: absolute;
+			right: 0;
+			top: 40px;
+			background: $white;
+			form {
+				padding: $gutter 5px $gutter $gutter;
+				.query {
+					font-size: 14px;
+					width: unitize(4);
+					color: $color6;
+				}
+			}
+		}
+	}
+
+	#wrapper {
+		clear: both;
+		margin: 0 auto;
+
+		// @include tablet-portrait-and-below {
+		// 	width: auto;
+		// 	margin: 0 $gutter;
+		// }
+
+		.brick {
+			width: unitize(6);
+			margin: 0 $gutter $gutter 0;
+			float: left;
+			background: $white;
+			@include box-shadow( 0, 3px, 10px, 0, rgba(0, 0, 0, .1) );
+
+			// @include transition(box-shadow, .2s);
+
+			&:hover {
+				@include box-shadow( 0, 3px, 10px, 0, rgba(0, 0, 0, .4) );
+
+				.yetmore {
+					height: 22px;
+					bottom: -22px;
+				}
+			}
+
+			h2, h3, p {
+				margin: 5px 5px 10px 5px;
+			}
+		}
+
+		#bighighlight {
+			width: unitize(24);
+			height: unitize(12);
+			background: $color2 url(/images/bighighlight.png) no-repeat;
+
+			color: $white;
+
+			// @include transition(width, .2s);
+			// @include transition(background-position, .2s);
+			@include transition(all, .7s);
+
+			@media screen and (min-width: 0px) and (max-width: 960px) {
+				width: unitize(16);
+				background-position: -100px 0;
+			}
+
+			@media screen and (min-width: 0px) and (max-width: 660px) {
+				width: unitize(12);
+				background-position: -280px 0;
+			}
+
+			@media screen and (min-width: 0px) and (max-width: 480px) {
+				width: unitize(8);
+				background-position: -480px 0;
+			}
+
+			.acllogo {
+				float: left;
+			}
+
+			.content {
+				width: 50%;
+				background-color: rgba(1,1,1,.75);
+				bottom: 0;
+				position: absolute;
+
+				// @include text-shadow(-2px, 1px, 2px, $black);
+
+				@media screen and (min-width: 0px) and (max-width: 660px) {
+					width: 100%;
+				}
+
+				h2 {
+					font-family: $mainfont;
+					font-size: 36px;
+					margin-bottom: 0;
+
+					@media screen and (min-width: 0px) and (max-width: 660px) {
+						font-size: 24px;
+					}
+
+				}
+
+				p {
+					font-size: 16px;
+					line-height: 1.2em;
+
+					@media screen and (min-width: 0px) and (max-width: 660px) {
+						font-size: 12px;
+					}
+
+				}
+			}
+
+		}
+
+		#highlight {
+			width: unitize(16);
+			height: unitize(8);
+			background: #131313 url(/images/highlight.png) no-repeat;
+
+			color: $white;
+
+			// @include transition(width, .2s);
+			// @include transition(background-position, .2s);
+			@include transition(all, .7s);
+
+			@media screen and (min-width: 0px) and (max-width: 660px) {
+				width: unitize(12);
+				background-position: -160px 0;
+			}
+
+			@media screen and (min-width: 0px) and (max-width: 480px) {
+				width: unitize(8);
+				background-position: -290px 0;
+			}
+
+			.content {
+				width: unitize(4);
+				height: unitize(8);
+				float: right;
+				background: #131313;
+
+				h2 {
+				}
+
+				p {
+				}
+			}
+
+		}
+
+		#video {
+			width: unitize(8);
+			// height: unitize(6);
+		}
+
+		#branch {
+			width: unitize(8);
+			height: unitize(8);
+			#mapdiv {
+				width: unitize(8);
+				height: unitize(4);
+			}
+
+			h3 {
+				font-family: $mainfont;
+				font-size: 18px;
+				font-weight: bold;
+				line-height: 1.5em;
+			}
+
+			p {
+			}
+
+			form {
+				text-align: center;
+				margin: $gutter 5px;
+				.zip {
+					font-size: 14px;
+					width: unitize(4);
+					color: $color6;
+				}
+			}
+
+		}
+
+		#live {
+			width: unitize(8);
+			// height: unitize(6);
+
+			.content {
+				position: relative;
+
+				.livelogo {
+					position: absolute;
+					top: 5px;
+					right: 5px;
+				}
+
+				h3 {
+					font-family: $mainfont;
+					font-size: 18px;
+					font-weight: bold;
+					line-height: 1.2em;
+				}
+
+				p {
+				}
+			}
+
+		}
+
+		#recommended {
+			width: unitize(8);
+			// height: unitize(8);
+
+			.photo {
+				float: right;
+				width: unitize(3);
+				margin: 5px;
+			}
+
+			.content {
+				h3 {
+					font-family: $mainfont;
+					font-weight: bold;
+					font-size: 18px;
+					line-height: 1.2em;
+				}
+
+				.author {
+					color: $color7;
+				}
+			}
+		}
+
+		#events {
+			width: unitize(8);
+			// height: unitize(4);
+
+			.calendar {
+				float: left;
+				width: unitize(2);
+				text-align: center;
+				margin: 5px;
+
+				.month {
+					padding: 6px;
+					font-size: 16px;
+					font-weight: bold;
+					color: $white;
+					background-color: $color1;
+					@include border-radius-separate(5px, 5px, 0, 0);
+				}
+
+				.day {
+					border: 5px solid $color1;
+					border-top: none;
+					padding: 10px 0;
+					font-size: 40px;
+				}
+			}
+
+			.info {
+				h3 {
+					font-family: $mainfont;
+					font-size: 18px;
+					font-weight: bold;
+					line-height: 1.2em;
+				}
+			}
+
+			.brief {
+				clear: both;
+				margin-bottom: $gutter;
+			}
+		}
+
+		#blogs {
+			width: unitize(8);
+
+			.content {
+				.author {
+					color: $color7;
+				}
+			}
+		}
+
+		#labs {
+			width: unitize(8);
+			// height: unitize(6);
+		}
+
+		#card {
+			width: unitize(4);
+			// height: unitize(4);
+			
+			background: $color1 url(/images/card.jpg) no-repeat;
+
+			a.button {
+				display: block;
+				font-size: 18px;
+				text-align: center;
+				padding: 140px 10px $gutter 10px;
+				line-height: 1.2em;
+				color: $white;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		#ask {
+			width: unitize(4);
+			height: unitize(2);
+
+			background: #fff url(/images/askNYPL-logo.jpg) no-repeat;
+
+			a.button {
+				display: block;
+				text-align: center;
+				padding: 34px 20px $gutter 20px;
+				line-height: 1.2em;
+			}
+		}
+
+		#donate {
+			width: unitize(4);
+			// height: unitize(2);
+
+			a.button {
+				display: block;
+				color: $white;
+				background-color: $color1;
+				text-decoration: none;
+				font-size: 24px;
+				text-align: center;
+				padding: $gutter;
+				margin: 5px;
+				//@include border-radius(5px);
+				//font-family: LatoBold;
+				letter-spacing: .09em;
+			}
+			p {
+				line-height: 1.2em;
+				text-align: center;
+			}
+		}
+	}
+
+	footer {
+		@include clearfix;
+		clear: both;
+		margin-top: $gutter*2;
+		padding-top: $gutter*4;
+		padding-bottom: $gutter*6;
+		background: $color7;
+
+		.content {
+			@include clearfix;
+			width: unitize(24);
+			margin: 0 auto;
+			margin-bottom: 30px;
+
+			@media screen and (min-width: 0px) and (max-width: 960px) {
+				width: auto;
+			}
+		}
+
+		.grid {
+			float: left;
+			width: unitize(4);
+			line-height: 1.4em;
+
+			@media screen and (min-width: 0px) and (max-width: 320px) {
+				float: none;
+			}
+
+			li {
+				margin-bottom: .8em;
+
+			}
+
+			a {
+				color: $white;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.copyright {
+			clear: both;
+			text-align: center;
+			color: $black;
+			background: url(/images/main-logo-lion.png) no-repeat;
+			background-size: 40px;
+			background-position: 50%;
+			padding-bottom: 80px;
+		}
+	}
+
+}
+
+
+.masonry,
+.masonry .masonry-brick {
+  -webkit-transition-duration: 0.7s;
+     -moz-transition-duration: 0.7s;
+      -ms-transition-duration: 0.7s;
+       -o-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+}
+
+.masonry {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.masonry .masonry-brick {
+  -webkit-transition-property: left, right, top, box-shadow;
+     -moz-transition-property: left, right, top, box-shadow;
+      -ms-transition-property: left, right, top, box-shadow;
+       -o-transition-property: left, right, top, box-shadow;
+          transition-property: left, right, top, box-shadow;
+}
+
