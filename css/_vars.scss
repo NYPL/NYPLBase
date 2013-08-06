@@ -12,8 +12,6 @@
 
 
 
-
-
 /*------------------------------------*\
     $OBJECTS-AND-ABSTRACTIONS
 \*------------------------------------*/
@@ -69,3 +67,105 @@ $use-greybox:       false;
 /**
  * Place any of your own variables that sit on top of inuit.css here.
  */
+
+
+// Config
+// -------------------------
+$fontPath:              "/font/";
+$imgPath:               "/image/";
+
+
+/*------------------------------------*\
+    COLORS
+\*------------------------------------*/
+// Primary palette colors
+// -------------------------
+$red
+$orange
+$green
+$blue
+$purple
+
+// Secondary palette colors
+// -------------------------
+$redDarkest
+$redDarker
+$pink
+$salmon
+
+$orangeDarkest
+$orangeDarker
+$yellow
+$yellowLight
+
+$greenDarkest
+$greenDarker
+$greenNeon
+$greenLight
+
+$indigo
+$blueDarker
+$blueNeon
+$blueLight
+
+$purpleDarkest
+$purpleDarker
+$purpleNeon
+$purpleLight
+
+$white:					#ffffff;
+
+// Cool grays
+// -------------------------
+coolGrayDarkest
+coolGrayDarker
+coolGray
+coolGrayLighter
+coolGrayLightest
+
+// Warm grays
+// -------------------------
+warmGrayDarkest
+warmGrayDarker
+warmGray
+warmGrayLighter
+warmGrayLightest
+
+
+
+/*------------------------------------*\
+    FONTS
+\*------------------------------------*/
+// Typography
+// -------------------------
+$mainFontFamily:        "Lato Regular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$heavyFontFamily:       "Lato Black", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$iconFontFamily:        "Icomoon";
+$baseFontFamily:        $mainFontFamily;
+$headingsFontFamily:    $heavyFontFamily;
+$headingsFontWeight:    normal;
+$headingsColor:         inherit;
+$headingsTransform:     uppercase;
+
+// Icon font
+// -------------------------
+$iconFontFamily:        "Icomoon";
+
+
+
+/*------------------------------------*\
+    BASE BRANDING SETTINGS
+\*------------------------------------*/
+// Base application color settings
+// -------------------------
+$bodyBackground:        $white;
+$textColor:             $;
+$bodyBackgroundInverse: $;
+$textColorInverse:      $;
+
+// Links
+// -------------------------
+$linkColor:             $;
+$linkColorHover:        lighten($linkColor, 10%);
+$linkInverseColor:      $;
+$linkInverseColorHover: lighten($linkInverseColor, 10%);

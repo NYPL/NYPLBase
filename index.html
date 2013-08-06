@@ -7,36 +7,118 @@
 	<title>NYPL Base: default elements style guide</title>
     
     <link rel="stylesheet" href="css/style.min.css">
+    
+    <style type="text/css">
+    	.color-block {
+		  padding: 5px;
+		  margin-right: 5px;
+		  margin-bottom: 20px;
+		  display: inline-block;
+		  font-size: 12px;
+		}
+    </style>
+    
 </head>
 <body>
 
 STEPS FOR FINISHING THIS STYLE GUIDE PAGE:
-0. fill in the markup below, compile SCSS, look at it in the browser as is.
-1. pick an element
-2. read the Inuit default code
-3. adjust as needed, turn adjustments into overrides
-4. put overrides in "_vars.scss"
-5. write some documentation in "README.md"
-6. push to repo, install on jandbox
-
-...then work out styling with unicorns: "Unicorn Retreat" #1!
+		0. fill in the markup below, compile SCSS, look at it in the browser as is.
+		
+		1. pick an element
+		
+		2. read the Inuit default code that affects that element.
+			(ie. the Inuit-specified selectors/classes!)
+		
+		3. adjust as needed, turn adjustments into custom NYPL overrides.
+			(ex. mixins, probably with Inuit extensions)
+		
+		4. put overrides for existing Inuit variables in "_vars.scss", also turn on/off objects.
+		4a.	put new patterns, plus treatments, into /ui directory.
+		
+		5. write some documentation in "README.md"
+		
+		6. push to repo, install on jandbox.
+		
+	...then work out styling with unicorns: "Unicorn Retreat" #1!
 
 	
 List of default elements
 
+
+Colors
+EX) <div class="color-block grayDarkest">Darkest #161514</div>
+
+
+Primary palette colors
+
+red
+orange
+green
+blue
+purple
+
+Secondary palette colors
+redDarkest
+redDarker
+pink
+salmon
+
+orangeDarkest
+orangeDarker
+yellow
+yellowLight
+
+greenDarkest
+greenDarker
+greenNeon
+greenLight
+
+indigo
+blueDarker
+blueNeon
+blueLight
+
+purpleDarkest
+purpleDarker
+purpleNeon
+purpleLight
+
+Cool grays
+coolGrayDarkest
+coolGrayDarker
+coolGray
+coolGrayLighter
+coolGrayLightest
+
+Warm grays
+warmGrayDarkest
+warmGrayDarker
+warmGray
+warmGrayLighter
+warmGrayLightest
+
+
+
 Typographic scale!
-Note: Inuit uses base size: 16px (or 100%), and line height 24px (or 1.5em)
+		Note: Inuit uses base size: 16px (or 100%), and line height 24px (or 1.5em)
 
 Typography
+		which weights look better at:
+		- very small
+		- large, very large
+		- on dark vs. light background
+		weight+size tests: work out in Typecast.com???
 
-weight tests:
 
 	Lato Light
 	Lato Reg
 	Lato Bold
 	Lato Black
-	(itals?)
+	(which itals?)
+	
+***CHECK YOUR TYPOGRAPHY VARIABLES in "_vars.scss"!!! (right now they are taken from BFoo, so you need to reset them for Base)
 
+Base type styles
 <h1>Heading 1</h1>
 <h2>Heading 2</h2>
 <h3>Heading 3</h3>
@@ -44,23 +126,30 @@ weight tests:
 <h5>Heading 5</h5>
 <h6>Heading 6</h6>
 
-<p></p>
-emphases
-<em></em>
-blockquote
-<blockquote></blockquote>
+<p>intro/lede graf</p>
 
-Colors
+<p>regular graf</p>
+
+<em>emphases</em>
+<strong>strong</strong>
+
+<blockquote>blockquote</blockquote>
 
 
+	
+Icon font
+How do I successfully pull out the demo code from the Icomoon package and get them to display w/ NYPL code?
+OR,
+maybe I should just link to that file from here, so I don't have to maintain too much crap, 
+and I can replace that file whenever I add to NYPL Base's icon collection...
 
 
 
 
 Links
-	heds
+	in heds
 	in graf
-	lists
+	in lists
 
 
 
@@ -68,6 +157,7 @@ Calls-to-action
 	buttons
 	icon + text
 	states (active, disabled, etc)
+
 
 
 Lists
@@ -98,18 +188,13 @@ Forms elements (ie. redesign our forms!)
 
 
 
-	
-Icons
-
-
-
-
-
 
 Images (ie. redesign our images!)
 	"hero"
 	+ caption
 	thumbnails
+	
+	
 	
 	
 Dropdowns
@@ -121,6 +206,9 @@ Tabbed nav
 Breadcrumbs
 
 Alerts
+
+
+
 
 	
 </body></html>
