@@ -16,42 +16,42 @@
 // Fonts
 // -------------------------
 @font-face {
-  @include font-face('Lato Light', $fontPathLato, 'Lato-Lig-webfont');
+  @include font-face('Lato Light', $fontPath, 'Lato-Lig-webfont');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  @include font-face('Lato Light Italic', $fontPathLato, 'Lato-LigIta-webfont');
+  @include font-face('Lato Light Italic', $fontPath, 'Lato-LigIta-webfont');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  @include font-face('Lato Regular', $fontPathLato, 'Lato-Reg-webfont');
+  @include font-face('Lato Regular', $fontPath, 'Lato-Reg-webfont');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  @include font-face('Lato Regular Italic', $fontPathLato, 'Lato-RegIta-webfont');
+  @include font-face('Lato Regular Italic', $fontPath, 'Lato-RegIta-webfont');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  @include font-face('Lato Bold', $fontPathLato, 'Lato-Bol-webfont');
+  @include font-face('Lato Bold', $fontPath, 'Lato-Bol-webfont');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  @include font-face('Lato Bold Italic', $fontPathLato, 'Lato-BolIta-webfont');
+  @include font-face('Lato Bold Italic', $fontPath, 'Lato-BolIta-webfont');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  @include font-face('Lato Black', $fontPathLato, 'Lato-Bla-webfont');
+  @include font-face('Lato Black', $fontPath, 'Lato-Bla-webfont');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  @include font-face('Lato Black Italic', $fontPathLato, 'Lato-BlaIta-webfont');
+  @include font-face('Lato Black Italic', $fontPath, 'Lato-BlaIta-webfont');
   font-weight: normal;
   font-style: normal;
 }

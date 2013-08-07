@@ -10,7 +10,7 @@
  * having to alter the framework itself.
  */
 
-
+$base-font-family:	"Lato Regular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 
 /*------------------------------------*\
     $OBJECTS-AND-ABSTRACTIONS
@@ -80,58 +80,58 @@ $imgPath:               "/image/";
 \*------------------------------------*/
 // Primary palette colors
 // -------------------------
-$red
-$orange
-$green
-$blue
-$purple
+$red:					#d62828;
+$orange:				#f0731f;
+$green:					#acb737;
+$blue:					#0090c4;
+$purple:				#aa137e;
 
 // Secondary palette colors
 // -------------------------
-$redDarkest
-$redDarker
-$pink
-$salmon
+$redDarkest:			#690b0b;
+$redDarker:				#9c191e;
+$pink:					#ff5b64;
+$salmon:				#fd986c;
 
-$orangeDarkest
-$orangeDarker
-$yellow
-$yellowLight
+$orangeDarkest:			#89380b;
+$orangeDarker:			#c9491a;
+$yellow:				#ffac1e;
+$yellowLight:			#fbb55d;
 
-$greenDarkest
-$greenDarker
-$greenNeon
-$greenLight
+$greenDarkest:			#645723;
+$greenDarker:			#858434;
+$greenNeon:				#ece94c;
+$greenLight:			#dbdf92;
 
-$indigo
-$blueDarker
-$blueNeon
-$blueLight
+$indigo:				#3c3449;
+$blueDarker:			#015d90;
+$blueNeon:				#7edcdb;
+$blueLight:				#c2e7df;
 
-$purpleDarkest
-$purpleDarker
-$purpleNeon
-$purpleLight
-
-$white:					#ffffff;
+$purpleDarkest:			#5b2439;
+$purpleDarker:			#7f2352;
+$purpleNeon:			#eb4197;
+$purpleLight:			#eaa7ae;
 
 // Cool grays
 // -------------------------
-coolGrayDarkest
-coolGrayDarker
-coolGray
-coolGrayLighter
-coolGrayLightest
+$coolGrayDarkest:		#62656c;
+$coolGrayDarker:		#858e95;
+$coolGray:				#acb1b7;
+$coolGrayLighter:		#cbccd0;
+$coolGrayLightest:		#dedede;
 
 // Warm grays
 // -------------------------
-warmGrayDarkest
-warmGrayDarker
-warmGray
-warmGrayLighter
-warmGrayLightest
+$warmGrayDarkest:		#5e564b;
+$warmGrayDarker:		#858e95;
+$warmGray:				#a29d97;
+$warmGrayLighter:		#c5c2bb;
+$warmGrayLightest:		#e2dedb;
 
 
+$white:					#ffffff;
+$black:					#222222;
 
 /*------------------------------------*\
     FONTS
@@ -159,13 +159,13 @@ $iconFontFamily:        "Icomoon";
 // Base application color settings
 // -------------------------
 $bodyBackground:        $white;
-$textColor:             $;
-$bodyBackgroundInverse: $;
-$textColorInverse:      $;
+$textColor:             $black;
+$bodyBackgroundInverse: $white;
+$textColorInverse:      $black;
 
 // Links
 // -------------------------
-$linkColor:             $;
+$linkColor:             $blue;
 $linkColorHover:        lighten($linkColor, 10%);
-$linkInverseColor:      $;
+$linkInverseColor:      $warmGrayLightest;
 $linkInverseColorHover: lighten($linkInverseColor, 10%);
