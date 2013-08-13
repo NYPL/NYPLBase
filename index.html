@@ -220,18 +220,23 @@ Alerts
 
 <h4>Class name</h4>
 	<div class="icon-cog">This is some text</div>
+	<pre class="code prettyprint">
+		&lt;div class=&quot;icon-cog&quot;&gt;This is some text&lt;/div&gt;
+	</pre>
 
 <h4>Data-icon attribute</h4>
 	<div class="glyph">
 		<div class="fs1" aria-hidden="true" data-icon="&#xf013;">This is also some text</div>
 	</div>
+	<pre class="code prettyprint">
+		&lt;div class=&quot;fs1&quot; aria-hidden=&quot;true&quot; data-icon=&quot;&amp;#xf013;&quot;&gt;This is also some text&lt;/div
+	</pre>
 
 <h4>Mixin</h4> 
-	<code>
-		(can use in outside dev's SCSS)
-		.custom-zoom-out:before { @include drr-icon("-"); }
-		.custom-zoom-in:before { @include drr-icon("+"); }
-	</code>
+	<pre class="code prettyprint">
+		.custom-zoom-out:before { @include nypl-icon("-"); }
+		.custom-zoom-in:before { @include nypl-icon("+"); }
+	</pre>
 
 <h4>Size examples</h4>
 small = lists, toolbar items
@@ -251,8 +256,17 @@ small = lists, toolbar items
 
 
 med = toolbar items
+	<ul>
+		<li data-icon="&#xf013;">reveal code</li>
+		<li class="icon-bookmark">save this page</li>
+		<li class="icon-book">read docs</li>
+	</ul>
+	
 large = illo in a graf/chunk
+	<div class="fs1" aria-hidden="true" data-icon="&#xf013;">This is also some text</div>
+	
 mega = ??
+	<div class="fs1" aria-hidden="true" data-icon="&#xf013;"></div>
 
 these are exported for multiples of 16, so show that sizing diff: 16, 32, 48, 64, ?
 
