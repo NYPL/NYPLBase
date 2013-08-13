@@ -137,39 +137,6 @@ Base type styles
 <blockquote>blockquote</blockquote>
 
 
-	
-<h2>Icon font</h2>
-this section should come last? (esp since i'm going to link to the Icomoon demo)
-
-1. link to Icomoon demo HTML from here! that way I don't have to copy over all the crap about data-icon usage
-2. put examples of usage here
-	how large am i going to allow icons to be used???
-	also, these are exported for multiples of 16, so show that sizing diff: 16, 32, 48, 64, ?
-
-Examples of usage
-
-Class name
-<div class="icon-multiple"> multiple</div>
-
-Data-icon attribute
-<div class="glyph">
-	<div class="fs1" aria-hidden="true" data-icon="&#xf013;"></div>
-	<input type="text" readonly="readonly" value="&amp;#xf013;" />
-</div>
-
-Mixin (can use in outside dev's SCSS)
-.custom-zoom-out:before { @include drr-icon("-"); }
-.custom-zoom-in:before { @include drr-icon("+"); }
-
-Size examples
-small = lists, toolbars
-med = tools
-large = illo in a graf/chunk
-mega = ??
-
-NOTE ABOUT HOW TO USE THE REVERSE LION ICON (ie. the "fill is always lighter" rule!)
-
-
 
 
 
@@ -235,6 +202,41 @@ Tabbed nav
 Breadcrumbs
 
 Alerts
+
+
+	
+<h2>Icon font</h2>
+
+1. link to <a href="fonts/icomoon75563/index.html">Icomoon demo HTML</a> from here!
+2. put examples of usage here
+	how large am i going to allow icons to be used???
+	also, these are exported for multiples of 16, so show that sizing diff: 16, 32, 48, 64, ?
+
+<h3>Examples of usage</h3>
+
+<h4>Class name</h4>
+<div class="icon-multiple"> multiple</div>
+
+<h4>Data-icon attribute</h4>
+<div class="glyph">
+	<div class="fs1" aria-hidden="true" data-icon="&#xf013;"></div>
+	<input type="text" readonly="readonly" value="&amp;#xf013;" />
+</div>
+
+<h4>Mixin</h4> 
+(can use in outside dev's SCSS)
+.custom-zoom-out:before { @include drr-icon("-"); }
+.custom-zoom-in:before { @include drr-icon("+"); }
+
+<h4>Size examples</h4>
+small = lists, toolbars
+med = tools
+large = illo in a graf/chunk
+mega = ??
+
+<h4>The logo</h4>
+NOTE ABOUT HOW TO USE THE REVERSE LION ICON (ie. the "fill is always lighter" rule!)
+
 
 
 
