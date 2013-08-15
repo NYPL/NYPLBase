@@ -3,6 +3,6 @@
 \*------------------------------------*/
 
 /* removes list image */
-li {
+ul.nobullet > li {
 	list-style: none;
 }

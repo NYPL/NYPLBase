@@ -5,6 +5,7 @@
 /**
  *
  * sass --watch style.scss:style.min.css --style compressed
+ * sass --watch css/style.scss:css/style.min.css --style compressed
  *
  * Here we pull in some variables, include the inuit.css framework, then add our
  * project-specific components afterwards.
