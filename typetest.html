@@ -4,48 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0">
     
-	<title>NYPL Base: default elements style guide</title>
+	<title>NYPL Base: Type tests</title>
     
     <link rel="stylesheet" href="css/style.min.css">
     
 </head>
 
-<body>
+<body class="grid">
 
-	<h1></h1>
+<div class="grid__item one-whole">
+
+	<h1>Typography tests</h1>
+
+	<p class="milli">Dummy copy stolen from Typekit, because they are the best.</p>
+
+	<p>Note: Inuit uses base size: 16px (or 100%), and line height 24px (or 1.5em)</p>
 	
-	<p class="lede">which weight/face combos look better at:
-		- very small
-		- large
-		- VERY large (remember, we like big type!)
-		- on dark vs. light background
+	<p>The fonts available on the site are:
+		<ul>
+		<li>LatoLight</li>
+		<li>LatoRegular</li>
+		<li>LatoBold</li>
+		<li>LatoBlack</li>
+		<li>and not any of the italics yet?</li>
+		</ul>
+	</p>
+	
+	<p>***CHECK YOUR TYPOGRAPHY VARIABLES in "_vars.scss"!!! (right now they refer to DRR stuff, so you need to reset them)</p>
+	
+	<section class="grid__item one-half push--one-quarter">
+		<header>
+			<h1>Regular page, dark type on light bg</h1>
+			<p>some description?</p>		
+		</header>
+		<p class="lede">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
 		
-		weight+size tests: work out in Typecast.com???
-			Note: Inuit uses base size: 16px (or 100%), and line height 24px (or 1.5em)
+		<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+		
+		<p>Even the all-powerful Pointing has no control about the blind texts — it is an almost unorthographic life. One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+		
+		<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+		
+		<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+	</section>
 
-		Lato Light
-		Lato Reg
-		Lato Bold
-		Lato Black
-		(which itals?)
+	<section class="grid__item one-half push--one-quarter whiteText black">
+		<header>
+			<h1>Regular page, light type on dark bg</h1>
+			<p>some description?</p>		
+		</header>
+		<p class="lede">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+		
+		<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+		
+		<p>Even the all-powerful Pointing has no control about the blind texts — it is an almost unorthographic life. One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+		
+		<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+		
+		<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+	</section>
 	
-***CHECK YOUR TYPOGRAPHY VARIABLES in "_vars.scss"!!! (right now they refer to DRR stuff, so you need to reset them)</p>
+		<p>
+		which weight/face combos look better at:
+			- very small
+			- large
+			- VERY large (remember, we like big type!)
+			
+			- in a block next to an image (like a feature)
+			- in a block under an image
+			- on an opacity over an image
+			
+			- all of the above on dark vs. light background (try dif colors)
+		</p>
 	
-	<p></p>
-	<p></p>
-	<p></p>
+	<section>
+		<div>picture</div>
+		<div>text</div>
+	</section>
 	
-	<h2></h2>
 	
-	<p></p>
-	<p></p>
-	<p></p>
-	
-	<h3></h3>
-	
-	<p></p>
-	<p></p>
-	<p></p>
+</div>
 
 </body>
 

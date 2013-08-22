@@ -2,7 +2,10 @@
     LIST STYLES
 \*------------------------------------*/
 
-/* removes list image */
-ul.nobullet > li {
-	list-style: none;
+/* removes list image if you are using icons  
+*/
+li[data-icon],
+li[class^="icon-"],
+li[class*=" icon-"] {
+	list-style-type: none;
 }
