@@ -31,6 +31,10 @@
 	</p>
 	
 	<p>***CHECK YOUR TYPOGRAPHY VARIABLES in "_vars.scss"!!! (right now they refer to DRR stuff, so you need to reset them)</p>
+
+
+
+
 	
 	<section class="grid__item one-half push--one-quarter">
 		<header>
@@ -48,6 +52,8 @@
 		<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
 	</section>
 
+
+
 	<section class="grid__item one-half push--one-quarter whiteText black">
 		<header>
 			<h1>Regular page, light type on dark bg</h1>
@@ -63,24 +69,270 @@
 		
 		<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
 	</section>
-	
-		<p>
-		which weight/face combos look better at:
-			- very small
-			- large
-			- VERY large (remember, we like big type!)
+
+
+
 			
-			- in a block next to an image (like a feature)
-			- in a block under an image
-			- on an opacity over an image
 			
-			- all of the above on dark vs. light background (try dif colors)
-		</p>
+<!--
+Type test patterns
+
+1. use Inspector to test all styling
+2. copy styling into inline styles
+3. when finished, read inline styles for PATTERNS
+4. turn those patterns into CLASSES
+-->
+
+
+<!--
+the heds for the following are H2s,
+bc one assumes the H1 would be the pg title.
+-->
+
+
+<!--
+PATTERN: LG IMG W/ TEXT OVERLAY, one-whole
+	div pos rel
+	h2 and p pos abs, bg color opacity
+-->
+<div>
+
+	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+	<p>[info about location, date?]</p>
+	<a href=""><img src="http://janderson.farm.nypl.org/img/whywefight-mockup/index-2.jpg"></a>	
+
+</div>
+
+
+
+
+<!-- PATTERN: LG IMG W/ TEXT ON RIGHT OR LEFT, one-half -->
+<div>
+
+	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+	<p><a href="">About this exhibition</a></p>
+	<a href=""><img src="http://janderson.farm.nypl.org/img/whywefight-mockup/index-2.jpg"></a>	
+
+</div>
+
+
+<!-- PATTERN: SM IMG w/ text on right or left, one-half -->
+<div>
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+	<p><a href="">About this exhibition</a></p>
+	<a href=""><img src="http://janderson.farm.nypl.org/img/whywefight-mockup/index-2.jpg"></a>	
+
+</div>
+
+
+<!-- PATTERN: SM IMG w/ text below, one-half -->
+<div>
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+	<p><a href="">About this exhibition</a></p>
+	<a href=""><img src="http://janderson.farm.nypl.org/img/whywefight-mockup/index-2.jpg"></a>	
+
+</div>
+
+
+
+<!-- PATTERN: SM IMG w/ text below, one-third -->
+<div>
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+	<p><a href="">About this exhibition</a></p>
+	<a href=""><img src="http://janderson.farm.nypl.org/img/whywefight-mockup/index-2.jpg"></a>	
+
+</div>
+<!-- ^-- the above 4 patterns should be ALSO tested w/ light text on dark bg, like home pg -->
+
+
+
+
+
+
+<!-- PATTERN: TEXT w/ no img, one-half -->
+<div>
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+	<p><a href="">About this exhibition</a></p>
+
+</div>
+
+
+
+<!-- PATTERN: TEXT w/ no img, one-third -->
+<div>
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+	<p><a href="">About this exhibition</a></p>
+
+</div>
+
+
+
+
+
+
+<!-- PATTERN: TEXT CHUNKS w/ THUMBNAILS -->
+<ul class="tier support-membership">
+    <li class="feature-friends">
+    <p><a href="/support/membership/friends-library">Friends</a></p>
+    <p class="membership-level">$25 - $1,499</p>
+    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
+    <a class="join-link" href="/support/membership/friends-library">Learn more</a></li>
+    <li class="feature-conservators">
+    <p><a href="/support/membership/conservators">Conservators</a></p>
+    <p class="membership-level">$1,500 - $24,999</p>
+    <p>The Conservators are the intellectual and social heart of the Library, providing critical funds while enjoying an array of privileges including behind-the-scenes tours, exhibition previews, and forums featuring prominent writers, scholars and curators.</p>
+    <a class="join-link" href="/support/membership/conservators">Learn more</a></li>
+    <li class="feature-prescouncil">
+    <p><a href="/support/membership/presidents-council">President’s Council</a></p>
+    <p class="membership-level">$25,000+</p>
+    <p>As an investor in our future, share intimate dinners and events with the leading public figures of our time, honoring your distinguished level of commitment to the Library.</p>
+    <a class="join-link" href="/support/membership/presidents-council">Learn more</a></li>
+    <li class="feature-younglions">
+    <p><a href="/support/membership/young-lions">Young Lions</a></p>
+    <p class="membership-level">$350+</p>
+    <p>Meet fellow Library supporters in their 20s and 30s at exclusive events including the Young Lions Benefit Party, the annual Young Lions Fiction Award, as well as our behind the scenes tours of the Library’s collections, exclusive film screenings, and forums featuring young writers, artists and innovators shaping the NYPL of tomorrow.</p>
+    <a class="join-link" href="/support/membership/young-lions">Learn more</a></li>
+    <li class="feature-schomburg">
+    <p><a href="/locations/tid/64/support">Schomburg Society</a></p>
+    <p class="membership-level">$35+</p>
+    <p>Join the committed group of donors who support the work of the Schomburg Center for Research in Black Culture and receive a special members' newsletter, invitations to exhibition previews and special events, and discounts on tickets and merchandise.</p>
+    <a class="join-link" href="/locations/tid/64/support">Learn more</a></li>
+    
+    
+</ul>
+
+
+
+<!-- PATTERN: TEXT CHUNKS w/ ICONS -->
+<div class="TG-4">
+<h4>Collections</h4>
+<ul>
+    <li><a href="research-collections">Research Collections</a>
+    <p>Rare books, photos, prints, maps, and media for advanced research.</p>
+    </li>
+    <li><a href="find-archival-materials">Manuscripts and Archives</a>
+    <p>Over 60,000 linear feet of personal papers and organizational records supporting historical research.</p>
+    </li>
+    <li><a href="http://wallachprintsandphotos.nypl.org">Prints &amp; Photographs Online Catalog</a>
+    <p>This catalog provides online access to our holdings. Cataloging of the collection is ongoing and new entries are continually added.</p>
+    </li>
+    <li class="last"><a href="collections/nypl-collections/preservation-division">Preservation of NYPL Collections</a>
+    <p>The New York Public Library has one of the oldest, largest, and most comprehensive institutional preservation programs in the United States.</p>
+    </li>
+</ul>
+</div>
+
+<!-- PATTERN: TEXT CHUNKS in a list -->
+<div class="TG-4">
+<h4>Collections</h4>
+<ul>
+    <li><a href="research-collections">Research Collections</a>
+    <p>Rare books, photos, prints, maps, and media for advanced research.</p>
+    </li>
+    <li><a href="find-archival-materials">Manuscripts and Archives</a>
+    <p>Over 60,000 linear feet of personal papers and organizational records supporting historical research.</p>
+    </li>
+    <li><a href="http://wallachprintsandphotos.nypl.org">Prints &amp; Photographs Online Catalog</a>
+    <p>This catalog provides online access to our holdings. Cataloging of the collection is ongoing and new entries are continually added.</p>
+    </li>
+    <li class="last"><a href="collections/nypl-collections/preservation-division">Preservation of NYPL Collections</a>
+    <p>The New York Public Library has one of the oldest, largest, and most comprehensive institutional preservation programs in the United States.</p>
+    </li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+<!-- PATTERN: TEXT lists w/ icons -->
+<div>
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<ul>
+	    <li><a href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
+	    </li>
+	    
+	    <li><a href="http://digitalgallery.nypl.org/nypldigital/index.cfm">LGBT Special Libraries and Museums</a>
+	    </li>
+	    
+	    <li><a href="collections/labs">Booktalking "Tessa Masterson Will Go to the Prom" by Emily Franklin &amp; Brendan Halpin</a>
+	    </li>
+	    <li class="last"><a href="online_projects">VITO: The Life of Gay Activist Vito Russo</a>
+	    </li>
+	</ul>
+	<p><a href="">View all</a></p>
 	
-	<section>
-		<div>picture</div>
-		<div>text</div>
-	</section>
+</div>
+
+
+<!-- PATTERN: TEXT lists  -->
+<div>
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<ul>
+	    <li><a href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
+	    </li>
+	    
+	    <li><a href="http://digitalgallery.nypl.org/nypldigital/index.cfm">LGBT Special Libraries and Museums</a>
+	    </li>
+	    
+	    <li><a href="collections/labs">Booktalking "Tessa Masterson Will Go to the Prom" by Emily Franklin &amp; Brendan Halpin</a>
+	    </li>
+	    <li class="last"><a href="online_projects">VITO: The Life of Gay Activist Vito Russo</a>
+	    </li>
+	</ul>
+	<p><a href="">View all</a></p>
+	
+</div>
+
+
+
+
+<!-- ^-- ALL the above patterns COULD have the "hed with underline" pattern attached for a category indicator -->
+
+
+
+<!--
+...that's pretty much everything in Tier Garden with text?
+(next/other patterns are about interacting w/ images, like for exhibitions or collections; RS can really help w/ i11y on this??)
+-->
+
+
+<!--
+HOW TO PRESENT THIS STUFF TO UNICORN RETREAT:
+- "i went through the whole site to find patterns"
+- DRAW each one out
+- then we can break down the treatment system into colors, type, bold, outlines, etc...
+-->
+
+	
 	
 	
 </div>
