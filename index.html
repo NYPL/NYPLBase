@@ -137,7 +137,7 @@
 	
 	<p><a href="typetest.html">Page of typography tests</a></p>
 	
-	<h3>Base type styles</h3>
+	<h3>Default type styles</h3>
 	
 	<h1>Heading 1</h1>
 	<h2>Heading 2</h2>
@@ -155,21 +155,28 @@
 	
 	<blockquote>blockquote</blockquote>
 	
+	<h4>Alerts</h4>
+	<div class="alert info">
+	<strong>Info</strong> Just letting you know...
+	</div>
+	<div class="alert success">
+	<strong>Success!</strong> Congrats, you just did something awesome.
+	</div>
+	<div class="alert danger">
+	<strong>Danger!</strong> You're about to do something really stupid.
+	</div>
+	
 	
 	
 	
 	
 	<h2>Links</h2>
-		in heds
-		in graf
-		in lists
+		<h3>in heds</h3>
+		<a href=""><h1>Chapter One: Looming</h1></a>
+		
+		<h3>in graf</h3>
+		<p>Call me Ishmael. Some years ago&ndash;never mind how long precisely&ndash;having little or <a href="">no money in my purse</a>, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.</p>
 	
-	
-	
-	<h2>Calls-to-action</h2>
-		buttons
-		icon + text
-		states (active, disabled, etc)
 	
 	
 	
@@ -194,12 +201,17 @@
 	
 	
 	
+	
+	
 	<h2>Tables</h2>
+	<p>we don't really use tables...</p>
+	
+	
 	
 	
 	
 	<h2>Forms</h2> 
-	(redesign our forms!)
+	(redesign our forms! take advantage of HTML5!)
 	* see Bootstrap for examples of form variations!
 		text inputs, + their default text
 		dropdowns
@@ -212,23 +224,54 @@
 	
 	
 	<h2>Images</h2> 
-	(redesign our images treatments?)
-		"hero"
+	put this code together w/ unicorns? 
+	will imgs get an outline/border? 
+		"hero" (unicorns: will we use this pattern?)
 		+ caption
 		thumbnails
 		
+	
+	
 		
+	<h2>Calls-to-action</h2>
+	
+		<button>Get this thing!</button>
 		
+		states (active, disabled, etc)
+		sizes (sm, med, large, huge)
+		*NOTE: InuitCSS includes a _beautons partial, but we don't HAVE to use it--we can make our own classes w/ styling
+	
+	
+	
+	
+			
+	<h2>Navigational elements</h2>		
+		<h3>Dropdowns</h3>
+		this is going to get taken care of in the header design. ("mega-menus" design)
 		
-	Dropdowns
+		<h3>Pagination</h3>
+		
+		   <ol class="nav  pagination">
+		       <li class=pagination__first>First</li>
+		       <li class=pagination__prev>Previous</li>
+		       <li><a href=/page/1>1</a></li>
+		       <li><a href=/page/2>2</a></li>
+		       <li class=current><a href=/page/3>3</a></li>
+		       <li><a href=/page/4>4</a></li>
+		       <li><a href=/page/5>5</a></li>
+		       <li class=pagination__next><a href=/page/next>Next</a></li>
+		       <li class=pagination__last><a href=/page/last>Last</a></li>
+		   </ol>
+		
+		<h3>Tabbed nav</h3>
+		unicorns: under what circumstances will we use tabs?
+		
+		<h3>Breadcrumbs</h3>
+		<div class="breadcrumb"><a href="/">Home</a> ›&nbsp;<a href="/voices" title="Blogs, Videos &amp; Publications">Blogs, Videos &amp; Publications</a> ›&nbsp;<a href="/blog" title="">Blogs</a> ›&nbsp;<a href="/voices/blogs/blog-channels" title="">Blog Channels</a></div>
 	
-	Pagination
 	
-	Tabbed nav
 	
-	Breadcrumbs
 	
-	Alerts
 	
 	
 		

@@ -16,7 +16,7 @@
 
 	<h1>Typography tests</h1>
 
-	<p class="milli">Dummy copy stolen from Typekit, because they are the best.</p>
+	<p class="milli">Dummy copy: from <i>Moby-Dick</i> by Herman Melville, and from NYPL.org original content.</p>
 
 	<p>Note: Inuit uses base size: 16px (or 100%), and line height 24px (or 1.5em)</p>
 	
@@ -31,25 +31,21 @@
 	</p>
 	
 	<p>***CHECK YOUR TYPOGRAPHY VARIABLES in "_vars.scss"!!! (right now they refer to DRR stuff, so you need to reset them)</p>
+	<p>what is the set of default fonts for Android, iOS devices? http://blog.typekit.com/2013/04/17/fallback-fonts-on-mobile-devices/</p>
 
 
 
 
+	<h2 class="blueLight">Default running text</h2>
 	
 	<section class="grid__item one-half push--one-quarter">
 		<header>
 			<h1>Regular page, dark type on light bg</h1>
 			<p>some description?</p>		
 		</header>
-		<p class="lede">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-		
-		<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-		
-		<p>Even the all-powerful Pointing has no control about the blind texts — it is an almost unorthographic life. One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-		
-		<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
-		
-		<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+		<p class="lede">Call me Ishmael. Some years ago&ndash;never mind how long precisely&ndash;having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.</p> 
+		<p>It is a way I have of driving off the spleen and regulating the circulation. Whenever I find myself growing grim about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily pausing before coffin warehouses, and bringing up the rear of every funeral I meet; and especially whenever my hypos get such an upper hand of me, that it requires a strong moral principle to prevent me from deliberately stepping into the street, and methodically knocking people's hats off—then, I account it high time to get to sea as soon as I can.</p> 
+		<p>This is my substitute for pistol and ball. With a philosophical flourish Cato throws himself upon his sword; I quietly take to the ship. There is nothing surprising in this. If they but knew it, almost all men in their degree, some time or other, cherish very nearly the same feelings towards the ocean with me.</p>
 	</section>
 
 
@@ -59,21 +55,15 @@
 			<h1>Regular page, light type on dark bg</h1>
 			<p>some description?</p>		
 		</header>
-		<p class="lede">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-		
-		<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-		
-		<p>Even the all-powerful Pointing has no control about the blind texts — it is an almost unorthographic life. One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-		
-		<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
-		
-		<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+		<p class="lede">Call me Ishmael. Some years ago&ndash;never mind how long precisely&ndash;having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.</p> 
+		<p>It is a way I have of driving off the spleen and regulating the circulation. Whenever I find myself growing grim about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily pausing before coffin warehouses, and bringing up the rear of every funeral I meet; and especially whenever my hypos get such an upper hand of me, that it requires a strong moral principle to prevent me from deliberately stepping into the street, and methodically knocking people's hats off—then, I account it high time to get to sea as soon as I can.</p> 
+		<p>This is my substitute for pistol and ball. With a philosophical flourish Cato throws himself upon his sword; I quietly take to the ship. There is nothing surprising in this. If they but knew it, almost all men in their degree, some time or other, cherish very nearly the same feelings towards the ocean with me.</p>
 	</section>
 
 
 
 			
-			
+<h2 class="blueLight">NYPL design patterns</h2>			
 <!--
 Type test patterns
 
@@ -91,35 +81,35 @@ bc one assumes the H1 would be the pg title.
 
 
 <!--
-PATTERN: LG IMG W/ TEXT OVERLAY, one-whole
 	div pos rel
 	h2 and p pos abs, bg color opacity
 -->
+<h3 class="blueLight">PATTERN: LG IMG W/ TEXT OVERLAY, one-whole</h3>
 <div>
 
 	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
 	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
-	<p>[info about location, date?]</p>
-	<a href=""><img src="http://janderson.farm.nypl.org/img/whywefight-mockup/index-2.jpg"></a>	
+	<p class="whenwhere">[info about location, date?]</p>
+	<a href=""><img class="grid__item one-fifth" src="http://janderson.farm.nypl.org/img/whywefight-mockup/index-2.jpg"></a>	
 
 </div>
 
 
 
 
-<!-- PATTERN: LG IMG W/ TEXT ON RIGHT OR LEFT, one-half -->
+<h3 class="blueLight">PATTERN: LG IMG W/ TEXT ON RIGHT OR LEFT, one-half </h3>
 <div>
 
 	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
 	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
 	<p><a href="">About this exhibition</a></p>
-	<a href=""><img src="http://janderson.farm.nypl.org/img/whywefight-mockup/index-2.jpg"></a>	
+	<a href=""><img class="grid__item one-fifth" src="http://janderson.farm.nypl.org/img/whywefight-mockup/index-2.jpg"></a>	
 
 </div>
 
 
-<!-- PATTERN: SM IMG w/ text on right or left, one-half -->
+<h3 class="blueLight">PATTERN: SM IMG w/ text on right or left, one-half</h3>
 <div>
 
 	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
@@ -127,12 +117,12 @@ PATTERN: LG IMG W/ TEXT OVERLAY, one-whole
 	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
 	<p><a href="">About this exhibition</a></p>
-	<a href=""><img src="http://janderson.farm.nypl.org/img/whywefight-mockup/index-2.jpg"></a>	
+	<a href=""><img class="grid__item one-fifth" src="http://janderson.farm.nypl.org/img/whywefight-mockup/index-2.jpg"></a>	
 
 </div>
 
 
-<!-- PATTERN: SM IMG w/ text below, one-half -->
+<h3 class="blueLight">PATTERN: SM IMG w/ text below, one-half</h3>
 <div>
 
 	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
@@ -140,13 +130,13 @@ PATTERN: LG IMG W/ TEXT OVERLAY, one-whole
 	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
 	<p><a href="">About this exhibition</a></p>
-	<a href=""><img src="http://janderson.farm.nypl.org/img/whywefight-mockup/index-2.jpg"></a>	
+	<a href=""><img class="grid__item one-fifth" src="http://janderson.farm.nypl.org/img/whywefight-mockup/index-2.jpg"></a>	
 
 </div>
 
 
 
-<!-- PATTERN: SM IMG w/ text below, one-third -->
+<h3 class="blueLight">PATTERN: SM IMG w/ text below, one-third</h3>
 <div>
 
 	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
@@ -154,7 +144,7 @@ PATTERN: LG IMG W/ TEXT OVERLAY, one-whole
 	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
 	<p><a href="">About this exhibition</a></p>
-	<a href=""><img src="http://janderson.farm.nypl.org/img/whywefight-mockup/index-2.jpg"></a>	
+	<a href=""><img class="grid__item one-fifth" src="http://janderson.farm.nypl.org/img/whywefight-mockup/index-2.jpg"></a>	
 
 </div>
 <!-- ^-- the above 4 patterns should be ALSO tested w/ light text on dark bg, like home pg -->
@@ -164,7 +154,7 @@ PATTERN: LG IMG W/ TEXT OVERLAY, one-whole
 
 
 
-<!-- PATTERN: TEXT w/ no img, one-half -->
+<h3 class="blueLight">PATTERN: TEXT w/ no img, one-half</h3>
 <div>
 
 	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
@@ -177,7 +167,7 @@ PATTERN: LG IMG W/ TEXT OVERLAY, one-whole
 
 
 
-<!-- PATTERN: TEXT w/ no img, one-third -->
+<h3 class="blueLight">PATTERN: TEXT w/ no img, one-third</h3>
 <div>
 
 	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
@@ -193,28 +183,34 @@ PATTERN: LG IMG W/ TEXT OVERLAY, one-whole
 
 
 
-<!-- PATTERN: TEXT CHUNKS w/ THUMBNAILS -->
+<h3 class="blueLight">PATTERN: TEXT CHUNKS w/ THUMBNAILS</h3>
 <ul class="tier support-membership">
     <li class="feature-friends">
     <p><a href="/support/membership/friends-library">Friends</a></p>
     <p class="membership-level">$25 - $1,499</p>
     <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
-    <a class="join-link" href="/support/membership/friends-library">Learn more</a></li>
+    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
+    <a href=""><img class="grid__item one-fifth" src="http://janderson.farm.nypl.org/img/whywefight-mockup/index-2.jpg"></a>
+    </li>
+    
     <li class="feature-conservators">
     <p><a href="/support/membership/conservators">Conservators</a></p>
     <p class="membership-level">$1,500 - $24,999</p>
     <p>The Conservators are the intellectual and social heart of the Library, providing critical funds while enjoying an array of privileges including behind-the-scenes tours, exhibition previews, and forums featuring prominent writers, scholars and curators.</p>
     <a class="join-link" href="/support/membership/conservators">Learn more</a></li>
+    
     <li class="feature-prescouncil">
     <p><a href="/support/membership/presidents-council">President’s Council</a></p>
     <p class="membership-level">$25,000+</p>
     <p>As an investor in our future, share intimate dinners and events with the leading public figures of our time, honoring your distinguished level of commitment to the Library.</p>
     <a class="join-link" href="/support/membership/presidents-council">Learn more</a></li>
+    
     <li class="feature-younglions">
     <p><a href="/support/membership/young-lions">Young Lions</a></p>
     <p class="membership-level">$350+</p>
     <p>Meet fellow Library supporters in their 20s and 30s at exclusive events including the Young Lions Benefit Party, the annual Young Lions Fiction Award, as well as our behind the scenes tours of the Library’s collections, exclusive film screenings, and forums featuring young writers, artists and innovators shaping the NYPL of tomorrow.</p>
     <a class="join-link" href="/support/membership/young-lions">Learn more</a></li>
+    
     <li class="feature-schomburg">
     <p><a href="/locations/tid/64/support">Schomburg Society</a></p>
     <p class="membership-level">$35+</p>
@@ -226,7 +222,7 @@ PATTERN: LG IMG W/ TEXT OVERLAY, one-whole
 
 
 
-<!-- PATTERN: TEXT CHUNKS w/ ICONS -->
+<h3 class="blueLight">PATTERN: TEXT CHUNKS w/ ICONS</h3>
 <div class="TG-4">
 <h4>Collections</h4>
 <ul>
@@ -245,7 +241,7 @@ PATTERN: LG IMG W/ TEXT OVERLAY, one-whole
 </ul>
 </div>
 
-<!-- PATTERN: TEXT CHUNKS in a list -->
+<h3 class="blueLight">PATTERN: TEXT CHUNKS in a list</h3>
 <div class="TG-4">
 <h4>Collections</h4>
 <ul>
@@ -271,7 +267,7 @@ PATTERN: LG IMG W/ TEXT OVERLAY, one-whole
 
 
 
-<!-- PATTERN: TEXT lists w/ icons -->
+<h3 class="blueLight">PATTERN: TEXT lists w/ icons</h3>
 <div>
 
 	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
@@ -292,7 +288,7 @@ PATTERN: LG IMG W/ TEXT OVERLAY, one-whole
 </div>
 
 
-<!-- PATTERN: TEXT lists  -->
+<h3 class="blueLight">PATTERN: TEXT lists</h3>
 <div>
 
 	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
@@ -311,9 +307,6 @@ PATTERN: LG IMG W/ TEXT OVERLAY, one-whole
 	<p><a href="">View all</a></p>
 	
 </div>
-
-
-
 
 <!-- ^-- ALL the above patterns COULD have the "hed with underline" pattern attached for a category indicator -->
 
