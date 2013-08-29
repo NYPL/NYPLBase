@@ -8,6 +8,27 @@
     
     <link rel="stylesheet" href="css/style.min.css">
     
+    
+    <style>
+    
+    	.category {
+    	    width: 100%;
+		    display: block;
+		    color: #0090c4;
+		    text-transform: uppercase;
+		    font-size: .9rem;
+    	}
+    	
+    	.nobullet {
+	    	list-style: none;
+    	}
+    	
+    	.displaylist {
+	    	margin-left: 0;
+    	}
+    
+    </style>
+    
 </head>
 
 <body class="grid">
@@ -63,7 +84,9 @@
 
 
 			
-<h2 class="blueLight">NYPL design patterns</h2>			
+<h2 class="blueLight">NYPL design patterns</h2>
+
+<p>Also test patterns using light text on dark bg, like home pg</p>
 <!--
 Type test patterns
 
@@ -79,11 +102,6 @@ the heds for the following are H2s,
 bc one assumes the H1 would be the pg title.
 -->
 
-
-<!--
-	div pos rel
-	h2 and p pos abs, bg color opacity
--->
 <h3 class="blueLight">PATTERN: LG IMG W/ TEXT OVERLAY</h3>
 
 <div class="two-thirds" style="
@@ -113,69 +131,132 @@ bc one assumes the H1 would be the pg title.
 		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 		<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
 		<p><a href="">About this exhibition</a></p>
-	</div>
-	<a href=""><img class="grid__item one-half" src="img/nyplphotobooth_jA_orig.jpg"></a>	
+	</div><!--
+	
+--><a href=""><img class="grid__item one-half" src="img/nyplphotobooth_jA_orig.jpg"></a>	
 
 </div>
 
-
-<h3 class="blueLight">PATTERN: SM IMG w/ text on right or left, one-half</h3>
-<div class="grid__item one-half" style="
-    outline: 1px solid;
-">
-
-	<!-- turn this span on/off to test --><span class="category" style="
-    width: 100%;
-    display: block;
-    color: #0090c4;
-    text-transform: uppercase;
-    font-size: .9rem;
-">Featured Blog</span>
-	<div class="grid__item one-half">
+<div class="one-whole">
+	<a href=""><img class="grid__item one-half" src="img/nyplphotobooth_jA_orig.jpg"></a><!--
+	
+--><div class="grid__item one-half" >
 		<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
 		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 		<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
 		<p><a href="">About this exhibition</a></p>
 	</div>
-	<a href=""><img class="grid__item one-third" src="img/nyplphotobooth_jA_orig.jpg"></a>	
+</div>
+
+
+
+
+<h3 class="blueLight">PATTERN: SM IMG w/ text on right or left, one-half</h3>
+<div class="grid__item one-half">
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<div class="grid__item one-half">
+		<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+		<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+		<p><a href="">About this exhibition</a></p>
+	</div><!--
+	
+--><a href=""><img class="grid__item one-half" src="img/nyplphotobooth_jA_orig.jpg"></a>	
+
+</div><!-- 
+ --><div class="grid__item one-half">
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<div class="grid__item one-half">
+		<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+		<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+		<p><a href="">About this exhibition</a></p>
+	</div><!--
+	
+--><a href=""><img class="grid__item one-half" src="img/nyplphotobooth_jA_orig.jpg"></a>	
 
 </div>
 
 
+
+
 <h3 class="blueLight">PATTERN: SM IMG w/ text below, one-half</h3>
-<div>
+<div class="grid__item one-half">
 
 	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<a href=""><img class="one-whole" src="img/nyplphotobooth_jA_orig.jpg"></a>	
 	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
 	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
 	<p><a href="">About this exhibition</a></p>
-	<a href=""><img class="grid__item one-fifth" src="img/nyplphotobooth_jA_orig.jpg"></a>	
+
+</div><!-- 
+
+ --><div class="grid__item one-half">
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<a href=""><img class="one-whole" src="img/nyplphotobooth_jA_orig.jpg"></a>	
+	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+	<p><a href="">About this exhibition</a></p>
 
 </div>
+
 
 
 
 <h3 class="blueLight">PATTERN: SM IMG w/ text below, one-third</h3>
-<div>
+<div class="grid__item one-third">
 
 	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<a href=""><img class="one-whole" src="img/nyplphotobooth_jA_orig.jpg"></a>	
 	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
 	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
 	<p><a href="">About this exhibition</a></p>
-	<a href=""><img class="grid__item one-fifth" src="img/nyplphotobooth_jA_orig.jpg"></a>	
+
+</div><!--
+
+--><div class="grid__item one-third">
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<a href=""><img class="one-whole" src="img/nyplphotobooth_jA_orig.jpg"></a>	
+	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+	<p><a href="">About this exhibition</a></p>
+
+</div><!--
+
+--><div class="grid__item one-third">
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<a href=""><img class="one-whole" src="img/nyplphotobooth_jA_orig.jpg"></a>	
+	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+	<p><a href="">About this exhibition</a></p>
 
 </div>
-<!-- ^-- the above 4 patterns should be ALSO tested w/ light text on dark bg, like home pg -->
-
 
 
 
 
 
 <h3 class="blueLight">PATTERN: TEXT w/ no img, one-half</h3>
-<div>
+<div class="grid__item one-half">
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+	<p><a href="">About this exhibition</a></p>
+
+</div><!-- 
+ --><div class="grid__item one-half">
 
 	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
 	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
@@ -184,11 +265,31 @@ bc one assumes the H1 would be the pg title.
 	<p><a href="">About this exhibition</a></p>
 
 </div>
+
+
 
 
 
 <h3 class="blueLight">PATTERN: TEXT w/ no img, one-third</h3>
-<div>
+<div class="grid__item one-third">
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+	<p><a href="">About this exhibition</a></p>
+
+</div><!-- 
+ --><div class="grid__item one-third">
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+	<p><a href="">About this exhibition</a></p>
+
+</div><!-- 
+ --><div class="grid__item one-third">
 
 	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
 	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
@@ -197,6 +298,8 @@ bc one assumes the H1 would be the pg title.
 	<p><a href="">About this exhibition</a></p>
 
 </div>
+
+
 
 
 
@@ -204,39 +307,66 @@ bc one assumes the H1 would be the pg title.
 
 
 <h3 class="blueLight">PATTERN: TEXT CHUNKS w/ THUMBNAILS</h3>
-<ul class="tier support-membership">
+<ul class="nobullet displaylist">
     <li class="feature-friends">
-    <p><a href="/support/membership/friends-library">Friends</a></p>
-    <p class="membership-level">$25 - $1,499</p>
-    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
-    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
-    <a href=""><img class="grid__item one-fifth" src="img/nyplphotobooth_jA_orig.jpg"></a>
+	    <a href=""><img class="grid__item one-fifth" src="img/nyplphotobooth_jA_orig.jpg"></a><!--
+
+	    
+--><div class="grid__item four-fifths">
+	        <p><a href="/support/membership/friends-library">Friends</a></p>
+		    <p class="membership-level">$25 - $1,499</p>
+		    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
+		    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
+	    </div>
     </li>
     
-    <li class="feature-conservators">
-    <p><a href="/support/membership/conservators">Conservators</a></p>
-    <p class="membership-level">$1,500 - $24,999</p>
-    <p>The Conservators are the intellectual and social heart of the Library, providing critical funds while enjoying an array of privileges including behind-the-scenes tours, exhibition previews, and forums featuring prominent writers, scholars and curators.</p>
-    <a class="join-link" href="/support/membership/conservators">Learn more</a></li>
-    
-    <li class="feature-prescouncil">
-    <p><a href="/support/membership/presidents-council">President’s Council</a></p>
-    <p class="membership-level">$25,000+</p>
-    <p>As an investor in our future, share intimate dinners and events with the leading public figures of our time, honoring your distinguished level of commitment to the Library.</p>
-    <a class="join-link" href="/support/membership/presidents-council">Learn more</a></li>
-    
-    <li class="feature-younglions">
-    <p><a href="/support/membership/young-lions">Young Lions</a></p>
-    <p class="membership-level">$350+</p>
-    <p>Meet fellow Library supporters in their 20s and 30s at exclusive events including the Young Lions Benefit Party, the annual Young Lions Fiction Award, as well as our behind the scenes tours of the Library’s collections, exclusive film screenings, and forums featuring young writers, artists and innovators shaping the NYPL of tomorrow.</p>
-    <a class="join-link" href="/support/membership/young-lions">Learn more</a></li>
-    
-    <li class="feature-schomburg">
-    <p><a href="/locations/tid/64/support">Schomburg Society</a></p>
-    <p class="membership-level">$35+</p>
-    <p>Join the committed group of donors who support the work of the Schomburg Center for Research in Black Culture and receive a special members' newsletter, invitations to exhibition previews and special events, and discounts on tickets and merchandise.</p>
-    <a class="join-link" href="/locations/tid/64/support">Learn more</a></li>
-    
+    <li class="feature-friends">
+	    <a href=""><img class="grid__item one-fifth" src="img/nyplphotobooth_jA_orig.jpg"></a><!--
+
+	    
+--><div class="grid__item four-fifths">
+	        <p><a href="/support/membership/friends-library">Friends</a></p>
+		    <p class="membership-level">$25 - $1,499</p>
+		    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
+		    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
+	    </div>
+    </li>
+        
+    <li class="feature-friends">
+	    <a href=""><img class="grid__item one-fifth" src="img/nyplphotobooth_jA_orig.jpg"></a><!--
+
+	    
+--><div class="grid__item four-fifths">
+	        <p><a href="/support/membership/friends-library">Friends</a></p>
+		    <p class="membership-level">$25 - $1,499</p>
+		    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
+		    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
+	    </div>
+    </li>    
+
+    <li class="feature-friends">
+	    <a href=""><img class="grid__item one-fifth" src="img/nyplphotobooth_jA_orig.jpg"></a><!--
+
+	    
+--><div class="grid__item four-fifths">
+	        <p><a href="/support/membership/friends-library">Friends</a></p>
+		    <p class="membership-level">$25 - $1,499</p>
+		    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
+		    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
+	    </div>
+    </li>
+        
+    <li class="feature-friends">
+	    <a href=""><img class="grid__item one-fifth" src="img/nyplphotobooth_jA_orig.jpg"></a><!--
+
+	    
+--><div class="grid__item four-fifths">
+	        <p><a href="/support/membership/friends-library">Friends</a></p>
+		    <p class="membership-level">$25 - $1,499</p>
+		    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
+		    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
+	    </div>
+    </li>    
     
 </ul>
 
@@ -244,27 +374,30 @@ bc one assumes the H1 would be the pg title.
 
 <h3 class="blueLight">PATTERN: TEXT CHUNKS w/ ICONS</h3>
 <div class="TG-4">
-<h4>Collections</h4>
-<ul>
-    <li><a href="research-collections">Research Collections</a>
-    <p>Rare books, photos, prints, maps, and media for advanced research.</p>
-    </li>
-    <li><a href="find-archival-materials">Manuscripts and Archives</a>
-    <p>Over 60,000 linear feet of personal papers and organizational records supporting historical research.</p>
-    </li>
-    <li><a href="http://wallachprintsandphotos.nypl.org">Prints &amp; Photographs Online Catalog</a>
-    <p>This catalog provides online access to our holdings. Cataloging of the collection is ongoing and new entries are continually added.</p>
-    </li>
-    <li class="last"><a href="collections/nypl-collections/preservation-division">Preservation of NYPL Collections</a>
-    <p>The New York Public Library has one of the oldest, largest, and most comprehensive institutional preservation programs in the United States.</p>
-    </li>
-</ul>
+	<h4 class="category">Collections</h4>
+	<ul class="grid__item one-quarter nobullet displaylist">
+	    <li class="icon-book"><a href="research-collections">Research Collections</a>
+	    <p>Rare books, photos, prints, maps, and media for advanced research.</p>
+	    </li>
+	    
+	    <li class="icon-book"><a href="find-archival-materials">Manuscripts and Archives</a>
+	    <p>Over 60,000 linear feet of personal papers and organizational records supporting historical research.</p>
+	    </li>
+	    
+	    <li class="icon-book"><a href="http://wallachprintsandphotos.nypl.org">Prints &amp; Photographs Online Catalog</a>
+	    <p>This catalog provides online access to our holdings. Cataloging of the collection is ongoing and new entries are continually added.</p>
+	    </li>
+	    
+	    <li class="icon-book last"><a href="collections/nypl-collections/preservation-division">Preservation of NYPL Collections</a>
+	    <p>The New York Public Library has one of the oldest, largest, and most comprehensive institutional preservation programs in the United States.</p>
+	    </li>
+	</ul>
 </div>
 
 <h3 class="blueLight">PATTERN: TEXT CHUNKS in a list</h3>
 <div class="TG-4">
-<h4>Collections</h4>
-<ul>
+<h4 class="category">Collections</h4>
+<ul class="grid__item one-quarter nobullet displaylist">
     <li><a href="research-collections">Research Collections</a>
     <p>Rare books, photos, prints, maps, and media for advanced research.</p>
     </li>
@@ -291,7 +424,7 @@ bc one assumes the H1 would be the pg title.
 <div>
 
 	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
-	<ul>
+	<ul class="grid__item one-quarter nobullet displaylist">
 	    <li><a href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
 	    </li>
 	    
@@ -312,7 +445,7 @@ bc one assumes the H1 would be the pg title.
 <div>
 
 	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
-	<ul>
+	<ul class="grid__item one-quarter nobullet displaylist">
 	    <li><a href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
 	    </li>
 	    
@@ -327,9 +460,6 @@ bc one assumes the H1 would be the pg title.
 	<p><a href="">View all</a></p>
 	
 </div>
-
-<!-- ^-- ALL the above patterns COULD have the "hed with underline" pattern attached for a category indicator -->
-
 
 
 <!--
