@@ -1,6 +1,9 @@
 /*------------------------------------*\
     $NYPL DEFAULTS
 \*------------------------------------*/
+
+
+
 /**
  * overriding some default scaffolding values
  */
@@ -11,7 +14,14 @@ body{
 
 
 /**
- * classes added to this framework
- * for reusable patterns like
+ * classes added to this framework for REUSABLE patterns like
  * alerts, location/time info, etc.
+ */
+ 
+/** 
+ *
+ * ANY CLASSES THAT REFER TO SECTION-SPECIFIC PATTERNS
+ * (LIKE JUST SOMETHING USED IN SUPPORT, OR EVENTS, ETC.)
+ * SHOULD GO INTO A PARTIAL IN THEIR OWN SUBDIRECTORY
+ * (EX. /UI/NYPL.ORG/EVENTS/
  */
