@@ -4,7 +4,7 @@
 \*------------------------------------*/
 /**
  *
- * sass --watch style.scss:style.min.css --style compressed
+ * 
  * sass --watch css/style.scss:css/style.min.css --style compressed
  *
  * Here we pull in some variables, include the inuit.css framework, then add our
@@ -38,12 +38,6 @@
 \*------------------------------------*/
 /**
  * Place any variables that should override inuit.css’ defaults here.
- */
-/*------------------------------------*\
-    $RESPONSIVE
-\*------------------------------------*/
-/**
- * Responsiveness?
  */
 /**
  * Responsiveness for widescreen/high resolution desktop monitors and beyond?
@@ -1754,6 +1748,52 @@ label,
 .nav--keywords > li:last-child:after {
   display: none; }
 
+/*------------------------------------*\
+    $PAGINATION
+\*------------------------------------*/
+/**
+ * Basic pagination object, extends `.nav`.
+ * Requires some funky commenting to collapse any white-space caused by the
+ * `display:inline-block;` rules.
+ *
+   <ol class="nav  pagination">
+       <li class=pagination__first>First</li>
+       <li class=pagination__prev>Previous</li>
+       <li><a href=/page/1>1</a></li>
+       <li><a href=/page/2>2</a></li>
+       <li class=current><a href=/page/3>3</a></li>
+       <li><a href=/page/4>4</a></li>
+       <li><a href=/page/5>5</a></li>
+       <li class=pagination__next><a href=/page/next>Next</a></li>
+       <li class=pagination__last><a href=/page/last>Last</a></li>
+   </ol>
+ *
+ * Demo: jsfiddle.net/inuitcss/9Y6PU
+ *
+ */
+.pagination {
+  text-align: center;
+  /**
+   * Remove whitespace caused by `inline-block`.
+   */
+  letter-spacing: -0.31em;
+  word-spacing: -0.43em; }
+
+.pagination > li {
+  padding: 12px;
+  letter-spacing: normal;
+  word-spacing: normal; }
+
+.pagination > li > a {
+  padding: 12px;
+  margin: -12px; }
+
+.pagination__first a:before {
+  content: "\00AB" "\00A0"; }
+
+.pagination__last a:after {
+  content: "\00A0" "\00BB"; }
+
 /**
  * Style trumps; helper and brand classes
  */
@@ -3047,6 +3087,26 @@ label,
  * She’s all yours, cap’n... Begin importing your stuff here.
  */
 /*------------------------------------*\
+    $NYPL DEFAULTS
+\*------------------------------------*/
+/**
+ * overriding some default scaffolding values
+ */
+body {
+  padding: 24px; }
+
+/**
+ * classes added to this framework for REUSABLE patterns like
+ * alerts, location/time info, etc.
+ */
+/** 
+ *
+ * ANY CLASSES THAT REFER TO SECTION-SPECIFIC PATTERNS
+ * (LIKE JUST SOMETHING USED IN SUPPORT, OR EVENTS, ETC.)
+ * SHOULD GO INTO A PARTIAL IN THEIR OWN SUBDIRECTORY
+ * (EX. /UI/NYPL.ORG/EVENTS/
+ */
+/*------------------------------------*\
     COLOR LABELS
 \*------------------------------------*/
 /*
@@ -3957,6 +4017,8 @@ License:	CC BY 3.0 -- http://creativecommons.org/licenses/by/3.0/
 /*------------------------------------*\
     LIST STYLES
 \*------------------------------------*/
-/* removes list image */
-ul.nobullet > li {
-  list-style: none; }
+/* removes list bullet if you are using icons */
+li[data-icon],
+li[class^="icon-"],
+li[class*=" icon-"] {
+  list-style-type: none; }
