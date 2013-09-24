@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    
+	<title>NYPL Base: Type tests</title>
+    
+    <link rel="stylesheet" href="css/style.min.css">
+    
+    
+    <style>
+    
+    	.category {
+    	    width: 100%;
+		    display: block;
+		    color: #0090c4;
+		    text-transform: uppercase;
+		    font-size: .9rem;
+    	}
+    	
+    	.nobullet {
+	    	list-style: none;
+    	}
+    	
+    	.displaylist {
+	    	margin-left: 0;
+    	}
+    
+    </style>
+    
+</head>
+
+<body class="grid">
+
+<div class="grid__item one-whole">
+
+	<h1>NYPL Design Patterns</h1>
+
+
+<p>Remember to patterns using light text on dark bg, like home pg</p>
+<!--
+Type test patterns
+
+1. use Inspector to test all styling
+2. copy styling into inline styles
+3. when finished, read inline styles for PATTERNS
+4. turn those patterns into CLASSES
+-->
+
+
+<!--
+the heds for the following are H2s,
+bc one assumes the H1 would be the pg title.
+-->
+
+<h2 class="blueLight">PATTERN: LG IMG W/ TEXT OVERLAY</h2>
+
+<div class="two-thirds" style="
+    position: relative;
+    outline: 1px solid;
+">
+	<div style="
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 144, 196, 0.35);
+">
+		<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+		<p class="whenwhere">[info about location, date?]</p>
+	</div>
+	<a href=""><img class="one-whole" src="img/nyplphotobooth_jA_orig.jpg"></a>	
+
+</div>
+
+
+
+
+<h2 class="blueLight">PATTERN: LG IMG W/ TEXT ON RIGHT OR LEFT</h2>
+<div class="one-whole">
+	<div class="grid__item one-half" >
+		<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+		<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+		<p><a href="">About this exhibition</a></p>
+	</div><!--
+	
+--><a href=""><img class="grid__item one-half" src="img/nyplphotobooth_jA_orig.jpg"></a>	
+
+</div>
+
+<div class="one-whole">
+	<a href=""><img class="grid__item one-half" src="img/nyplphotobooth_jA_orig.jpg"></a><!--
+	
+--><div class="grid__item one-half" >
+		<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+		<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+		<p><a href="">About this exhibition</a></p>
+	</div>
+</div>
+
+
+
+
+<h2 class="blueLight">PATTERN: SM IMG w/ text on right or left, one-half</h2>
+<div class="grid__item one-half">
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<div class="grid__item one-half">
+		<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+		<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+		<p><a href="">About this exhibition</a></p>
+	</div><!--
+	
+--><a href=""><img class="grid__item one-half" src="img/nyplphotobooth_jA_orig.jpg"></a>	
+
+</div><!-- 
+ --><div class="grid__item one-half">
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<div class="grid__item one-half">
+		<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+		<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+		<p><a href="">About this exhibition</a></p>
+	</div><!--
+	
+--><a href=""><img class="grid__item one-half" src="img/nyplphotobooth_jA_orig.jpg"></a>	
+
+</div>
+
+
+
+
+<h2 class="blueLight">PATTERN: SM IMG w/ text below, one-half</h2>
+<div class="grid__item one-half">
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<a href=""><img class="one-whole" src="img/nyplphotobooth_jA_orig.jpg"></a>	
+	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+	<p><a href="">About this exhibition</a></p>
+
+</div><!-- 
+
+ --><div class="grid__item one-half">
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<a href=""><img class="one-whole" src="img/nyplphotobooth_jA_orig.jpg"></a>	
+	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+	<p><a href="">About this exhibition</a></p>
+
+</div>
+
+
+
+
+<h2 class="blueLight">PATTERN: SM IMG w/ text below, one-third</h2>
+<div class="grid__item one-third">
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<a href=""><img class="one-whole" src="img/nyplphotobooth_jA_orig.jpg"></a>	
+	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+	<p><a href="">About this exhibition</a></p>
+
+</div><!--
+
+--><div class="grid__item one-third">
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<a href=""><img class="one-whole" src="img/nyplphotobooth_jA_orig.jpg"></a>	
+	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+	<p><a href="">About this exhibition</a></p>
+
+</div><!--
+
+--><div class="grid__item one-third">
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<a href=""><img class="one-whole" src="img/nyplphotobooth_jA_orig.jpg"></a>	
+	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+	<p><a href="">About this exhibition</a></p>
+
+</div>
+
+
+
+
+
+<h2 class="blueLight">PATTERN: TEXT w/ no img, one-half</h2>
+<div class="grid__item one-half">
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+	<p><a href="">About this exhibition</a></p>
+
+</div><!-- 
+ --><div class="grid__item one-half">
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+	<p><a href="">About this exhibition</a></p>
+
+</div>
+
+
+
+
+
+<h2 class="blueLight">PATTERN: TEXT w/ no img, one-third</h2>
+<div class="grid__item one-third">
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+	<p><a href="">About this exhibition</a></p>
+
+</div><!-- 
+ --><div class="grid__item one-third">
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+	<p><a href="">About this exhibition</a></p>
+
+</div><!-- 
+ --><div class="grid__item one-third">
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
+	<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+	<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
+	<p><a href="">About this exhibition</a></p>
+
+</div>
+
+
+
+
+
+
+
+
+<h2 class="blueLight">PATTERN: TEXT CHUNKS w/ THUMBNAILS</h2>
+<ul class="nobullet displaylist">
+    <li class="feature-friends">
+	    <a href=""><img class="grid__item one-fifth" src="img/nyplphotobooth_jA_orig.jpg"></a><!--
+
+	    
+--><div class="grid__item four-fifths">
+	        <p><a href="/support/membership/friends-library">Friends</a></p>
+		    <p class="membership-level">$25 - $1,499</p>
+		    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
+		    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
+	    </div>
+    </li>
+    
+    <li class="feature-friends">
+	    <a href=""><img class="grid__item one-fifth" src="img/nyplphotobooth_jA_orig.jpg"></a><!--
+
+	    
+--><div class="grid__item four-fifths">
+	        <p><a href="/support/membership/friends-library">Friends</a></p>
+		    <p class="membership-level">$25 - $1,499</p>
+		    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
+		    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
+	    </div>
+    </li>
+        
+    <li class="feature-friends">
+	    <a href=""><img class="grid__item one-fifth" src="img/nyplphotobooth_jA_orig.jpg"></a><!--
+
+	    
+--><div class="grid__item four-fifths">
+	        <p><a href="/support/membership/friends-library">Friends</a></p>
+		    <p class="membership-level">$25 - $1,499</p>
+		    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
+		    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
+	    </div>
+    </li>    
+
+    <li class="feature-friends">
+	    <a href=""><img class="grid__item one-fifth" src="img/nyplphotobooth_jA_orig.jpg"></a><!--
+
+	    
+--><div class="grid__item four-fifths">
+	        <p><a href="/support/membership/friends-library">Friends</a></p>
+		    <p class="membership-level">$25 - $1,499</p>
+		    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
+		    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
+	    </div>
+    </li>
+        
+    <li class="feature-friends">
+	    <a href=""><img class="grid__item one-fifth" src="img/nyplphotobooth_jA_orig.jpg"></a><!--
+
+	    
+--><div class="grid__item four-fifths">
+	        <p><a href="/support/membership/friends-library">Friends</a></p>
+		    <p class="membership-level">$25 - $1,499</p>
+		    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
+		    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
+	    </div>
+    </li>    
+    
+</ul>
+
+
+
+<h2 class="blueLight">PATTERN: TEXT CHUNKS w/ ICONS</h2>
+<div class="TG-4">
+	<h4 class="category">Collections</h4>
+	<ul class="grid__item one-quarter nobullet displaylist">
+	    <li class="icon-book"><a href="research-collections">Research Collections</a>
+	    <p>Rare books, photos, prints, maps, and media for advanced research.</p>
+	    </li>
+	    
+	    <li class="icon-book"><a href="find-archival-materials">Manuscripts and Archives</a>
+	    <p>Over 60,000 linear feet of personal papers and organizational records supporting historical research.</p>
+	    </li>
+	    
+	    <li class="icon-book"><a href="http://wallachprintsandphotos.nypl.org">Prints &amp; Photographs Online Catalog</a>
+	    <p>This catalog provides online access to our holdings. Cataloging of the collection is ongoing and new entries are continually added.</p>
+	    </li>
+	    
+	    <li class="icon-book last"><a href="collections/nypl-collections/preservation-division">Preservation of NYPL Collections</a>
+	    <p>The New York Public Library has one of the oldest, largest, and most comprehensive institutional preservation programs in the United States.</p>
+	    </li>
+	</ul>
+</div>
+
+<h2 class="blueLight">PATTERN: TEXT CHUNKS in a list</h2>
+<div class="TG-4">
+<h4 class="category">Collections</h4>
+<ul class="grid__item one-quarter nobullet displaylist">
+    <li><a href="research-collections">Research Collections</a>
+    <p>Rare books, photos, prints, maps, and media for advanced research.</p>
+    </li>
+    <li><a href="find-archival-materials">Manuscripts and Archives</a>
+    <p>Over 60,000 linear feet of personal papers and organizational records supporting historical research.</p>
+    </li>
+    <li><a href="http://wallachprintsandphotos.nypl.org">Prints &amp; Photographs Online Catalog</a>
+    <p>This catalog provides online access to our holdings. Cataloging of the collection is ongoing and new entries are continually added.</p>
+    </li>
+    <li class="last"><a href="collections/nypl-collections/preservation-division">Preservation of NYPL Collections</a>
+    <p>The New York Public Library has one of the oldest, largest, and most comprehensive institutional preservation programs in the United States.</p>
+    </li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+<h2 class="blueLight">PATTERN: TEXT lists w/ icons</h2>
+<div>
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<ul class="grid__item one-quarter nobullet displaylist">
+	    <li><a href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
+	    </li>
+	    
+	    <li><a href="http://digitalgallery.nypl.org/nypldigital/index.cfm">LGBT Special Libraries and Museums</a>
+	    </li>
+	    
+	    <li><a href="collections/labs">Booktalking "Tessa Masterson Will Go to the Prom" by Emily Franklin &amp; Brendan Halpin</a>
+	    </li>
+	    <li class="last"><a href="online_projects">VITO: The Life of Gay Activist Vito Russo</a>
+	    </li>
+	</ul>
+	<p><a href="">View all</a></p>
+	
+</div>
+
+
+<h2 class="blueLight">PATTERN: TEXT lists</h2>
+<div>
+
+	<!-- turn this span on/off to test --><span class="category">Featured Blog</span>
+	<ul class="grid__item one-quarter nobullet displaylist">
+	    <li><a href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
+	    </li>
+	    
+	    <li><a href="http://digitalgallery.nypl.org/nypldigital/index.cfm">LGBT Special Libraries and Museums</a>
+	    </li>
+	    
+	    <li><a href="collections/labs">Booktalking "Tessa Masterson Will Go to the Prom" by Emily Franklin &amp; Brendan Halpin</a>
+	    </li>
+	    <li class="last"><a href="online_projects">VITO: The Life of Gay Activist Vito Russo</a>
+	    </li>
+	</ul>
+	<p><a href="">View all</a></p>
+	
+</div>
+
+
+<!--
+...that's pretty much everything in Tier Garden with text?
+(next/other patterns are about interacting w/ images, like for exhibitions or collections; RS can really help w/ i11y on this??)
+-->
+
+
+<!--
+HOW TO PRESENT THIS STUFF TO UNICORN RETREAT:
+- "i went through the whole site to find patterns"
+- DRAW each one out
+- then we can break down the treatment system into colors, type, bold, outlines, etc...
+-->
+
+	
+	
+	
+</div>
+
+</body>
+
+</html>
