@@ -11,21 +11,35 @@
  * project-specific components afterwards.
  */
 
-
 /**
  * Setup
  */
+ 
 @import "vars";
 @import "inuit.css/inuit";
-
-
 
 
 
 /**
  * She’s all yours, cap’n... Begin importing your stuff here.
  */
-@import "ui/nypldefault"; 
-@import "ui/colorlabels";
-@import "ui/fonts";
-@import "ui/lists";
+ 
+ 
+/*------------------------------------*\
+    $OBJECTS-AND-ABSTRACTIONS
+\*------------------------------------*/
+
+/**
+ * The basis for NYPL Base core elements
+ */
+
+@import "nyplbase/base/colorlabels";
+@import "nyplbase/base/fonts";
+@import "nyplbase/base/lists";
+@import "nyplbase/base/nypldefault";
+
+/**
+ * Objects and abstractions within NYPL Base
+ */
+
+@import "nyplbase/nyploptional.scss";

@@ -1,0 +1,10 @@
+/*------------------------------------*\
+    $NYPLOPTIONAL.SCSS
+\*------------------------------------*/
+/**
+ * The files imported via this stylesheet are optional, 
+ * and therefore not imported via Inuit's style.scss master file.
+ * 
+ * Variables for these files are in vars.scss, along with those for Inuit's abstractions.
+ */
+@import "objects/styleguide";

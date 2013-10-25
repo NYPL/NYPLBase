@@ -108,7 +108,14 @@ $desk-wide-start:   1200px!default;
 /**
  * Place any of your own variables that sit on top of inuit.css here.
  */
+ 
+// turn on/off NYPL-specific partials below
+// -------------------------
+$use-styleguide:         true; 
 
+
+// set base font family first
+// -------------------------
 $base-font-family:	"Lato Regular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 
 
@@ -184,6 +191,8 @@ $black:					#222222;
 $mainFontFamily:        "Lato Regular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $heavyFontFamily:       "Lato Black", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $iconFontFamily:        "Icomoon";
+
+/* I'm not using the following variables (from BFoo) yet; will I? */
 $baseFontFamily:        $mainFontFamily;
 $headingsFontFamily:    $heavyFontFamily;
 $headingsFontWeight:    normal;
@@ -194,7 +203,7 @@ $headingsColor:         inherit;
 $iconFontFamily:        "Icomoon";
 
 
-
+/* I'm not using the following variables (from BFoo) yet; will I? */
 /*------------------------------------*\
     BASE BRANDING SETTINGS
 \*------------------------------------*/
