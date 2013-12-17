@@ -15,7 +15,7 @@
  * Setup
  */
  
-@import "vars";
+@import "vars--nyplbase";
 @import "inuit.css/inuit";
 
 
@@ -23,23 +23,57 @@
 /**
  * She’s all yours, cap’n... Begin importing your stuff here.
  */
- 
- 
+ //END INUIT, BEGIN NYPL BASE
+
+
+
 /*------------------------------------*\
-    $OBJECTS-AND-ABSTRACTIONS
+    NYPL-BASE-CORE
 \*------------------------------------*/
 
 /**
- * The basis for NYPL Base core elements
+ * This is the basis for NYPL Base core elements, where we define all the styling choices that express our brand.
+ * 
  */
 
 @import "nyplbase/base/colorlabels";
 @import "nyplbase/base/fonts";
 @import "nyplbase/base/lists";
 @import "nyplbase/base/nypldefault";
+		/**
+		 * NOTETOSELF --------------------------
+		 * These should all be collected into "nyplbase/_basecore.scss" or something
+		 * in order to discourage hacking the core.
+		 *  -------------------------------------
+		 * /
+
+ 
+/*------------------------------------*\
+    $OBJECTS-AND-ABSTRACTIONS
+\*------------------------------------*/
 
 /**
  * Objects and abstractions within NYPL Base
  */
+ 		/**
+		 * NOTETOSELF --------------------------
+		 * I don't actually know if we'll have any optional stuff in Base.
+		 * That seems like a bad idea.
+		 * and anyway, wouldn't I put that stuff in /nyplbase/_nyploptional.scss
+		 * and make them all things to turn off on?
+		 * -------------------------------------
+		 */
 
-@import "nyplbase/nyploptional.scss";
+
+/**
+ * This file contains styles that are not central to NYPL Base core,
+ * such as the styles for the Style Guide.
+ */
+@import "nyplbase/nyploptional";
+		/**
+		 * NOTETOSELF --------------------------
+		 * will there actually be any other "optional" styles?
+		 * if not, just put a note here or something that says
+		 * end user can comment out (or turn off???) this file.
+		 * -------------------------------------
+		 */

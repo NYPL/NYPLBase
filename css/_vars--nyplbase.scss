@@ -183,6 +183,26 @@ $warmGrayLightest:		#e2dedb;
 $white:					#ffffff;
 $black:					#222222;
 
+
+
+/*------------------------------------*\
+    $BRAND
+\*------------------------------------*/
+/**
+ * Brand stuff
+ */
+$brand-color:       $blue;
+$brand-face:        "Lato Regular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+
+/**
+ * How big would you like round corners to be by default?
+ */
+$brand-round:        2px!default;
+
+
+
+
+/* THE FOLLOWING VARIABLES ARE FROM BFOO; AM I USING THEM? */
 /*------------------------------------*\
     FONTS
 \*------------------------------------*/
