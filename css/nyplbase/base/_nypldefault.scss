@@ -2,26 +2,41 @@
     $NYPL DEFAULTS
 \*------------------------------------*/
 
-
-
-/**
- * overriding some default scaffolding values
- */
-
 body{
 	padding: $base-spacing-unit;
 }
 
+a {
+	color: $black;
+	&:visited {
+		color: $purple;
+	}
+	&:hover {
+		color: $blue;
+	}
+}
+
 
 /**
- * classes added to this framework for REUSABLE patterns like
+ * classes for REUSABLE patterns like
  * alerts, location/time info, etc.
  */
+ 
+
+/* category name above a pattern */ 
+.hedcategory {
+    width: 100%;
+    display: block;
+    color: $blue;
+    text-transform: uppercase;
+    font-size: .9rem;
+}
+ 
  
 /** 
  *
  * ANY CLASSES THAT REFER TO SECTION-SPECIFIC PATTERNS
  * (LIKE JUST SOMETHING USED IN SUPPORT, OR EVENTS, ETC.)
  * SHOULD GO INTO A PARTIAL IN THEIR OWN SUBDIRECTORY
- * (EX. /UI/NYPL.ORG/EVENTS/
+ * (EX. /NYPLBASE/EVENTS/
  */

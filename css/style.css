@@ -66,6 +66,16 @@
     COLORS
 \*------------------------------------*/
 /*------------------------------------*\
+    $BRAND
+\*------------------------------------*/
+/**
+ * Brand stuff
+ */
+/**
+ * How big would you like round corners to be by default?
+ */
+/* THE FOLLOWING VARIABLES ARE FROM BFOO; AM I USING THEM? */
+/*------------------------------------*\
     FONTS
 \*------------------------------------*/
 /* I'm not using the following variables (from BFoo) yet; will I? */
@@ -1154,7 +1164,7 @@ img[height] {
  * Rounded images.
  */
 .img--round {
-  border-radius: 4px; }
+  border-radius: 2px; }
 
 /**
  * Image placement variations.
@@ -2753,15 +2763,15 @@ label,
  * any element using a handy helper class.
  */
 .brand {
-  font-family: "Helvetica Neue", sans-serif!important;
-  color: #4a8ec2!important; }
+  font-family: "Lato Regular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif!important;
+  color: #0090c4!important; }
 
 .brand-face {
-  font-family: "Helvetica Neue", sans-serif!important; }
+  font-family: "Lato Regular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif!important; }
 
 .brand-color,
 .brand-colour {
-  color: #4a8ec2!important; }
+  color: #0090c4!important; }
 
 /*------------------------------------*\
     $HELPER
@@ -3089,10 +3099,11 @@ label,
  * She’s all yours, cap’n... Begin importing your stuff here.
  */
 /*------------------------------------*\
-    $OBJECTS-AND-ABSTRACTIONS
+    NYPL-BASE-CORE
 \*------------------------------------*/
 /**
- * The basis for NYPL Base core elements
+ * This is the basis for NYPL Base core elements, where we define all the styling choices that express our brand.
+ * 
  */
 /*------------------------------------*\
     $COLORLABELS.SCSS
@@ -4015,14 +4026,11 @@ li[class*=" icon-"] {
 /*------------------------------------*\
     $NYPL DEFAULTS
 \*------------------------------------*/
-/**
- * overriding some default scaffolding values
- */
 body {
   padding: 24px; }
 
 /**
- * classes added to this framework for REUSABLE patterns like
+ * classes for REUSABLE patterns like
  * alerts, location/time info, etc.
  */
 /** 
@@ -4030,10 +4038,33 @@ body {
  * ANY CLASSES THAT REFER TO SECTION-SPECIFIC PATTERNS
  * (LIKE JUST SOMETHING USED IN SUPPORT, OR EVENTS, ETC.)
  * SHOULD GO INTO A PARTIAL IN THEIR OWN SUBDIRECTORY
- * (EX. /UI/NYPL.ORG/EVENTS/
+ * (EX. /NYPLBASE/EVENTS/
  */
 /**
+		 * NOTETOSELF --------------------------
+		 * These should all be collected into "nyplbase/_basecore.scss" or something
+		 * in order to discourage hacking the core.
+		 *  -------------------------------------
+		 * /
+
+ 
+/*------------------------------------*\
+    $OBJECTS-AND-ABSTRACTIONS
+\*------------------------------------*/
+/**
  * Objects and abstractions within NYPL Base
+ */
+ 		/**
+		 * NOTETOSELF --------------------------
+		 * I don't actually know if we'll have any optional stuff in Base.
+		 * That seems like a bad idea.
+		 * and anyway, wouldn't I put that stuff in /nyplbase/_nyploptional.scss
+		 * and make them all things to turn off on?
+		 * -------------------------------------
+		 */
+/**
+ * This file contains styles that are not central to NYPL Base core,
+ * such as the styles for the Style Guide.
  */
 /*------------------------------------*\
     $NYPLOPTIONAL.SCSS
@@ -4087,3 +4118,11 @@ p[class*=" icon-"]:before {
   color: #0090c4;
   text-transform: uppercase;
   font-size: .9rem; }
+
+/**
+ * NOTETOSELF --------------------------
+ * will there actually be any other "optional" styles?
+ * if not, just put a note here or something that says
+ * end user can comment out (or turn off???) this file.
+ * -------------------------------------
+ */

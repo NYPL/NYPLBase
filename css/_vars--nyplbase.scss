@@ -113,15 +113,39 @@ $desk-wide-start:   1200px!default;
 $use-styleguide:         true; 
 
 
-// set base font family first
+
+
+/*------------------------------------*\
+    FONTS
+\*------------------------------------*/
+// Typography
+// -------------------------
+
+// redefine $base-font-family before config variables
 // -------------------------
 $base-font-family:	"Lato Regular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+
+/* WE ALSO HAVE AVAILABLE:
+   'Lato Light'
+   'Lato Light Italic'
+   'Lato Regular Italic'
+   'Lato Bold'
+   'Lato Bold Italic'
+   'Lato Black'
+   'Lato Black Italic'
+   CREATE VARIABLES TO USE THEM
+ */ 
+
+// Icon font
+// -------------------------
+$iconFontFamily:        "Icomoon";
 
 
 // Config
 // -------------------------
 $fontPath:              "../fonts/";
 $imgPath:               "../img/";
+
 
 
 /*------------------------------------*\
@@ -191,7 +215,7 @@ $black:					#222222;
  * Brand stuff
  */
 $brand-color:       $blue;
-$brand-face:        "Lato Regular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$brand-face:        $base-font-family;
 
 /**
  * How big would you like round corners to be by default?
@@ -199,49 +223,3 @@ $brand-face:        "Lato Regular", "Helvetica Neue", "Helvetica", Helvetica, Ar
 $brand-round:        2px!default;
 
 
-
-
-
-
-
-
-
-
-/* THE FOLLOWING VARIABLES ARE FROM BFOO; AM I USING THEM? */
-/*------------------------------------*\
-    FONTS
-\*------------------------------------*/
-// Typography
-// -------------------------
-$mainFontFamily:        "Lato Regular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$heavyFontFamily:       "Lato Black", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$iconFontFamily:        "Icomoon";
-
-/* I'm not using the following variables (from BFoo) yet; will I? */
-$baseFontFamily:        $mainFontFamily;
-$headingsFontFamily:    $heavyFontFamily;
-$headingsFontWeight:    normal;
-$headingsColor:         inherit;
-
-// Icon font
-// -------------------------
-$iconFontFamily:        "Icomoon";
-
-
-/* I'm not using the following variables (from BFoo) yet; will I? */
-/*------------------------------------*\
-    BASE BRANDING SETTINGS
-\*------------------------------------*/
-// Base application color settings
-// -------------------------
-$bodyBackground:        $white;
-$textColor:             $black;
-$bodyBackgroundInverse: $white;
-$textColorInverse:      $black;
-
-// Links
-// -------------------------
-$linkColor:             $blue;
-$linkColorHover:        lighten($linkColor, 10%);
-$linkInverseColor:      $warmGrayLightest;
-$linkInverseColorHover: lighten($linkInverseColor, 10%);

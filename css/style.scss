@@ -66,14 +66,7 @@
 
 
 /**
- * This file contains styles that are not central to NYPL Base core,
- * such as the styles for the Style Guide.
+ * This file contains styles that are just for the Style Guide,
+ * which are the files in /demo.
  */
-@import "nyplbase/nyploptional";
-		/**
-		 * NOTETOSELF --------------------------
-		 * will there actually be any other "optional" styles?
-		 * if not, just put a note here or something that says
-		 * end user can comment out (or turn off???) this file.
-		 * -------------------------------------
-		 */
+@import "nyplbase/styleguide";
