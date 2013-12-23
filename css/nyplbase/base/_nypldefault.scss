@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    $NYPL DEFAULTS
+    $NYPL-DEFAULTS
 \*------------------------------------*/
 /**
  * Start with the HTML elements.
@@ -21,7 +21,7 @@ a{
 
 
 /*------------------------------------*\
-    $NYPL BUTTONS
+    $NYPL-BUTTONS
 \*------------------------------------*/
 /**
  * This is what our calls-to-action buttons look like.
@@ -29,6 +29,8 @@ a{
  
 .btn{
 	color: $white;
+/* 	@extend .btn--natural; */
+	@include vendor (transition, all, 0.15s);
 	
 	&:hover {
 		background: lighten($beautons, 10%);
@@ -41,9 +43,13 @@ button{
 
 
 
-
-
-
+/*------------------------------------*\
+    $NYPL-DESIGN-PATTERNS
+\*------------------------------------*/
+/**
+ * This is what our calls-to-action buttons look like.
+ */
+ 
 /* category hed above a pattern */ 
 .hed--category{
     width: 100%;
