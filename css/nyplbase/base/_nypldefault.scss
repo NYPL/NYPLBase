@@ -1,15 +1,18 @@
 /*------------------------------------*\
     $NYPL DEFAULTS
 \*------------------------------------*/
-
+/**
+ * Start with the HTML elements.
+ */
 body{
+	color: $black;
 	padding: $base-spacing-unit;
 }
 
-a {
+a{
 	color: $black;
 	&:visited {
-		color: $purple;
+		color: $black;
 	}
 	&:hover {
 		color: $blue;
@@ -17,14 +20,32 @@ a {
 }
 
 
+/*------------------------------------*\
+    $NYPL BUTTONS
+\*------------------------------------*/
 /**
- * classes for REUSABLE patterns like
- * alerts, location/time info, etc.
+ * This is what our calls-to-action buttons look like.
  */
  
+.btn{
+	color: $white;
+	
+	&:hover {
+		background: lighten($beautons, 10%);
+	}
+}
 
-/* category name above a pattern */ 
-.hedcategory {
+button{
+	@extend .btn;
+}
+
+
+
+
+
+
+/* category hed above a pattern */ 
+.hed--category{
     width: 100%;
     display: block;
     color: $blue;
@@ -32,6 +53,17 @@ a {
     font-size: .9rem;
 }
  
+ 
+    
+
+.nobullet{
+	list-style: none;
+}
+
+.list-- {
+	margin-left: 0;
+}
+
  
 /** 
  *

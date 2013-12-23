@@ -24,8 +24,8 @@
 				<a href="#elements">Elements of the page</a>
 				<ul class="nav nav--stacked">
 					<li><a href="#typography">Typography</a></li>
-					<li><a href="#lists">Lists</a></li>
 					<li><a href="#links">Links</a></li>
+					<li><a href="#lists">Lists</a></li>
 					<li><a href="#calls-to-action">Calls-to-action</a></li>
 					<li><a href="#forms">Forms</a></li>
 					<li><a href="#images">Images</a></li>
@@ -44,12 +44,14 @@
 		</ul>
 	</nav>
 	
-	<section class="grid__item four-fifths">
+	<section class="grid__item four-fifths push--one-fifth">
 	
 		<h1 id="elements">Elements of the page</h1>
 
 		<section id="typography">
 			<h2>Typography</h2>
+			
+			<p>NYPL's core web typeface is <a href="http://www.latofonts.com/">Lato</a>.</p>
 	
 			<p><a href="typetest.html">Page of typography tests</a></p>
 			
@@ -91,6 +93,7 @@
 	
 		<section id="links">
 			<h2>Links</h2>
+<!--
 			<h3>in heds</h3>
 			<a href=""><h1>CHAPTER 1. Loomings.</h1></a>
 			<a href=""><h2>CHAPTER 2. The Carpet-Bag.</h2></a>
@@ -98,17 +101,17 @@
 			<a href=""><h4>CHAPTER 4. The Counterpane.</h4></a>
 			<a href=""><h5>CHAPTER 5. Breakfast.</h5></a>
 			<a href=""><h6>CHAPTER 6. The Street.</h6></a>
+-->
 	
 			
 			<h3>in graf</h3>
-			<p>Call me Ishmael. Some years ago&ndash;never mind how long precisely&ndash;having little or <a href="">no money in my purse</a>, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.</p>
+			<p>Call me <a href="">Ishmael</a>. Some years ago&ndash;never mind how long precisely&ndash;having little or <a href="">no money in my purse</a>, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.</p>
 		</section>	
 	
 				
 		
 		<section id="lists">
 			<h2>Lists</h2>
-			<pre>should there be a "no bullet" mixin?, rather than having to apply the class to every UL that needs it? then you would just @include in the overall landing page style or something?</pre>
 			<ul>
 				<li>stuff</li>
 				<li>stuff</li>
@@ -128,13 +131,21 @@
 				
 			<h2>Calls-to-action</h2>
 			
-			<h3>states (active, disabled, etc)</h3>
-			<button>Get this thing!</button><button>Get this thing!</button><button>Get this thing!</button>
+			<h3>States (active, disabled)</h3>
+			<button>Get this thing!</button>
+			<p class="unicorns">color variants? upp/low case?</p>
+			<button class="btn--inactive">Get this thing!</button>
 			
-			<h3>sizes (sm, med, large, huge)</h3>
-			<button>Get this thing!</button><button>Get this thing!</button><button>Get this thing!</button><button>Get this thing!</button>
+			<h3>Sizes (small, regular, large, huge, full)</h3>
+			<button class="btn--small">Get this thing!</button>
+			<button>Get this thing!</button>
+			<button class="btn--large">Get this thing!</button>
+			<button class="btn--huge">Get this thing!</button>
+			<button class="btn--full">Get this thing!</button>
 			
-			<p class="unicorns">*NOTE: InuitCSS includes a _beautons partial, but we don't HAVE to use it--we can make our own classes w/ styling</p>
+			<h3 class="unicorns">various NYPL contexts for calls-to-action</h3>
+			<p>Donate button</p>
+			
 
 		</section>
 
@@ -235,7 +246,7 @@
 
 
 			
-		<section id="navigaional">		
+		<section id="navigational">		
 			<h2>Navigational elements</h2>	
 			
 			<h3 id="dropdowns">Dropdowns</h3>
