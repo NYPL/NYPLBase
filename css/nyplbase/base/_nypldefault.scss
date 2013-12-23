@@ -29,17 +29,25 @@ a{
  
 .btn{
 	color: $white;
-/* 	@extend .btn--natural; */
+ 	@extend .btn--natural; /* NOTE TO SELF: i think this is the style we want to be the default? */
 	@include vendor (transition, all, 0.15s);
 	
 	&:hover {
-		background: lighten($beautons, 10%);
+		background: lighten(/* $beautons */$btn-color, 10%);
 	}
 }
 
 button{
 	@extend .btn;
 }
+
+
+/*
+@mixin btn-color (context, color)
+if donate then $__
+if buy ticket then $__
+if regular call-to-action then $__
+*/
 
 
 
