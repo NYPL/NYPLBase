@@ -2,13 +2,127 @@
     VARS.SCSS
 \*------------------------------------*/
 /**
- * Any variables you find set in inuit.css’ `_vars.scss` that you do not wish to
+ * Any variables you find set in inuit.css’ `_defaults.scss` that you do not wish to
  * keep, simply redefine here. This means that if inuit.css, for example, sets
  * your `$base-font-size` at 16px and you wish it to be 14px, simply redeclare
  * that variable in this file. inuit.css ignores its own variables in favour of
  * using your own, so you can completely modify how inuit.css works without ever
  * having to alter the framework itself.
  */
+
+
+
+
+
+			/*------------------------------------*\
+			    $CUSTOM
+			\*------------------------------------*/
+			/**
+			 * Place any of your own variables that sit on top of inuit.css here.
+			 */
+
+			/**
+			 * i'm placing Custom variables here rather than below Overrides (as it is in Inuit's original file)
+			 * so that i can use NYPL colors in the Inuit overrides.
+			 */
+			 			 
+			// turn on/off NYPL-specific partials below
+			// -------------------------
+			$use-styleguide:         true; 
+			
+			
+			/*------------------------------------*\
+			    Fonts
+			\*------------------------------------*/
+			// Typography
+			// -------------------------
+			
+			
+			// redefine $base-font-family before config variables
+			// -------------------------
+			$base-font-family:	"Lato Regular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+			
+			/* WE ALSO HAVE AVAILABLE:
+			   'Lato Light'
+			   'Lato Light Italic'
+			   'Lato Regular Italic'
+			   'Lato Bold'
+			   'Lato Bold Italic'
+			   'Lato Black'
+			   'Lato Black Italic'
+			   CREATE VARIABLES TO USE THEM
+			 */ 
+			
+			// Icon font
+			// -------------------------
+			$iconFontFamily:        "Icomoon";
+			
+			
+			// Config
+			// -------------------------
+			$fontPath:              "../fonts/";
+			$imgPath:               "../img/";
+			
+			
+			
+			/*------------------------------------*\
+			    Colors
+			\*------------------------------------*/
+			// Primary palette colors
+			// -------------------------
+			$red:					#d62828;
+			$orange:				#f0731f;
+			$green:					#acb737;
+			$blue:					#0090c4;
+			$purple:				#aa137e;
+			
+			// Secondary palette colors
+			// -------------------------
+			$redDarkest:			#690b0b;
+			$redDarker:				#9c191e;
+			$pink:					#ff5b64;
+			$salmon:				#fd986c;
+			
+			$orangeDarkest:			#89380b;
+			$orangeDarker:			#c9491a;
+			$yellow:				#ffac1e;
+			$yellowLight:			#fbb55d;
+			
+			$greenDarkest:			#645723;
+			$greenDarker:			#858434;
+			$greenNeon:				#ece94c;
+			$greenLight:			#dbdf92;
+			
+			$indigo:				#3c3449;
+			$blueDarker:			#015d90;
+			$blueNeon:				#7edcdb;
+			$blueLight:				#c2e7df;
+			
+			$purpleDarkest:			#5b2439;
+			$purpleDarker:			#7f2352;
+			$purpleNeon:			#eb4197;
+			$purpleLight:			#eaa7ae;
+			
+			// Cool grays
+			// -------------------------
+			$coolGrayDarkest:		#62656c;
+			$coolGrayDarker:		#858e95;
+			$coolGray:				#acb1b7;
+			$coolGrayLighter:		#cbccd0;
+			$coolGrayLightest:		#dedede;
+			
+			// Warm grays
+			// -------------------------
+			$warmGrayDarkest:		#5e564b;
+			$warmGrayDarker:		#7d7872;
+			$warmGray:				#a29d97;
+			$warmGrayLighter:		#c5c2bb;
+			$warmGrayLightest:		#e2dedb;
+			
+			
+			$white:					#ffffff;
+			$black:					#333333;
+
 
 
 
@@ -42,11 +156,15 @@ $use-flyout:        false;
 $use-arrows:        false;
 $use-sprite:        false;
 $use-icon-text:     false;
-$use-beautons:      false;
+$use-beautons:      true;
 $use-lozenges:      false;
 $use-rules:         false;
 $use-stats:         false;
 $use-greybox:       false;
+
+
+
+
 
 
 
@@ -57,9 +175,14 @@ $use-greybox:       false;
 /**
  * Place any variables that should override inuit.css’ defaults here.
  */
- 
 
-$responsive:        true!default;
+/*------------------------------------*\
+    $RESPONSIVE
+\*------------------------------------*/
+/**
+ * Responsiveness?
+ */
+$responsive:        true;
 
 /**
  * Responsiveness for widescreen/high resolution desktop monitors and beyond?
@@ -100,111 +223,16 @@ $desk-wide-start:   1200px!default;
 
 
 
-
 /*------------------------------------*\
-    $CUSTOM
+    $BEAUTONS
 \*------------------------------------*/
 /**
- * Place any of your own variables that sit on top of inuit.css here.
+ * Set the background colors for beauton button functions.
  */
- 
-// turn on/off NYPL-specific partials below
-// -------------------------
-$use-styleguide:         true; 
-
-
-
-
-/*------------------------------------*\
-    FONTS
-\*------------------------------------*/
-// Typography
-// -------------------------
-
-// redefine $base-font-family before config variables
-// -------------------------
-$base-font-family:	"Lato Regular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-
-/* WE ALSO HAVE AVAILABLE:
-   'Lato Light'
-   'Lato Light Italic'
-   'Lato Regular Italic'
-   'Lato Bold'
-   'Lato Bold Italic'
-   'Lato Black'
-   'Lato Black Italic'
-   CREATE VARIABLES TO USE THEM
- */ 
-
-// Icon font
-// -------------------------
-$iconFontFamily:        "Icomoon";
-
-
-// Config
-// -------------------------
-$fontPath:              "../fonts/";
-$imgPath:               "../img/";
-
-
-
-/*------------------------------------*\
-    COLORS
-\*------------------------------------*/
-// Primary palette colors
-// -------------------------
-$red:					#d62828;
-$orange:				#f0731f;
-$green:					#acb737;
-$blue:					#0090c4;
-$purple:				#aa137e;
-
-// Secondary palette colors
-// -------------------------
-$redDarkest:			#690b0b;
-$redDarker:				#9c191e;
-$pink:					#ff5b64;
-$salmon:				#fd986c;
-
-$orangeDarkest:			#89380b;
-$orangeDarker:			#c9491a;
-$yellow:				#ffac1e;
-$yellowLight:			#fbb55d;
-
-$greenDarkest:			#645723;
-$greenDarker:			#858434;
-$greenNeon:				#ece94c;
-$greenLight:			#dbdf92;
-
-$indigo:				#3c3449;
-$blueDarker:			#015d90;
-$blueNeon:				#7edcdb;
-$blueLight:				#c2e7df;
-
-$purpleDarkest:			#5b2439;
-$purpleDarker:			#7f2352;
-$purpleNeon:			#eb4197;
-$purpleLight:			#eaa7ae;
-
-// Cool grays
-// -------------------------
-$coolGrayDarkest:		#62656c;
-$coolGrayDarker:		#858e95;
-$coolGray:				#acb1b7;
-$coolGrayLighter:		#cbccd0;
-$coolGrayLightest:		#dedede;
-
-// Warm grays
-// -------------------------
-$warmGrayDarkest:		#5e564b;
-$warmGrayDarker:		#7d7872;
-$warmGray:				#a29d97;
-$warmGrayLighter:		#c5c2bb;
-$warmGrayLightest:		#e2dedb;
-
-
-$white:					#ffffff;
-$black:					#222222;
+$beautons:              $blue;
+$beautons-positive:     $blue;
+$beautons-negative:     $red;
+$beautons-inactive:     $coolGrayLightest;
 
 
 
