@@ -27,44 +27,91 @@
 
 
 
-/*------------------------------------*\
-    NYPL-BASE-CORE
-\*------------------------------------*/
 
+
+/*------------------------------------*\
+    $SETTINGS
+\*------------------------------------*/
 /**
  * This is the basis for NYPL Base core elements, where we define all the styling choices that express our brand.
+ * Settings like brand colours etc. stored in variables.
  * 
  */
+@import "nyplbase/settings/colorlabels";
+@import "nyplbase/settings/fonts";
 
-@import "nyplbase/base/colorlabels";
-@import "nyplbase/base/fonts";
-@import "nyplbase/base/lists";
-@import "nyplbase/base/nypldefault";
-		/**
-		 * NOTETOSELF --------------------------
-		 * These should all be collected into "nyplbase/_basecore.scss" or something
-		 * in order to discourage hacking the core.
-		 *  -------------------------------------
-		 * /
 
+
+/*------------------------------------*\
+    $TOOLS
+\*------------------------------------*/
+/**
+ * custom mixins and functions and the like.
+ */
+ 
+ 
  
 /*------------------------------------*\
-    $OBJECTS-AND-ABSTRACTIONS
+    $GENERIC
 \*------------------------------------*/
-
 /**
- * Objects and abstractions within NYPL Base
+ * stuff like your reset, Normalize.css, clearfix, etc
+ * (This should already have been included in InuitCSS core.)
+ */
+ 
+ 
+ 
+ 
+/*------------------------------------*\
+    $BASE
+\*------------------------------------*/
+/**
+ * Base styling for unclassed HTML elements (what does an h1 look like without a class on it, etc.).
+ * 
+ */
+@import "nyplbase/base/nypldefault";
+
+
+
+  
+/*------------------------------------*\
+    $OBJECTS
+\*------------------------------------*/
+/**
+ * Objects such as the media object, the nav abstraction, and so on.
  */
  		/**
 		 * NOTETOSELF --------------------------
-		 * I don't actually know if we'll have any optional stuff in Base.
-		 * That seems like a bad idea.
-		 * and anyway, wouldn't I put that stuff in /nyplbase/_nyploptional.scss
-		 * and make them all things to turn off on?
+		 * What would NYPL-specific objects/abstractions be
+		 * (that are not provided by InuitCSS)? 
 		 * -------------------------------------
 		 */
 
 
+/*------------------------------------*\
+    $GUI
+\*------------------------------------*/
+/**
+ * GUI components, which are fully designed chunks of the UI
+ * 
+ */
+ 
+ 
+ 
+ /*------------------------------------*\
+    $OVERRIDES
+\*------------------------------------*/
+/**
+ * Overrides and helper classes which need to trump everything else that came before them.
+ * 
+ */
+
+
+
+
+/*------------------------------------*\
+    $STYLE-GUIDE-ONLY
+\*------------------------------------*/
 /**
  * This file contains styles that are just for the Style Guide,
  * which are the files in /demo.

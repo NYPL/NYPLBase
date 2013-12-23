@@ -14,114 +14,116 @@
 
 
 
-			/*------------------------------------*\
-			    $CUSTOM
-			\*------------------------------------*/
-			/**
-			 * Place any of your own variables that sit on top of inuit.css here.
-			 */
+/*------------------------------------*\
+    $CUSTOM
+\*------------------------------------*/
+/**
+ * Place any of your own variables that sit on top of inuit.css here.
+ */
 
 			/**
-			 * i'm placing Custom variables here rather than below Overrides (as it is in Inuit's original file)
+			 * NOTE TO SELF:
+			 * I'm placing Custom variables here rather than below Overrides
+			 * (as it is in Inuit's original file)
 			 * so that i can use NYPL colors in the Inuit overrides.
 			 */
-			 			 
-			// turn on/off NYPL-specific partials below
-			// -------------------------
-			$use-styleguide:         true; 
-			
-			
-			/*------------------------------------*\
-			    Fonts
-			\*------------------------------------*/
-			// Typography
-			// -------------------------
-			
-			
-			// redefine $base-font-family before config variables
-			// -------------------------
-			$base-font-family:	"Lato Regular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-			
-			/* WE ALSO HAVE AVAILABLE:
-			   'Lato Light'
-			   'Lato Light Italic'
-			   'Lato Regular Italic'
-			   'Lato Bold'
-			   'Lato Bold Italic'
-			   'Lato Black'
-			   'Lato Black Italic'
-			   CREATE VARIABLES TO USE THEM
-			 */ 
-			
-			// Icon font
-			// -------------------------
-			$iconFontFamily:        "Icomoon";
-			
-			
-			// Config
-			// -------------------------
-			$fontPath:              "../fonts/";
-			$imgPath:               "../img/";
-			
-			
-			
-			/*------------------------------------*\
-			    Colors
-			\*------------------------------------*/
-			// Primary palette colors
-			// -------------------------
-			$red:					#d62828;
-			$orange:				#f0731f;
-			$green:					#acb737;
-			$blue:					#0090c4;
-			$purple:				#aa137e;
-			
-			// Secondary palette colors
-			// -------------------------
-			$redDarkest:			#690b0b;
-			$redDarker:				#9c191e;
-			$pink:					#ff5b64;
-			$salmon:				#fd986c;
-			
-			$orangeDarkest:			#89380b;
-			$orangeDarker:			#c9491a;
-			$yellow:				#ffac1e;
-			$yellowLight:			#fbb55d;
-			
-			$greenDarkest:			#645723;
-			$greenDarker:			#858434;
-			$greenNeon:				#ece94c;
-			$greenLight:			#dbdf92;
-			
-			$indigo:				#3c3449;
-			$blueDarker:			#015d90;
-			$blueNeon:				#7edcdb;
-			$blueLight:				#c2e7df;
-			
-			$purpleDarkest:			#5b2439;
-			$purpleDarker:			#7f2352;
-			$purpleNeon:			#eb4197;
-			$purpleLight:			#eaa7ae;
-			
-			// Cool grays
-			// -------------------------
-			$coolGrayDarkest:		#62656c;
-			$coolGrayDarker:		#858e95;
-			$coolGray:				#acb1b7;
-			$coolGrayLighter:		#cbccd0;
-			$coolGrayLightest:		#dedede;
-			
-			// Warm grays
-			// -------------------------
-			$warmGrayDarkest:		#5e564b;
-			$warmGrayDarker:		#7d7872;
-			$warmGray:				#a29d97;
-			$warmGrayLighter:		#c5c2bb;
-			$warmGrayLightest:		#e2dedb;
-			
-			
-			$white:					#ffffff;
-			$black:					#333333;
+ 			 
+// turn on/off NYPL-specific partials below
+// -------------------------
+$use-styleguide:         true; 
+
+
+/*------------------------------------*\
+    Fonts
+\*------------------------------------*/
+// Typography
+// -------------------------
+
+
+// redefine $base-font-family before config variables
+// -------------------------
+$base-font-family:	"Lato Regular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+
+/* WE ALSO HAVE AVAILABLE:
+   'Lato Light'
+   'Lato Light Italic'
+   'Lato Regular Italic'
+   'Lato Bold'
+   'Lato Bold Italic'
+   'Lato Black'
+   'Lato Black Italic'
+   CREATE VARIABLES TO USE THEM
+ */ 
+
+// Icon font
+// -------------------------
+$iconFontFamily:        "Icomoon";
+
+
+// Config
+// -------------------------
+$fontPath:              "../fonts/";
+$imgPath:               "../img/";
+
+
+
+/*------------------------------------*\
+    Colors
+\*------------------------------------*/
+// Primary palette colors
+// -------------------------
+$red:					#d62828;
+$orange:				#f0731f;
+$green:					#acb737;
+$blue:					#0090c4;
+$purple:				#aa137e;
+
+// Secondary palette colors
+// -------------------------
+$redDarkest:			#690b0b;
+$redDarker:				#9c191e;
+$pink:					#ff5b64;
+$salmon:				#fd986c;
+
+$orangeDarkest:			#89380b;
+$orangeDarker:			#c9491a;
+$yellow:				#ffac1e;
+$yellowLight:			#fbb55d;
+
+$greenDarkest:			#645723;
+$greenDarker:			#858434;
+$greenNeon:				#ece94c;
+$greenLight:			#dbdf92;
+
+$indigo:				#3c3449;
+$blueDarker:			#015d90;
+$blueNeon:				#7edcdb;
+$blueLight:				#c2e7df;
+
+$purpleDarkest:			#5b2439;
+$purpleDarker:			#7f2352;
+$purpleNeon:			#eb4197;
+$purpleLight:			#eaa7ae;
+
+// Cool grays
+// -------------------------
+$coolGrayDarkest:		#62656c;
+$coolGrayDarker:		#858e95;
+$coolGray:				#acb1b7;
+$coolGrayLighter:		#cbccd0;
+$coolGrayLightest:		#dedede;
+
+// Warm grays
+// -------------------------
+$warmGrayDarkest:		#5e564b;
+$warmGrayDarker:		#7d7872;
+$warmGray:				#a29d97;
+$warmGrayLighter:		#c5c2bb;
+$warmGrayLightest:		#e2dedb;
+
+
+$white:					#ffffff;
+$black:					#333333;
 
 
 

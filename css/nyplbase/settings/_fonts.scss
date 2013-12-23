@@ -115,6 +115,12 @@ License:	CC BY 3.0 -- http://creativecommons.org/licenses/by/3.0/
   background: none;
 }
 
+/* removes list bullet if you are using icons in a list */
+li[data-icon],
+li[class^="icon-"],
+li[class*=" icon-"] {
+	list-style-type: none;
+}
 
 // THE FOLLOWING CODE IS PULLED DIRECTLY FROM ICOMOON DEMO HTML: REPLACE AFTER UPDATING OUR ICON SET
 .icon-cog:before {

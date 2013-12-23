@@ -1,0 +1,53 @@
+@if $use-styleguide == true{
+
+/*------------------------------------*\
+    $STYLEGUIDE.SCSS
+\*------------------------------------*/
+/**
+ * These are some classes/overrides to make the style guide look right
+ * not used anywhere else but /demo
+ */
+ 
+/* code examples */ 
+.code, .code.prettyprint {
+	padding: 12px;
+	border: 1px solid #d0cdc8;
+	background: #e8e4e2;
+}
+
+/* notes to myself */
+pre {
+	width: 80%;
+	white-space: normal;
+}
+
+/* notes for discussion with the unicorns */
+.unicorns {
+	background: yellow;
+}
+
+/* colors demo "paint chips" */
+.color-block {
+	padding: 5px;
+	margin-right: 6px;
+	margin-bottom: 24px;
+	display: inline-block;
+	font-size: 16px;
+}
+
+/* icons demo section */
+p[data-icon]:before,
+p[class^="icon-"]:before,
+p[class*=" icon-"]:before {
+	padding-right: 5px;
+}
+
+.guidenav {
+	position: fixed;
+	
+	li > ul {
+		margin-left: $half-spacing-unit;
+	}
+}
+
+}//endif 
