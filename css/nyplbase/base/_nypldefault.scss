@@ -33,7 +33,7 @@ a{
 	@include vendor (transition, all, 0.15s);
 	
 	&:hover {
-		background: lighten(/* $beautons */$btn-color, 10%);
+		background: lighten($beautons, 10%);
 	}
 }
 
