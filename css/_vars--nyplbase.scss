@@ -23,8 +23,8 @@
 
 			/**
 			 * NOTE TO SELF:
-			 * I'm placing Custom variables here rather than below Overrides
-			 * (as it is in Inuit's original file)
+			 * I'm placing some custom variables here 
+			 * (rather than below Overrides, as it is in Inuit's original file)
 			 * so that i can use NYPL colors in the Inuit overrides.
 			 */
  			 
@@ -231,8 +231,7 @@ $desk-wide-start:   1200px!default;
 /**
  * Set the colors for default and specific-use NYPL buttons.
  */
-/* $btn-color:					$blue!default; */
-
+ 
 /**
  * Set the background colors for beauton button functions.
  */
@@ -257,4 +256,15 @@ $brand-face:        $base-font-family;
  */
 $brand-round:        2px!default;
 
-
+/*------------------------------------*\
+    Additional brand variables -jA
+\*------------------------------------*/
+/**
+ * Transition time
+ */
+$brand-timing:		0.15s;
+/**
+ * Color changes
+ */
+$brand-gradient:	7%;
+$brand-hover:		10%

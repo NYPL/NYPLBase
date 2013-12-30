@@ -51,7 +51,8 @@
 		<section id="typography">
 			<h2>Typography</h2>
 			
-			<p>NYPL's core web typeface is <a href="http://www.latofonts.com/">Lato</a>. Type size, line height, heds, readability, etc.</p>
+			<p>Notes on type size, line height, heds, readability, etc.</p>
+			<p>NYPL's core web typeface is <a href="http://www.latofonts.com/">Lato</a>.</p>
 	
 			<p><a href="typetest.html">Page of typography tests</a></p>
 			
@@ -131,14 +132,28 @@
 				
 			<h2>Calls-to-action</h2>
 			
-			<button>Get this thing!</button>
+			<button class="gradient">Get this thing!</button>			
+			<p>NYPL buttons should have the <code>.gradient</code> class applied to them.</prr>
+			<pre class="code prettyprint">
+				&lt;button class=&quot;gradient&quot;&gt;Get this thing!&lt;/button&gt;
+			</pre>
+
 			<button class="btn--inactive">Get this thing!</button>
+			<p>Inactive buttons get the <code>.btn--inactive</code> class.</p>
+			
 			
 			<h3>Sizes</h3>
-			<button class="btn--small btn--greenNeon">small</button>
-			<button class="btn--large btn--orange">large</button>
-			<button class="btn--huge btn--black">huge</button>
-			<button class="btn--full red">full width</button>
+			<button class="btn--small gradient">small</button>
+			<button class="btn--large gradient">large</button>
+			<button class="btn--huge gradient">huge</button>
+			<button class="btn--full gradient">full width</button>
+			<p>Notes</p>
+			
+			<h3>Color variations</h3>
+			<button class="btn--greenNeon gradient">greenNeon</button>
+			<button class="btn--orange gradient">orange</button>
+			<button class="btn--black gradient">black</button>
+			<p>Notes</p>
 			
 			<h3>Specific NYPL use contexts</h3>
 			<button class="btn btn--donate">Donate now</button>
@@ -153,59 +168,88 @@
 		<section id="forms">
 			<h2>Forms</h2> 
 	
-			<pre>(redesign our forms! take advantage of HTML5!)
-			* see Bootstrap for examples of form variations?</pre>
+			<pre>NYPL forms: SSO, search, newsletter signup, a&d filter</pre>
+
+
+<!--
+<form action="/" accept-charset="UTF-8" method="post" id="bc-sso-login-form">
+<div><div class="form-item" id="username-wrapper">
+ <label for="username">Username or bar code: </label>
+ <input type="text" maxlength="128" name="name" id="username" size="60" value="" class="form-text">
+</div>
+<div class="form-item" id="pin-wrapper">
+ <label for="pin">PIN: </label>
+ <input type="password" name="user_pin" id="pin" maxlength="128" size="60" class="form-text">
+</div>
+<div class="form-item" id="remember_me-wrapper">
+ <label class="option" for="remember_me"><input type="checkbox" name="remember_me" id="remember_me" value="1" class="form-checkbox"> Remember me</label>
+</div>
+<input type="hidden" name="destination" id="edit-destination" value="http://www.nypl.org/">
+<input type="submit" name="op" id="login-form-submit" value="Log In" class="form-submit">
+<div id="login-form-help" class="login-helptext">
+      <a href="https://nypl.bibliocommons.com/user/forgot" class="forgotpin-button">Forgot your PIN?</a>
+      <a href="http://www.nypl.org/help/library-card" class="createacct-button">Need an account?</a>
+    </div><input type="hidden" name="form_build_id" id="form-1cc2d4b331595f23529cad30cd811bab" value="form-1cc2d4b331595f23529cad30cd811bab">
+<input type="hidden" name="form_id" id="edit-bc-sso-login-form" value="bc_sso_login_form">
+
+</div></form>
+-->
 			
-			<h3>Text inputs</h3>
-			<label for="textinput">label</label>
-			<input id="textinput" name="textinput" type="text" placeholder="and their default text!" autocomplete="on">
+			<h3>Default form example</h3>
 			
-			<h3>Dropdowns</h3>
-			<label for="optionslist">many choices</label>
-			<select id="optionslist">
-				<option value="one">One
-				<option value="two">Two
-				<option value="three">Three
-				<option value="four">Four
-				<option value="five">Five
-			</select>
+			<form role="form" id="example1">
+				<label for="example1email">Email</label>
+				<input id="example1email" type="email" placeholder="Email address" autocomplete="on">
+				<label for="example1password">Password</label>
+				<input id="example1password" type="password" placeholder="Password" autocomplete="on">
+								
+				<label for="optionslist">Pick an option</label>
+				<select id="optionslist">
+					<option value="one">One
+					<option value="two">Two
+					<option value="three">Three
+					<option value="four">Four
+					<option value="five">Five
+				</select>
+	
+				<fieldset>
+					<legend>Check all that apply</legend>
+					<input id="chocolate" type="checkbox" value="chocolate" />
+					<label for="chocolate">Chocolate</label> 
+					<input id="vanilla" type="checkbox" value="vanilla" />
+					<label for="vanilla">Vanilla</label> 
+					<input id="ham" type="checkbox" value="ham" />
+					<label for="ham">Icy ham</label>
+				</fieldset>
+				
+				<fieldset>
+					<legend>Check one</legend>
+					<input id="chocolate" type="radio" value="chocolate" />
+					<label for="chocolate">Chocolate</label> 
+					<input id="vanilla" type="radio" value="vanilla" />
+					<label for="vanilla">Vanilla</label> 
+					<input id="ham" type="radio" value="ham" />
+					<label for="ham">Icy ham</label>
+				</fieldset>
+				
+				<h3>submit/cancel etc buttons</h3>
+				
+				<input type="submit" value="submit">
+				<input type="button" value="call to action">
+			</form>
+
+			<h3>Inline form example</h3>	
 			
-			<h3>checkboxes</h3>
-			<fieldset>
-				<legend>Ice cream flavors:</legend>
-				<input id="chocolate" type="checkbox" value="chocolate" />
-				<label for="chocolate">Chocolate</label> 
-				<input id="vanilla" type="checkbox" value="vanilla" />
-				<label for="vanilla">Vanilla</label> 
-				<input id="ham" type="checkbox" value="ham" />
-				<label for="ham">Icy ham</label>
-			</fieldset>
+			<h3>Horizontal form example</h3>
 			
-			<h3>radios</h3>
-			<fieldset>
-				<legend>Ice cream flavors:</legend>
-				<input id="chocolate" type="radio" value="chocolate" />
-				<label for="chocolate">Chocolate</label> 
-				<input id="vanilla" type="radio" value="vanilla" />
-				<label for="vanilla">Vanilla</label> 
-				<input id="ham" type="radio" value="ham" />
-				<label for="ham">Icy ham</label>
-			</fieldset>
+			<h3>Input states (focus, disabled, validate/error)</h3>		
 			
-			<h3>submit/cancel etc buttons</h3>
-			<input type="submit" value="submit">
-			<input type="button" value="call to action">
-			
-			<button type="button" form="NAME OF FORM">button</button>
-			<button type="reset" form="NAME OF FORM">reset</button>
-			<button type="submit" form="NAME OF FORM">submit</button>	
 		</section>
 
 
 
 		<section id="images">
-			<h2>Images</h2> 
-			<p class="unicorns">will imgs get an outline/border?</p>
+			<h2>Images</h2>
 		
 			<h3>img + caption</h3>
 			<figure class="grid__item one-half">
@@ -213,31 +257,28 @@
 				<figcaption>Here is a lovely NYPL employee, showing both her work pride and her guns. <span class="unicorns">NOTE: code here is using figure and figcaption, which are ONLY used for true captions, not just any old picture with text next to it.</span></figcaption>
 			</figure>
 			
-			<h3>standard image sizes</h3>			
+			<h3>standard image sizes</h3>	
+					
 			<h4>thumbnails (square?)</h4>
-			<div style="
-		    width: 100px; height: 100px; overflow: hidden;
-		">
-				<img src="../img/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig" width="1280" height="861">
+			<div>
+				<img  style="width: 100px; height: 100px; overflow: hidden;" src="../img/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
 			</div>	
+			
 			<h4>small</h4>
-			<div style="
-		    width: 100px; height: 100px; overflow: hidden;
-		">
-				<img src="../img/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig" width="1280" height="861">
+			<div>
+				<img class="grid__item one-third img--outline" src="../img/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
 			</div>	
+			
 			<h4>medium</h4>
-			<div style="
-		    width: 100px; height: 100px; overflow: hidden;
-		">
-				<img src="../img/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig" width="1280" height="861">
+			<div>
+				<img class="grid__item one-half" src="../img/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
 			</div>	
+			
 			<h4>large</h4>
-			<div style="
-		    width: 100px; height: 100px; overflow: hidden;
-		">
-				<img src="../img/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig" width="1280" height="861">
+			<div>
+				<img class="grid__item two-thirds" src="../img/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
 			</div>	
+			
 			<h4>"hero" <span class="unicorns">(unicorns: will we use this pattern?)</span></h4>
 			<img src="../img/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
 						
@@ -250,16 +291,13 @@
 			
 			<h3 id="dropdowns">Dropdowns</h3>
 			<pre>take care of this patterns in the header design ("mega-menus" design), THEN should be copied here?</pre>
-			
-			<h3 id="tabbed">Tabbed nav</h3>
-			<p class="unicorns">unicorns: under what circumstances will we use tabs?</p>
-			
+
 			<h3 id="breadcrumbs">Breadcrumbs</h3>
 			<div class="breadcrumb"><a href="/">Home</a> ›&nbsp;<a href="/voices" title="Blogs, Videos &amp; Publications">Blogs, Videos &amp; Publications</a> ›&nbsp;<a href="/blog" title="">Blogs</a> ›&nbsp;<a href="/voices/blogs/blog-channels" title="">Blog Channels</a></div>
 	
 			<h3 id="pagination">Pagination</h3>
 			
-		   <ol class="nav  pagination">
+		   <ol class="nav pagination">
 		       <li class=pagination__first>First</li>
 		       <li class=pagination__prev>Previous</li>
 		       <li><a href=/page/1>1</a></li>

@@ -20,129 +20,50 @@ a{
 }
 
 
+code{
+	color: $purple;
+}
+
+
+
+
 
 
 /*------------------------------------*\
-    $NYPL-BUTTONS
+    $NYPL-FORMS
 \*------------------------------------*/
 /**
- * This is what our calls-to-action buttons look like.
+ * This is what our forms look like.
  */
 
-
-		/** NOTE TO SELF
-		 * Buttons contain styling decisions based on a color choice.
-		 *
-		 * Styling decisions are:
-		 *		background color, which contains a gradient
-		 *		text color
-		 *		hover color
-		 *
-		 * Color choice should IDEALLY come from an added color class:
-		 * 		<a class="btn red">
-		 * rather than redefining a background color in a class used only for buttons.
-		 *
-		 * HOW DO I MAKE .btn PRODUCE THE BG GRADIENT, TEXT COLOR, AND HOVER EFFECT
-		 * BASED ON THE CONCATENATED COLOR CLASS???
-		 */
-
-
-
-
-
-/* THIS MIGHT WORK BUT I DON'T KNOW HOW TO USE IT
-@mixin color-name($class, $color){
-	.#{$class} {
-		background-color: $color;
-	}
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+	border: 1px solid $warmGrayLightest;
+	border-radius:$brand-round;
+	width: 100%;
 }
-*/
+ 
+fieldset {
+	border: 0;
+} 
 
-
-/* I DON'T THINK THIS WILL WORK
-@mixin color-name($color){
-	.#{$color} {
-		background-color: $color;
-	}
-}
-*/
-
-// $fromColor 		should equal $color lighten by 10%
-// $toColor 		should equal $color
-@mixin linear-gradient($fromColor, $toColor) {
-  background-color: $toColor; /* Fallback Color */
-  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
-  background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
-  background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
-  background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
-  background-image:         linear-gradient(top, $fromColor, $toColor);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
-}
-
-// the following 2 mixins are kind of based on http://tallpixels.com/advanced-sass-mixins/
-// evaluate which text color to use
-@mixin button-text($color){
-	@if lightness($color) <= 55% {
-			color: $white;	
-	}
-	@else {
-			color: inherit;		
-	}
-
-}
-
-// styles based on the color parameter, including text color
-@mixin button-color($color){
-	background-color: $color; //want the background to be a gradient!
-	@include button-text($color);
-	
-	&:hover {
-		background: lighten($color, 10%);
-	}	
-}
-
-
-.btn{
- 	@extend .btn--natural; /* NOTE TO SELF: i think this is the style we want to be the default? */
- 	@include button-color($beautons);
-	@include vendor (transition, all, 0.15s);
-	
-}
-
-button{
+input[type="submit"],
+input[type="button"] {
 	@extend .btn;
 }
-
-// add this class to override a btn's color settings
-// 
-.btn--greenNeon {
-	@include button-color($greenNeon);
-}
-.btn--orange {
-	@include button-color($orange);
-}
-.btn--black {
-	@include button-color($black);
-}
-
-
-
-/* DO I WANT TO USE THIS MIXIN? 
-@mixin f11y-context($context-name){
-	@if $context-name == donate {$btn-color: $red; text-transform: uppercase;}
-	@if $context-name == friends {$btn-color: $greenNeon; color: $black; text-transform: uppercase;}
-}
-
-USAGE:
-.btn--donate {
-	@include f11y-context(donate)
-}
-*/
-
-
-
-
 
 
 

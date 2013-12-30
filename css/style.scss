@@ -33,8 +33,8 @@
     $SETTINGS
 \*------------------------------------*/
 /**
- * This is the basis for NYPL Base core elements, where we define all the styling choices that express our brand.
- * Settings like brand colours etc. stored in variables.
+ * Styling choices that express our brand,
+ * like brand colours etc., stored in variables.
  * 
  */
 @import "nyplbase/settings/colorlabels";
@@ -46,20 +46,9 @@
     $TOOLS
 \*------------------------------------*/
 /**
- * custom mixins and functions and the like.
+ * These are custom mixins and functionse.
  */
 @import "nyplbase/tools/nyplmixins";
- 
- 
- 
- 
-/*------------------------------------*\
-    $GENERIC
-\*------------------------------------*/
-/**
- * stuff like your reset, Normalize.css, clearfix, etc
- * (This should already have been included in InuitCSS core.)
- */
  
  
  
@@ -68,8 +57,7 @@
     $BASE
 \*------------------------------------*/
 /**
- * Base styling for unclassed HTML elements (what does an h1 look like without a class on it, etc.).
- * 
+ * Default styling for unclassed HTML elements (what does an h1 look like without a class on it, etc.).
  */
 @import "nyplbase/base/nypldefault";
 
@@ -80,7 +68,7 @@
     $OBJECTS
 \*------------------------------------*/
 /**
- * Objects such as the media object, the nav abstraction, and so on.
+ * Objects and abstractions, which provide structure for components.
  */
  		/**
 		 * NOTETOSELF --------------------------
@@ -94,10 +82,11 @@
     $GUI
 \*------------------------------------*/
 /**
- * GUI components, which are fully designed chunks of the UI
+ * GUI components, which are fully styled chunks of the UI.
  * 
  */
- 
+@import "nyplbase/gui/buttons";
+@import "nyplbase/gui/images";
  
  
  /*------------------------------------*\

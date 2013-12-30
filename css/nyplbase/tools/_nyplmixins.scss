@@ -2,5 +2,74 @@
     $NYPL-MIXINS
 \*------------------------------------*/
 /**
- * xxxxx
+ * Gradients
  */
+
+
+@mixin linear-gradient($color, $toColor) {
+	background-color: $color;
+	background-image: -webkit-linear-gradient(top, $color, $toColor);
+	background-image: 		  linear-gradient(top, $color, $toColor);
+}
+
+/**
+ * Buttons
+ */
+ 
+// The following 2 mixins are kind of based on http://tallpixels.com/advanced-sass-mixins/
+
+/**
+ * This evaluates the background color of a button 
+ * in order to pick which text color to use.
+ */ 
+ 
+@mixin button-text($color){
+	@if lightness($color) <= 55% {
+			color: $white;	
+	}
+	@else {
+			color: inherit;		
+	}
+}
+
+
+
+/*
+ * This styles the button based on the color parameter, including text color.
+ * It also concatenates the ".gradient" class so that the mixin
+ * can use the background color to evaluate the darker stop color.
+*/
+
+@mixin button-color($color){
+	background: $color;
+	@include button-text($color);
+
+	&.gradient{
+		$toColor: darken($color, $brand-gradient);
+		@include linear-gradient($color, $toColor);	
+	}
+	
+	&:hover{
+		background: lighten($color, $brand-hover);
+	}	
+	
+}
+
+
+
+/* 
+ * Some buttons have specific use cases, such as the Donate button,
+ * and must be styled very specifically.
+ * Add context names here to add specific styling;
+ * the name you add provides the second part of the class name.
+   
+	USAGE:
+	.btn--donate {
+		@include f11y-context(donate)
+	}
+*/
+
+@mixin button-f11y-context($context-name){
+	@if $context-name == donate {@include button-color($red);text-transform: uppercase;}
+	@if $context-name == friends {@include button-color($greenNeon); color: $black; text-transform: uppercase;}
+}

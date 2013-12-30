@@ -1,0 +1,63 @@
+/*------------------------------------*\
+    $NYPL-BUTTONS
+\*------------------------------------*/
+/**
+ * This is what our calls-to-action buttons look like.
+ * The ".btn" class is extended for form inputs too.
+ */
+
+
+		/** NOTE TO SELF
+		 * Buttons contain styling decisions based on a color choice.
+		 *
+		 * Styling decisions are:
+		 *		background color, which contains a gradient
+		 *		text color
+		 *		hover color
+		 *
+		 * Color choice should IDEALLY come from an added color class:
+		 * 		<a class="btn red">
+		 * rather than redefining a background color in a class used only for buttons.
+		 *
+		 * HOW DO I MAKE .btn PRODUCE THE BG GRADIENT, TEXT COLOR, AND HOVER EFFECT
+		 * BASED ON THE CONCATENATED COLOR CLASS???
+		 */
+
+		/* THIS MIGHT WORK BUT I DON'T KNOW HOW TO USE IT
+		@mixin color-name($class, $color){
+			.#{$class} {
+				background-color: $color;
+			}
+		}
+		*/
+
+.btn{
+ 	@extend .btn--natural; /* NOTE TO SELF: i think this is the style we want to be the default? */
+ 	@include button-color($beautons);
+	@include vendor (transition, background, $brand-timing);
+}
+
+button{
+	@extend .btn;
+}
+
+// add a class to override a btn's color settings
+// 
+
+.btn--greenNeon {
+	@include button-color($greenNeon);
+}
+.btn--orange {
+	@include button-color($orange);
+}
+.btn--black {
+	@include button-color($black);
+}
+
+
+.btn--donate {
+	@include button-f11y-context(donate);
+}
+.btn--friends {
+	@include button-f11y-context(friends);
+}
