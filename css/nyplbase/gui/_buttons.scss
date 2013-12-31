@@ -34,7 +34,7 @@
 .btn{
  	@extend .btn--natural; /* NOTE TO SELF: i think this is the style we want to be the default? */
  	@include button-color($beautons);
-	@include vendor (transition, background, $brand-timing);
+	@extend %transition--bg !optional;
 }
 
 button{

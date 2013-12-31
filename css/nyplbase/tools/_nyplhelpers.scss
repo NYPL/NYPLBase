@@ -1,0 +1,10 @@
+/*------------------------------------*\
+    $NYPL-EXTENDS
+\*------------------------------------*/
+/**
+ * Transition
+ */
+%transition--bg{
+	@include vendor (transition, background, $brand-timing);	
+} 
+

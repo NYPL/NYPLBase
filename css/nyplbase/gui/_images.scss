@@ -4,7 +4,22 @@
 /**
  * Some classes for styling images.
  */
- 
+
 .img--outline{
 	outline: 3px solid $warmGrayLightest;
 }
+
+
+.img__thumbnail{ 
+	height: 100px; 
+	width: 100px;
+	margin-right: $base-spacing-unit/2;
+	overflow: hidden;
+	
+	@extend .img--outline;
+	
+	&:last-child{
+		margin-right: 0;
+	}
+}
+ 

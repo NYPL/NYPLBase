@@ -42,18 +42,16 @@ $use-styleguide:         true;
 
 // redefine $base-font-family before config variables
 // -------------------------
-$base-font-family:	"Lato Regular", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$base-font-family:			"Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-/* WE ALSO HAVE AVAILABLE:
-   'Lato Light'
-   'Lato Light Italic'
-   'Lato Regular Italic'
-   'Lato Bold'
-   'Lato Bold Italic'
-   'Lato Black'
-   'Lato Black Italic'
-   CREATE VARIABLES TO USE THEM
- */ 
+$light-font-family:  		"Lato Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$light-ital-font-family:	"Lato Light Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-ital-font-family:		"Lato Regular Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$bold-font-family:			"Lato Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$bold-ital-font-family:		"Lato Bold Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$black-font-family:			"Lato Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$black-ital-font-family:	"Lato Black Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 
 // Icon font
 // -------------------------

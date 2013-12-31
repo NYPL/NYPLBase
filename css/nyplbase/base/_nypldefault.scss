@@ -11,21 +11,43 @@ body{
 
 a{
 	color: $black;
-	&:visited {
+	&:visited{
 		color: $black;
 	}
-	&:hover {
+	&:hover{
 		color: $blue;
+		@extend %transition--bg !optional;
 	}
 }
 
+
+blockquote{
+	padding: $base-spacing-unit/2 $base-spacing-unit;
+	text-indent: 0;
+}
 
 code{
 	color: $purple;
 }
 
+figure{
+	background: $warmGrayLightest;
+	padding: $base-spacing-unit/2;
+}
 
+figcaption{
+	@extend .zeta;
+	margin-top: $base-spacing-unit/2;
+}
 
+h1,h2,h3,h4,h5,h6 {
+	& a {
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
+		}
+	}	
+}
 
 
 
