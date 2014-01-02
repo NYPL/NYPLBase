@@ -5,13 +5,13 @@
 /**
  * Gradients
  */
-
-
 @mixin linear-gradient($color, $toColor) {
 	background-color: $color;
 	background-image: -webkit-linear-gradient(top, $color, $toColor);
 	background-image: 		  linear-gradient(top, $color, $toColor);
 }
+
+
 
 /**
  * Buttons
@@ -23,7 +23,6 @@
  * This evaluates the background color of a button 
  * in order to pick which text color to use.
  */ 
- 
 @mixin button-text($color){
 	@if lightness($color) <= 55% {
 			color: $white;	
@@ -34,13 +33,11 @@
 }
 
 
-
 /*
  * This styles the button based on the color parameter, including text color.
  * It also concatenates the ".gradient" class so that the mixin
  * can use the background color to evaluate the darker stop color.
 */
-
 @mixin button-color($color){
 	background: $color;
 	@include button-text($color);
@@ -69,7 +66,6 @@
 		@include f11y-context(donate)
 	}
 */
-
 @mixin button-f11y-context($context-name){
 	@if $context-name == donate {@include button-color($red);text-transform: uppercase;}
 	@if $context-name == friends {@include button-color($greenNeon); color: $black; text-transform: uppercase;}

@@ -53,7 +53,7 @@
 		<section id="typography">
 			<h2>Typography</h2>
 			
-			<p>Notes on type size, line height, heds, readability, etc.</p>
+			<p>Notes on type size, line height, heds, readability, etc. including font size classes!</p>
 			<p>NYPL's core web typeface is <a href="http://www.latofonts.com/">Lato</a>.</p>
 	
 			<p><a href="typetest.html">Page of typography tests</a></p>
@@ -153,6 +153,7 @@
 			<p><button class="btn--small gradient">small</button></p>
 			<p><button class="btn--large gradient">large</button></p>
 			<p><button class="btn--huge gradient">huge</button></p>
+			<p>You can add font classes too for bigger/smaller text.</p>
 			<pre class="code prettyprint">
 				&lt;button class=&quot;btn--small[[or large, or huge]]&quot;&gt;Get this thing!&lt;/button&gt;
 			</pre>
@@ -185,77 +186,121 @@
 		<section id="forms">
 			<h2>Forms</h2> 
 	
-			<pre>NYPL forms: SSO, search, newsletter signup, a&d filter</pre>
+			<p>How to use form classes</p>
 
 
 <!--
 <form action="/" accept-charset="UTF-8" method="post" id="bc-sso-login-form">
-<div><div class="form-item" id="username-wrapper">
- <label for="username">Username or bar code: </label>
- <input type="text" maxlength="128" name="name" id="username" size="60" value="" class="form-text">
-</div>
-<div class="form-item" id="pin-wrapper">
- <label for="pin">PIN: </label>
- <input type="password" name="user_pin" id="pin" maxlength="128" size="60" class="form-text">
-</div>
-<div class="form-item" id="remember_me-wrapper">
- <label class="option" for="remember_me"><input type="checkbox" name="remember_me" id="remember_me" value="1" class="form-checkbox"> Remember me</label>
-</div>
-<input type="hidden" name="destination" id="edit-destination" value="http://www.nypl.org/">
-<input type="submit" name="op" id="login-form-submit" value="Log In" class="form-submit">
-<div id="login-form-help" class="login-helptext">
-      <a href="https://nypl.bibliocommons.com/user/forgot" class="forgotpin-button">Forgot your PIN?</a>
-      <a href="http://www.nypl.org/help/library-card" class="createacct-button">Need an account?</a>
-    </div><input type="hidden" name="form_build_id" id="form-1cc2d4b331595f23529cad30cd811bab" value="form-1cc2d4b331595f23529cad30cd811bab">
-<input type="hidden" name="form_id" id="edit-bc-sso-login-form" value="bc_sso_login_form">
 
-</div></form>
+	<div><div class="form-item" id="username-wrapper">
+	 <label for="username">Username or bar code: </label>
+	 <input type="text" maxlength="128" name="name" id="username" size="60" value="" class="form-text">
+	</div>
+	<div class="form-item" id="pin-wrapper">
+	 <label for="pin">PIN: </label>
+	 <input type="password" name="user_pin" id="pin" maxlength="128" size="60" class="form-text">
+	</div>
+	<div class="form-item" id="remember_me-wrapper">
+	 <label class="option" for="remember_me"><input type="checkbox" name="remember_me" id="remember_me" value="1" class="form-checkbox"> Remember me</label>
+	</div>
+	<input type="hidden" name="destination" id="edit-destination" value="http://www.nypl.org/">
+	<input type="submit" name="op" id="login-form-submit" value="Log In" class="form-submit">
+	<div id="login-form-help" class="login-helptext">
+	      <a href="https://nypl.bibliocommons.com/user/forgot" class="forgotpin-button">Forgot your PIN?</a>
+	      <a href="http://www.nypl.org/help/library-card" class="createacct-button">Need an account?</a>
+	    </div><input type="hidden" name="form_build_id" id="form-1cc2d4b331595f23529cad30cd811bab" value="form-1cc2d4b331595f23529cad30cd811bab">
+	<input type="hidden" name="form_id" id="edit-bc-sso-login-form" value="bc_sso_login_form">
+	
+	</div>
+
+</form>
 -->
 			
-			<h3>Default form example</h3>
-			
-			<form role="form" id="example1">
-				<label for="example1email">Email</label>
-				<input id="example1email" type="email" placeholder="Email address" autocomplete="on">
-				<label for="example1password">Password</label>
-				<input id="example1password" type="password" placeholder="Password" autocomplete="on">
-								
-				<label for="optionslist">Pick an option</label>
-				<select id="optionslist">
-					<option value="one">One
-					<option value="two">Two
-					<option value="three">Three
-					<option value="four">Four
-					<option value="five">Five
-				</select>
+			<h3>Form elements: examples</h3>
+				<div class="grid__item two-thirds">			
+					<form role="form" id="form__feedback" class="form--callout">
+						<label for="name">Name</label>
+						<input id="name" class="text-input" type="text" placeholder="Name" autocomplete="on">
+						
+						<label for="email">Email</label>
+						<input id="email" class="text-input" type="email" placeholder="Email address" autocomplete="on">
+						
+						<label for="example-text">Type your message below</label>
+						<textarea id="example-text" class="text-input" rows="5"></textarea>
+						
+						<fieldset>
+							<legend>I'd like to receive updates:</legend>
+							
+							<input id="daily" name="update" type="radio" value="daily" />
+							<label for="daily">Daily</label> 
+							
+							<input id="weekly" name="update" type="radio" value="weekly" />
+							<label for="weekly">Weekly</label> 
+							
+							<input id="monthly" name="update" type="radio" value="monthly" />
+							<label for="monthly">Monthly</label>
+						</fieldset>
+						
+						<label for="userhome">Where do you live?</label>
+						<select id="userhome" class="form-control" name="locations">
+							<option value="queens">Queens</option>
+							<optgroup label="Manhattan">
+							<option>Uptown</option>
+							<option>Midtown</option>
+							<option>Downtown</option>
+							</optgroup>
+							<option value="brooklyn">Brooklyn</option>
+							<option value="staten">Staten Island</option>
+							<option value="Bronx">Bronx</option>
+						</select>
 	
-				<fieldset>
-					<legend>Check all that apply</legend>
-					<input id="chocolate" type="checkbox" value="chocolate" />
-					<label for="chocolate">Chocolate</label> 
-					<input id="vanilla" type="checkbox" value="vanilla" />
-					<label for="vanilla">Vanilla</label> 
-					<input id="ham" type="checkbox" value="ham" />
-					<label for="ham">Icy ham</label>
-				</fieldset>
+						<input type="submit" value="Send">
+					</form>
+				</div>
 				
-				<fieldset>
-					<legend>Check one</legend>
-					<input id="chocolate" type="radio" value="chocolate" />
-					<label for="chocolate">Chocolate</label> 
-					<input id="vanilla" type="radio" value="vanilla" />
-					<label for="vanilla">Vanilla</label> 
-					<input id="ham" type="radio" value="ham" />
-					<label for="ham">Icy ham</label>
-				</fieldset>
-				
-				<h3>submit/cancel etc buttons</h3>
-				
-				<input type="submit" value="submit">
-				<input type="button" value="call to action">
-			</form>
+				<div class="grid__item two-thirds">
+					<form role="form" id="form__login" class="form--callout">
+						<label for="email">Email</label>
+						<input id="email" class="text-input" type="email" placeholder="Email address" autocomplete="on">
+						
+						<label for="password">Password</label>
+						<input id="password" class="text-input" type="password" placeholder="Password" autocomplete="on">
+						
+						<input type="submit" value="Log in">
+					</form>	
+				</div>
+
+				<div class="grid__item two-thirds">				
+					<form role="form" id="form__search" class="form--callout">
+						<label for="search">Search</label>
+						<input id="search" class="text-input" type="search" placeholder="keyword" autocomplete="on">
+						
+						<fieldset>
+							<legend>Type of results:</legend>
+							
+							<input id="images" type="checkbox" value="images" />
+							<label for="images">images</label> 
+							
+							<input id="video" type="checkbox" value="video" />
+							<label for="video">video</label> 
+							
+							<input id="transcipts" type="checkbox" value="transcipts" />
+							<label for="transcipts">transcipts</label>
+						</fieldset>
+						
+						<input type="submit" value="search">
+					</form>				
+				</div>
 
 			<h3>Inline form example</h3>	
+			
+			<form id="" action="" method="">
+				<label class="visuallyhidden" for="email">Email</label>
+				<input id="email" class="text-input" type="email" placeholder="Email address" autocomplete="on">
+				<label class="visuallyhidden" for="password">Password</label>
+				<input id="password" class="text-input" type="password" placeholder="Password" autocomplete="on">
+				<input type="submit" value="submit">
+			</form>
 			
 			<h3>Horizontal form example</h3>
 			
@@ -344,7 +389,7 @@
 	<h2>Acknowledgements</h2>
 	<p>I owe being able to conceive of a distributable rapid prototyping system (RaProSys?) to <a href="http://twitter.com/mdo">Mark Otto</a> and <a href="http://twitter.com/fat">Jacob Thornton</a>, makers of <a href="http://getbootstrap.com/">Bootstrap</a>.</p>
 	<p>Massive amounts to Harry Roberts and his css wizardry for creating Inuit; I stand on his beefy shoulders and no mistake.</p>
-	<p>Also major thanks to <a href="http://github.com/beefoo">Brian Foo</a>, whose <a href="https://drrstyleguide.herokuapp.com/">DRR Bootstrap</a> (maintained by <a href="http://www.nypl.org/collections/labs">NYPL Labs</a>) provided more than a little guidance on how to put together a style guide.</p>
+	<p>Also major thanks to <a href="http://github.com/beefoo">Brian Foo</a>, whose <a href="https://drrstyleguide.herokuapp.com/">DRR Bootstrap</a> (maintained by <a href="http://www.nypl.org/collections/labs">NYPL Labs</a>) provided a great starting point. Also, BFoo taught me more than a few sassy Sass tricks.</p>
 	<p>Finally to Sean Redmond, who gave me room to do this exactly how I wanted, and never made me feel bad for not knowing all my command line commands.</p>
 </div>
 -->

@@ -57,24 +57,24 @@ h1,h2,h3,h4,h5,h6 {
 /**
  * This is what our forms look like.
  */
+ 
+.form--callout{
+	background: lighten($warmGrayLightest, 5%);
+	border: 1px solid $warmGrayLightest;
+	border-radius:$brand-round;	
+	padding: $base-spacing-unit/2;
+} 
 
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"] {
+/*
+Use class="text-input" to style inputs:
+ex. <input type=email class=text-input>
+*/
+.text-input,
+textarea{
 	border: 1px solid $warmGrayLightest;
 	border-radius:$brand-round;
+	line-height: 2rem;
+	padding: 0 .5rem;
 	width: 100%;
 }
  
@@ -85,6 +85,10 @@ fieldset {
 input[type="submit"],
 input[type="button"] {
 	@extend .btn;
+}
+
+.form-control{
+	@extend .text-input;
 }
 
 
