@@ -186,115 +186,103 @@
 		<section id="forms">
 			<h2>Forms</h2> 
 	
-			<p>How to use form classes</p>
-
-
-<!--
-<form action="/" accept-charset="UTF-8" method="post" id="bc-sso-login-form">
-
-	<div><div class="form-item" id="username-wrapper">
-	 <label for="username">Username or bar code: </label>
-	 <input type="text" maxlength="128" name="name" id="username" size="60" value="" class="form-text">
-	</div>
-	<div class="form-item" id="pin-wrapper">
-	 <label for="pin">PIN: </label>
-	 <input type="password" name="user_pin" id="pin" maxlength="128" size="60" class="form-text">
-	</div>
-	<div class="form-item" id="remember_me-wrapper">
-	 <label class="option" for="remember_me"><input type="checkbox" name="remember_me" id="remember_me" value="1" class="form-checkbox"> Remember me</label>
-	</div>
-	<input type="hidden" name="destination" id="edit-destination" value="http://www.nypl.org/">
-	<input type="submit" name="op" id="login-form-submit" value="Log In" class="form-submit">
-	<div id="login-form-help" class="login-helptext">
-	      <a href="https://nypl.bibliocommons.com/user/forgot" class="forgotpin-button">Forgot your PIN?</a>
-	      <a href="http://www.nypl.org/help/library-card" class="createacct-button">Need an account?</a>
-	    </div><input type="hidden" name="form_build_id" id="form-1cc2d4b331595f23529cad30cd811bab" value="form-1cc2d4b331595f23529cad30cd811bab">
-	<input type="hidden" name="form_id" id="edit-bc-sso-login-form" value="bc_sso_login_form">
-	
-	</div>
-
-</form>
--->
+			<p>Text-based inputs are 100% by default.</p>
 			
 			<h3>Form elements: examples</h3>
-				<div class="grid__item two-thirds">			
-					<form role="form" id="form__feedback" class="form--callout">
-						<label for="name">Name</label>
-						<input id="name" class="text-input" type="text" placeholder="Name" autocomplete="on">
-						
-						<label for="email">Email</label>
-						<input id="email" class="text-input" type="email" placeholder="Email address" autocomplete="on">
-						
-						<label for="example-text">Type your message below</label>
-						<textarea id="example-text" class="text-input" rows="5"></textarea>
-						
-						<fieldset>
-							<legend>I'd like to receive updates:</legend>
-							
-							<input id="daily" name="update" type="radio" value="daily" />
-							<label for="daily">Daily</label> 
-							
-							<input id="weekly" name="update" type="radio" value="weekly" />
-							<label for="weekly">Weekly</label> 
-							
-							<input id="monthly" name="update" type="radio" value="monthly" />
-							<label for="monthly">Monthly</label>
-						</fieldset>
-						
-						<label for="userhome">Where do you live?</label>
-						<select id="userhome" class="form-control" name="locations">
-							<option value="queens">Queens</option>
-							<optgroup label="Manhattan">
+			
+			<div class="grid__item two-thirds hard--left">			
+				<form role="form" id="form__feedback" class="form--callout">
+					<label for="name">Name</label>
+					<input id="name" class="text-input" type="text" placeholder="Name" autocomplete="on">
+					
+					<label for="email">Email</label>
+					<input id="email" class="text-input" type="email" placeholder="Email address" autocomplete="on">
+					
+					<label for="example-text">Type your message below</label>
+					<textarea id="example-text" class="text-input" rows="5"></textarea>
+					
+					<label for="userhome">Where do you live?</label>
+					<select id="userhome" class="form-control" name="locations">
+						<option value="queens">Queens</option>
+						<optgroup label="Manhattan">
 							<option>Uptown</option>
 							<option>Midtown</option>
 							<option>Downtown</option>
-							</optgroup>
-							<option value="brooklyn">Brooklyn</option>
-							<option value="staten">Staten Island</option>
-							<option value="Bronx">Bronx</option>
-						</select>
-	
-						<input type="submit" value="Send">
-					</form>
-				</div>
-				
-				<div class="grid__item two-thirds">
-					<form role="form" id="form__login" class="form--callout">
-						<label for="email">Email</label>
-						<input id="email" class="text-input" type="email" placeholder="Email address" autocomplete="on">
-						
-						<label for="password">Password</label>
-						<input id="password" class="text-input" type="password" placeholder="Password" autocomplete="on">
-						
-						<input type="submit" value="Log in">
-					</form>	
-				</div>
+						</optgroup>
+						<option value="brooklyn">Brooklyn</option>
+						<option value="staten">Staten Island</option>
+						<option value="Bronx">Bronx</option>
+					</select>
+					
+					<fieldset>
+						<legend>I'd like to receive updates:</legend>
+						<ul class="check-list-inline">
+							<li><input id="daily" name="update" type="radio" value="daily" />
+							<label for="daily">Daily</label></li> 
+							
+							<li><input id="weekly" name="update" type="radio" value="weekly" />
+							<label for="weekly">Weekly</label></li>
+							
+							<li><input id="monthly" name="update" type="radio" value="monthly" />
+							<label for="monthly">Monthly</label></li>
+						</ul>
+					</fieldset>
 
-				<div class="grid__item two-thirds">				
-					<form role="form" id="form__search" class="form--callout">
-						<label for="search">Search</label>
-						<input id="search" class="text-input" type="search" placeholder="keyword" autocomplete="on">
-						
-						<fieldset>
-							<legend>Type of results:</legend>
+					<input type="submit" value="Send">
+				</form>
+			</div>
+				
+			<div class="grid__item one-half hard--left">
+				<form role="form" id="form__login" class="form--callout">
+					<label for="email">Email</label>
+					<input id="email" class="text-input" type="email" placeholder="Email address" autocomplete="on">
+					
+					<label for="password">Password</label>
+					<input id="password" class="text-input" type="password" placeholder="Password" autocomplete="on">
+					
+					<input type="submit" value="Log in">
+				</form>	
+			</div>
+
+			<div class="grid__item two-thirds hard--left">				
+				<form role="form" id="form__search" class="form--callout">
+					<label for="search">Search</label>
+					<input id="search" class="text-input" type="search" placeholder="keyword" autocomplete="on">
+					
+					<fieldset>
+						<legend>Type of results:</legend>
+						<ul class="check-list">
+							<li><input id="images" type="checkbox" value="images" />
+							<label for="images">images</label> </li>
 							
-							<input id="images" type="checkbox" value="images" />
-							<label for="images">images</label> 
+							<li><input id="video" type="checkbox" value="video" />
+							<label for="video">video</label> </li>
 							
-							<input id="video" type="checkbox" value="video" />
-							<label for="video">video</label> 
-							
-							<input id="transcipts" type="checkbox" value="transcipts" />
-							<label for="transcipts">transcipts</label>
-						</fieldset>
-						
-						<input type="submit" value="search">
-					</form>				
-				</div>
+							<li><input id="transcipts" type="checkbox" value="transcipts" />
+							<label for="transcipts">transcipts</label></li>
+						</ul>
+					</fieldset>
+					
+					<input type="submit" value="search">
+				</form>				
+			</div>
+<!--
+					<input type="color" />
+					<input type="file" />
+					<input type="range" />
+					<input type="number" />
+					
+					<input type="date" />
+					<input type="datetime" />
+					<input type="datetime-local" />
+					<input type="month" />
+					<input type="time" />
+					<input type="week" />
+-->			
 
 			<h3>Inline form example</h3>	
 			
-			<form id="" action="" method="">
+			<form role="form" id="" class="form--inline" action="" method="">
 				<label class="visuallyhidden" for="email">Email</label>
 				<input id="email" class="text-input" type="email" placeholder="Email address" autocomplete="on">
 				<label class="visuallyhidden" for="password">Password</label>
@@ -303,9 +291,32 @@
 			</form>
 			
 			<h3>Horizontal form example</h3>
+				
+				<div class="grid__item two-thirds hard--left">
+					<form role="form" id="form__login" class="form--horiz form--callout">
+						<label for="email" class="one-third">Email</label><!--
+						--><input id="email" class="two-thirds" type="email" placeholder="Email address" autocomplete="on">
+						
+						<label for="password" class="one-third">Password</label><!--
+						--><input id="password" class="two-thirds" type="password" placeholder="Password" autocomplete="on">
+						
+						<input class="one-third push--two-thirds" type="submit" value="Log in">
+					</form>	
+				</div>			
 			
 			<h3>Input states (focus, disabled, validate/error)</h3>		
-			
+				<div class="grid__item two-thirds hard--left">
+					<form role="form" id="form__states">
+						<label>Error</label>
+						<input type="text" class="error">
+						<label>Success</label>
+						<input type="text" class="success">
+						<label>Disabled</label>
+						<input type="text" class="disabled">
+						<label><input type="checkbox" class="disabled">Disabled</label>
+						<input type="submit" class="btn--inactive" value="Disabled">
+					</form>
+				</div>			
 		</section>
 
 
@@ -328,12 +339,12 @@
 --><p class="grid__item one-half">Here's an example of <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code>. (Note: figure and figcaption are ONLY used for true captions, not just any old picture with text next to it.)</p>
 					
 			<h3>Thumbnails</h3>
-			<div>
-				<img class="img__thumbnail" src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
-				<img class="img__thumbnail" src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
-				<img class="img__thumbnail" src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
-				<img class="img__thumbnail" src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
-				<img class="img__thumbnail" src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
+			<div class="thumbnails">
+				<img src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
+				<img src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
+				<img src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
+				<img src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
+				<img src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
 			</div>
 			<p>(Figure out square sizing)</p>
 						

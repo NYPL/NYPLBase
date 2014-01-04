@@ -32,7 +32,7 @@
 		*/
 
 .btn{
- 	@extend .btn--natural; /* NOTE TO SELF: i think this is the style we want to be the default? */
+ 	@extend .btn--natural; // NOTE TO SELF: this is the style we want to be the default
  	@include button-color($beautons);
 	@extend %transition--bg !optional;
 }
@@ -41,8 +41,15 @@ button{
 	@extend .btn;
 }
 
-// add a class to override a btn's color settings
-// 
+
+.btn--inactive {
+	@include button-color($warmGrayLighter);
+}
+
+/**
+ * For now, in order to override a btn's color settings
+ * you have to add a class. 
+ */ 
 
 .btn--greenNeon {
 	@include button-color($greenNeon);
@@ -54,6 +61,10 @@ button{
 	@include button-color($black);
 }
 
+/**
+ * These purpose-specific buttons have styles defined for them
+ * in the mixin. 
+ */ 
 
 .btn--donate {
 	@include button-f11y-context(donate);

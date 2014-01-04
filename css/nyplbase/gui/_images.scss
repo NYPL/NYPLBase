@@ -5,21 +5,32 @@
  * Some classes for styling images.
  */
 
+
+/**
+ * Add this class to the <img> element.
+ */
 .img--outline{
 	outline: 3px solid $warmGrayLightest;
 }
 
+/**
+ * NYPL thumbnail style is still evolving,
+ * and this class will necessarily become more abstracted/flexible
+ * as the style gets codified.
+ */
+.thumbnails{ 
 
-.img__thumbnail{ 
-	height: 100px; 
-	width: 100px;
-	margin-right: $base-spacing-unit/2;
-	overflow: hidden;
-	
-	@extend .img--outline;
-	
-	&:last-child{
-		margin-right: 0;
+	> img{
+		height: 100px; 
+		width: 100px;
+		margin-right: $half-spacing-unit;
+		overflow: hidden;
+		
+		@extend .img--outline;		
+
+		&:last-child{
+			margin-right: 0;
+		}
 	}
 }
  

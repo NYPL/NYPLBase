@@ -1,8 +1,9 @@
 /*------------------------------------*\
     $NYPL-DEFAULTS
 \*------------------------------------*/
+
 /**
- * Start with the HTML elements.
+ * All the HTML elements, put your hands up.
  */
 body{
 	color: $black;
@@ -20,9 +21,8 @@ a{
 	}
 }
 
-
 blockquote{
-	padding: $base-spacing-unit/2 $base-spacing-unit;
+	padding: $half-spacing-unit $base-spacing-unit;
 	text-indent: 0;
 }
 
@@ -32,14 +32,17 @@ code{
 
 figure{
 	background: $warmGrayLightest;
-	padding: $base-spacing-unit/2;
+	padding: $half-spacing-unit;
 }
 
 figcaption{
 	@extend .zeta;
-	margin-top: $base-spacing-unit/2;
+	margin-top: $half-spacing-unit;
 }
 
+/* 
+ * If a hed contains a link, then underline on hover only. 
+ */
 h1,h2,h3,h4,h5,h6 {
 	& a {
 		text-decoration: none;
@@ -57,39 +60,187 @@ h1,h2,h3,h4,h5,h6 {
 /**
  * This is what our forms look like.
  */
- 
-.form--callout{
-	background: lighten($warmGrayLightest, 5%);
-	border: 1px solid $warmGrayLightest;
-	border-radius:$brand-round;	
-	padding: $base-spacing-unit/2;
-} 
 
-/*
-Use class="text-input" to style inputs:
-ex. <input type=email class=text-input>
-*/
-.text-input,
-textarea{
+			/** 			
+			* NOTE TO SELF:
+			* Bootstrap has some great workarounds for normalizing forms and for bugs.
+			* Refer to them if you need help.
+			*/ 
+
+/*------------------------------------*\
+    Form elements
+\*------------------------------------*/
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select,
+.text-input{
 	border: 1px solid $warmGrayLightest;
 	border-radius:$brand-round;
 	line-height: 2rem;
 	padding: 0 .5rem;
 	width: 100%;
+	
+	&:focus{
+		border-color: $blue;
+		@include vendor(box-shadow, 0 0 10px $blue);
+	}
 }
- 
+
+label{
+	padding: $half-spacing-unit 0 $half-spacing-unit/2;
+	
+	//less padding for labels in a .check-list
+	.check-list & {
+		padding: $half-spacing-unit/4;
+		padding-right: $base-spacing-unit;
+	}
+}
+
 fieldset {
 	border: 0;
+	padding: 0;
+	margin: $half-spacing-unit 0;
 } 
 
+/**
+ * Adds NYPL button style to button-like inputs 
+ */
 input[type="submit"],
 input[type="button"] {
 	@extend .btn;
+	line-height: 2rem;
+	margin: $half-spacing-unit 0 $half-spacing-unit/2;
+	
+	&.btn--inactive{
+		@include button-color($warmGrayLighter);
+		pointer-events: none;
+	}
 }
 
+input[type="search"]{
+	width: 95%;
+}
+
+
+/*------------------------------------*\
+    Form classes
+\*------------------------------------*/
+/**
+ * Use class="text-input" to style inputs:
+ */
+
+.check-list-inline{
+	@extend .check-list;
+	li{
+		display: inline;
+	}
+}
+
+form{
+	.error{
+		color: $red;
+		border: 1px solid $red;
+		&:focus{
+			border-color: $red;
+			@include vendor(box-shadow, 0 0 10px $red);
+		}
+	}
+	
+	.success{
+		color: green;
+		border: 1px solid green;
+		&:focus{
+			border-color: green;
+			@include vendor(box-shadow, 0 0 10px green);
+		}
+	}	
+	
+	.disabled{
+		color: $warmGray;
+		cursor: not-allowed;
+		border: 1px solid $warmGray;
+		&:focus{
+			border-color: $warmGray;
+			@include vendor(box-shadow, 0 0 10px $warmGray);
+		}
+	}	
+}
+
+
+/*------------------------------------*\
+    Alternate form styles
+\*------------------------------------*/
+/**
+ * Add the .form-control class 
+ * rather than forcing all controls (such as selects)
+ * to have the same styles as text inputs.
+ */
 .form-control{
 	@extend .text-input;
+	height: 2rem;
 }
+
+
+/**
+ * Add .form--inline to the form element 
+ * to lay out the elements in a row
+ */
+.form--inline{
+	@include media-query(lap-and-up){
+		*{
+			display: inline-block;
+			margin-right: $half-spacing-unit;
+			width: auto !important;
+		}
+	}
+}
+
+/**
+ * Add .form--horiz to the form element 
+ * to put the labels to the left of the fields
+ */
+
+.form--horiz{
+	
+	> *{
+		@extend .grid__item;
+	}
+	
+/*
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="url"],
+	textarea,
+	select,
+	.text-input{
+		width: auto;
+	}
+*/
+	
+	> label{
+		@extend .text--right;
+		line-height: 2rem;
+	}
+	
+// if .form--horiz has as a child any width class, kill width 100% AND make the width class minus 1%
+}
+
+/**
+ * Apply this style to the form or its container for a bgcolor and border.
+ */
+.form--callout{
+	@include callout-box($warmGrayLightest, lighten($warmGrayLighter, 10%));
+} 
+
+
 
 
 
@@ -100,7 +251,9 @@ input[type="button"] {
  * This is what our calls-to-action buttons look like.
  */
  
-/* category hed above a pattern */ 
+/**
+ * category hed above a pattern 
+ */ 
 .hed--category{
     width: 100%;
     display: block;
@@ -109,8 +262,6 @@ input[type="button"] {
     font-size: .9rem;
 }
  
- 
-    
 
 .nobullet{
 	list-style: none;
@@ -119,6 +270,7 @@ input[type="button"] {
 .list--tier {
 	margin-left: 0;
 }
+
 
  
 /** 

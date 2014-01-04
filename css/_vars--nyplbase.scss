@@ -45,12 +45,12 @@ $use-styleguide:         true;
 $base-font-family:			"Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $light-font-family:  		"Lato Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$light-ital-font-family:	"Lato Light Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-ital-font-family:		"Lato Regular Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$lightital-font-family:		"Lato Light Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$baseital-font-family:		"Lato Regular Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $bold-font-family:			"Lato Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$bold-ital-font-family:		"Lato Bold Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$boldital-font-family:		"Lato Bold Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $black-font-family:			"Lato Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$black-ital-font-family:	"Lato Black Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$blackital-font-family:		"Lato Black Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 
 // Icon font
@@ -143,7 +143,7 @@ $use-columns:       false;
 $use-nav:           true;
 $use-options:       false;
 $use-pagination:    true;
-$use-breadcrumb:    false;
+$use-breadcrumb:    true;
 $use-media:         false;
 $use-marginalia:    false;
 $use-island:        false;

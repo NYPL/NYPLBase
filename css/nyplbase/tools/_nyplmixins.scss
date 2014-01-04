@@ -2,8 +2,12 @@
     $NYPL-MIXINS
 \*------------------------------------*/
 
+/*------------------------------------*\
+ * Colors and  Gradients
+\*------------------------------------*/
+ 
 /**
- * Gradients
+ * This makes a simple linear top-to-bottom gradient.
  */
 @mixin linear-gradient($color, $toColor) {
 	background-color: $color;
@@ -12,18 +16,12 @@
 }
 
 
-
 /**
- * Buttons
- */
- 
-// The following 2 mixins are kind of based on http://tallpixels.com/advanced-sass-mixins/
-
-/**
- * This evaluates the background color of a button 
- * in order to pick which text color to use.
+ * This evaluates the background color of an element 
+ * in order to pick which text color to use on top of it.
+ * Particularly handy for buttons!
  */ 
-@mixin button-text($color){
+@mixin text-on-bg($color){
 	@if lightness($color) <= 55% {
 			color: $white;	
 	}
@@ -33,6 +31,27 @@
 }
 
 
+/**
+ * Callouts
+ * puts a background color and 1px solid border on a container.
+ */
+@mixin callout-box($bgcolor, $bordercolor){
+	background: $bgcolor;
+	border-width: 1px;
+	border-style: solid;
+	border-color: $bordercolor;
+	border-radius:$brand-round;	
+	padding: $half-spacing-unit;
+}
+
+
+
+/*------------------------------------*\
+ * Buttons
+\*------------------------------------*/
+ 
+// The following mixin is kind of based on http://tallpixels.com/advanced-sass-mixins/
+
 /*
  * This styles the button based on the color parameter, including text color.
  * It also concatenates the ".gradient" class so that the mixin
@@ -40,7 +59,7 @@
 */
 @mixin button-color($color){
 	background: $color;
-	@include button-text($color);
+	@include text-on-bg($color);
 
 	&.gradient{
 		$toColor: darken($color, $brand-gradient);
@@ -52,8 +71,6 @@
 	}	
 	
 }
-
-
 
 /* 
  * Some buttons have specific use cases, such as the Donate button,

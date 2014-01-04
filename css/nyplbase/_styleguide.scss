@@ -4,8 +4,8 @@
     $STYLEGUIDE.SCSS
 \*------------------------------------*/
 /**
- * These are some classes/overrides to make the style guide look right
- * not used anywhere else but /demo
+ * These are some classes/overrides to make the style guide look right,
+ * not used anywhere else but /demo.
  */
  
 /* code examples */ 
@@ -48,6 +48,10 @@ p[class*=" icon-"]:before {
 	li > ul {
 		margin-left: $half-spacing-unit;
 	}
+}
+
+section#forms form{
+	margin-bottom: $base-spacing-unit*2;
 }
 
 }//endif 
