@@ -38,9 +38,10 @@ $use-styleguide:         true;
 \*------------------------------------*/
 // Typography
 // -------------------------
+//optimal line length
+$measure:			60rem;
 
-
-// redefine $base-font-family before config variables
+// redefine $base-font-family before declaring the config variables
 // -------------------------
 $base-font-family:			"Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
@@ -62,6 +63,30 @@ $iconFontFamily:        "Icomoon";
 // -------------------------
 $fontPath:              "../fonts/";
 $imgPath:               "../img/";
+
+
+/*------------------------------------*\
+    $FONT-SIZES
+\*------------------------------------*/
+/**
+ * Font-sizes (in pixels). Refer to relevant sections for their implementations.
+ */
+$giga-size:         96px;
+$mega-size:         72px;
+$kilo-size:         60px;
+$big-size:			48px;
+
+$h1-size:           36px; // .alpha
+$h2-size:           24px; // .beta
+$h3-size:           21px; // .gamma
+$h4-size:           18px; // .delta
+$h5-size:           16px; // .epsilon
+$h6-size:           14px; // .zeta
+
+$milli-size:        12px;
+$micro-size:        10px;
+
+
 
 
 

@@ -53,7 +53,8 @@
 		<section id="typography">
 			<h2>Typography</h2>
 			
-			<p>Notes on type size, line height, heds, readability, etc. including font size classes!</p>
+			<p>NYPL's default typography is set to 16px, with a 24px line height. The heds and type size classes are set to the standard typographic scale (see Bringhurst).</p>
+			<p>Paragraphs are set to a maximum width of 60rem, to prevent an unreadably long line.</p>
 			<p>NYPL's core web typeface is <a href="http://www.latofonts.com/">Lato</a>.</p>
 	
 			<p><a href="typetest.html">Page of typography tests</a></p>
@@ -94,14 +95,16 @@
 	
 		<section id="links">
 			<h2>Links</h2>
+			<p>Links are underlined in running text, and change color on hover. Linked heds are not underlined, but do display the underline as well as the color change on hover.</p>	
+			
+			<h3>in graf</h3>
+			<p>Call me <a href="">Ishmael</a>. Some years ago&ndash;never mind how long precisely&ndash;having little or <a href="">no money in my purse</a>, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.</p>
+			
 			<h3>in heds</h3>
 			<h1><a href="">CHAPTER 1. Loomings.</a></h1>
 			<h2><a href="">CHAPTER 2. The Carpet-Bag.</a></h2>
 			<h3><a href="">CHAPTER 3. The Spouter-Inn.</a></h3>
-	
-			
-			<h3>in graf</h3>
-			<p>Call me <a href="">Ishmael</a>. Some years ago&ndash;never mind how long precisely&ndash;having little or <a href="">no money in my purse</a>, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.</p>
+
 		</section>	
 	
 				
@@ -312,9 +315,9 @@
 						<label>Success</label>
 						<input type="text" class="success">
 						<label>Disabled</label>
-						<input type="text" class="disabled">
-						<label><input type="checkbox" class="disabled">Disabled</label>
-						<input type="submit" class="btn--inactive" value="Disabled">
+						<input disabled type="text" class="disabled">
+						<label><input disabled type="checkbox" class="disabled">   Disabled</label>
+						<input disabled type="submit" class="btn--inactive" value="Disabled">
 					</form>
 				</div>			
 		</section>
