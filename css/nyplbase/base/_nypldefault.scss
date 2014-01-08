@@ -11,10 +11,6 @@ body{
 	padding: $base-spacing-unit;
 }
 
-p{
-	max-width: $measure;
-}
-
 a{
 	color: $black;
 	&:visited{
@@ -45,7 +41,6 @@ figcaption{
 	margin-top: $half-spacing-unit;
 }
 
-
 // If a hed contains a link, then underline on hover only. 
 h1,h2,h3,h4,h5,h6 {
 	& a {
@@ -56,9 +51,9 @@ h1,h2,h3,h4,h5,h6 {
 	}	
 }
 
-//added font size
-.big{
-    @include font-size($big-size);
+// keep the measure readable
+p{
+	max-width: $measure;
 }
 
 
@@ -72,6 +67,15 @@ h1,h2,h3,h4,h5,h6 {
 /**
  * This is what our calls-to-action buttons look like.
  */
+ 
+		/** 
+		 * NOTE TO SELF:
+		 * 
+		 * ANY CLASSES THAT REFER TO SECTION-SPECIFIC PATTERNS
+		 * (LIKE JUST SOMETHING USED IN SUPPORT, OR EVENTS, ETC.)
+		 * SHOULD GO INTO A PARTIAL IN THEIR OWN SUBDIRECTORY
+		 * (EX. /NYPLBASE/EVENTS/
+		 */ 
  
 /**
  * category hed above a pattern 
@@ -93,12 +97,3 @@ h1,h2,h3,h4,h5,h6 {
 	margin-left: 0;
 }
 
-
- 
-/** 
- *
- * ANY CLASSES THAT REFER TO SECTION-SPECIFIC PATTERNS
- * (LIKE JUST SOMETHING USED IN SUPPORT, OR EVENTS, ETC.)
- * SHOULD GO INTO A PARTIAL IN THEIR OWN SUBDIRECTORY
- * (EX. /NYPLBASE/EVENTS/
- */

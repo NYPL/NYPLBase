@@ -66,6 +66,19 @@
   font-style: italic;
 }
 
+
+/**
+ * Additional font size (to go with classes defined in InuitCSS /base/_headings
+ */
+.big{
+    @include font-size($big-size);
+}
+
+
+
+
+// Icons
+// -------------------------
 /*
 Icon Set:	IcoMoon - Free -- http://keyamoon.com/icomoon/
 License:	CC BY 3.0 -- http://creativecommons.org/licenses/by/3.0/
@@ -77,8 +90,7 @@ License:	CC BY 3.0 -- http://creativecommons.org/licenses/by/3.0/
 }
 
 
-// Icons
-// -------------------------
+
 @mixin nypl-icon($content: "none") {
   @if ( $content != "none") {
     content: "#{$content}";
@@ -117,7 +129,7 @@ License:	CC BY 3.0 -- http://creativecommons.org/licenses/by/3.0/
   background: none;
 }
 
-/* removes list bullet if you are using icons in a list */
+// removes list bullet if you are using icons in a list
 li[data-icon],
 li[class^="icon-"],
 li[class*=" icon-"] {

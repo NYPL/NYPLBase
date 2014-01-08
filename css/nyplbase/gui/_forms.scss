@@ -21,7 +21,6 @@ input[type="search"],
 input[type="tel"],
 input[type="url"],
 textarea,
-select,
 .text-input{
 	border: 1px solid $warmGrayLightest;
 	border-radius:$brand-round;
@@ -33,6 +32,11 @@ select,
 		border-color: $blue;
 		@include vendor(box-shadow, 0 0 10px $blue);
 	}
+}
+
+select{
+	@extend .text-input;
+	border-color: $warmGray;
 }
 
 label{
@@ -145,35 +149,20 @@ form{
  * Add .form--horiz to the form element 
  * to put the labels to the left of the fields
  */
-
 .form--horiz{
 
 	*{
-//		@extend .grid__item;
 		display: inline-block;
 	}
 	
-
-	input[type="text"],
-	input[type="email"],
-	input[type="password"],
-	input[type="search"],
-	input[type="tel"],
-	input[type="url"],
-	textarea,
-	select,
-	.text-input{
-//		width: auto;
-	}
-
+// this allows you to give width classes to label and input elements and override the 100% default width 
 	@include grid-setup();
 	
 	> label{
 		@extend .text--right;
 		line-height: 2rem;
+		padding-right: $half-spacing-unit/2;
 	}
-	
-// if .form--horiz has as a child any width class, kill width 100% AND make the width class minus 1%
 }
 
 /**
