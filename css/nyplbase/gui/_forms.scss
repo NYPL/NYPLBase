@@ -108,7 +108,7 @@ form{
 		background-color: lighten($warmGrayLightest, 5%);
 		color: $warmGray;
 		cursor: not-allowed;
-		border: 1px solid $warmGrayLighter;
+		border: 1px solid $warmGrayLighter ;
 	}	
 }
 
@@ -147,12 +147,13 @@ form{
  */
 
 .form--horiz{
-	
-	> *{
-		@extend .grid__item;
+
+	*{
+//		@extend .grid__item;
+		display: inline-block;
 	}
 	
-/*
+
 	input[type="text"],
 	input[type="email"],
 	input[type="password"],
@@ -162,9 +163,10 @@ form{
 	textarea,
 	select,
 	.text-input{
-		width: auto;
+//		width: auto;
 	}
-*/
+
+	@include grid-setup();
 	
 	> label{
 		@extend .text--right;
