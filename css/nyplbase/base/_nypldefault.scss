@@ -76,10 +76,18 @@ p{
 		 * SHOULD GO INTO A PARTIAL IN THEIR OWN SUBDIRECTORY
 		 * (EX. /NYPLBASE/EVENTS/
 		 */ 
- 
-/**
- * category hed above a pattern 
- */ 
+
+
+
+.hp-brick{
+	@extend .hard--left;
+	border: 1px solid $warmGrayLightest;
+	box-shadow: 0px 6px 6px -3px $warmGrayLightest;
+
+}
+
+// category hed above a pattern
+.tag--category,
 .hed--category{
     width: 100%;
     display: block;
@@ -88,6 +96,16 @@ p{
     font-size: .9rem;
 }
  
+.overlay{
+	position: relative;
+	
+	.blurb{
+		position: absolute;
+	    bottom: 0;
+	    background: rgba($warmGray, .3);
+	}
+}
+
 
 .nobullet{
 	list-style: none;
