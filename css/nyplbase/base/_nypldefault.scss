@@ -83,26 +83,29 @@ p{
 	@extend .hard--left;
 	border: 1px solid $warmGrayLightest;
 	box-shadow: 0px 6px 6px -3px $warmGrayLightest;
-
 }
 
 // category hed above a pattern
-.tag--category,
-.hed--category{
-    width: 100%;
-    display: block;
+.hdg{
+	@extend .zeta;
     color: $blue;
+    display: block;
     text-transform: uppercase;
-    font-size: .9rem;
+    width: 100%;
 }
  
 .overlay{
 	position: relative;
 	
 	.blurb{
+	    background: rgba($warmGray, .3);
+	    padding: $half-spacing-unit;
 		position: absolute;
 	    bottom: 0;
-	    background: rgba($warmGray, .3);
+	}
+	
+	img{
+		vertical-align: bottom; //otherwise there's a space btn the blurb overlay and the img
 	}
 }
 

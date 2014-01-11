@@ -20,9 +20,10 @@
 
 // notes
 .guide-notes{
-	@include callout-box(lighten($greenLight, 15%), $greenDarker);
+	@include callout-box(lighten($greenLight, 15%), desaturate($greenLight, 25%));
 	@include vendor(border-radius, $brand-round);
 	margin-bottom: $base-spacing-unit;
+	max-width: 60rem;
 }
 
 // code examples  
@@ -30,9 +31,9 @@
 	padding: 12px;
 	border: 1px solid #d0cdc8;
 	background: #e8e4e2;
+	max-width: 60rem;
 }
 pre {
-	width: 80%;
 	white-space: normal;
 }
 

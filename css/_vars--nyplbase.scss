@@ -22,27 +22,32 @@
  */
 
 			/**
-			 * NOTE TO SELF:
-			 * I'm placing some custom variables here 
+			 * NOTE:
+			 * I'm placing some custom variables here in this file 
 			 * (rather than below Overrides, as it is in Inuit's original file)
 			 * so that i can use NYPL colors in the Inuit overrides.
 			 */
- 			 
-// turn on/off NYPL-specific partials below
-// -------------------------
+
+/**
+ *  turn on/off NYPL-specific partials below
+ */
 $use-styleguide:         true; 
 
 
+
 /*------------------------------------*\
-    Fonts
+    $TYPOGRAPHY
 \*------------------------------------*/
-// Typography
-// -------------------------
-//optimal line length
+
+/**
+ * Set the outside limitt for optimal line length
+ */
 $measure:			60rem;
 
-// redefine $base-font-family before declaring the config variables
-// -------------------------
+
+/**
+ * Redefine $base-font-family before declaring the config variables
+ */
 $base-font-family:			"Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $light-font-family:  		"Lato Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -54,22 +59,23 @@ $black-font-family:			"Lato Black", "Helvetica Neue", Helvetica, Arial, sans-ser
 $blackital-font-family:		"Lato Black Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 
-// Icon font
-// -------------------------
+/**
+ * Define icon font
+ */
 $iconFontFamily:        "Icomoon";
 
 
-// Config
-// -------------------------
+
+/**
+ * Config variables, from BFoo
+ */
 $fontPath:              "../fonts/";
 $imgPath:               "../img/";
 
 
-/*------------------------------------*\
-    $FONT-SIZES
-\*------------------------------------*/
+
 /**
- * Font-sizes (in pixels). Refer to relevant sections for their implementations.
+ * Font-sizes (in pixels). 
  */
 $giga-size:         96px;
 $mega-size:         72px;
@@ -91,7 +97,7 @@ $micro-size:        10px;
 
 
 /*------------------------------------*\
-    Colors
+    $COLORS
 \*------------------------------------*/
 // Primary palette colors
 // -------------------------
@@ -169,17 +175,17 @@ $use-nav:           true;
 $use-options:       false;
 $use-pagination:    true;
 $use-breadcrumb:    true;
-$use-media:         false;
+$use-media:         true;
 $use-marginalia:    false;
 $use-island:        false;
-$use-block-list:    false;
+$use-block-list:    true;
 $use-matrix:        false;
 $use-split:         false;
 $use-this-or-this:  false;
 $use-link-complex:  false;
 $use-flyout:        false;
-$use-arrows:        false;
-$use-sprite:        false;
+$use-arrows:        true;
+$use-sprite:        true;
 $use-icon-text:     false;
 $use-beautons:      true;
 $use-lozenges:      false;
