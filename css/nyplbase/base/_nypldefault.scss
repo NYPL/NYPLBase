@@ -77,23 +77,45 @@ p{
 		 * (EX. /NYPLBASE/EVENTS/
 		 */ 
 
+/**
+ * "Bricks" pattern is currently being used on the home page
+ * to feature current events and promoted items.
+ */ 
 
-
-.hp-brick{
+.feature-brick{
 	@extend .hard--left;
 	border: 1px solid $warmGrayLightest;
 	box-shadow: 0px 6px 6px -3px $warmGrayLightest;
 }
 
-// category hed above a pattern
+
+/**
+ * Some "tiers" of content need a category/tag as a heading above them.
+ * These will appear most often above secondary and tertiary tiers.
+ */
 .hdg{
 	@extend .zeta;
+	border-bottom: 1px solid $base-ui-color;
     color: $blue;
     display: block;
     text-transform: uppercase;
     width: 100%;
 }
- 
+
+
+/** 
+ * Using "block-list" Inuit object for lists of chunks
+ */
+.block-list{
+	border-top-width: 0;
+}
+
+
+/** OVERLAY: primary tier pattern
+
+ *  feature chunk with blurb overlaid onto image
+
+ */
 .overlay{
 	position: relative;
 	
@@ -110,6 +132,13 @@ p{
 }
 
 
+
+
+
+
+/** 
+ * am i even using these??
+ */
 .nobullet{
 	list-style: none;
 }

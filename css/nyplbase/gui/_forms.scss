@@ -22,7 +22,7 @@ input[type="tel"],
 input[type="url"],
 textarea,
 .text-input{
-	border: 1px solid $warmGrayLightest;
+	border: 1px solid $base-ui-color;
 	border-radius:$brand-round;
 	line-height: 2rem;
 	padding: 0 .5rem;
@@ -169,6 +169,6 @@ form{
  * Apply this style to the form or its container for a bgcolor and border.
  */
 .form--callout{
-	@include callout-box($warmGrayLightest, lighten($warmGrayLighter, 10%));
+	@include callout-box($base-ui-color, lighten($warmGrayLighter, 10%));
 } 
 

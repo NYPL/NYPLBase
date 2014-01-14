@@ -19,14 +19,14 @@
 \*------------------------------------*/
 /**
  * Place any of your own variables that sit on top of inuit.css here.
+ *
+ * NOTE:
+ * I'm placing some custom variables here in this file 
+ * (rather than below Overrides, as it is in Inuit's original file)
+ * so that i can use NYPL colors in the Inuit overrides.
+ *
  */
 
-			/**
-			 * NOTE:
-			 * I'm placing some custom variables here in this file 
-			 * (rather than below Overrides, as it is in Inuit's original file)
-			 * so that i can use NYPL colors in the Inuit overrides.
-			 */
 
 /**
  *  turn on/off NYPL-specific partials below
@@ -40,7 +40,7 @@ $use-styleguide:         true;
 \*------------------------------------*/
 
 /**
- * Set the outside limitt for optimal line length
+ * Set the outside limit for optimal line length
  */
 $measure:			60rem;
 
@@ -206,6 +206,14 @@ $use-greybox:       false;
 /**
  * Place any variables that should override inuit.css’ defaults here.
  */
+ 
+ 
+
+/**
+ * Default colour for objects’ borders etc.
+ */
+$base-ui-color:     $warmGrayLightest; 
+
 
 /*------------------------------------*\
     $RESPONSIVE
@@ -256,15 +264,11 @@ $desk-wide-start:   1200px!default;
 
 /*------------------------------------*\
     $BEAUTONS
-\*------------------------------------*/
-/**
- * Set the colors for default and specific-use NYPL buttons.
- */
- 
+\*------------------------------------*/ 
 /**
  * Set the background colors for beauton button functions.
  */
-$beautons:              $blue!default;
+$beautons:              $blue;
 $beautons-inactive:     $coolGrayLightest;
 
 $beautons-positive:     $green;
@@ -285,15 +289,15 @@ $brand-face:        $base-font-family;
  */
 $brand-round:        2px!default;
 
-/*------------------------------------*\
-    Additional brand variables -jA
-\*------------------------------------*/
-/**
- * Transition time
- */
-$brand-timing:		0.15s;
-/**
- * Color changes
- */
-$brand-gradient:	7%;
-$brand-hover:		10%
+	/*----------------------------------------*\
+	    Additional brand variables for NYPL 
+	\*----------------------------------------*/
+	/**
+	 * Transition time
+	 */
+	$brand-timing:		0.15s;
+	/**
+	 * Color changes
+	 */
+	$brand-gradient:	7%;
+	$brand-hover:		10%
