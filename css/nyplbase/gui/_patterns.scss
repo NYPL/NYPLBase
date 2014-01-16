@@ -1,0 +1,168 @@
+/*------------------------------------*\
+    $NYPL-DESIGN-PATTERNS
+\*------------------------------------*/
+/**
+ * These are the chunks (ref: @karenmcgrane) of content that 
+ * cascade down the page in tiers.
+ */
+ 
+		/** NOTE TO SELF -----------------------------------------
+		 * ANY CLASSES THAT REFER TO SECTION-SPECIFIC PATTERNS
+		 * (LIKE JUST SOMETHING USED IN SUPPORT, OR EVENTS, ETC.)
+		 * SHOULD GO INTO A PARTIAL IN THEIR OWN SUBDIRECTORY
+		 * (EX. /NYPLBASE/EVENTS/
+		 * ----------------------------------------------------
+		 */ 
+
+/** 
+ * Some reference on widths:
+ * 
+ * _vars--nyplbase 
+ *		contains breakpoints variables.
+ * 
+ * inuit.css/generic/mixins
+ *		contains the media queries mixin.
+ * 
+ * inuit.css/generic/widths
+ *		contains code for responsive width classes.
+
+	 * If you have set `$responsive` to ‘true’ in `_vars.scss` then you now have
+	 * access to these classes. You can define at which breakpoint you’d like an
+	 * element to be a certain size, e.g.:
+	 *
+	 * `<div class="g  one-quarter  lap-one-half  palm-one-whole"> ... </div>`
+	 *
+	 * This would create a `div` that, at ‘desktop’ sizes, takes up a quarter of the
+	 * horizontal space, a half of that space at ‘tablet’ sizes, and goes full width
+	 * at ‘mobile’ sizes.
+	 *
+	 * Demo: jsfiddle.net/inuitcss/WS4Ge
+	 *
+
+ */
+
+
+
+/*------------------------------------*\
+    Chunks are contained by TIERS
+\*------------------------------------*/
+	/**
+	 * I imagine the Tier styles are going to use the RWD width classes?
+	 * as in
+	   
+	   .secondary > .chunk 
+	   
+	 * extends 
+	    
+	   .one-half .palm-one-whole
+	 */
+	 
+.primary{
+	
+}
+
+.secondary{
+	
+}
+
+.tertiary{
+	
+}
+
+/**
+ * Some "tiers" of content need a category/tag as a heading above them.
+ * These will appear most often above secondary and tertiary tiers.
+ */
+.hdg{
+	@extend .zeta;
+	border-bottom: 1px solid $base-ui-color;
+    color: $blue;
+    display: block;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+/*------------------------------------*\
+    Chunks that are CHUNKS
+\*------------------------------------*/
+/**
+ * Chunks of text that has a large icon illustrating it.
+ */
+.chunk--icon{
+	
+}
+
+
+/*------------------------------------*\
+    Chunks that are LISTS
+\*------------------------------------*/
+/** 
+ * Extending "block-list" Inuit object for chunks that are lists.
+ */
+.chunk__list{
+	@extend .block-list;
+	border-top-width: 0;
+}
+/**
+ * If the list item wraps a line, give a margin to the text
+ * so the icon stands out properly.
+ */
+.chunk__list--icon li:before{
+	margin:0 .35em 0 -1.35em;
+}
+
+
+/**
+ * "Bricks" pattern is currently being used on the home page
+ * to feature current events and promoted items.
+ */ 
+
+.feature-brick{ //THIS IS A TERRIBLE CLASS NAME. CHANGE IT.
+	@extend .hard--left;
+	border: 1px solid $warmGrayLightest;
+	box-shadow: 0px 6px 6px -3px $warmGrayLightest;
+}
+
+
+
+
+
+
+
+
+/** OVERLAY: primary tier pattern
+
+ *  feature chunk with blurb overlaid onto image
+
+ */
+.overlay{
+	position: relative;
+	
+	.blurb{
+	    background: rgba($warmGray, .3);
+	    padding: $half-spacing-unit;
+		position: absolute;
+	    bottom: 0;
+	}
+	
+	img{
+		vertical-align: bottom; //otherwise there's a space btn the blurb overlay and the img
+	}
+}
+
+
+
+
+
+
+/** 
+ * am i even using these??
+ */
+.nobullet{
+	list-style: none;
+}
+
+.list--tier {
+	margin-left: 0;
+}
+

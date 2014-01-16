@@ -1,10 +1,10 @@
 @if $use-styleguide == true{
 
 /*------------------------------------*\
-    $STYLEGUIDE.SCSS
+    $STYLEGUIDE
 \*------------------------------------*/
 /**
- * These are some classes/overrides to make the style guide look right,
+ * These are classes/overrides to make the style guide look nice,
  * not used anywhere else but /demo.
  */
 
@@ -28,10 +28,10 @@
 
 // code examples  
 .code, .code.prettyprint {
-	padding: 12px;
-	border: 1px solid #d0cdc8;
-	background: #e8e4e2;
+	border: 1px solid $warmGrayLighter;
+	background: rgba($warmGrayLightest, .5);
 	max-width: 60rem;
+	padding: $base-spacing-unit;
 }
 pre {
 	white-space: normal;
@@ -44,18 +44,11 @@ pre {
 
 // colors demo "paint chips"; courtesy of BFoo :)
 .color-block {
-	padding: 5px;
+	padding: $half-spacing-unit;
 	margin-right: 6px;
-	margin-bottom: 24px;
-	display: inline-block;
+//	margin-bottom: 24px;
+//	display: inline-block;
 	font-size: 16px;
-}
-
-// icons demo section 
-p[data-icon]:before,
-p[class^="icon-"]:before,
-p[class*=" icon-"]:before {
-	padding-right: 5px;
 }
 
 // space between example forms

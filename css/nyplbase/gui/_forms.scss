@@ -6,13 +6,14 @@
  */
 
 			/** 			
-			* NOTE TO SELF:
+			* NOTE TO SELF ------------------------------------
 			* Bootstrap has some great workarounds for normalizing forms and for bugs.
 			* Refer to them if you need help.
+			* ------------------------------------------------
 			*/ 
 
 /*------------------------------------*\
-    Form elements
+    FORM ELEMENTS
 \*------------------------------------*/
 input[type="text"],
 input[type="email"],
@@ -76,12 +77,11 @@ input[type="search"]{
 
 
 /*------------------------------------*\
-    Form classes
+    FORM-SPECIFIC CLASSES
 \*------------------------------------*/
 /**
- * Use class="text-input" to style inputs:
+ * Fixes some positioning on check-lists.
  */
-
 .check-list-inline{
 	@extend .check-list;
 	li{
@@ -89,6 +89,9 @@ input[type="search"]{
 	}
 }
 
+/**
+ * Feedback styles
+ */
 form{
 	.error{
 		color: $red;
@@ -118,7 +121,7 @@ form{
 
 
 /*------------------------------------*\
-    Alternate form styles
+    ALTERNATE FORMS
 \*------------------------------------*/
 /**
  * Add the .form-control class 
@@ -133,7 +136,7 @@ form{
 
 /**
  * Add .form--inline to the form element 
- * to lay out the elements in a row
+ * to lay out the elements in a row.
  */
 .form--inline{
 	@include media-query(lap-and-up){
@@ -147,15 +150,17 @@ form{
 
 /**
  * Add .form--horiz to the form element 
- * to put the labels to the left of the fields
+ * to put the labels to the left of the fields.
  */
 .form--horiz{
 
 	*{
 		display: inline-block;
 	}
-	
-// this allows you to give width classes to label and input elements and override the 100% default width 
+
+/**
+ * This allows you to give width classes to label and input elements and override the 100% default width.
+ */
 	@include grid-setup();
 	
 	> label{

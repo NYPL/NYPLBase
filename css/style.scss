@@ -35,7 +35,6 @@
 /**
  * Styling choices that express our brand,
  * like brand colours etc., stored in variables.
- * 
  */
 @import "nyplbase/settings/colorlabels";
 @import "nyplbase/settings/fonts";
@@ -71,8 +70,7 @@
 /**
  * Objects and abstractions, which provide structure for components.
  */
- 		/**
-		 * NOTETOSELF --------------------------
+ 		/** NOTE TO SELF --------------------------
 		 * What would NYPL-specific objects/abstractions be
 		 * (that are not provided by InuitCSS)? 
 		 * -------------------------------------
@@ -84,11 +82,11 @@
 \*------------------------------------*/
 /**
  * GUI components, which are fully styled chunks of the UI.
- * 
  */
 @import "nyplbase/gui/buttons";
 @import "nyplbase/gui/forms";
 @import "nyplbase/gui/images";
+@import "nyplbase/gui/patterns";
  
  
  /*------------------------------------*\
@@ -96,7 +94,6 @@
 \*------------------------------------*/
 /**
  * Overrides and helper classes which need to trump everything else that came before them.
- * 
  */
 
 

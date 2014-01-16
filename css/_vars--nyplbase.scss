@@ -31,6 +31,11 @@
 /**
  *  turn on/off NYPL-specific partials below
  */
+			/**
+			 * NOTETOSELF --------------------------------------
+			 * is the style guide the only NYPL-specific partial?
+			 * -------------------------------------------------
+			 */
 $use-styleguide:         true; 
 
 
@@ -257,7 +262,7 @@ $desk-pull:         false!default;
  * Tell inuit.css when breakpoints start.
  */
 $lap-start:         481px!default;
-$desk-start:        1024px!default;
+$desk-start:        961px!default;
 $desk-wide-start:   1200px!default;
 
 

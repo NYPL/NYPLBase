@@ -7,13 +7,13 @@
  */
 
 
-		/** NOTE TO SELF
+		/** NOTE TO SELF ------------------------------------
 		 * Buttons contain styling decisions based on a color choice.
 		 *
 		 * Styling decisions are:
-		 *		background color, which contains a gradient
-		 *		text color
-		 *		hover color
+		 *		- background color, which contains a gradient
+		 *		- text color
+		 *		- hover color
 		 *
 		 * Color choice should IDEALLY come from an added color class:
 		 * 		<a class="btn red">
@@ -21,18 +21,21 @@
 		 *
 		 * HOW DO I MAKE .btn PRODUCE THE BG GRADIENT, TEXT COLOR, AND HOVER EFFECT
 		 * BASED ON THE CONCATENATED COLOR CLASS???
-		 */
+		 
 
-		/* THIS MIGHT WORK BUT I DON'T KNOW HOW TO USE IT
-		@mixin color-name($class, $color){
-			.#{$class} {
-				background-color: $color;
-			}
-		}
+				THIS MIGHT WORK BUT I DON'T KNOW HOW TO USE IT:
+				
+				@mixin color-name($class, $color){
+					.#{$class} {
+						background-color: $color;
+					}
+				}
+				
+		* ------------------------------------
 		*/
 
 .btn{
- 	@extend .btn--natural; // NOTE TO SELF: this is the style we want to be the default
+ 	@extend .btn--natural; 
  	@include button-color($beautons);
 	@extend %transition--bg !optional;
 }
@@ -48,7 +51,7 @@ button{
 
 /**
  * For now, in order to override a btn's color settings
- * you have to add a class. 
+ * you have to add a class. Create it here.
  */ 
 
 .btn--greenNeon {
@@ -63,7 +66,7 @@ button{
 
 /**
  * These purpose-specific buttons have styles defined for them
- * in the mixin. 
+ * in the mixin. There is probably a better way to do this.
  */ 
 
 .btn--donate {

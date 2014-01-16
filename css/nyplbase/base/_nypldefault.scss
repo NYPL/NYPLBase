@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    $NYPL-DEFAULTS
+    $NYPL-DEFAULT
 \*------------------------------------*/
 
 /**
@@ -23,6 +23,7 @@ a{
 }
 
 blockquote{
+	border-left: 5px solid $base-ui-color;
 	padding: $half-spacing-unit $base-spacing-unit;
 	text-indent: 0;
 }
@@ -41,7 +42,7 @@ figcaption{
 	margin-top: $half-spacing-unit;
 }
 
-// If a hed contains a link, then underline on hover only. 
+// if a hed contains a link, then underline on hover only. 
 h1,h2,h3,h4,h5,h6 {
 	& a {
 		text-decoration: none;
@@ -57,93 +58,26 @@ p{
 }
 
 
-
-
-
-
-/*------------------------------------*\
-    $NYPL-DESIGN-PATTERNS
-\*------------------------------------*/
 /**
- * This is what our calls-to-action buttons look like.
+ * Some additional classes. (Put in /tools/nyplhelpers???) 
  */
  
-		/** 
-		 * NOTE TO SELF:
-		 * 
-		 * ANY CLASSES THAT REFER TO SECTION-SPECIFIC PATTERNS
-		 * (LIKE JUST SOMETHING USED IN SUPPORT, OR EVENTS, ETC.)
-		 * SHOULD GO INTO A PARTIAL IN THEIR OWN SUBDIRECTORY
-		 * (EX. /NYPLBASE/EVENTS/
-		 */ 
-
-/**
- * "Bricks" pattern is currently being used on the home page
- * to feature current events and promoted items.
- */ 
-
-.feature-brick{
-	@extend .hard--left;
-	border: 1px solid $warmGrayLightest;
-	box-shadow: 0px 6px 6px -3px $warmGrayLightest;
-}
-
-
-/**
- * Some "tiers" of content need a category/tag as a heading above them.
- * These will appear most often above secondary and tertiary tiers.
- */
-.hdg{
-	@extend .zeta;
-	border-bottom: 1px solid $base-ui-color;
-    color: $blue;
-    display: block;
-    text-transform: uppercase;
-    width: 100%;
-}
-
-
-/** 
- * Using "block-list" Inuit object for lists of chunks
- */
-.block-list{
-	border-top-width: 0;
-}
-
-
-/** OVERLAY: primary tier pattern
-
- *  feature chunk with blurb overlaid onto image
-
- */
-.overlay{
-	position: relative;
-	
-	.blurb{
-	    background: rgba($warmGray, .3);
-	    padding: $half-spacing-unit;
-		position: absolute;
-	    bottom: 0;
-	}
-	
-	img{
-		vertical-align: bottom; //otherwise there's a space btn the blurb overlay and the img
-	}
-}
+// additional font size (to go with classes defined in InuitCSS /base/_headings)
+.big{
+    @include font-size($big-size);
+} 
 
 
 
 
 
 
-/** 
- * am i even using these??
- */
-.nobullet{
-	list-style: none;
-}
 
-.list--tier {
-	margin-left: 0;
-}
+
+
+
+
+
+
+
 

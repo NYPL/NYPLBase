@@ -59,7 +59,7 @@
 		<section id="typography">
 			<h2>Typography</h2>
 			<div class="guide-notes">
-				<p>NYPL's default typography is set to 16px, with a 24px line height. The heds and type size classes are set to the standard typographic scale (see Bringhurst).</p>
+				<p>NYPL's default typography is set to 16px, with a 24px line height. The heds and type size classes are set to the standard typographic scale (see Robert Bringhurst, <cite><a href="http://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style">The Elements of Typographic Style</a></cite>).</p>
 				<p>Paragraphs are set to a maximum width of 60rem, to prevent an unreadably long line.</p>
 				<p>NYPL's core web typeface is <a href="http://www.latofonts.com/">Lato</a>.</p>
 		
@@ -75,14 +75,23 @@
 			<h5>Heading 5</h5>
 			<h6>Heading 6</h6>
 			
+			<p class="guide-notes">Use the class <code>.lede</code> or <code>.lead</code> for the first graf, if you want.</p>
 			<p class="lede">Call me Ishmael. Some years ago&mdash;never mind how long precisely&mdash;having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.</p>
 
 			<p>It is a way I have of driving off the spleen and regulating the circulation. Whenever I find myself growing grim about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily pausing before coffin warehouses, and bringing up the rear of every funeral I meet; and especially whenever my hypos get such an upper hand of me, that it requires a strong moral principle to prevent me from deliberately stepping into the street, and methodically knocking people's hats off&mdash;then, I account it high time to get to sea as soon as I can.</p>
 			
-			<p><em>This is my substitute for pistol and ball.</em></p>
-			<p><strong>With a philosophical flourish Cato throws himself upon his sword; I quietly take to the ship.</strong></p>
-			
+			<p class="guide-notes">The <code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code>, and <code>&lt;blockquote&gt;</code> element default styles have been set.</p>
+			<p>This is my substitute for <em>pistol and ball</em>. With a philosophical flourish Cato <strong>throws</strong> himself upon his sword; I quietly take to the ship.</strong>
 			<blockquote>There is nothing surprising in this. If they but knew it, almost all men in their degree, some time or other, cherish very nearly the same feelings towards the ocean with me.</blockquote>
+			</p>
+			
+			
+
+
+			
+			<h2>Type styling</h2>
+			<p class="unicorns">add notes on specific uses of uppercase, bold, etc.</p>
+
 		</section>
 
 
@@ -182,8 +191,7 @@
 		
 		<section id="forms">
 			<h2>Forms</h2> 
-	
-			<p>Text-based inputs are 100% by default.</p>
+			<p class="guide-notes">Text-based inputs are 100% by default.</p>
 			
 			<h3>Form elements: examples</h3>
 			
@@ -340,7 +348,7 @@
 				<img src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
 				<img src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
 			</div>
-			<p>(Figure out square sizing)</p>
+			<p>(Derivatives are properly propotioned by Drupal)</p>
 						
 		</section>
 
@@ -349,12 +357,13 @@
 		<section id="navigational">		
 			<h2>Navigational elements</h2>	
 			
-			<p>Dropdowns: take care of this pattern in the header design ("mega-menus" design), THEN copy here?</p>
+			<h3>Dropdowns</h3>
+			<p class="warmGrayText">take care of this pattern in the header design ("mega-menus" design), THEN copy here?</p>
 
-			<p>Breadcrumbs</p>
+			<h3>Breadcrumbs</h3>
 			<div class="breadcrumb"><a href="/">Home</a> ›&nbsp;<a href="/voices" title="Blogs, Videos &amp; Publications">Blogs, Videos &amp; Publications</a> ›&nbsp;<a href="/blog" title="">Blogs</a> ›&nbsp;<a href="/voices/blogs/blog-channels" title="">Blog Channels</a></div>
 	
-			<p>Pagination</p>
+			<h3>Pagination</h3>
 			
 		   <ol class="nav pagination">
 		       <li class=pagination__first>First</li>
@@ -439,7 +448,7 @@
 
 		<section id="logo">
 			<h2>Logo</h2>
-			<p class="unicorns">update of Visual Id. Program?</p>
+			<p class="unicorns">consult with unicorns on usage rules we need here!</p>
 		</section>
 
 
@@ -447,11 +456,14 @@
 
 		<sections id="icons">
 			<h2>Icon font</h2>
-			
-			<p>This is the <a href="../fonts/icomoon/index.html">current set of supported icons</a>. We use a custom export of <a href="http://icomoon.io/">Icomoon</a>.</p>
-			
-			<p>Note to self: watch for width conflicts on elements with both a width class ("one-fifth") and an icon class or data-icon on the same element; icons have a width and height: auto setting.</p>
-			
+			<div class="guide-notes">
+				<p>This is the <a href="../fonts/icomoon/index.html">current set of supported icons</a>. We use a custom export of <a href="http://icomoon.io/">Icomoon</a>.</p>
+				
+				<p>Note to self: watch for width conflicts on elements with both a width class ("one-fifth") and an icon class or data-icon on the same element; icons have a width and height: auto setting.</p>
+			</div>
+
+
+
 			<h3>How to use the icons</h3>
 			
 			<h4>Class name</h4>
@@ -465,50 +477,40 @@
 			<pre class="code prettyprint">
 				&lt;p aria-hidden=&quot;true&quot; data-icon=&quot;&amp;#xf013;&quot;&gt;This is also some text&lt;/p&gt;
 			</pre>
+
 			
-			<h4>Mixin</h4> 
-			<p>Feel free to incorporate icons into your own styles, like this:</p>
-			<pre class="code prettyprint">
-				.custom-zoom-out:before { @include nypl-icon("-"); }
-				.custom-zoom-in:before { @include nypl-icon("+"); }
-			</pre>
 			
-			<h4>Examples</h4>
-			<h5>small = lists, toolbar items</h5>
-			<ul>
-				<li data-icon="&#xf013;">List item here</li>
-				<li class="icon-bookmark">Another item here</li>
-				<li class="icon-book">Last one</li>
-			</ul>
-		
-			<ul class="nav">
-				<li data-icon="&#xf013;">List item here</li>
-				<li class="icon-bookmark">Another item here</li>
-				<li class="icon-book">Last one</li>
-			</ul>
-			
-			<h5>med = toolbar items</h5>
-			<ul class="nav gamma">
-				<li data-icon="&#xf013;">reveal code</li>
-				<li class="icon-bookmark">save this page</li>
-				<li class="icon-book">read docs</li>
-			</ul>
-				
-			<h5>large = illo in a graf/chunk</h5>
-			<div class="grid cf">
-				<div class="grid__item one-eighth giga" aria-hidden="true" data-icon="&#xf013;"></div>
-				<p class="grid__item four-eighths gamma">Progressively administrate B2B functionalities whereas enabled deliverables.</p>
+			<h4>Sizes</h4>
+			<div class="guide-notes">
+				<p>If you simply apply either an icon class or a data-icon attribute to an element, the icon that is attached will render at the same font size as its containing element. You can add font size classes to any element to affect the size of the text.</p>
+				<p>The icon set has been exported at 16px, so they will appear smoothest at multiples of 16.</p>
 			</div>
-				
-			<h5>mega = great big overwhelming illo? use w/ caution?</h5>
-			<div class="giga" aria-hidden="true" data-icon="&#xf013;"></div>
-			
-			
-			<h5>Note on sizing</h5>
-			<p>The icon set has been exported at 16px, so they will appear smoothest at multiples of 16.</p>
-			
-			<h4>The logo</h4>
-			
+			<div>
+				<ul class="grid__item one-half chunk__list--icon">
+					<li data-icon="&#xf013;">List item here</li>
+					<li class="icon-bookmark">Another item here</li>
+					<li class="icon-book">Last one</li>
+				</ul><!--
+	
+	
+			 --><ul class="grid__item one-half nav beta">
+					<li data-icon="&#xf013;">List item here</li>
+					<li class="icon-bookmark">Another item here</li>
+					<li class="icon-book">Last one</li>
+				</ul>
+			</div>	
+
+			<div class="grid__item one-half">
+				<span class="giga" aria-hidden="true" data-icon="&#xf013;"></span>
+				<p class="grid__item four-eighths gamma">This large icon illustrates this chunk of content.</p>
+			</div>
+
+			<p class="blueNeon">jA: KEEP WORKING ON VERTICAL POSITIONING, LINE HEIGHTS (ESP ON LINE WRAPS) ON VARIOUS SIZES</p>
+
+
+
+
+			<h4>The logo icon</h4>
 			<div class="cf">
 				<div class="grid__item one-sixth giga" aria-hidden="true" data-icon="&#x4e;"></div>
 				<p class="grid__item three-sixths">This is the logo (without the "New York Public Library" text, it's referred to as the "lion mark"), conveniently available as part of our icon font! Because it's an icon font, changing the color of the lion mark is as easy as applying a text color.</p>
@@ -528,14 +530,9 @@
 				</div>
 				<div class="grid__item one-whole giga whiteText black" aria-hidden="true" data-icon="&#x57;">See? clever!</div>
 			</div>		
+			
+			
 		</sections>
-		
-
-		<section id="type-styling">
-			<h2>Type styling</h2>
-			<p class="unicorns">add notes on specific uses of uppercase, bold, etc.</p>
-		</section>
-		
 		
 		
 		
@@ -546,26 +543,24 @@
 	<!-- end page -->
 	</div>
 
-<!-- for styling the code snippets 
-	NOTE: it doesn't escape tags!!! gotta convert to entities :(
-	Here's a good tool: http://www.accessify.com/tools-and-wizards/developer-tools/quick-escape/default.php
--->	
-<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>	
-
-
-
 <!--
-<div>
-	<h2>Acknowledgements</h2>
-	<p>I owe being able to conceive of a distributable rapid prototyping system (RaProSys?) to <a href="http://twitter.com/mdo">Mark Otto</a> and <a href="http://twitter.com/fat">Jacob Thornton</a>, makers of <a href="http://getbootstrap.com/">Bootstrap</a>.</p>
-	<p>Massive amounts to Harry Roberts and his css wizardry for creating Inuit; I stand on his beefy shoulders and no mistake.</p>
-	<p>Also major thanks to <a href="http://github.com/beefoo">Brian Foo</a>, whose <a href="https://drrstyleguide.herokuapp.com/">DRR Bootstrap</a> (maintained by <a href="http://www.nypl.org/collections/labs">NYPL Labs</a>) provided a great starting point. Also, BFoo taught me more than a few sassy Sass tricks.</p>
-	<p>Finally to Sean Redmond, who gave me room to do this exactly how I wanted, and never made me feel bad for not knowing all my command line commands.</p>
-</div>
+	<div>
+		<h2>Acknowledgements</h2>
+		<p>I owe being able to even <em>conceive</em> of a distributable rapid prototyping system (RaProSys?) to <a href="http://twitter.com/mdo">Mark Otto</a> and <a href="http://twitter.com/fat">Jacob Thornton</a>, makers of <a href="http://getbootstrap.com/">Bootstrap</a>.</p>
+		<p>Massive amounts to Harry Roberts and his css wizardry for creating Inuit; I stand on his beefy shoulders and no mistake.</p>
+		<p>Also major thanks to <a href="http://github.com/beefoo">Brian Foo</a>, whose <a href="https://drrstyleguide.herokuapp.com/">DRR Bootstrap</a> (maintained by <a href="http://www.nypl.org/collections/labs">NYPL Labs</a>) provided a great starting point. Also, BFoo taught me more than a few sassy Sass tricks.</p>
+		<p>Finally to Sean Redmond, who gave me room to do this exactly how I wanted, and never made me feel bad for not knowing all my command line commands.</p>
+	</div>
 -->
 
 
 <footer></footer>
+
+<!--Script for styling the code snippets 
+				NOTE: it doesn't escape tags!!! gotta convert to entities :(
+				Here's a good tool: http://www.accessify.com/tools-and-wizards/developer-tools/quick-escape/default.php
+-->	
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>	
 
 
 </body></html>
