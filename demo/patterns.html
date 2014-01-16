@@ -12,12 +12,11 @@
 
 <body class="grid">
 
-<div class="grid__item one-whole">
-
-	<h1>NYPL Design Patterns</h1>
-
-	<p>(Note to self: test patterns using light text on dark bg)</p>
+	<header class="grid__item one-whole">
+		<h1>NYPL Design Patterns</h1>
 	
+		<p>(Note to self: test patterns using light text on dark bg)</p>
+	</header>
 	
 	
 <!-- from Inuit /generic/widths
@@ -103,6 +102,7 @@ MEDIA OBJECT: use in tier patterns? (this variable is set to true for now)
 <p></p>
 -->
 
+<!--
 
 	<h2 class="blueLight">PATTERN: LG IMG W/ TEXT OVERLAY</h2>
 
@@ -114,48 +114,155 @@ MEDIA OBJECT: use in tier patterns? (this variable is set to true for now)
 		</div>
 		<a href=""><img class="one-whole" src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="example image"></a>
 	</div>
+-->
 
 
+<!--
+****************
+PRIMARY PATTERNS
+****************
+-->
 
 
+<section class="primary grid--center">
 
-	<h2 class="blueLight">PATTERN: LG IMG W/ HED, DESC</h2>
-
-	<div class="grid__item ">
+<!-- IMG + HED, BLURB, CALLOUT, CALLTOACTION -->
+	<div class="grid__item chunk">
 		<img class="one-whole" src="../img/demo/nyplphotobooth_jA_orig.jpg">
-		<h2>Title</h2>
-		<p>description</p>
+		<h2><a href="">Title of This Article: It Could Be a Blog Post, or Even an Exhibition</a></h2
+		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+		<p class="callout">
+			<span class="location">Stephen A. Schwarzman Building</span>
+			<span class="date">Thursday, January 16, 4:00pm</span>
+		</p>
+		<button class="gradient btn--full">Sign up</button>
+	</div>
+
+
+
+
+<!-- **TURNS TO OVERLAY** IMG + HED, BLURB, CALLOUT, CALLTOACTION-->
+
+
+
+
+
+
+
+<!-- **TURNS TO HALF/HALF** IMG + HED, BLURB, CALLOUT, CALLTOACTION -->
+	<div class="grid__item chunk">
+		<img class=" one-whole desk-one-half" src="../img/demo/nyplphotobooth_jA_orig.jpg"><!--
+
+		
+--><h2 class="grid__item desk-one-half"><a href="">Title of This Article: It Could Be a Blog Post, or Even an Exhibition</a></h2>
+		
+		<p class="grid__item desk-one-half">The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p><!--
+
+		
+--><p class="grid__item desk-one-half callout">
+			<span class="location">Stephen A. Schwarzman Building</span>
+			<span class="date">Thursday, January 16, 4:00pm</span>
+		</p>
+		
+		<button class="gradient btn--full grid__item desk-one-half">Sign up</button>
+	</div>
+
+
+
+
+
+
+<!-- JUST HED, BLURB, CALLOUT, CALLTOACTION-->
+	<div class="grid__item chunk">
+		<h2 class=""><a href="">Title of This Article: It Could Be a Blog Post, or Even an Exhibition</a></h2>
+		
+		<p class="grid__item desk-one-half">The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p><!--
+
+		
+--><p class="grid__item desk-one-half callout">
+			<span class="location">Stephen A. Schwarzman Building</span>
+			<span class="date">Thursday, January 16, 4:00pm</span>
+		</p>
+		
+		<button class="gradient btn--full grid__item desk-one-half">Sign up</button>
+	</div>
+
+
+
+
+
+
+
+
+<!-- 3 LG ICONS -->
+	<div class="chunk">
+		<div class="grid__item one-whole desk-one-third beta icon-size-kilo" data-icon="&#xf013;">Get a Library Card Today</div><!--
+	
+		
+	--><div class="grid__item one-whole desk-one-third beta icon-size-kilo" data-icon="&#xf013;">Get a Library Card Today</div><!--
+	
+		
+	--><div class="grid__item one-whole desk-one-third beta icon-size-kilo" data-icon="&#xf013;">Get a Library Card Today</div>
+	</div>
+
+
+
+
+
+<!-- 3 LG BUTTONS -->
+	<div class="chunk">
+		<button class="gradient btn--full desk-one-third">Get a Library Card Today</button><!--
+
+		
+	--><button class="gradient btn--full desk-one-third">Get a Library Card Today</button><!--
+	
+			
+	--><button class="gradient btn--full desk-one-third">Get a Library Card Today</button>	
+	</div>	
+	
+	
+		
+</section>
+
+
+
+
+
+<!--
+****************
+SECONDARY PATTERNS
+****************
+-->
+<section class="secondary">
+
+	<div class="grid__item desk-one-half chunk">
+		<img class="one-whole" src="../img/demo/nyplphotobooth_jA_orig.jpg">
+		<h2><a href="">Title of This Article: It Could Be a Blog Post, or Even an Exhibition</a></h2
+		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+		<p class="callout">
+			<span class="location">Stephen A. Schwarzman Building</span>
+			<span class="date">Thursday, January 16, 4:00pm</span>
+		</p>
+		<button>Sign up</button>
+	</div><!--
+
+
+	
+--><div class="grid__item desk-one-half chunk">
+		<img class="one-whole" src="../img/demo/nyplphotobooth_jA_orig.jpg">
+		<h2><a href="">Title of This Article: It Could Be a Blog Post, or Even an Exhibition</a></h2
+		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+		<p class="callout">
+			<span class="location">Stephen A. Schwarzman Building</span>
+			<span class="date">Thursday, January 16, 4:00pm</span>
+		</p>
 		<button>Sign up</button>
 	</div>
 
+</section>
 
 
-
-		
- 	<h2 class="blueLight">PATTERN: LG IMG W/ TEXT ON RIGHT OR LEFT</h2>
- 	
-	<div class="one-whole">
-		<div class="grid__item one-half" >
-			<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
-			<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
-			<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
-			<p><a href="">About this exhibition</a></p>
-		</div><!--
-		
-	--><a href=""><img class="grid__item one-half" src="../img/demo/nyplphotobooth_jA_orig.jpg"></a>	
 	
-	</div>
-	
-	<div class="one-whole">
-		<a href=""><img class="grid__item one-half" src="../img/demo/nyplphotobooth_jA_orig.jpg"></a><!--
-		
-	--><div class="grid__item one-half" >
-			<a href=""><h2>Title of This Article: It Could Be a Blog Post, or Even an Exhibition</h2></a>
-			<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
-			<p class="whenwhere">From April 1 through November 30, Stephen A. Schwarzman Building</p>
-			<p><a href="">About this exhibition</a></p>
-		</div>
-	</div>
 	
 	
 	
@@ -503,8 +610,7 @@ MEDIA OBJECT: use in tier patterns? (this variable is set to true for now)
 	
 
 	
-	
-</div>
+
 
 </body>
 

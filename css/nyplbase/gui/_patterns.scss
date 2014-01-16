@@ -46,28 +46,59 @@
 /*------------------------------------*\
     Chunks are contained by TIERS
 \*------------------------------------*/
-	/**
-	 * I imagine the Tier styles are going to use the RWD width classes?
-	 * as in
-	   
-	   .secondary > .chunk 
-	   
-	 * extends 
-	    
-	   .one-half .palm-one-whole
-	 */
-	 
-.primary{
+
+					/**
+					 * I imagine the Tier styles are going to use the RWD width classes?
+					 * as in
+					   
+					   .secondary > .chunk 
+					   
+					 * extends 
+					    
+					   .one-half .palm-one-whole
+					 */
+					 
+					.primary{
+						
+					}
+					
+					.secondary{
+						
+					}
+					
+					.tertiary{
+						
+					}
+
+
+
+/** OVERLAY: primary tier pattern
+ *  feature chunk with blurb overlaid onto image
+ */
+.overlay{
+	position: relative;
 	
+	.blurb{
+	    background: rgba($warmGray, .3);
+	    padding: $half-spacing-unit;
+		position: absolute;
+	    bottom: 0;
+	}
+	
+	img{
+		vertical-align: bottom; //otherwise there's a space btn the blurb overlay and the img
+	}
 }
 
-.secondary{
-	
+
+.icon-size-kilo{
+	&:before{
+		@extend .kilo;
+		display: block;
+		text-align: center;
+	}
 }
 
-.tertiary{
-	
-}
 
 /**
  * Some "tiers" of content need a category/tag as a heading above them.
@@ -85,6 +116,14 @@
 /*------------------------------------*\
     Chunks that are CHUNKS
 \*------------------------------------*/
+.chunk{
+	margin-bottom: $base-spacing-unit;
+	
+	img {
+		@extend .img--outline;
+	}
+}
+
 /**
  * Chunks of text that has a large icon illustrating it.
  */
@@ -112,6 +151,10 @@
 }
 
 
+
+/*------------------------------------*\
+    Chunks that are CONTEXT-SPECIAL
+\*------------------------------------*/
 /**
  * "Bricks" pattern is currently being used on the home page
  * to feature current events and promoted items.
@@ -126,43 +169,4 @@
 
 
 
-
-
-
-
-/** OVERLAY: primary tier pattern
-
- *  feature chunk with blurb overlaid onto image
-
- */
-.overlay{
-	position: relative;
-	
-	.blurb{
-	    background: rgba($warmGray, .3);
-	    padding: $half-spacing-unit;
-		position: absolute;
-	    bottom: 0;
-	}
-	
-	img{
-		vertical-align: bottom; //otherwise there's a space btn the blurb overlay and the img
-	}
-}
-
-
-
-
-
-
-/** 
- * am i even using these??
- */
-.nobullet{
-	list-style: none;
-}
-
-.list--tier {
-	margin-left: 0;
-}
 

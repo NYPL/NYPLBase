@@ -67,6 +67,9 @@ p{
     @include font-size($big-size);
 } 
 
+.callout{
+	@include callout-box($base-ui-color, $warmGrayLighter);
+}
 
 
 
