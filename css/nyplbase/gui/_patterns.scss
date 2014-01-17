@@ -72,25 +72,10 @@
 
 
 
-/** OVERLAY: primary tier pattern
- *  feature chunk with blurb overlaid onto image
+
+/**
+ * Experimenting w/ icon size vs. containing text size
  */
-.overlay{
-	position: relative;
-	
-	.blurb{
-	    background: rgba($warmGray, .3);
-	    padding: $half-spacing-unit;
-		position: absolute;
-	    bottom: 0;
-	}
-	
-	img{
-		vertical-align: bottom; //otherwise there's a space btn the blurb overlay and the img
-	}
-}
-
-
 .icon-size-kilo{
 	&:before{
 		@extend .kilo;
@@ -118,6 +103,7 @@
 \*------------------------------------*/
 .chunk{
 	margin-bottom: $base-spacing-unit;
+	position: relative;
 	
 	img {
 		@extend .img--outline;
