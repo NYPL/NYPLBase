@@ -10,7 +10,7 @@
     
 </head>
 
-<body class="grid">
+<body class="grid--center">
 
 	<header class="grid__item one-whole">
 		<h1>NYPL Design Patterns</h1>
@@ -114,47 +114,41 @@ PRIMARY PATTERNS
 -->
 
 
-<section class="primary grid--center">
+<section class="primary grid__item">
+
 	<h1>Primary patterns</h1>
 
-<!-- IMG + HED, BLURB, CALLOUT, CALLTOACTION -->
+<!-- FULL WIDTH IMG + HED, BLURB, CALLOUT, CALLTOACTION -->
+
+<!-- .primary .chunk -->
+
 	<div class="grid__item chunk">
+	
 		<img class="one-whole" src="../img/demo/nyplphotobooth_jA_orig.jpg" />
-		<h2><a href="">Title of This Primary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2>
-		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
-		<p class="callout">
+		
+		<h2><a href="">Topmost Primary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2>
+		
+		<p class="grid__item desk-one-half">The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p><!--
+		
+		--><p class="grid__item desk-one-half callout">
 			<span class="location">Stephen A. Schwarzman Building</span>
 			<span class="date">Thursday, January 16, 4:00pm</span>
 		</p>
-		<button class="gradient btn--full">Sign up</button>
+		
+		<button class="gradient one-half">Sign up</button>
+		
 	</div>
 
 
 
 
-<!-- **TURNS TO OVERLAY** IMG + HED, BLURB, CALLOUT, CALLTOACTION-->
+<!-- FULL WIDTH IMG + HED, BLURB, CALLOUT, CALLTOACTION: DESK = HALFS -->
 
-<!--
-	<div class="grid__item chunk overlay">
-		<img class="one-whole" src="../img/demo/nyplphotobooth_jA_orig.jpg" />
-		<h2><a href="">Title of This Primary Tier Article, Which is Contained in an Overlay</a></h2>
-		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
-		<p class="callout">
-			<span class="location">Stephen A. Schwarzman Building</span>
-			<span class="date">Thursday, January 16, 4:00pm</span>
-		</p>
-		<button class="gradient btn--full">Sign up</button>
-	</div>
--->
+<!-- .primary .chunk--half -->
 
-
-
-
-
-<!-- **TURNS TO HALF/HALF** IMG + HED, BLURB, CALLOUT, CALLTOACTION -->
 	<div class="grid__item chunk">
 		<img class="one-whole desk-one-half" src="../img/demo/nyplphotobooth_jA_orig.jpg" /><!--
-		--><h2 class="grid__item desk-one-half"><a href="">Title of This Primary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2>
+		--><h2 class="grid__item desk-one-half"><a href="">Primary Tier Article, Which Goes Halvsies in Desktop Context: It Could Be a Blog Post, or Even an Exhibition</a></h2>
 
 		<p class="grid__item desk-one-half">The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p><!--
 		--><p class="grid__item desk-one-half callout">
@@ -168,9 +162,12 @@ PRIMARY PATTERNS
 
 
 
-<!-- JUST HED, BLURB, CALLOUT, CALLTOACTION-->
+<!-- HED, BLURB, CALLOUT, CALLTOACTION-->
+
+<!-- .primary .chunk (same as the first one, just doesn't have an img) -->
+
 	<div class="grid__item chunk">
-		<h2 class=""><a href="">Title of This Primary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2>
+		<h2 class=""><a href="">Image-free Primary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2>
 		
 		<p class="grid__item desk-one-half">The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p><!--
 		--><p class="grid__item desk-one-half callout">
@@ -185,19 +182,25 @@ PRIMARY PATTERNS
 
 
 <!-- 3 LG ICONS -->
-	<div class="chunk">
-		<div class="grid__item one-whole desk-one-third beta icon-size-kilo" data-icon="&#xf013;">Get a Library Card Today</div><!--
 
-	--><div class="grid__item one-whole desk-one-third beta icon-size-kilo" data-icon="&#xf013;">Get a Library Card Today</div><!--
+<!-- .primary .chunk--icons -->
+
+	<div class="grid--center chunk">
+		<div class="grid__item one-whole desk-one-third beta icon-size-kilo" data-icon="&#xe690;">Get a Library Card Today</div><!--
+
+	--><div class="grid__item one-whole desk-one-third beta icon-size-kilo" data-icon="&#xe690;">Get a Library Card Today</div><!--
 		
-	--><div class="grid__item one-whole desk-one-third beta icon-size-kilo" data-icon="&#xf013;">Get a Library Card Today</div>
+	--><div class="grid__item one-whole desk-one-third beta icon-size-kilo" data-icon="&#xe690;">Get a Library Card Today</div>
 	</div>
 	
 
 
 
 <!-- 3 LG BUTTONS -->
-	<div class="chunk">
+
+<!-- .primary .chunk--buttons -->
+
+	<div class="grid__item chunk">
 		<button class="gradient btn--full desk-one-third">Get a Library Card Today</button><!--
 	
 	--><button class="gradient btn--full desk-one-third">Get a Library Card Today</button><!--
@@ -215,19 +218,23 @@ PRIMARY PATTERNS
 
 <!--
 ****************
-SECONDARY PATTERNS
+SECONDARY & TERTIARY PATTERNS
 ****************
 -->
-<section class="secondary grid--center">
-	<h1>Secondary patterns</h1>
+<section class="secondary grid__item">
+
+	<h1>Secondary & Tertiary patterns</h1>
 
 
 
 
 <!-- IMG + HED, BLURB, CALLOUT, CALLTOACTION -->
+
+<!-- .secondary .chunk -->
+
 	<div class="grid__item chunk">
 		<img class="one-whole desk-one-half" src="../img/demo/nyplphotobooth_jA_orig.jpg" /><!--
-		--><h2 class="grid__item desk-one-half"><a href="">Title of This Secondary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2><!--
+		--><h2 class="grid__item desk-one-half"><a href="">Secondary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2><!--
 		--><p class="grid__item desk-one-half">The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 		<p class="callout">
 			<span class="location">Stephen A. Schwarzman Building</span>
@@ -241,9 +248,12 @@ SECONDARY PATTERNS
 
 
 <!-- 2 CHUNKS NEXT TO EACH OTHER -->
+
+<!-- .secondary .chunk--half -->
+
 	<div class="grid__item desk-one-half chunk">
 		<img class="one-whole" src="../img/demo/nyplphotobooth_jA_orig.jpg" />
-		<h2><a href="">Title of This Secondary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2>
+		<h2><a href="">Secondary Tier Article, Which Divides the Space with its Mate: It Could Be a Blog Post, or Even an Exhibition</a></h2>
 		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 		<p class="callout">
 			<span class="location">Stephen A. Schwarzman Building</span>
@@ -254,7 +264,7 @@ SECONDARY PATTERNS
 
 --><div class="grid__item desk-one-half chunk">
 		<img class="one-whole" src="../img/demo/nyplphotobooth_jA_orig.jpg" />
-		<h2><a href="">Title of This Secondary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2>
+		<h2><a href="">Secondary Tier Article, Which Divides the Space with its Mate: It Could Be a Blog Post, or Even an Exhibition</a></h2>
 		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 		<p class="callout">
 			<span class="location">Stephen A. Schwarzman Building</span>
@@ -268,9 +278,12 @@ SECONDARY PATTERNS
 
 
 <!-- 3 CHUNKS NEXT TO EACH OTHER -->
+
+<!-- .secondary .chunk--third -->
+
 	<div class="grid__item desk-one-third chunk">
 		<img class="one-whole" src="../img/demo/nyplphotobooth_jA_orig.jpg" />
-		<h2><a href="">Title of This Secondary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2>
+		<h2><a href="">Secondary Tier Article, Which Goes Three Across: It Could Be a Blog Post, or Even an Exhibition</a></h2>
 		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 		<p class="callout">
 			<span class="location">Stephen A. Schwarzman Building</span>
@@ -281,7 +294,7 @@ SECONDARY PATTERNS
 
 --><div class="grid__item desk-one-third chunk">
 		<img class="one-whole" src="../img/demo/nyplphotobooth_jA_orig.jpg" />
-		<h2><a href="">Title of This Secondary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2>
+		<h2><a href="">Secondary Tier Article, Which Goes Three Across: It Could Be a Blog Post, or Even an Exhibition</a></h2>
 		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 		<p class="callout">
 			<span class="location">Stephen A. Schwarzman Building</span>
@@ -292,7 +305,7 @@ SECONDARY PATTERNS
 
 --><div class="grid__item desk-one-third chunk">
 		<img class="one-whole" src="../img/demo/nyplphotobooth_jA_orig.jpg" />
-		<h2><a href="">Title of This Secondary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2>
+		<h2><a href="">Title of This Secondary Tier Article, Which Goes Three Across: It Could Be a Blog Post, or Even an Exhibition</a></h2>
 		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 		<p class="callout">
 			<span class="location">Stephen A. Schwarzman Building</span>
@@ -305,11 +318,15 @@ SECONDARY PATTERNS
 
 
 
+
 <!-- 2 CHUNKS NEXT TO EACH OTHER, SM IMG -->
+
+<!-- .secondary .chunk--half -->
+
 	<div class="grid__item desk-one-half chunk">
-		<span class="grid__item one-whole hdg">Featured Blog</span>
+		<h4 class="hdg">Featured Blog</h4>
 		<img class="one-whole desk-one-third" src="../img/demo/nyplphotobooth_jA_orig.jpg" /><!--
-		--><h2 class="grid__item desk-two-thirds"><a href="">Title of This Secondary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2>
+		--><h2 class="grid__item desk-two-thirds"><a href="">Two Across with Small Image: It Could Be a Blog Post, or Even an Exhibition</a></h2>
 		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 		<p class="callout">
 			<span class="location">Stephen A. Schwarzman Building</span>
@@ -319,9 +336,9 @@ SECONDARY PATTERNS
 	</div><!--
 
 --><div class="grid__item desk-one-half chunk">
-		<span class="grid__item one-whole hdg">Featured Blog</span>
+		<h4 class="hdg">Featured Blog</h4>
 		<img class="one-whole desk-one-third" src="../img/demo/nyplphotobooth_jA_orig.jpg" /><!--
-		--><h2 class="grid__item desk-two-thirds"><a href="">Title of This Secondary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2>
+		--><h2 class="grid__item desk-two-thirds"><a href="">Two Across with Small Image: It Could Be a Blog Post, or Even an Exhibition</a></h2>
 		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 		<p class="callout">
 			<span class="location">Stephen A. Schwarzman Building</span>
@@ -336,10 +353,13 @@ SECONDARY PATTERNS
 
 
 <!-- 3 CHUNKS NEXT TO EACH OTHER, SM IMG -->
+
+<!-- .secondary .chunk--third -->
+
 	<div class="grid__item desk-one-third chunk">
-		<span class="grid__item one-whole hdg">Featured Blog</span>
+		<h4 class="hdg">Featured Blog</h4>
 		<img class="one-whole desk-one-third" src="../img/demo/nyplphotobooth_jA_orig.jpg" /><!--
-		--><h2 class="grid__item desk-two-thirds"><a href="">Title of This Secondary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2>
+		--><h2 class="grid__item desk-two-thirds"><a href="">Three Across with Small Image: It Could Be a Blog Post, or Even an Exhibition</a></h2>
 		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 		<p class="callout">
 			<span class="location">Stephen A. Schwarzman Building</span>
@@ -349,9 +369,9 @@ SECONDARY PATTERNS
 	</div><!--
 
 --><div class="grid__item desk-one-third chunk">
-		<span class="grid__item one-whole hdg">Featured Blog</span>
+		<h4 class="hdg">Featured Blog</h4>
 		<img class="one-whole desk-one-third" src="../img/demo/nyplphotobooth_jA_orig.jpg" /><!--
-		--><h2 class="grid__item desk-two-thirds"><a href="">Title of This Secondary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2>
+		--><h2 class="grid__item desk-two-thirds"><a href="">Three Across with Small Image: It Could Be a Blog Post, or Even an Exhibition</a></h2>
 		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 		<p class="callout">
 			<span class="location">Stephen A. Schwarzman Building</span>
@@ -361,9 +381,9 @@ SECONDARY PATTERNS
 	</div><!--
 
 --><div class="grid__item desk-one-third chunk">
-		<span class="grid__item one-whole hdg">Featured Blog</span>
+		<h4 class="hdg">Featured Blog</h4>
 		<img class="one-whole desk-one-third" src="../img/demo/nyplphotobooth_jA_orig.jpg" /><!--
-		--><h2 class="grid__item desk-two-thirds"><a href="">Title of This Secondary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2>
+		--><h2 class="grid__item desk-two-thirds"><a href="">Three Across with Small Image: It Could Be a Blog Post, or Even an Exhibition</a></h2>
 		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 		<p class="callout">
 			<span class="location">Stephen A. Schwarzman Building</span>
@@ -378,10 +398,13 @@ SECONDARY PATTERNS
 
 
 <!-- 2 CHUNKS NEXT TO EACH OTHER, JUST HED -->
-	<span class="grid__item one-whole hdg">Featured Blog</span>
+
+<!-- .secondary .chunk--half -->
+
+	<h4 class="hdg">Featured Blog</h4>
 	
 	<div class="grid__item desk-one-half chunk">
-		<h2 class="grid__item one-whole"><a href="">Title of This Secondary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2>
+		<h2 class="grid__item one-whole"><a href="">Image-free Secondary Tier Article, Which Divides the Space with its Mate: It Could Be a Blog Post, or Even an Exhibition</a></h2>
 		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 		<p class="callout">
 			<span class="location">Stephen A. Schwarzman Building</span>
@@ -391,7 +414,7 @@ SECONDARY PATTERNS
 	</div><!--
 
 --><div class="grid__item desk-one-half chunk">
-		<h2 class="grid__item one-whole"><a href="">Title of This Secondary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2>
+		<h2 class="grid__item one-whole"><a href="">Image-free Secondary Tier Article, Which Divides the Space with its Mate: It Could Be a Blog Post, or Even an Exhibition</a></h2>
 		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 		<p class="callout">
 			<span class="location">Stephen A. Schwarzman Building</span>
@@ -405,10 +428,13 @@ SECONDARY PATTERNS
 
 
 <!-- 3 CHUNKS NEXT TO EACH OTHER, JUST HED -->
-	<span class="grid__item one-whole hdg">Featured Blog</span>
+
+<!-- .secondary .chunk--third -->
+
+	<h4 class="hdg">Featured Blog</h4>
 	
 	<div class="grid__item desk-one-third chunk">
-		<h2 class="grid__item one-whole"><a href="">Title of This Secondary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2>
+		<h2 class="grid__item one-whole"><a href="">Image-free Secondary Tier Article, Which Goes Three Across: It Could Be a Blog Post, or Even an Exhibition</a></h2>
 		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 		<p class="callout">
 			<span class="location">Stephen A. Schwarzman Building</span>
@@ -418,7 +444,7 @@ SECONDARY PATTERNS
 	</div><!--
 
 --><div class="grid__item desk-one-third chunk">
-		<h2 class="grid__item one-whole"><a href="">Title of This Secondary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2>
+		<h2 class="grid__item one-whole"><a href="">Image-free Secondary Tier Article, Which Goes Three Across: It Could Be a Blog Post, or Even an Exhibition</a></h2>
 		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 		<p class="callout">
 			<span class="location">Stephen A. Schwarzman Building</span>
@@ -428,7 +454,7 @@ SECONDARY PATTERNS
 	</div><!--
 
 --><div class="grid__item desk-one-third chunk">
-		<h2 class="grid__item one-whole"><a href="">Title of This Secondary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2>
+		<h2 class="grid__item one-whole"><a href="">Image-free Secondary Tier Article, Which Goes Three Across: It Could Be a Blog Post, or Even an Exhibition</a></h2>
 		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 		<p class="callout">
 			<span class="location">Stephen A. Schwarzman Building</span>
@@ -440,105 +466,256 @@ SECONDARY PATTERNS
 
 
 
+
+
 <!-- 2 LG ICONS -->
-	<div class="chunk">
-		<div class="grid__item one-whole desk-one-half beta icon-size-kilo" data-icon="&#xf013;">Get a Library Card Today</div><!--
 
-	--><div class="grid__item one-whole desk-one-half beta icon-size-kilo" data-icon="&#xf013;">Get a Library Card Today</div>
+<!-- .secondary .chunk--icons -->
+
+	<div class="chunk grid--center">
+		<div class="grid__item one-whole desk-one-half beta icon-size-kilo" data-icon="&#xe690;">Get a Library Card Today</div><!--
+
+	--><div class="grid__item one-whole desk-one-half beta icon-size-kilo" data-icon="&#xe690;">Get a Library Card Today</div>
 	</div>
-	
 
 
 
-<!-- TEXT CHUNKS WITH ICONS -->
+
+
+<!-- TEXT CHUNKS WITH IMAGES -->
+
+					<!--
+					NOTE TO SELF:
+					
+					AT THE MOMENT THIS PATTERN IS ONLY IN USE ON THE /SUPPORT/MEMBERSHIP PAGE
+					BUT THAT DOESN'T MEAN IT WON'T BE USEFUL SOMEWHERE ELSE
+					-->
+
+<!-- .secondary .chunk__list -->
+
 	<div class="chunk">
-		<ul>
-			<li></li>
+		<ul class="nobullet">
+			<li>
+			    <a href=""><img class="one-fifth" src="../img/demo/nyplphotobooth_jA_orig.jpg"></a><!--
+			    --><div class="grid__item four-fifths">
+			        <p><a href="/support/membership/friends-library">Friends</a></p>
+				    <p class="membership-level">$25 - $1,499</p>
+				    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
+				    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
+			    </div>
+			</li>
+			
+			<li>
+			    <a href=""><img class="one-fifth" src="../img/demo/nyplphotobooth_jA_orig.jpg"></a><!--
+			    --><div class="grid__item four-fifths">
+			        <p><a href="/support/membership/friends-library">Friends</a></p>
+				    <p class="membership-level">$25 - $1,499</p>
+				    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
+				    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
+			    </div>
+			</li>
+			
+			<li>
+			    <a href=""><img class="one-fifth" src="../img/demo/nyplphotobooth_jA_orig.jpg"></a><!--
+			    --><div class="grid__item four-fifths">
+			        <p><a href="/support/membership/friends-library">Friends</a></p>
+				    <p class="membership-level">$25 - $1,499</p>
+				    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
+				    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
+			    </div>
+			</li>
+			
+			<li>
+			    <a href=""><img class="one-fifth" src="../img/demo/nyplphotobooth_jA_orig.jpg"></a><!--
+			    --><div class="grid__item four-fifths">
+			        <p><a href="/support/membership/friends-library">Friends</a></p>
+				    <p class="membership-level">$25 - $1,499</p>
+				    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
+				    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
+			    </div>
+			</li>
+			
+			<li>
+			    <a href=""><img class="one-fifth" src="../img/demo/nyplphotobooth_jA_orig.jpg"></a><!--
+			    --><div class="grid__item four-fifths">
+			        <p><a href="/support/membership/friends-library">Friends</a></p>
+				    <p class="membership-level">$25 - $1,499</p>
+				    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
+				    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
+			    </div>
+			</li>
 		</ul>
 	</div>
-
+	
 
 </section>
 
 
-	
-	
-	
-	
-	
-	
-	
-	
-	<h2 class="blueLight">PATTERN: TEXT CHUNKS w/ THUMBNAILS</h2>
-	<ul class="nobullet displaylist">
-	    <li class="feature-friends">
-		    <a href=""><img class="grid__item one-fifth" src="../img/demo/nyplphotobooth_jA_orig.jpg"></a><!--
-	
-		    
-	--><div class="grid__item four-fifths">
-		        <p><a href="/support/membership/friends-library">Friends</a></p>
-			    <p class="membership-level">$25 - $1,499</p>
-			    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
-			    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
-		    </div>
-	    </li>
-	    
-	    <li class="feature-friends">
-		    <a href=""><img class="grid__item one-fifth" src="../img/demo/nyplphotobooth_jA_orig.jpg"></a><!--
-	
-		    
-	--><div class="grid__item four-fifths">
-		        <p><a href="/support/membership/friends-library">Friends</a></p>
-			    <p class="membership-level">$25 - $1,499</p>
-			    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
-			    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
-		    </div>
-	    </li>
-	        
-	    <li class="feature-friends">
-		    <a href=""><img class="grid__item one-fifth" src="../img/demo/nyplphotobooth_jA_orig.jpg"></a><!--
-	
-		    
-	--><div class="grid__item four-fifths">
-		        <p><a href="/support/membership/friends-library">Friends</a></p>
-			    <p class="membership-level">$25 - $1,499</p>
-			    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
-			    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
-		    </div>
-	    </li>    
-	
-	    <li class="feature-friends">
-		    <a href=""><img class="grid__item one-fifth" src="../img/demo/nyplphotobooth_jA_orig.jpg"></a><!--
-	
-		    
-	--><div class="grid__item four-fifths">
-		        <p><a href="/support/membership/friends-library">Friends</a></p>
-			    <p class="membership-level">$25 - $1,499</p>
-			    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
-			    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
-		    </div>
-	    </li>
-	        
-	    <li class="feature-friends">
-		    <a href=""><img class="grid__item one-fifth" src="../img/demo/nyplphotobooth_jA_orig.jpg"></a><!--
-	
-		    
-	--><div class="grid__item four-fifths">
-		        <p><a href="/support/membership/friends-library">Friends</a></p>
-			    <p class="membership-level">$25 - $1,499</p>
-			    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
-			    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
-		    </div>
-	    </li>    
-	    
-	</ul>
 
+<!--
+****************
+MOSTLY TERTIARY PATTERNS. MOSTLY.
+****************
+-->
+<section class="tertiary grid__item">
+	<h1>Mostly Tertiary patterns</h1>
+
+
+
+
+
+<!-- PATTERN: TEXT LIST W/ ICONS -->
+
+<!-- .tertiary .chunk__list--icon -->
+
+	<div class="grid__item one-whole">
 	
+		<h4 class="hdg">Text List with Icons</h4>
+		
+		<ul class="chunk__list--icon grid__item one-quarter">
+		    <li data-icon="&#xe65a;"><a href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
+		    </li>
+		    
+		    <li data-icon="&#xe65a;"><a href="http://digitalgallery.nypl.org/nypldigital/index.cfm">LGBT Special Libraries and Museums</a>
+		    </li>
+		    
+		    <li data-icon="&#xe65a;"><a href="collections/labs">Booktalking "Tessa Masterson Will Go to the Prom" by Emily Franklin &amp; Brendan Halpin</a>
+		    </li>
+		    
+		    <li class="last" data-icon="&#xe65a;"><a href="online_projects">VITO: The Life of Gay Activist Vito Russo</a>
+		    </li>
+		</ul>
+		<ul class="chunk__list--icon grid__item one-quarter">
+		    <li data-icon="&#xe65a;"><a href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
+		    </li>
+		    
+		    <li data-icon="&#xe65a;"><a href="http://digitalgallery.nypl.org/nypldigital/index.cfm">LGBT Special Libraries and Museums</a>
+		    </li>
+		    
+		    <li data-icon="&#xe65a;"><a href="collections/labs">Booktalking "Tessa Masterson Will Go to the Prom" by Emily Franklin &amp; Brendan Halpin</a>
+		    </li>
+		    
+		    <li class="last" data-icon="&#xe65a;"><a href="online_projects">VITO: The Life of Gay Activist Vito Russo</a>
+		    </li>
+		</ul>
+		<ul class="chunk__list--icon grid__item one-quarter">
+		    <li data-icon="&#xe65a;"><a href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
+		    </li>
+		    
+		    <li data-icon="&#xe65a;"><a href="http://digitalgallery.nypl.org/nypldigital/index.cfm">LGBT Special Libraries and Museums</a>
+		    </li>
+		    
+		    <li data-icon="&#xe65a;"><a href="collections/labs">Booktalking "Tessa Masterson Will Go to the Prom" by Emily Franklin &amp; Brendan Halpin</a>
+		    </li>
+		    
+		    <li class="last" data-icon="&#xe65a;"><a href="online_projects">VITO: The Life of Gay Activist Vito Russo</a>
+		    </li>
+		</ul>
+		
+	</div>
+
+
+
+
+
+<!-- PATTERN: TEXT LIST-->
+
+<!-- .tertiary .chunk__list -->
+
+	<div class="grid__item one-whole">
 	
- 	<h2 class="blueLight">PATTERN: TEXT CHUNKS w/ ICONS</h2>
-	<div class="TG-4">
-		<h4 class="hdg">Collections</h4>
-		<ul class="grid__item one-quarter nobullet displaylist">
+		<h4 class="hdg">Text List</h4>
+		
+		<ul class="grid__item one-third chunk__list">
+		    <li><a href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
+		    </li>
+		    
+		    <li><a href="http://digitalgallery.nypl.org/nypldigital/index.cfm">LGBT Special Libraries and Museums</a>
+		    </li>
+		    
+		    <li><a href="collections/labs">Booktalking "Tessa Masterson Will Go to the Prom" by Emily Franklin &amp; Brendan Halpin</a>
+		    </li>
+		    <li class="last"><a href="online_projects">VITO: The Life of Gay Activist Vito Russo</a>
+		    </li>
+		</ul><!--
+		
+		--><ul class="grid__item one-third chunk__list">
+		    <li><a href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
+		    </li>
+		    
+		    <li><a href="http://digitalgallery.nypl.org/nypldigital/index.cfm">LGBT Special Libraries and Museums</a>
+		    </li>
+		    
+		    <li><a href="collections/labs">Booktalking "Tessa Masterson Will Go to the Prom" by Emily Franklin &amp; Brendan Halpin</a>
+		    </li>
+		    <li class="last"><a href="online_projects">VITO: The Life of Gay Activist Vito Russo</a>
+		    </li>
+		</ul><!--
+		
+		--><ul class="grid__item one-third chunk__list">
+		    <li><a href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
+		    </li>
+		    
+		    <li><a href="http://digitalgallery.nypl.org/nypldigital/index.cfm">LGBT Special Libraries and Museums</a>
+		    </li>
+		    
+		    <li><a href="collections/labs">Booktalking "Tessa Masterson Will Go to the Prom" by Emily Franklin &amp; Brendan Halpin</a>
+		    </li>
+		    <li class="last"><a href="online_projects">VITO: The Life of Gay Activist Vito Russo</a>
+		    </li>
+		</ul>
+		
+	</div>
+
+
+
+
+
+<!-- PATTERN: TEXT CHUNKS LIST w/ ICONS -->
+
+<!-- .tertiary .chunk__list--icon -->
+
+	<div>
+		<ul class="chunk__list--icon grid__item one-quarter">
+			<h4 class="hdg">Text Chunks List with Icons</h4>
+		    <li class="icon-book"><a href="research-collections">Research Collections</a>
+		    <p>Rare books, photos, prints, maps, and media for advanced research.</p>
+		    </li>
+		    
+		    <li class="icon-book"><a href="find-archival-materials">Manuscripts and Archives</a>
+		    <p>Over 60,000 linear feet of personal papers and organizational records supporting historical research.</p>
+		    </li>
+		    
+		    <li class="icon-book"><a href="http://wallachprintsandphotos.nypl.org">Prints &amp; Photographs Online Catalog</a>
+		    <p>This catalog provides online access to our holdings. Cataloging of the collection is ongoing and new entries are continually added.</p>
+		    </li>
+		    
+		    <li class="icon-book last"><a href="collections/nypl-collections/preservation-division">Preservation of NYPL Collections</a>
+		    <p>The New York Public Library has one of the oldest, largest, and most comprehensive institutional preservation programs in the United States.</p>
+		    </li>
+		</ul>
+		
+		<ul class="chunk__list--icon grid__item one-quarter">
+			<h4 class="hdg">Collections</h4>
+		    <li class="icon-book"><a href="research-collections">Research Collections</a>
+		    <p>Rare books, photos, prints, maps, and media for advanced research.</p>
+		    </li>
+		    
+		    <li class="icon-book"><a href="find-archival-materials">Manuscripts and Archives</a>
+		    <p>Over 60,000 linear feet of personal papers and organizational records supporting historical research.</p>
+		    </li>
+		    
+		    <li class="icon-book"><a href="http://wallachprintsandphotos.nypl.org">Prints &amp; Photographs Online Catalog</a>
+		    <p>This catalog provides online access to our holdings. Cataloging of the collection is ongoing and new entries are continually added.</p>
+		    </li>
+		    
+		    <li class="icon-book last"><a href="collections/nypl-collections/preservation-division">Preservation of NYPL Collections</a>
+		    <p>The New York Public Library has one of the oldest, largest, and most comprehensive institutional preservation programs in the United States.</p>
+		    </li>
+		</ul>
+		
+		<ul class="chunk__list--icon grid__item one-quarter">
+			<h4 class="hdg">Blogs</h4>
 		    <li class="icon-book"><a href="research-collections">Research Collections</a>
 		    <p>Rare books, photos, prints, maps, and media for advanced research.</p>
 		    </li>
@@ -556,129 +733,70 @@ SECONDARY PATTERNS
 		    </li>
 		</ul>
 	</div>
-	
- 	<h2 class="blueLight">PATTERN: TEXT CHUNKS in a list</h2>
-	<div class="TG-4">
-	<h4 class="hdg">Collections</h4>
-	<ul class="grid__item one-quarter nobullet displaylist">
-	    <li><a href="research-collections">Research Collections</a>
-	    <p>Rare books, photos, prints, maps, and media for advanced research.</p>
-	    </li>
-	    <li><a href="find-archival-materials">Manuscripts and Archives</a>
-	    <p>Over 60,000 linear feet of personal papers and organizational records supporting historical research.</p>
-	    </li>
-	    <li><a href="http://wallachprintsandphotos.nypl.org">Prints &amp; Photographs Online Catalog</a>
-	    <p>This catalog provides online access to our holdings. Cataloging of the collection is ongoing and new entries are continually added.</p>
-	    </li>
-	    <li class="last"><a href="collections/nypl-collections/preservation-division">Preservation of NYPL Collections</a>
-	    <p>The New York Public Library has one of the oldest, largest, and most comprehensive institutional preservation programs in the United States.</p>
-	    </li>
-	</ul>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
- 	<h2 class="blueLight">PATTERN: TEXT lists w/ icons</h2>
-	<div class="grid__item one-whole">
-	
-		<span class="hdg">Featured Blog</span>
+
+
+
+
+
+<!-- PATTERN: TEXT CHUNKS LIST -->
+
+<!-- .tertiary .chunk__list -->
+
+	<div>
+		<h4 class="hdg">Text Chunks List</h4>
 		
-		<ul class="grid__item one-quarter chunk__list">
-		    <li><a data-icon="&#xf013;" href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
+		<ul class="chunk__list grid__item desk-one-quarter">
+		    <li><a class="gamma" href="research-collections">Research Collections</a>
+		    <p>Rare books, photos, prints, maps, and media for advanced research.</p>
 		    </li>
-		    
-		    <li><a data-icon="&#xe00e;" href="http://digitalgallery.nypl.org/nypldigital/index.cfm">LGBT Special Libraries and Museums</a>
+		    <li><a class="gamma" href="find-archival-materials">Manuscripts and Archives</a>
+		    <p>Over 60,000 linear feet of personal papers and organizational records supporting historical research.</p>
 		    </li>
-		    
-		    <li><a data-icon="&#xe002;" href="collections/labs">Booktalking "Tessa Masterson Will Go to the Prom" by Emily Franklin &amp; Brendan Halpin</a>
+		    <li><a class="gamma" href="http://wallachprintsandphotos.nypl.org">Prints &amp; Photographs Online Catalog</a>
+		    <p>This catalog provides online access to our holdings. Cataloging of the collection is ongoing and new entries are continually added.</p>
 		    </li>
-		    <li class="last" data-icon="&#x66;"><a href="online_projects">VITO: The Life of Gay Activist Vito Russo</a>
+		    <li class="last"><a class="gamma" href="collections/nypl-collections/preservation-division">Preservation of NYPL Collections</a>
+		    <p>The New York Public Library has one of the oldest, largest, and most comprehensive institutional preservation programs in the United States.</p>
 		    </li>
 		</ul>
-		<ul class="grid__item one-quarter chunk__list">
-		    <li><a data-icon="&#x27;" href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
+		
+		<ul class="chunk__list grid__item desk-one-quarter">
+		    <li><a class="delta" href="research-collections">Research Collections</a>
+		    <p>Rare books, photos, prints, maps, and media for advanced research.</p>
 		    </li>
-		    
-		    <li><a data-icon="&#xe006;" href="http://digitalgallery.nypl.org/nypldigital/index.cfm">LGBT Special Libraries and Museums</a>
+		    <li><a class="delta" href="find-archival-materials">Manuscripts and Archives</a>
+		    <p>Over 60,000 linear feet of personal papers and organizational records supporting historical research.</p>
 		    </li>
-		    
-		    <li><a data-icon="&#x6d;" href="collections/labs">Booktalking "Tessa Masterson Will Go to the Prom" by Emily Franklin &amp; Brendan Halpin</a>
+		    <li><a class="delta" href="http://wallachprintsandphotos.nypl.org">Prints &amp; Photographs Online Catalog</a>
+		    <p>This catalog provides online access to our holdings. Cataloging of the collection is ongoing and new entries are continually added.</p>
 		    </li>
-		    <li class="last" data-icon="&#x2a;"><a href="online_projects">VITO: The Life of Gay Activist Vito Russo</a>
+		    <li class="last"><a class="delta" href="collections/nypl-collections/preservation-division">Preservation of NYPL Collections</a>
+		    <p>The New York Public Library has one of the oldest, largest, and most comprehensive institutional preservation programs in the United States.</p>
 		    </li>
 		</ul>
-		<ul class="grid__item one-quarter chunk__list">
-		    <li><a data-icon="&#x45;" href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
-		    </li>
-		    
-		    <li><a data-icon="&#x44;" href="http://digitalgallery.nypl.org/nypldigital/index.cfm">LGBT Special Libraries and Museums</a>
-		    </li>
-		    
-		    <li><a data-icon="&#x41;" href="collections/labs">Booktalking "Tessa Masterson Will Go to the Prom" by Emily Franklin &amp; Brendan Halpin</a>
-		    </li>
-		    <li class="last" data-icon="&#xe012;"><a href="online_projects">VITO: The Life of Gay Activist Vito Russo</a>
-		    </li>
-		</ul>		
-		<p><a href="">View all</a></p>
 		
+		<ul class="chunk__list grid__item desk-one-quarter">
+		    <li><a class="delta" href="research-collections">Research Collections</a>
+		    <p>Rare books, photos, prints, maps, and media for advanced research.</p>
+		    </li>
+		    <li><a class="delta" href="find-archival-materials">Manuscripts and Archives</a>
+		    <p>Over 60,000 linear feet of personal papers and organizational records supporting historical research.</p>
+		    </li>
+		    <li><a class="delta" href="http://wallachprintsandphotos.nypl.org">Prints &amp; Photographs Online Catalog</a>
+		    <p>This catalog provides online access to our holdings. Cataloging of the collection is ongoing and new entries are continually added.</p>
+		    </li>
+		    <li class="last"><a class="delta" href="collections/nypl-collections/preservation-division">Preservation of NYPL Collections</a>
+		    <p>The New York Public Library has one of the oldest, largest, and most comprehensive institutional preservation programs in the United States.</p>
+		    </li>
+		</ul>
+	
 	</div>
-	
-	
- 	<h2 class="blueLight">PATTERN: TEXT lists</h2>
-	<div class="grid__item one-whole">
-	
-		<span class="hdg">Featured Blog</span>
-		
-		<ul class="grid__item one-third chunk__list">
-		    <li><a href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
-		    </li>
-		    
-		    <li><a href="http://digitalgallery.nypl.org/nypldigital/index.cfm">LGBT Special Libraries and Museums</a>
-		    </li>
-		    
-		    <li><a href="collections/labs">Booktalking "Tessa Masterson Will Go to the Prom" by Emily Franklin &amp; Brendan Halpin</a>
-		    </li>
-		    <li class="last"><a href="online_projects">VITO: The Life of Gay Activist Vito Russo</a>
-		    </li>
-		</ul><!--
-		--><ul class="grid__item one-third chunk__list">
-		    <li><a href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
-		    </li>
-		    
-		    <li><a href="http://digitalgallery.nypl.org/nypldigital/index.cfm">LGBT Special Libraries and Museums</a>
-		    </li>
-		    
-		    <li><a href="collections/labs">Booktalking "Tessa Masterson Will Go to the Prom" by Emily Franklin &amp; Brendan Halpin</a>
-		    </li>
-		    <li class="last"><a href="online_projects">VITO: The Life of Gay Activist Vito Russo</a>
-		    </li>
-		</ul><!--
-		--><ul class="grid__item one-third chunk__list">
-		    <li><a href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
-		    </li>
-		    
-		    <li><a href="http://digitalgallery.nypl.org/nypldigital/index.cfm">LGBT Special Libraries and Museums</a>
-		    </li>
-		    
-		    <li><a href="collections/labs">Booktalking "Tessa Masterson Will Go to the Prom" by Emily Franklin &amp; Brendan Halpin</a>
-		    </li>
-		    <li class="last"><a href="online_projects">VITO: The Life of Gay Activist Vito Russo</a>
-		    </li>
-		</ul><!--
-		--><p><a href="">View all</a></p>
-		
-	</div>
-	
-	
 
-	
 
-	
+</section>
+
+
+
 
 
 </body>

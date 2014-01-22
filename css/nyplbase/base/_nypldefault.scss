@@ -18,7 +18,7 @@ a{
 	}
 	&:hover{
 		color: $blue;
-		@extend %transition--bg !optional;
+		@extend %transition !optional;
 	}
 }
 
@@ -67,8 +67,14 @@ p{
     @include font-size($big-size);
 } 
 
+// gives gray bg color and border to item
 .callout{
 	@include callout-box($base-ui-color, $warmGrayLighter);
+}
+
+// removes bullet from a list
+.nobullet{
+	list-style: none;
 }
 
 

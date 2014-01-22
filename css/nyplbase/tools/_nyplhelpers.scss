@@ -4,7 +4,7 @@
 /**
  * Transition
  */
-%transition--bg{
-	@include vendor (transition, background, $brand-timing);	
+%transition{
+	@include vendor (transition, all, $brand-timing);	
 } 
 

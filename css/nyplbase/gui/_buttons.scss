@@ -37,7 +37,8 @@
 .btn{
  	@extend .btn--natural; 
  	@include button-color($beautons);
-	@extend %transition--bg !optional;
+	@extend %transition !optional;
+	-webkit-transition-timing-function: ease-out;
 }
 
 button{

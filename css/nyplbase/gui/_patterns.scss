@@ -47,29 +47,41 @@
     Chunks are contained by TIERS
 \*------------------------------------*/
 
-					/**
-					 * I imagine the Tier styles are going to use the RWD width classes?
-					 * as in
-					   
-					   .secondary > .chunk 
-					   
-					 * extends 
-					    
-					   .one-half .palm-one-whole
-					 */
-					 
-					.primary{
-						
-					}
-					
-					.secondary{
-						
-					}
-					
-					.tertiary{
-						
-					}
+/**
+ * I imagine the "Tier styles" are going to use the RWD width classes?
+ * as in
+   
+   .secondary > .chunk 
+   
+ * extends 
+    
+   .one-half .palm-one-whole
+ */
 
+
+
+
+.primary{
+	> *{
+//		@extend .grid__item;
+//		background: pink;
+	}
+}
+
+.secondary{
+	
+}
+
+.tertiary{
+	
+}
+
+
+.primary,
+.secondary,
+.tertiary{
+	max-width: $desk-start;
+}
 
 
 
@@ -91,7 +103,6 @@
  */
 .hdg{
 	@extend .zeta;
-	border-bottom: 1px solid $base-ui-color;
     color: $blue;
     display: block;
     text-transform: uppercase;
@@ -131,6 +142,8 @@
 /**
  * If the list item wraps a line, give a margin to the text
  * so the icon stands out properly.
+ *
+ * NOTE TO SELF: ADD CODE FOR DATA-ICON TOO
  */
 .chunk__list--icon li:before{
 	margin:0 .35em 0 -1.35em;
