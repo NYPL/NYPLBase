@@ -25,8 +25,8 @@
 
 				THIS MIGHT WORK BUT I DON'T KNOW HOW TO USE IT:
 				
-				@mixin color-name($class, $color){
-					.#{$class} {
+				@mixin color-name(CLASSNAME, $color){
+					.#{CLASSNAME} {
 						background-color: $color;
 					}
 				}
@@ -38,7 +38,6 @@
  	@extend .btn--natural; 
  	@include button-color($beautons);
 	@extend %transition !optional;
-	-webkit-transition-timing-function: ease-out;
 }
 
 button{
@@ -47,7 +46,14 @@ button{
 
 
 .btn--inactive {
-	@include button-color($warmGrayLighter);
+//	@include button-color($warmGrayLighter);
+	background: $warmGrayLighter;
+	-webkit-transition: none;
+	transition: none;
+	
+	&:hover{
+		background-color: $warmGrayLighter;
+	}
 }
 
 /**

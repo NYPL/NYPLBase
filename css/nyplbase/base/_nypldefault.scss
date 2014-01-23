@@ -13,12 +13,14 @@ body{
 
 a{
 	color: $black;
+	@extend %transition !optional;
+	
 	&:visited{
 		color: $black;
 	}
+	
 	&:hover{
 		color: $blue;
-		@extend %transition !optional;
 	}
 }
 
@@ -45,7 +47,9 @@ figcaption{
 // if a hed contains a link, then underline on hover only. 
 h1,h2,h3,h4,h5,h6 {
 	& a {
-		text-decoration: none;
+			text-decoration: none;
+			@extend %transition !optional;
+		
 		&:hover{
 			text-decoration: underline;
 		}

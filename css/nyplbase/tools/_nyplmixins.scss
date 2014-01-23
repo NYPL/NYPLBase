@@ -64,12 +64,11 @@
 	&.gradient{
 		$toColor: darken($color, $brand-gradient);
 		@include linear-gradient($color, $toColor);	
+		
+		&:hover{
+			opacity: .85;
+		}	
 	}
-	
-	&:hover{
-		background: lighten($color, $brand-hover);
-	}	
-	
 }
 
 /* 
