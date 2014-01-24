@@ -146,6 +146,10 @@
 .chunk__list{
 	@extend .block-list;
 	border-top-width: 0;
+	
+	li{
+		padding-left: 0;
+	}
 }
 
 /**
