@@ -61,6 +61,10 @@ p{
 	max-width: $measure;
 }
 
+ul, ol{
+	margin-left: 0;
+}
+
 
 /**
  * Some additional classes. (Put in /tools/nyplhelpers???) 

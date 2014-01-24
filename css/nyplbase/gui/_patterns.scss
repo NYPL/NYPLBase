@@ -96,6 +96,13 @@
 	}
 }
 
+.icon-size-beta{
+	&:before{
+		@extend .beta;
+		display: block;
+		text-align: center;
+	}
+}
 
 /**
  * Some "tiers" of content need a category/tag as a heading above them.
@@ -105,6 +112,7 @@
 	@extend .zeta;
     color: $blue;
     display: block;
+    margin-bottom: .5rem;
     text-transform: uppercase;
     width: 100%;
 }
@@ -139,14 +147,19 @@
 	@extend .block-list;
 	border-top-width: 0;
 }
+
 /**
  * If the list item wraps a line, give a margin to the text
  * so the icon stands out properly.
  *
  * NOTE TO SELF: ADD CODE FOR DATA-ICON TOO
  */
-.chunk__list--icon li:before{
-	margin:0 .35em 0 -1.35em;
+.chunk__list--icon{
+	@extend .chunk__list;
+	& li:before,
+	& a:before{
+		margin:0 .35em 0 -1.35em;		
+	}
 }
 
 
