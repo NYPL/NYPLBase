@@ -1,0 +1,74 @@
+/*------------------------------------*\
+    $NYPL-ICONS
+\*------------------------------------*/
+/**
+ * These are classes that affect how icons are displayed with 
+ * their originating elements.
+ */
+ 
+/**
+ * Experimenting w/ icon size vs. containing text size
+ */
+/*
+alpha
+beta
+gamma
+delta
+epsilon
+big
+giga
+mega
+kilo
+*/
+
+
+.icon-increase{
+	vertical-align: middle;
+	&:before{
+		font-size: 1.25em;
+	}
+}
+
+/* these work but are not super DRY */
+/* First set some display settings to extend... */
+%icon-size-settings{
+	display: block;
+	text-align: center;
+}
+
+/* ...then set all the icon size classes. */
+.icon-size-alpha{
+	&:before{
+		@extend .alpha;
+		@extend %icon-size-settings
+	}
+}
+
+.icon-size-beta{
+	&:before{
+		@extend .beta;
+		@extend %icon-size-settings
+	}
+}
+
+.icon-size-kilo{
+	&:before{
+		@extend .kilo;
+		@extend %icon-size-settings;
+	}
+}
+
+
+
+/**
+ * experimenting with dif. color from origin element
+ *
+ * can i DRY this w/ mixin? or something?
+ */
+
+
+.icon-color-blue{
+	&:before{
+		color: $blue;
+	}
+}

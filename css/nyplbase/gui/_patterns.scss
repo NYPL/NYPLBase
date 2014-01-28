@@ -84,26 +84,6 @@
 }
 
 
-
-/**
- * Experimenting w/ icon size vs. containing text size
- */
-.icon-size-kilo{
-	&:before{
-		@extend .kilo;
-		display: block;
-		text-align: center;
-	}
-}
-
-.icon-size-beta{
-	&:before{
-		@extend .beta;
-		display: block;
-		text-align: center;
-	}
-}
-
 /**
  * Some "tiers" of content need a category/tag as a heading above them.
  * These will appear most often above secondary and tertiary tiers.
