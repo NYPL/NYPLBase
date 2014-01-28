@@ -2,7 +2,7 @@
     $NYPL-HELPERS
 \*------------------------------------*/
 /**
- * Transition
+ * Use this variable as an extend to include NYPL transition time
  */
 %transition{
 	@include vendor (transition, all, $brand-timing);

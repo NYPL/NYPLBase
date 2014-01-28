@@ -35,9 +35,9 @@
 		*/
 
 .btn{
- 	@extend .btn--natural; 
  	@include button-color($beautons);
 	@extend %transition !optional;
+	margin: $half-spacing-unit/4;
 }
 
 button{
@@ -46,7 +46,6 @@ button{
 
 
 .btn--inactive {
-//	@include button-color($warmGrayLighter);
 	background: $warmGrayLighter;
 	-webkit-transition: none;
 	transition: none;
@@ -73,7 +72,7 @@ button{
 
 /**
  * These purpose-specific buttons have styles defined for them
- * in the mixin. There is probably a better way to do this.
+ * in the mixin. There is almost certainly a better way to do this.
  */ 
 
 .btn--donate {
@@ -82,3 +81,19 @@ button{
 .btn--friends {
 	@include button-f11y-context(friends);
 }
+
+
+
+
+
+/*
+alpha
+beta
+gamma
+delta
+epsilon
+big
+giga
+mega
+kilo
+*/

@@ -125,7 +125,10 @@
  */
 .chunk__list{
 	@extend .block-list;
-	border-top-width: 0;
+//	border-top-width: 0;
+	& .last {
+		border-bottom-width: 0;
+	}
 	
 	li{
 		padding-left: 0;
