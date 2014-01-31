@@ -43,6 +43,14 @@
 
 
 
+/*
+.grid__item{
+	padding-left:0;
+	padding-right:$base-spacing-unit;
+}
+*/
+
+
 /*------------------------------------*\
     Chunks are contained by TIERS
 \*------------------------------------*/
@@ -97,6 +105,13 @@
     width: 100%;
 }
 
+
+
+
+
+
+
+
 /*------------------------------------*\
     Chunks that are CHUNKS
 \*------------------------------------*/
@@ -117,6 +132,11 @@
 }
 
 
+
+
+
+
+
 /*------------------------------------*\
     Chunks that are LISTS
 \*------------------------------------*/
@@ -125,7 +145,10 @@
  */
 .chunk__list{
 	@extend .block-list;
-//	border-top-width: 0;
+	border-top-width: 0;
+	& .first {
+		border-top-width: 1px;
+	}
 	& .last {
 		border-bottom-width: 0;
 	}
@@ -148,6 +171,11 @@
 		margin:0 .35em 0 -1.35em;		
 	}
 }
+
+
+
+
+
 
 
 

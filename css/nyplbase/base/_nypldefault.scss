@@ -62,7 +62,7 @@ p{
 }
 
 ul, ol{
-	margin-left: 0;
+//	margin-left: 0;
 }
 
 
@@ -83,6 +83,11 @@ ul, ol{
 // removes bullet from a list
 .nobullet{
 	list-style: none;
+}
+
+// use instead of floats?
+.inline{
+	display: inline;
 }
 
 
