@@ -1,0 +1,29 @@
+/*------------------------------------*\
+    $NYPL-NAV
+\*------------------------------------*/
+/**
+ * Styles for navigational elements:
+ * 
+ * dropdowns
+ * breadcrumbs
+ * pagination
+ */
+
+
+
+
+/**
+ * Pagination
+ */
+
+.pagination > li{
+	margin: 0 $half-spacing-unit/4;
+	&.active{
+		border-radius: $brand-round;
+		border: 1px solid $brand-color;
+		& a{
+			color: $brand-color;
+		}
+	}
+	
+}

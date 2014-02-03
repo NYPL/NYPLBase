@@ -8,12 +8,36 @@
  * not used anywhere else but /demo.
  */
 
+
+/**
+ * Default
+ */
+
 body{
 	background: $softWhite;
 }
 
+// code examples  
+.code, .code.prettyprint {
+	border: 1px solid $warmGrayLighter;
+	background: rgba($warmGrayLightest, .5);
+	max-width: 60rem;
+	padding: $base-spacing-unit;
+}
+pre {
+	white-space: normal;
+}
+
+
+
+
+
+/**
+ * Sections
+ */
+
 // fixed nav for the style guide
-.guidenav {
+.guide--nav {
 	position: fixed;
 	
 	li > ul {
@@ -30,21 +54,8 @@ body{
 
 }
 
-
-// a little space between the sections
-.style-guide section{
-	border-bottom: 1px solid $warmGrayLighter;
-	margin-bottom: $base-spacing-unit * 2;
-	padding-bottom: $base-spacing-unit;
-}
-
-#palette h3{
-	margin-bottom: 0;
-	padding: $base-spacing-unit $half-spacing-unit $half-spacing-unit;
-}
-
 // container for the the content
-.guidecontent{
+.guide--content{
 /*
 	@include media-query(lap){
 		@extend .visuallyhidden;
@@ -53,33 +64,36 @@ body{
 }
 
 // notes
-.guide-notes{
+.guide--notes{
 	@include callout-box(lighten($greenLight, 15%), desaturate($greenLight, 25%));
 	@include vendor(border-radius, $brand-round);
 	margin-bottom: $base-spacing-unit;
 	max-width: 60rem;
-}
-
-// code examples  
-.code, .code.prettyprint {
-	border: 1px solid $warmGrayLighter;
-	background: rgba($warmGrayLightest, .5);
-	max-width: 60rem;
-	padding: $base-spacing-unit;
-}
-pre {
-	white-space: normal;
-}
-
-// notes for discussion with the unicorns 
-.unicorns {
-	background: yellow;
-
-	&:before{
-		content: "Unicorns: ";
-		text-transform: uppercase;
+	
+	p:last-child{
+		margin-bottom: 0;
 	}
 }
+
+
+
+
+/**
+ * Details
+ */
+
+// space between the sections
+.style-guide section{
+	border-bottom: 1px solid $warmGrayLighter;
+	margin-bottom: $base-spacing-unit * 2;
+	padding-bottom: $base-spacing-unit;
+}
+
+// space between example forms
+section#forms form{
+	margin-bottom: $base-spacing-unit;
+}
+
 
 // colors demo "paint chips"; courtesy of BFoo :)
 .color-block {
@@ -90,9 +104,20 @@ pre {
 	font-size: 16px;
 }
 
-// space between example forms
-section#forms form{
-	margin-bottom: $base-spacing-unit;
+// a little space on the headings in the palette
+#palette h3{
+	margin-bottom: 0;
+	padding: $base-spacing-unit 0 $half-spacing-unit;
+}
+
+// notes for discussion with the unicorns 
+.unicorns {
+	background: yellow;
+
+	&:before{
+		content: "Unicorns: ";
+		text-transform: uppercase;
+	}
 }
 
 

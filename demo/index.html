@@ -16,9 +16,9 @@
 	<div class="grid__item one-whole">
 
 	
-	<nav class="guidenav grid__item one-whole desk-one-fifth">
+	<nav class="guide--nav grid__item one-whole desk-one-fifth">
 	
-		<span class="menu__button icon-menu2 alpha"></span>
+<!-- 		<span class="menu__button icon-menu2 alpha"></span> -->
 	
 		<ul class="nav nav--stacked">
 			<li>
@@ -42,12 +42,16 @@
 					<li><a href="#type-styling">Type styling</a></li>
 				</ul>				
 			</li>
+<!--
 			<li>
 				<a href="#gridsystem">Grid system</a>
 			</li>
+-->
+<!--
 			<li>
 				<a href="patterns.html">NYPL design patterns</a>
 			</li>
+-->
 		</ul>
 		
 	</nav>
@@ -55,7 +59,7 @@
 
 
 
-	<section class="guidecontent grid__item one-whole desk-four-fifths push--one-fifth">
+	<section class="guide--content grid__item one-whole desk-four-fifths push--one-fifth">
 	
 		<header>
 			<h1>This is NYPL Base.</h1>
@@ -70,7 +74,7 @@
 
 		<section id="typography">
 			<h2>Typography</h2>
-			<div class="guide-notes">
+			<div class="guide--notes">
 				<p>NYPL's <strong >default</strong> body text is set to <strong>16px, with a 24px line height</strong>. The heds and type size classes are set to the standard typographic scale (see Robert Bringhurst, <cite><a href="http://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style">The Elements of Typographic Style</a></cite>).</p>
 				<p>Paragraphs are set to a <strong>maximum width of 60rem</strong>, to prevent an unreadably long line.</p>
 				<p>NYPL's core web typeface is <a href="http://www.latofonts.com/"><strong>Lato</strong></a>.</p>
@@ -85,13 +89,13 @@
 			<h5>Heading 5</h5>
 			<h6>Heading 6</h6>
 			
-			<p class="guide-notes">Use the class <code>.lede</code> or <code>.lead</code> for the first graf, if you want.</p>
+			<p class="guide--notes">Use the class <code>.lede</code> or <code>.lead</code> for the <strong>first graf</strong>, if you want.</p>
 			<p class="lede">Call me Ishmael. Some years ago&mdash;never mind how long precisely&mdash;having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.</p>
 
 			<p>It is a way I have of driving off the spleen and regulating the circulation. Whenever I find myself growing grim about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily pausing before coffin warehouses, and bringing up the rear of every funeral I meet; and especially whenever my hypos get such an upper hand of me, that it requires a strong moral principle to prevent me from deliberately stepping into the street, and methodically knocking people's hats off&mdash;then, I account it high time to get to sea as soon as I can.</p>
 			
 			<h5>em and strong</h5>
-			<p class="guide-notes">The <code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code>, and <code>&lt;blockquote&gt;</code> element default styles have also been set.</p>
+			<p class="guide--notes">The <code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code>, and <code>&lt;blockquote&gt;</code> element default styles have also been set.</p>
 			<p>This is my substitute for <em>pistol and ball</em>. With a philosophical flourish Cato <strong>throws</strong> himself upon his sword; I quietly take to the ship.</strong>
 			<h5>Block quotes</h5>
 			<blockquote>There is nothing surprising in this. If they but knew it, almost all men in their degree, some time or other, cherish very nearly the same feelings towards the ocean with me.</blockquote>
@@ -104,8 +108,8 @@
 			<h2>Notes on using type styles</h2>
 			<p class="unicorns">add notes on specific uses of uppercase, bold, etc.</p>
 			
-			<div class="guide-notes" id="text-sizes">
-				<p>Inuit comes with a set of classes that affect font size only. The first six classes (alpha - zeta) correspond to the six heading element settings. Then there are additional very large and very small classes, all listed below.</p>
+			<div class="guide--notes" id="text-sizes">
+				<p>Inuit comes with a set of <strong>classes that affect font size</strong> only. The first six classes (alpha - zeta) correspond to the six heading element settings. Then there are additional very large and very small classes, all listed below.</p>
 			</div>
 <!-- 			<p><span class="alpha">alpha</span> <span class="beta">beta</span> <span class="gamma">gamma</span> <span class="delta">delta</span> <span class="epsilon">epsilon</span></p> -->
 			<div class="grid__item one-third">
@@ -141,8 +145,8 @@
 	
 		<section id="links">
 			<h2>Links</h2>
-			<div class="guide-notes">
-				<p>Links are underlined in running text, and change color on hover.</p>
+			<div class="guide--notes">
+				<p>Links are <strong>underlined in running text</strong>, and change color on hover.</p>
 				<p>Linked heds are not underlined, but on hover they do display the underline as well as the color change.</p>	
 			</div>
 
@@ -155,8 +159,8 @@
 		
 		<section id="lists">
 			<h2>Lists</h2>
-			<div class="guide-notes">
-				<p>Our <code>&lt;ul&gt;</code> and <code>&lt;ol&gt;</code> elements adhere to browser default styles.</p>
+			<div class="guide--notes">
+				<p>Our <code>&lt;ul&gt;</code> and <code>&lt;ol&gt;</code> elements adhere to browser <strong>default styles</strong>.</p>
 			</div>
 			
 			
@@ -187,8 +191,8 @@
 		<section id="calls-to-action">
 				
 			<h2>Buttons/calls-to-action</h2>
-			<div class="guide-notes">
-				<p>Any element (most commonly <code>&lt;a&gt;</code>) used as buttons get the <code>.btn</code> class applied. Also, the following elements:
+			<div class="guide--notes">
+				<p>Any element (most commonly <code>&lt;a&gt;</code>) used as a <strong>button</strong> gets the <code>.btn</code> class applied. Also, the following elements:
 				<ul><code>
 					<li>&lt;button&gt;</li>
 					<li>&lt;input[type="button"]&gt;</li>
@@ -209,7 +213,7 @@
 			
 			<h3>Sizes</h3>
 			
-			<p class="guide-notes">Use the following alternative <code>.btn--</code> styles to create buttons of different sizes.</p>
+			<p class="guide--notes">Use the following alternative <code>.btn--</code> styles to create <strong>buttons of different sizes</strong>.</p>
 			<pre class="code prettyprint">
 				&lt;button class=&quot;btn--small&quot;&gt;small&lt;/button&gt;<br>
 				&lt;button class=&quot;btn--large&quot;&gt;large&lt;/button&gt;<br>
@@ -220,9 +224,9 @@
 				<button class="btn--huge gradient">huge</button>
 			</p>
 
-			<div class="guide-notes">
-				<p>You can also add the <a href="#text-sizes">text classes</a> for bigger/smaller text.</p>
-				<p>Note that the button's padding shrinks or grows proportionally based on the text class. In the above examples, I've only added button size classes; the text size remains the same. Below, I've made some ridiculously mismatched button/text size combos to demonstrate the need to be careful with your classes.</p>			
+			<div class="guide--notes">
+				<p>You can also add the <a href="#text-sizes">text classes</a> for <strong>bigger/smaller text</strong>.</p>
+				<p>Note that the button's padding shrinks or grows proportionally based on the text class. In the above examples, I've only added button size classes; the text size remains the same. Below, I've made some ridiculously mismatched button/text size combos to demonstrate the need to be careful with your classes. (In other words, watch out for Buttons of Unusual Size.)</p>			
 			</div>
 			<pre class="code prettyprint">
 				&lt;button class=&quot;btn--small micro&quot;&gt;small button, micro text&lt;/button&gt;<br>
@@ -235,8 +239,8 @@
 				<button class="btn--huge gradient kilo">huge button, kilo text</button>
 			</p>
 
-			<div class="guide-notes">
-				<p>There's also a class called <code>.btn--natural</code>, which inherits its type size and padding from its parent element. Button and text size classes will not affect this style.</p>			
+			<div class="guide--notes">
+				<p>There's also a class called <code>.btn--natural</code>, which <strong>inherits its type size and padding</strong> from its parent element. Button and text size classes will not affect this style.</p>			
 			</div>
 			<pre class="code prettyprint">
 				&lt;button class=&quot;btn--natural&quot;&gt;natural&lt;/button&gt;
@@ -246,8 +250,8 @@
 
 			
 			<h3>Color variations</h3>
-			<div class="guide-notes">
-				<p>At the moment I don't have a better way to assign a different color to a button and preserve all the other button styles, than adding a <code>.btn--</code>-style class. The colors that currently exist are listed below</p>
+			<div class="guide--notes">
+				<p>At the moment I don't have a better way to <strong>assign a different color to a button</strong> (and still preserve all the other button styles) than adding a <code>.btn--</code>-style class. The colors that currently exist are listed below:</p>
 			</div>
 			<pre class="code prettyprint">
 				&lt;button class=&quot;btn--greenNeon&quot;&gt;greenNeon&lt;/button&gt;<br>
@@ -282,8 +286,8 @@
 		
 		<section id="forms">
 			<h2>Forms</h2> 
-			<div class="guide-notes">
-				<p>Below are examples of different configurations of form elements. Text-based inputs are 100% by default, so they can grow or shrink automatically with the available space.</p>
+			<div class="guide--notes">
+				<p>Below are examples of different configurations of form elements. Text-based inputs are <strong>100% wide by default</strong>, so they can grow or shrink automatically with the available space.</p>
 				<p>Adding the class <code>.form--callout</code> to the <code>&lt;form&gt;</code> element gives it that nice warm gray background and border, plus a little padding.</p>
 			</div>
 			
@@ -380,8 +384,8 @@
 -->			
 
 			<h3>Inline form example</h3>	
-			<div class="guide-notes">
-				<p>Adding the class <code>.form--inline</code> to the <code>&lt;form&gt;</code> element lays out all contained elements inline, with some comfy padding.</p>
+			<div class="guide--notes">
+				<p>Adding the class <code>.form--inline</code> to the <code>&lt;form&gt;</code> element <strong>lays out all contained elements inline</strong>, with some comfy padding.</p>
 			</div>
 			
 			<form role="form" id="" class="form--inline" action="" method="">
@@ -393,8 +397,8 @@
 			</form>
 			
 			<h3>Horizontal form example</h3>
-			<div class="guide-notes">
-				<p>Adding the class <code>.form--horiz</code> to the <code>&lt;form&gt;</code> element creates this right-aligned label layout.</p>
+			<div class="guide--notes">
+				<p>Adding the class <code>.form--horiz</code> to the <code>&lt;form&gt;</code> element creates this <strong>right-aligned label layout</strong>.</p>
 			</div>				
 		
 			<div class="grid__item two-thirds hard--left">
@@ -425,7 +429,7 @@
 
 		<section id="images">
 			<h2>Images</h2>
-			<p class="guide-notes">This is a regular image, with the class <code>.img--outline</code> applied to give it a soft outline.</p>
+			<p class="guide--notes">This is a simple image element, with the class <code>.img--outline</code> applied to give it a soft outline.</p>
 			<div class="grid__item two-thirds hard--left">
 				<img class="img--outline" src="../img/demo/photo_Computers.png" alt="computers in the library">
 			</div>
@@ -438,12 +442,11 @@
 					<figcaption>Here is a lovely NYPL employee, showing both her work pride and her guns.</figcaption>
 				</figure>
 			</div><!--
-			--><p class="guide-notes grid__item one-half">Here's an example of <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code>. (Note: figure and figcaption are ONLY used for true captions, not just any old picture with text next to it.)</p>
+			--><p class="guide--notes grid__item one-half push--left">Here's an example of <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code>. (Note: <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> are only used for <strong>true captions</strong>, not just any old picture with text next to it.)</p>
 					
 			<h3>Thumbnails</h3>
-			<div class="guide-notes">
+			<div class="guide--notes">
 				<p>Adding the class <code>.thumbnails</code> to a container of <code>&lt;img&gt;</code> elements lays out 100x100px images.</p>
-				<p>(Derivatives would be properly proportioned, of course.)</p>
 			</div>
 			<div class="thumbnails">
 				<img src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
@@ -464,15 +467,15 @@
 			<p class="warmGrayText">Note to self: this pattern will be created in the header design ("mega-menus" design), then copied here for reference</p>
 
 			<h3>Breadcrumbs</h3>
-			<div class="guide-notes">
-				<p>Adding the class <code>.breadcrumb</code> to a container of <code>&lt;a&gt;</code> elements adds &gt; between the elements.</p>
+			<div class="guide--notes">
+				<p>Adding the class <code>.breadcrumb</code> to a container of <code>&lt;a&gt;</code> elements adds a <code>&gt;</code> symbol between each element pair.</p>
 			</div>
 			<div class="breadcrumb"><a href="/">Home</a> ›&nbsp;<a href="/voices" title="Blogs, Videos &amp; Publications">Blogs, Videos &amp; Publications</a> ›&nbsp;<a href="/blog" title="">Blogs</a> ›&nbsp;<a href="/voices/blogs/blog-channels" title="">Blog Channels</a></div>
 			
 			<br><br>
 			
 			<h3>Pagination</h3>
-			<div class="guide-notes">
+			<div class="guide--notes">
 				<p>Adding the class <code>.pagination</code> to a list container with the <code>&lt;.nav&gt;</code> class also applied creates the pagination layout. Also use the following classes:
 				<code><ul>
 					<li>pagination__first</li>
@@ -482,17 +485,18 @@
 				</ul></code>
 				on the appropriate elements in your list.
 				</p>
+				<p>(Note: in the example below, the class <code>.active</code> is being applied to the page 5 list item to demonstrate that state, which displays a blue border.)
 			</div>
 			<ol class="nav pagination">
-			   <li class=pagination__first>First</li>
-			   <li class=pagination__prev>Previous</li>
+			   <li class="pagination__first">First</li>
+			   <li class="pagination__prev">Previous</li>
 			   <li><a href=/page/1>1</a></li>
 			   <li><a href=/page/2>2</a></li>
-			   <li class=current><a href=/page/3>3</a></li>
+			   <li><a href=/page/3>3</a></li>
 			   <li><a href=/page/4>4</a></li>
-			   <li><a href=/page/5>5</a></li>
-			   <li class=pagination__next><a href=/page/next>Next</a></li>
-			   <li class=pagination__last><a href=/page/last>Last</a></li>
+			   <li class="active"><a href=/page/5>5</a></li>
+			   <li class="pagination__next"><a href=/page/next>Next</a></li>
+			   <li class="pagination__last"><a href=/page/last>Last</a></li>
 			</ol>
 
 		</section>
@@ -506,6 +510,9 @@
 			<h2>Color palette</h2>
 			
 			<h3>Primary palette colors</h3>
+			<div class="guide--notes">
+				<p class="unicorns">notes about how to use these colors</p>
+			</div>
 			<div class="color-block red whiteText">red #d62828</div>
 			<div class="color-block orange whiteText">orange #f0731f</div>
 			<div class="color-block green">green #acb737</div>
@@ -513,6 +520,9 @@
 			<div class="color-block purple whiteText">purple #aa137e</div>
 			
 			<h3>Secondary palette colors</h3>
+			<div class="guide--notes">
+				<p class="unicorns">notes about how to use these colors</p>
+			</div>
 			<div class="color-block redDarkest whiteText">redDarkest #690b0b</div>
 			<div class="color-block redDarker whiteText">redDarker #9c191e</div>
 			<div class="color-block pink ">pink #ff5b64</div>
@@ -558,7 +568,9 @@
 
 		<section id="logo">
 			<h2>Logo</h2>
+			<div class="guide--notes">
 			<p class="unicorns">consult with unicorns on usage rules we need here!</p>
+			</div>
 		</section>
 
 
@@ -566,10 +578,9 @@
 
 		<section id="icons">
 			<h2>Icon font</h2>
-			<div class="guide-notes">
-				<p>This is the <a href="../fonts/icons-demo/demo.html">current set of supported icons</a>. We use a custom export of <a href="http://icomoon.io/">Icomoon</a>.</p>
-				
-				<p>Note to self: watch for width conflicts on elements with both a width class ("one-fifth") and an icon class or data-icon on the same element; icons have a width and height: auto setting.</p>
+			<div class="guide--notes">
+				<p>We use a custom export of <a href="http://icomoon.io/"><strong>Icomoon</strong>'s</a> proprietary icons, which are available for use under the <a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License</a>. Included as part of the icon set are two icons of the "lion mark" (just the lion part) logo. (More on how to use those further on in the guide!)</p>
+				<p>This is the <a href="../fonts/icons-demo/demo.html"><strong>current set of supported icons</strong></a>.</p>
 			</div>
 
 
@@ -591,66 +602,67 @@
 			
 			
 			<h4>Sizes</h4>
-			<div class="guide-notes">
-				<p>If you simply apply either an icon class or a data-icon attribute to an element, the icon that is attached will render at the same font size as its containing element. You can add font size classes to any element to affect the size of the text.</p>
-				<p>The icon set has been exported at 16px, so they will appear smoothest at multiples of 16.</p>
-			</div>
-			<div>
-				<ul class="grid__item one-half chunk__list--icon">
-					<li data-icon="&#xe61d;">List item here</li>
-					<li class="icon-bookmark">Another item here</li>
-					<li class="icon-book">Last one</li>
-				</ul><!--
-	
-	
-			 --><ul class="grid__item one-half nav beta">
-					<li data-icon="&#xe61d;">List item here</li>
-					<li class="icon-bookmark">Another item here</li>
-					<li class="icon-book">Last one</li>
-				</ul>
+			<div class="guide--notes">
+				<p>If you simply apply either an icon class or a data-icon attribute to an element, the icon that is attached will render at the <strong>same font size as its containing element</strong>. You can add font size classes to any element to affect the size of the text.</p>
 			</div>	
-
+			<pre class="code prettyprint">
+				&lt;ul class=&quot;nav grid__item four-fifths&quot;&gt;<br>
+					&lt;li class=&quot;zeta icon-cog&quot;&gt;List item here&lt;/li&gt;<br>
+					&lt;li class=&quot;episilon icon-bookmark&quot;&gt;Another item here&lt;/li&gt;<br>
+					&lt;li class=&quot;delta icon-book&quot;&gt;Last one&lt;/li&gt;<br>
+				&lt;/ul&gt;
+			</pre>		
+			<ul class="nav grid__item four-fifths">
+				<li class="zeta icon-cog">List item here</li>
+				<li class="episilon icon-bookmark">Another item here</li>
+				<li class="delta icon-book">Last one</li>
+			</ul>
+			
+			<div class="guide--notes">
+				<p>You can combine 2 elements, one containing the icon and one containing some content, and give each a different font size class.</p>
+			</div>
+			<pre class="code prettyprint grid__item one-whole">
+					&lt;span class=&quot;giga&quot; aria-hidden=&quot;true&quot; data-icon=&quot;&amp;#xe61d;&quot;&gt;&lt;/span&gt;<br>
+					&lt;p class=&quot;grid__item four-eighths gamma&quot;&gt;This large icon illustrates this chunk of content.&lt;/p&gt;
+			</pre>
 			<div class="grid__item one-half">
 				<span class="giga" aria-hidden="true" data-icon="&#xe61d;"></span>
 				<p class="grid__item four-eighths gamma">This large icon illustrates this chunk of content.</p>
-			</div>
-
-			<p class="blueNeon">jA: KEEP WORKING ON VERTICAL POSITIONING, LINE HEIGHTS (ESP ON LINE WRAPS) ON VARIOUS SIZES</p>
+			</div><p class="blueNeon">jA: KEEP WORKING ON VERTICAL POSITIONING, LINE HEIGHTS (ESP ON LINE WRAPS) ON VARIOUS SIZES</p>
 
 
 
 
 			<h4>The logo icon</h4>
-			<div class="cf">
-				<div class="grid__item one-sixth giga" aria-hidden="true" data-icon="&#xe600;"></div>
-				<p class="grid__item three-sixths">This is the logo (without the "New York Public Library" text, it's referred to as the "lion mark"), conveniently available as part of our icon font! Because it's an icon font, changing the color of the lion mark is as easy as applying a text color.</p>
-			</div>
+				<span class="grid__item one-sixth hard--left giga" aria-hidden="true" data-icon="&#xe600;"></span><!--
+				--><p class="guide--notes grid__item five-sixths">This is the logo (without the "New York Public Library" text, it's referred to as the "lion mark"), conveniently available as part of our icon font! Because it's an icon font, changing the color of the lion mark is as easy as applying a text color.</p>
 	
-			<div class="cf">
-				<div class="grid__item one-sixth giga blueText" aria-hidden="true" data-icon="&#xe600;"></div>
-				<p class="grid__item three-sixths">See? All I did was change the color of the text of the element with the icon. Now it's blue!</p>
-			</div>
+				<span class="grid__item one-sixth hard--left giga blueText" aria-hidden="true" data-icon="&#xe600;"></span><!--
+				--><p class="guide--notes grid__item five-sixths">See? All I did was change the color of the text of the element with the icon. Now it's blue!</p>
 			
-			<div class="cf">
-				<div class="grid__item one-sixth giga" aria-hidden="true" data-icon="&#xe601;"></div>
-				<div class="grid__item three-sixths">
+				<span class="grid__item one-sixth hard--left giga" aria-hidden="true" data-icon="&#xe601;"></span><!--
+				--><div class="guide--notes grid__item five-sixths">
 					<p>We also have a version of the lion mark in reverse. Here it is, no styling applied.</p>
-					<p>But what you see here is TOTALLY WRONG. Bad, wrong, no-no. Never use the lion mark with black/dark fills. The thing to remember is: <br /><span class="gamma">the fill is always lighter than the background!</span></p>
-					<p>The trick, then, is to apply a color to the reverse version of the lion mark that is <em>lighter</em> than the background it sits on!</p>
+					<p>But remember, what you see here is totally wrong. Bad, wrong, no-no. Never use the lion mark with black/dark fills. The thing to remember is: <span class="gamma">the fill is always lighter than the background!</span></p>
 				</div>
-				<div class="grid__item one-whole giga whiteText black" aria-hidden="true" data-icon="&#xe601;">See? clever!</div>
-			</div>		
-			
+
+				<div class="grid__item one-whole whiteText black">
+					<span class="grid__item one-sixth hard--left giga " aria-hidden="true" data-icon="&#xe601;"></span><!--
+					--><p class="grid__item five-sixths">The trick is to apply a color to the reverse version of the lion mark that is <em>lighter</em> than the background it sits on. See?</p>	
+				</div>
 			
 		</section>
 		
 		
+<!--
 		<section id="gridsystem">
 			<h2>The Proportional Grid</h2>
 			
-			<p>(will write d11n about Inuit's proportional units)</p>
+			<p>InuitCSS </p>
 			<p>and don't forget to point out the stupid whitespace bug in the markup, fixed by comments</p>
 		</section>
+		
+-->
 	<!-- end content -->
 	</section>
 	
@@ -658,15 +670,15 @@
 	<!-- end page -->
 	</div>
 
-<!--
-	<div>
+
+	<div class="grid__item one-whole">
 		<h2>Acknowledgements</h2>
 		<p>I owe being able to even <em>conceive</em> of a distributable rapid prototyping system (RaProSys?) to <a href="http://twitter.com/mdo">Mark Otto</a> and <a href="http://twitter.com/fat">Jacob Thornton</a>, makers of <a href="http://getbootstrap.com/">Bootstrap</a>.</p>
 		<p>Massive amounts to Harry Roberts and his css wizardry for creating Inuit; I stand on his beefy shoulders and no mistake.</p>
 		<p>Also big thanks to <a href="http://github.com/beefoo">Brian Foo</a>, whose <a href="https://drrstyleguide.herokuapp.com/">DRR Bootstrap</a> (maintained by <a href="https://twitter.com/nypl_labs">NYPL Labs</a>) provided a great starting point. Also, BFoo taught me more than a few sassy Sass tricks.</p>
 		<p>Finally to Sean Redmond, who gave me room to do this exactly how I wanted, and never made me feel bad for not knowing all my command line commands.</p>
+		<span class="icon-grin alpha blueText"></span><p>Thank you!</p>
 	</div>
--->
 
 
 <footer></footer>
@@ -689,7 +701,7 @@
 $(document).ready(function () {
 
 	$( ".menu__button" ).click(function() {
-	  $( ".guidenav .nav" ).toggle( "slide" );
+	  $( ".guide--nav .nav" ).toggle( "slide" );
 	});
 	
 	
