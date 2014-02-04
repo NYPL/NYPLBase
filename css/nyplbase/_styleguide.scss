@@ -113,11 +113,6 @@ section#forms form{
 // notes for discussion with the unicorns 
 .unicorns {
 	background: yellow;
-
-	&:before{
-		content: "Unicorns: ";
-		text-transform: uppercase;
-	}
 }
 
 
