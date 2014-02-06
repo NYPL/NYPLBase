@@ -235,36 +235,20 @@ $responsive:        true;
  */
 $responsive-extra:  true;
 
-/**
- * Responsive push and pull produce a LOT of code, only turn them on if you
- * definitely need them.
- */
-$push:              true;
-/**
- * Note: `$push` variable above must be set to true before enabling these.
- */
-$palm-push:         false!default;
-$lap-push:          false!default;
-$lap-and-up-push:   false!default;
-$portable-push:     false!default;
-$desk-push:         false!default;
-
-$pull:              true;
-/**
- * Note: `$pull` variable above must be set to true before enabling these.
- */
-$palm-pull:         false!default;
-$lap-pull:          false!default;
-$lap-and-up-pull:   false!default;
-$portable-pull:     false!default;
-$desk-pull:         false!default;
 
 /**
  * Tell inuit.css when breakpoints start.
  */
-$lap-start:         481px!default;
-$desk-start:        1024px!default;
-$desk-wide-start:   1200px!default;
+
+$tablet-start:			481px;
+$lap-start:				601px;
+$desk-start:     	  	1024px!default;
+$desk-wide-start:  		1200px!default;
+
+//from _mixins
+$palm-end:              $tablet-start - 1px;
+$lap-end:               $desk-start - 1px;
+
 
 
 
