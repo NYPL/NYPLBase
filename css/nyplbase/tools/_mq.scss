@@ -1,0 +1,91 @@
+/*------------------------------------*\
+    $NYPL-MEDIAQUERIES
+\*------------------------------------*/
+/**
+ * Redefining mq/breakpoints from mixins.scss
+ */
+
+
+// from _mixins.scss
+@mixin media-query($media-query){
+
+    @if $media-query == palm{
+
+        @media only screen and (max-width:$palm-end) { @content; }
+
+    }
+
+					// adding tablet breakpoint
+					    @if $media-query == tablet{
+					
+					        @media only screen and (min-width:$tablet-start) and (max-width:$lap-start) { @content; }
+					
+					    }
+					// end of additional tablet breakpoint
+
+    @if $media-query == lap{
+
+        @media only screen and (min-width:$lap-start) and (max-width:$lap-end) { @content; }
+
+    }
+
+    @if $media-query == lap-and-up{
+
+        @media only screen and (min-width:$lap-start) { @content; }
+
+    }
+
+    @if $media-query == portable{
+
+        @media only screen and (max-width:$lap-end) { @content; }
+
+    }
+
+    @if $media-query == desk{
+
+        @media only screen and (min-width:$desk-start) { @content; }
+
+    }
+
+    @if $media-query == desk-wide{
+
+        @media only screen and (min-width: $desk-wide-start) { @content; }
+
+    }
+
+}
+
+
+
+
+// from _widths
+
+@if $responsive == true{
+
+@include media-query(palm){
+    @include grid-setup("palm-");
+}
+
+// adding tablet grid
+@include media-query(tablet){
+    @include grid-setup("tablet-");
+}
+// end tablet grid
+
+@include media-query(lap){
+    @include grid-setup("lap-");
+}
+
+@include media-query(lap-and-up){
+    @include grid-setup("lap-and-up-");
+}
+
+@include media-query(portable){
+    @include grid-setup("portable-");
+}
+
+@include media-query(desk){
+    @include grid-setup("desk-");
+}
+
+} /* endif */
