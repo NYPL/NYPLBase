@@ -47,7 +47,7 @@ $use-styleguide:         true;
 /**
  * Set the outside limit for optimal line length
  */
-$measure:			60rem;
+$measure:			50rem;
 
 
 /**
@@ -234,6 +234,32 @@ $responsive:        true;
  * Note: `$responsive` variable above must be set to true before enabling this.
  */
 $responsive-extra:  true;
+
+
+/**
+ * Responsive push and pull produce a LOT of code, only turn them on if you
+ * definitely need them.
+ */
+$push:              true;
+/**
+ * Note: `$push` variable above must be set to true before enabling these.
+ */
+$palm-push:         true;
+$lap-push:          true;
+$lap-and-up-push:   true;
+$portable-push:     true;
+$desk-push:         true;
+
+$pull:              true;
+/**
+ * Note: `$pull` variable above must be set to true before enabling these.
+ */
+$palm-pull:         true;
+$lap-pull:          true;
+$lap-and-up-pull:   true;
+$portable-pull:     true;
+$desk-pull:         true;
+
 
 
 /**
