@@ -4,6 +4,8 @@
 /**
  * These are the chunks (ref: @karenmcgrane) of content that 
  * cascade down the page in tiers.
+ *
+ * (NOTE TO SELF: Probably these should be broken up into smaller partials, by type of pattern?)
  */
  
 		/** NOTE TO SELF -----------------------------------------
@@ -98,6 +100,7 @@
  */
 .hdg{
 	@extend .zeta;
+	border-bottom: 1px solid $warmGrayLightest;
     color: $blue;
     display: block;
     margin-bottom: .5rem;
