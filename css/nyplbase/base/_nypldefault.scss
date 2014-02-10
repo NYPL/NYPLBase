@@ -80,6 +80,25 @@ ul, ol{
 	@include callout-box($base-ui-color, $warmGrayLighter);
 }
 
+// styles for "read more"-type links
+.read-more{
+//	@extend .btn-natural;
+
+	background: $warmGrayLightest;
+	border: 1px solid $warmGrayLighter;
+	padding: $half-spacing-unit/2;
+	
+//	@extend .icon-arrow-right2;
+	
+	@extend .zeta;
+	
+/*
+	 &:after{
+		 
+	 }
+*/
+}
+
 // removes bullet from a list
 .nobullet{
 	list-style: none;

@@ -121,6 +121,14 @@
 	margin-bottom: $base-spacing-unit;
 	position: relative;
 	
+	@include headings(){
+		@include media-query(palm){
+			//@extend .hard--left;
+			padding-left: 0;
+		}
+		
+	}
+	
 	img {
 		@extend .img--outline;
 	}
