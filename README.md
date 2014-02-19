@@ -12,5 +12,3 @@ As far as I know, the Library has never had a resource like this. So, it's a bit
 I have already started using NYPLBase myself to build prototypes of new designs for the site. As I build, I'm working directly in the code for Base so that I can make fixes to the core as I go. 
 
 At the moment, I'm the only developer allowed to work like this. At some point I will start accepting pull requests on GitHub from Trusted Colleagues.
-
-Thank you for your patience.

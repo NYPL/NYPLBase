@@ -30,36 +30,87 @@ pre {
 
 
 
-
-
 /**
- * Sections
+ * Navigation
  */
-
+ 
 // fixed nav for the style guide
-.guide--nav {
+.nav--guide{
 	background: rgba($white, .95);
 	display: none; // state on load
 	margin-top: 3rem;
 	position: fixed;
 	
+/*
 	@media only screen and (min-width:$lap-start) { 
 		display: inline-block;
 		position: relative; 
 	}
+*/
 	
 	li > ul {
 		margin-left: $half-spacing-unit;
 	}
 }
 
+.nav--show{
+	display: block;
+}
+
+// back to top link styling
+.backtotop{
+	position: fixed;
+	bottom: .5rem;
+	right: 0;	
+	
+	&:before{
+		color: $blue;
+	}
+	&:hover{
+		color: lighten($blue, 10%);	
+		@extend %transition;
+	}
+}
+
+// keep menu button fixed
+.menu__button{
+	color: $blue;
+
+	position: fixed;
+	left: 0;
+	top: 0;
+	
+	&:hover{
+		color: lighten($blue, 10%);	
+		@extend %transition;
+	}
+}
+
+
+
+
+/**
+ * Sections
+ */
+
 // container for the the content
-.guide--content{
+.content--guide{
 	margin-top: 2rem;
 }
 
+section{
+	.style-guide &{ // space between the sections
+		border-bottom: 1px solid $warmGrayLighter;
+		margin-bottom: $base-spacing-unit * 2;
+		padding-bottom: $base-spacing-unit;		
+	}
+	&#forms form{ // space between example forms
+	margin-bottom: $base-spacing-unit;
+	}
+}
+
 // notes
-.guide--notes{
+.notes--guide{
 	@include callout-box(lighten($greenLight, 15%), desaturate($greenLight, 25%));
 	@include vendor(border-radius, $brand-round);
 	margin-bottom: $base-spacing-unit;
@@ -72,54 +123,9 @@ pre {
 
 
 
-
 /**
  * Details
  */
-
-// space between the sections
-section{
-	.style-guide &{
-		border-bottom: 1px solid $warmGrayLighter;
-		margin-bottom: $base-spacing-unit * 2;
-		padding-bottom: $base-spacing-unit;		
-	}
-}
-
-// space between example forms
-section#forms form{
-	margin-bottom: $base-spacing-unit;
-}
-
-// back to top link styling
-.backtotop{
-	color: $blue !important;
-	position: fixed;
-	bottom: .5rem;
-	right: 0;	
-	
-	&:hover{
-		color: lighten($blue, 10%);	
-	}
-}
-
-// keep menu button fixed
-.menu__button{
-	color: $blue;
-
-	position: fixed;
-	right: 0;
-	top: 0;
-	
-	@media only screen and (min-width:$lap-start) {
-		display: none;
-	}
-	
-	&:hover{
-		color: lighten($blue, 10%);	
-		@extend %transition;
-	}
-}
 
 // subtitle styling
 .subtitle{

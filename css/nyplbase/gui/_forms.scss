@@ -82,7 +82,7 @@ input[type="search"]{
 /**
  * Fixes some positioning on check-lists.
  */
-.check-list-inline{
+.check-list--inline{
 	@extend .check-list;
 	li{
 		display: inline;
