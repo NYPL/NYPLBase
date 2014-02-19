@@ -15,7 +15,8 @@
 
 <a href="#top"></a>
 <a class="backtotop icon-arrow-up3 gamma"href=""><span class="visuallyhidden">Back to top</span></a>
-<span class="menu__button icon-menu2 beta"></span>
+<!--<span class="menu__button icon-menu2 beta"></span>
+
 
 	<nav class="guide--nav grid__item one-half lap-and-up-one-quarter zeta">
 	
@@ -43,7 +44,8 @@
 
 		</ul>
 		
-	</nav><!--
+	</nav>
+--><!--
 	
 
 
@@ -63,7 +65,7 @@
 		<section>
 		
 			<div class="guide--notes">
-				<p>Each element that you want to adhere to the grid system gets a class of <code>.grid__item</code>, which sets up, among other things, those elements as inline.</p>
+				<p>Your content <strong>container</strong> (or any container that will contain elements in the grid) gets a class of <code>.grid</code>. Each <strong>element</strong> that you want to adhere to the grid system gets a class of <code>.grid__item</code>, which sets up, among other things, those elements as inline.</p>
 				<p>Inuit's grid system is not really a traditional grid; it's <strong>based on proportions</strong> rather than columns. (See more at <a href="http://github.com/csswizardry/csswizardry-grids/">csswizardry-grids</a> and <a href="http://csswizardry.com/2013/02/responsive-grid-systems-a-solution/">CSS Wizardry</a>.) For example, if you want an element to take up half of its container, give that element the class <code>.one-half</code>. This way, you don't have to remember the number of columns in your grid!</p>
 				<p>You can also combine these proportion classes with <strong>device contexts</strong> to define at which breakpoint you’d like an element to be a certain size:</p>
 			</div>
@@ -74,7 +76,7 @@
 			
 			
 			 
-			<p class="guide--notes">Inuit's grid system relies on the inline setting to avoid the usual "float" hack. This means you can use text-level attributes for easier positioning. One caveat: there's a bug in the whitespace attribute, which means <strong>you need to comment out the space in the code between <code>.grid__item</code> elements</strong>. Kind of a pain? sure, but less hacky.</p>
+			<p class="guide--notes">Inuit's grid system relies on the inline setting to avoid the usual "float" hack. This means you can use text-level attributes for easier positioning. One caveat: there's a bug in the whitespace attribute, which means <strong>you need to comment out the space in the code between <code>.grid__item</code> elements</strong>. Kind of a pain? sure, but less hacky. And we at NYPL do not play hackysacks.</p>
 		
 			<pre class="code prettyprint">
 				&lt;div class=&quot;grid&quot;&gt;<br><br>
@@ -113,11 +115,9 @@
 		<section id="typography">
 			<h2>Typography</h2>
 			<div class="guide--notes">
-				<p>NYPL's <strong >default</strong> body text is set to <strong>16px, with a 24px line height</strong>. The heds and type size classes are set to the standard typographic scale (see Robert Bringhurst, <cite><a href="http://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style">The Elements of Typographic Style</a></cite>).</p>
-				<p>Paragraphs are set to a <strong>maximum width of 5.0rem</strong>, to prevent an unreadably long line.</p>
+				<p>NYPL's <strong >default</strong> body text is set to <strong>16px, with a 24px line height</strong> (or 1rem, 1.5rem line height). The heds and type size classes are set to the standard typographic scale (see Robert Bringhurst, <cite><a href="http://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style">The Elements of Typographic Style</a></cite>).</p>
+				<p>Paragraphs are set to a <strong>maximum width of 50rem</strong>, to prevent an unreadably long line.</p>
 				<p>NYPL's core web typeface is <a href="http://www.latofonts.com/"><strong>Lato</strong></a>.</p>
-		
-				<p><a href="typetest.html">Page of typography tests</a></p>
 			</div>
 			
 			<h1>Heading 1</h1>
@@ -147,7 +147,7 @@
 			<p class="unicorns">add notes on specific uses of uppercase, bold, etc.</p>
 			
 			<div class="guide--notes" id="text-sizes">
-				<p>Inuit comes with a set of <strong>classes that affect font size</strong> only. The first six classes (alpha - zeta) correspond to the six heading element settings. Then there are additional very large and very small classes, all listed below.</p>
+				<p>Inuit comes with a set of <strong>classes that affect font size</strong> only. The first six classes (<code>.alpha</code> through <code>.zeta</code>) correspond to the six heading element settings. Then there are additional very large and very small classes, all listed below.</p>
 			</div>
 <!-- 			<p><span class="alpha">alpha</span> <span class="beta">beta</span> <span class="gamma">gamma</span> <span class="delta">delta</span> <span class="epsilon">epsilon</span></p> -->
 			<div class="grid__item one-third">
@@ -236,9 +236,9 @@
 					<li>&lt;input[type="button"]&gt;</li>
 					<li>&lt;input[type="submit"]&gt;</li>
 				</code></ul>
-				 are styled by default.</p>
-				<p>NYPL buttons should also have the <code>.gradient</code> class applied to them. The gradient styling is not applied by default so that it may be omitted from a button if appropriate. This is much better practice than overriding the default style.</p>
-				<p>You may also apply the <code>.btn--inactive</code> class for a "grayed-out" style.</p>
+				 are styled the same way by default.</p>
+				<p>NYPL buttons should also have the <code>.gradient</code> class added to them. The gradient styling is not applied by default so that it may be omitted from a button if appropriate. (This is much better practice than overriding the default style.)</p>
+				<p>You may also add the <code>.btn--inactive</code> class for a "grayed-out" style.</p>
 			</div>
 			<pre class="code prettyprint">
 				&lt;button class=&quot;gradient&quot;&gt;Get this thing!&lt;/button&gt; <br><br>
@@ -253,9 +253,9 @@
 			
 			<p class="guide--notes">Use the following alternative <code>.btn--</code> styles to create <strong>buttons of different sizes</strong>.</p>
 			<pre class="code prettyprint">
-				&lt;button class=&quot;btn--small&quot;&gt;small&lt;/button&gt;<br>
-				&lt;button class=&quot;btn--large&quot;&gt;large&lt;/button&gt;<br>
-				&lt;button class=&quot;btn--huge&quot;&gt;huge&lt;/button&gt;
+				&lt;button class=&quot;gradient btn--small&quot;&gt;small&lt;/button&gt;<br>
+				&lt;button class=&quot;gradient btn--large&quot;&gt;large&lt;/button&gt;<br>
+				&lt;button class=&quot;gradient btn--huge&quot;&gt;huge&lt;/button&gt;
 			</pre>
 			<p>
 				<button class="btn--small gradient">small</button><button class="btn--large gradient">large</button>
@@ -267,9 +267,9 @@
 				<p>Note that the button's padding shrinks or grows proportionally based on the text class. In the above examples, I've only added button size classes; the text size remains the same. Below, I've made some ridiculously mismatched button/text size combos to demonstrate the need to be careful with your classes. (In other words, watch out for Buttons of Unusual Size.)</p>			
 			</div>
 			<pre class="code prettyprint">
-				&lt;button class=&quot;btn--small micro&quot;&gt;small button, micro text&lt;/button&gt;<br>
-				&lt;button class=&quot;btn--large alpha&quot;&gt;large button, alpha text&lt;/button&gt;<br>
-				&lt;button class=&quot;btn--huge kilo&quot;&gt;huge button, kilo text&lt;/button&gt;
+				&lt;button class=&quot;gradient btn--small micro&quot;&gt;small button, micro text&lt;/button&gt;<br>
+				&lt;button class=&quot;gradient btn--large alpha&quot;&gt;large button, alpha text&lt;/button&gt;<br>
+				&lt;button class=&quot;gradient btn--huge kilo&quot;&gt;huge button, kilo text&lt;/button&gt;
 			</pre>
 			<p>
 				<button class="btn--small gradient micro">small button, micro text</button>
@@ -278,12 +278,12 @@
 			</p>
 
 			<div class="guide--notes">
-				<p>There's also a class called <code>.btn--natural</code>, which <strong>inherits its type size and padding</strong> from its parent element. Button and text size classes will not affect this style.</p>			
+				<p>There's also a class called <code>.btn--natural</code>, which <strong>inherits its type size and padding</strong> from its parent element, which is handy for inline calls-to-action. (Note: the other button and text size classes will have no effect on this style.)</p>			
 			</div>
 			<pre class="code prettyprint">
-				&lt;button class=&quot;btn--natural&quot;&gt;natural&lt;/button&gt;
+				&lt;button class=&quot;gradient btn--natural&quot;&gt;natural&lt;/button&gt;
 			</pre>
-			<p><button class="btn--natural gradient">natural</button></p>
+			<p>You make me feel like a <button class="btn--natural gradient">natural</button> woman</p>
 
 
 			
@@ -292,7 +292,7 @@
 				<p>At the moment I don't have a better way to <strong>assign a different color to a button</strong> (and still preserve all the other button styles) than adding a <code>.btn--</code>-style class. The colors that currently exist are listed below:</p>
 			</div>
 			<pre class="code prettyprint">
-				&lt;button class=&quot;btn--greenNeon&quot;&gt;greenNeon&lt;/button&gt;<br>
+				&lt;button class=&quot;gradient btn--greenNeon&quot;&gt;greenNeon&lt;/button&gt;<br>
 			</pre>
 			<p>
 				<button class="btn--greenNeon gradient">greenNeon</button>
@@ -302,6 +302,10 @@
 
 			
 			<h3>Specific NYPL use contexts</h3>
+			<div class="guide--notes">
+				<p>Some <strong>NYPL calls-to-action</strong>, like the "Donate" button, have very specific styles. Again: at the moment I don't have a better way to assign these styles, but so far I've got <code>.btn--donate</code> and <code>.btn--friends</code>. This will develop over time, I'm sure.</p>
+			</div>
+
 			<h4>The Donate button</h4>
 			<p>
 				<pre class="code prettyprint ">
@@ -316,6 +320,17 @@
 					&lt;button class=&quot;btn--friends&quot;&gt;Become a friend&lt;/button&gt;
 				</pre>
 				<button class="btn--friends ">Become a Friend</button>
+			</p>
+			
+			
+			
+			<p class="guide--notes">Note: if you are using any of the additional call-to-action classes listed below on an element that does <strong>not</strong> have the <code>.btn</code> styling applied by default, don't forget to also add <code>.btn</code> class first!.</p>
+			
+			<pre class="code prettyprint">
+				&lt;a class=&quot;btn gradient btn--greenNeon&quot;&gt;greenNeon&lt;/a&gt;<br>
+			</pre>
+			<p>
+				<a class="btn btn--greenNeon gradient">greenNeon</a>
 			</p>
 
 		</section>
