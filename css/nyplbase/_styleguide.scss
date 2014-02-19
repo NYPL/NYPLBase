@@ -38,29 +38,24 @@ pre {
 
 // fixed nav for the style guide
 .guide--nav {
+	background: rgba($white, .95);
+	display: none; // state on load
+	margin-top: 3rem;
 	position: fixed;
+	
+	@media only screen and (min-width:$lap-start) { 
+		display: inline-block;
+		position: relative; 
+	}
 	
 	li > ul {
 		margin-left: $half-spacing-unit;
 	}
-
-	& ul.nav{
-/*
-		@include media-query(portable){
-			display: none;
-		}
-*/
-	}	
-
 }
 
 // container for the the content
 .guide--content{
-/*
-	@include media-query(lap){
-		@extend .visuallyhidden;
-	}
-*/
+	margin-top: 2rem;
 }
 
 // notes
@@ -83,10 +78,12 @@ pre {
  */
 
 // space between the sections
-.style-guide section{
-	border-bottom: 1px solid $warmGrayLighter;
-	margin-bottom: $base-spacing-unit * 2;
-	padding-bottom: $base-spacing-unit;
+section{
+	.style-guide &{
+		border-bottom: 1px solid $warmGrayLighter;
+		margin-bottom: $base-spacing-unit * 2;
+		padding-bottom: $base-spacing-unit;		
+	}
 }
 
 // space between example forms
@@ -94,6 +91,42 @@ section#forms form{
 	margin-bottom: $base-spacing-unit;
 }
 
+// back to top link styling
+.backtotop{
+	color: $blue !important;
+	position: fixed;
+	bottom: .5rem;
+	right: 0;	
+	
+	&:hover{
+		color: lighten($blue, 10%);	
+	}
+}
+
+// keep menu button fixed
+.menu__button{
+	color: $blue;
+
+	position: fixed;
+	right: 0;
+	top: 0;
+	
+	@media only screen and (min-width:$lap-start) {
+		display: none;
+	}
+	
+	&:hover{
+		color: lighten($blue, 10%);	
+		@extend %transition;
+	}
+}
+
+// subtitle styling
+.subtitle{
+	& span{
+		display: inline-block;
+	}
+}
 
 // colors demo "paint chips"; courtesy of BFoo :)
 .color-block {

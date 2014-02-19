@@ -15,13 +15,20 @@
 
     }
 
-					// adding tablet breakpoint
-					    @if $media-query == tablet{
-					
-					        @media only screen and (min-width:$tablet-start) and (max-width:$lap-start) { @content; }
-					
-					    }
-					// end of additional tablet breakpoint
+	// adding tablet breakpoint
+	    @if $media-query == tablet{
+	
+	        @media only screen and (min-width:$tablet-start) and (max-width:$lap-start) { @content; }
+	
+	    }
+
+		@if $media-query == tablet-and-up{
+			
+			@media only screen and (min-width:$tablet-start) { @content; }
+		}
+
+
+	// end of additional tablet breakpoint
 
     @if $media-query == lap{
 
@@ -69,6 +76,10 @@
 // adding tablet grid
 @include media-query(tablet){
     @include grid-setup("tablet-");
+}
+
+@include media-query(tablet-and-up){
+    @include grid-setup("tablet-and-up-");
 }
 // end tablet grid
 

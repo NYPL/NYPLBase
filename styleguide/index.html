@@ -13,29 +13,26 @@
 </head>
 <body class="grid style-guide">
 
-	<div class="grid__item one-whole">
+<a href="#top"></a>
+<a class="backtotop icon-arrow-up3 gamma"href=""><span class="visuallyhidden">Back to top</span></a>
+<span class="menu__button icon-menu2 beta"></span>
 
-	
-
-	<nav class="guide--nav grid__item lap-and-up-one-fifth">
-	
-		<span class="menu__button icon-menu2 alpha"></span>
+	<nav class="guide--nav grid__item one-half lap-and-up-one-quarter zeta">
 	
 		<ul class="nav nav--stacked">
-			<li>
-				<a href="#elements">Elements of the page</a>
+			<li><a href="#gridsystem">Grid system</a></li>
+			<li><a href="#elements">Elements of the page</a>
 				<ul class="nav nav--stacked">
 					<li><a href="#typography">Typography</a></li>
 					<li><a href="#links">Links</a></li>
 					<li><a href="#lists">Lists</a></li>
-					<li><a href="#calls-to-action">Buttons/Calls-to-action</a></li>
+					<li><a href="#calls-to-action">Buttons</a></li>
 					<li><a href="#forms">Forms</a></li>
 					<li><a href="#images">Images</a></li>
-					<li><a href="#navigational">Navigational elements</a></li>
+					<li><a href="#navigational">Nav elements</a></li>
 				</ul>
 			</li>
-			<li>
-				<a href="#branding">Branding</a>
+			<li><a href="#branding">Branding</a>
 				<ul class="nav nav--stacked">
 					<li><a href="#palette">Color palette</a></li>
 					<li><a href="#logo">Logo</a></li>
@@ -46,23 +43,71 @@
 
 		</ul>
 		
-	</nav>
-
-
-
-
-	<section class="guide--content grid__item lap-and-up-four-fifths push--one-fifth">
+	</nav><!--
 	
-		<header>
-			<h1>This is NYPL Base.</h1>
-			<p class="lede"><span class="icon-cogs blueDarkerText">rapid prototyping system</span> <span class="icon-images purpleText">style guide</span> <span class="icon-scissors purpleDarkerText">pattern library</span> <span class="icon-NYPL_mark1_black_pos blueText">branding machine</span></p>
-			
-			<div>
-				<p>NYPLBase is built on Inuit. <span class="unicorns">[more notes here]</span></p>
-				<p class="smallprint">Note: this style guide is a work in progress, so please be patient with any bugs or other weirdness... Thanks, The Management</p>
-			</div>
+
+
+	--><section class="guide--content grid__item one-whole lap-and-up-three-quarters">
+		
+
+		<header class="header-hed grid__item one-whole flush--left">
+			<h1>NYPLBase</h1>
+			<p class="subtitle lede text--center"><span class="icon-cogs blueDarkerText">rapid prototyping system</span> <span class="icon-images purpleText">style guide</span> <span class="icon-scissors purpleDarkerText">pattern library</span> <span class="icon-NYPL_mark1_black_pos blueText">branding machine</span></p>
+			<p class="smallprint">Note: this style guide is a work in progress, so please be patient with any bugs or other weirdness. Thanks, The Management</p>
 		</header>
 	
+	
+
+
+		<h1 id="gridsystem">The grid system</h1>
+		<section>
+		
+			<div class="guide--notes">
+				<p>Each element that you want to adhere to the grid system gets a class of <code>.grid__item</code>, which sets up, among other things, those elements as inline.</p>
+				<p>Inuit's grid system is not really a traditional grid; it's <strong>based on proportions</strong> rather than columns. (See more at <a href="http://github.com/csswizardry/csswizardry-grids/">csswizardry-grids</a> and <a href="http://csswizardry.com/2013/02/responsive-grid-systems-a-solution/">CSS Wizardry</a>.) For example, if you want an element to take up half of its container, give that element the class <code>.one-half</code>. This way, you don't have to remember the number of columns in your grid!</p>
+				<p>You can also combine these proportion classes with <strong>device contexts</strong> to define at which breakpoint you’d like an element to be a certain size:</p>
+			</div>
+		
+			<pre class="code prettyprint">
+				&lt;div class=&quot;grid__item  one-quarter  lap-one-half  palm-one-whole&quot;&gt; ... &lt;/div&gt;
+			</pre>
+			
+			
+			 
+			<p class="guide--notes">Inuit's grid system relies on the inline setting to avoid the usual "float" hack. This means you can use text-level attributes for easier positioning. One caveat: there's a bug in the whitespace attribute, which means <strong>you need to comment out the space in the code between <code>.grid__item</code> elements</strong>. Kind of a pain? sure, but less hacky.</p>
+		
+			<pre class="code prettyprint">
+				&lt;div class=&quot;grid&quot;&gt;<br><br>
+			
+			       &lt;div class=&quot;grid__item  one-third&quot;&gt;<br>
+			           &lt;p&gt;One third grid&lt;/p&gt;<br>
+			       &lt;/div&gt;&lt;!--<br><br>
+			
+			    --&gt;&lt;div class=&quot;grid__item  two-thirds&quot;&gt;<br>
+			           &lt;p&gt;Two thirds grid&lt;/p&gt;<br>
+			       &lt;/div&gt;&lt;!--<br><br>
+			
+			    --&gt;&lt;div class=&quot;grid__item  one-half&quot;&gt;<br>
+			           &lt;p&gt;One half grid&lt;/p&gt;<br>
+			       &lt;/div&gt;&lt;!--<br><br>
+			
+			    --&gt;&lt;div class=&quot;grid__item  one-quarter&quot;&gt;<br>
+			           &lt;p&gt;One quarter grid&lt;/p&gt;<br>
+			       &lt;/div&gt;&lt;!--<br><br>
+			
+			    --&gt;&lt;div class=&quot;grid__item  one-quarter&quot;&gt;<br>
+			           &lt;p&gt;One quarter grid&lt;/p&gt;<br>
+			       &lt;/div&gt;<br><br>
+			
+			   &lt;/div&gt;
+
+				 </pre>
+
+		</section>
+
+
+
+
 		<h1 id="elements">Elements of the page</h1>
 
 		<section id="typography">
@@ -658,10 +703,7 @@
 -->
 	<!-- end content -->
 	</section>
-	
-	
-	<!-- end page -->
-	</div>
+
 
 
 	<div class="grid__item one-whole">
@@ -694,7 +736,11 @@
 $(document).ready(function () {
 
 	$( ".menu__button" ).click(function() {
-	  $( ".guide--nav .nav" ).toggle( "slide" );
+	  $( ".guide--nav" ).show( "slide" );
+	});
+	
+	$(".guide--nav a").click(function() {
+	  $( ".guide--nav" ).hide( "slide" );
 	});
 	
 	
