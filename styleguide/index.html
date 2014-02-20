@@ -15,29 +15,29 @@
 
 <a href="#top"></a>
 <a class="backtotop icon-arrow-up3 gamma"href=""><span class="visuallyhidden">Back to top</span></a>
-<span class="menu__button icon-menu2 beta"></span>
+<!-- <span class="menu__button icon-menu2 beta"></span> -->
 
 
 	<nav class="nav--guide grid__item two-thirds lap-and-up-one-quarter zeta">
 	
 		<ul class="nav nav--stacked">
 			<li><a href="#gridsystem">Grid system</a></li>
-			<li><a href="#elements">Elements of the page</a>
+			<li><a href="#elements">Basic elements</a>
 				<ul class="nav nav--stacked">
-					<li><a href="#typography">Typography</a></li>
+					<li><a href="#text">Text</a></li>
 					<li><a href="#links">Links</a></li>
 					<li><a href="#lists">Lists</a></li>
 					<li><a href="#calls-to-action">Buttons</a></li>
 					<li><a href="#forms">Forms</a></li>
 					<li><a href="#images">Images</a></li>
 					<li><a href="#navigational">Nav elements</a></li>
+					<li><a href="#icons">Icons</a></li>
 				</ul>
 			</li>
 			<li><a href="#branding">Branding</a>
 				<ul class="nav nav--stacked">
 					<li><a href="#palette">Color palette</a></li>
 					<li><a href="#logo">Logo</a></li>
-					<li><a href="#icons">Icons</a></li>
 				</ul>				
 			</li>
 			<li><a href="#thanks">Acknowledgements</a></li>
@@ -47,7 +47,7 @@
 	</nav><!--
 
 
-	--><div class="content--guide grid__item one-whole lap-and-up-three-quarters">
+	--><div class="content--guide grid__item one-whole lap-and-up-three-quarters push--one-quarter">
 		
 
 		<header class="header-hed grid__item one-whole flush--left hard--left">
@@ -108,10 +108,10 @@
 
 
 
-		<h1 id="elements">Elements of the page</h1>
+		<h1 id="elements">Basic elements</h1>
 
-		<section id="typography">
-			<h2>Typography</h2>
+		<section id="text">
+			<h2>Text</h2>
 			<div class="notes--guide">
 				<p>NYPL's <strong >default</strong> body text is set to <strong>16px, with a 24px line height</strong> (or 1rem, 1.5rem line height). The heds and type size classes are set to the standard typographic scale (see Robert Bringhurst, <cite><a href="http://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style">The Elements of Typographic Style</a></cite>).</p>
 				<p>Paragraphs are set to a <strong>maximum width of 50rem</strong>, to prevent an unreadably long line.</p>
@@ -552,7 +552,62 @@
 
 		</section>
 		
-	
+		<section id="icons">
+			<h2>Icons</h2>
+			<div class="notes--guide">
+				<p>We use a custom export of <a href="http://icomoon.io/"><strong>Icomoon</strong>'s</a> proprietary icons, which are available for use under the <a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License</a>. Included as part of the icon set are two icons of the "lion mark" (just the lion part) logo. (More on how to use those further on in the guide!)</p>
+				<p>This is the <a href="../fonts/icons-demo/demo.html"><strong>current set of supported icons</strong></a>.</p>
+			</div>
+
+
+
+			<h3>How to use the icons</h3>
+			
+			<h4>Class name</h4>
+			<p class="icon-cog">This is some text</p>
+			<pre class="code prettyprint">
+				&lt;p class=&quot;icon-cog&quot;&gt;This is some text&lt;/p&gt;
+			</pre>
+			
+			<h4>Data-icon attribute</h4>
+			<p class="fs1" aria-hidden="true" data-icon="&#xe690;">This is also some text</p>
+			<pre class="code prettyprint">
+				&lt;p aria-hidden=&quot;true&quot; data-icon=&quot;&amp;#xf013;&quot;&gt;This is also some text&lt;/p&gt;
+			</pre>
+
+			
+			
+			<h4>Sizes</h4>
+			<div class="notes--guide">
+				<p>If you simply apply either an icon class or a data-icon attribute to an element, the icon that is attached will render at the <strong>same font size as its containing element</strong>. You can add font size classes to any element to affect the size of the text.</p>
+			</div>	
+			<pre class="code prettyprint">
+				&lt;ul class=&quot;nav grid__item four-fifths&quot;&gt;<br>
+					&lt;li class=&quot;zeta icon-cog&quot;&gt;List item here&lt;/li&gt;<br>
+					&lt;li class=&quot;episilon icon-bookmark&quot;&gt;Another item here&lt;/li&gt;<br>
+					&lt;li class=&quot;delta icon-book&quot;&gt;Last one&lt;/li&gt;<br>
+				&lt;/ul&gt;
+			</pre>		
+			<ul class="nav grid__item four-fifths">
+				<li class="zeta icon-cog">List item here</li>
+				<li class="episilon icon-bookmark">Another item here</li>
+				<li class="delta icon-book">Last one</li>
+			</ul>
+			
+			<div class="notes--guide">
+				<p>You can combine 2 elements, one containing the icon and one containing some content, and give each a different font size class.</p>
+			</div>
+			<pre class="code prettyprint grid__item one-whole">
+					&lt;span class=&quot;giga&quot; aria-hidden=&quot;true&quot; data-icon=&quot;&amp;#xe61d;&quot;&gt;&lt;/span&gt;<br>
+					&lt;p class=&quot;grid__item four-eighths gamma&quot;&gt;This large icon illustrates this chunk of content.&lt;/p&gt;
+			</pre>
+			<div class="grid__item one-half">
+				<span class="giga" aria-hidden="true" data-icon="&#xe61d;"></span>
+				<p class="grid__item four-eighths gamma">This large icon illustrates this chunk of content.</p>
+			</div><p class="blueNeon">jA: KEEP WORKING ON VERTICAL POSITIONING, LINE HEIGHTS (ESP ON LINE WRAPS) ON VARIOUS SIZES</p>
+
+			
+		</section>	
 
 
 		<h1 id="branding">Branding</h1>
@@ -622,67 +677,6 @@
 			<div class="notes--guide">
 			<p class="unicorns">consult on usage rules we need here</p>
 			</div>
-		</section>
-
-
-
-
-		<section id="icons">
-			<h2>Icon font</h2>
-			<div class="notes--guide">
-				<p>We use a custom export of <a href="http://icomoon.io/"><strong>Icomoon</strong>'s</a> proprietary icons, which are available for use under the <a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License</a>. Included as part of the icon set are two icons of the "lion mark" (just the lion part) logo. (More on how to use those further on in the guide!)</p>
-				<p>This is the <a href="../fonts/icons-demo/demo.html"><strong>current set of supported icons</strong></a>.</p>
-			</div>
-
-
-
-			<h3>How to use the icons</h3>
-			
-			<h4>Class name</h4>
-			<p class="icon-cog">This is some text</p>
-			<pre class="code prettyprint">
-				&lt;p class=&quot;icon-cog&quot;&gt;This is some text&lt;/p&gt;
-			</pre>
-			
-			<h4>Data-icon attribute</h4>
-			<p class="fs1" aria-hidden="true" data-icon="&#xe690;">This is also some text</p>
-			<pre class="code prettyprint">
-				&lt;p aria-hidden=&quot;true&quot; data-icon=&quot;&amp;#xf013;&quot;&gt;This is also some text&lt;/p&gt;
-			</pre>
-
-			
-			
-			<h4>Sizes</h4>
-			<div class="notes--guide">
-				<p>If you simply apply either an icon class or a data-icon attribute to an element, the icon that is attached will render at the <strong>same font size as its containing element</strong>. You can add font size classes to any element to affect the size of the text.</p>
-			</div>	
-			<pre class="code prettyprint">
-				&lt;ul class=&quot;nav grid__item four-fifths&quot;&gt;<br>
-					&lt;li class=&quot;zeta icon-cog&quot;&gt;List item here&lt;/li&gt;<br>
-					&lt;li class=&quot;episilon icon-bookmark&quot;&gt;Another item here&lt;/li&gt;<br>
-					&lt;li class=&quot;delta icon-book&quot;&gt;Last one&lt;/li&gt;<br>
-				&lt;/ul&gt;
-			</pre>		
-			<ul class="nav grid__item four-fifths">
-				<li class="zeta icon-cog">List item here</li>
-				<li class="episilon icon-bookmark">Another item here</li>
-				<li class="delta icon-book">Last one</li>
-			</ul>
-			
-			<div class="notes--guide">
-				<p>You can combine 2 elements, one containing the icon and one containing some content, and give each a different font size class.</p>
-			</div>
-			<pre class="code prettyprint grid__item one-whole">
-					&lt;span class=&quot;giga&quot; aria-hidden=&quot;true&quot; data-icon=&quot;&amp;#xe61d;&quot;&gt;&lt;/span&gt;<br>
-					&lt;p class=&quot;grid__item four-eighths gamma&quot;&gt;This large icon illustrates this chunk of content.&lt;/p&gt;
-			</pre>
-			<div class="grid__item one-half">
-				<span class="giga" aria-hidden="true" data-icon="&#xe61d;"></span>
-				<p class="grid__item four-eighths gamma">This large icon illustrates this chunk of content.</p>
-			</div><p class="blueNeon">jA: KEEP WORKING ON VERTICAL POSITIONING, LINE HEIGHTS (ESP ON LINE WRAPS) ON VARIOUS SIZES</p>
-
-
-
 
 			<h4>The logo icon</h4>
 				<span class="grid__item one-sixth hard--left giga" aria-hidden="true" data-icon="&#xe600;"></span><!--
@@ -701,19 +695,11 @@
 					<span class="grid__item one-sixth hard--left giga " aria-hidden="true" data-icon="&#xe601;"></span><!--
 					--><p class="grid__item five-sixths">The trick is to apply a color to the reverse version of the lion mark that is <em>lighter</em> than the background it sits on. See?</p>	
 				</div>
-			
+				
 		</section>
 		
-		
-<!--
-		<section id="gridsystem">
-			<h2>The Proportional Grid</h2>
-			
-			<p>InuitCSS </p>
-			<p>and don't forget to point out the stupid whitespace bug in the markup, fixed by comments</p>
-		</section>
-		
--->
+
+
 
 		<section id="thanks" class="grid__item one-whole">
 			<h2>Acknowledgements</h2>
@@ -748,6 +734,7 @@
 <script>
 $(document).ready(function () {
 	
+/*
 	// show/hide nav
 	$( ".menu__button" ).click(function() {
 	  $( ".nav--guide" ).toggleClass( "nav--show" );
@@ -758,6 +745,7 @@ $(document).ready(function () {
 	    e.stopPropagation();
 	    $( ".nav--guide" ).removeClass( "nav--show" ); 
 	});
+*/
 	
 	
 /* -end- */
