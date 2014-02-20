@@ -59,9 +59,11 @@ pre {
 
 // back to top link styling
 .backtotop{
+	display: inline-block;
 	position: fixed;
 	bottom: .5rem;
 	right: 0;	
+	z-index: 1001;
 	
 	&:before{
 		color: $blue;

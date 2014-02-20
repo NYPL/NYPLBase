@@ -5,6 +5,16 @@
  * Redefining mq/breakpoints from mixins.scss
  */
 
+/*
+palm
+tablet
+tablet-and-up
+lap
+lap-and-up
+portable
+desk
+desk-wide
+*/
 
 // from _mixins.scss
 @mixin media-query($media-query){

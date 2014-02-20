@@ -13,8 +13,8 @@
 </head>
 <body class="grid style-guide">
 
-<a href="#top"></a>
-<a class="backtotop icon-arrow-up3 gamma"href=""><span class="visuallyhidden">Back to top</span></a>
+<div id="top"></div>
+<a class="backtotop icon-arrow-up3 alpha" href="#top"><span class="visuallyhidden">Back to top</span></a>
 <!-- <span class="menu__button icon-menu2 beta"></span> -->
 
 
@@ -34,10 +34,18 @@
 					<li><a href="#icons">Icons</a></li>
 				</ul>
 			</li>
+			<li><a href="#helpers">Helpers</a>
+				<ul class="nav nav--stacked">
+					<li><a href="#naming">Note on naming</a></li>
+					<li><a href="#helpclasses">Helper classes</a></li>
+					<li><a href="#mqs">Media queries</a></li>
+				</ul>				
+			</li>
 			<li><a href="#branding">Branding</a>
 				<ul class="nav nav--stacked">
 					<li><a href="#palette">Color palette</a></li>
 					<li><a href="#logo">Logo</a></li>
+					<li><a href="#iconusage">Icon usage</a></li>
 				</ul>				
 			</li>
 			<li><a href="#thanks">Acknowledgements</a></li>
@@ -51,7 +59,7 @@
 		
 
 		<header class="header-hed grid__item one-whole flush--left hard--left">
-			<h1>NYPLBase</h1>
+			<h1 class="kilo">NYPLBase</h1>
 			<p class="subtitle lede text--center"><span class="icon-cogs blueDarkerText">rapid prototyping system</span> <span class="icon-images purpleText">style guide</span> <span class="icon-scissors purpleDarkerText">pattern library</span> <span class="icon-NYPL_mark1_black_pos blueText">branding machine</span></p>
 			<p class="smallprint text--right">Note: this style guide is a work in progress, so please be patient with any bugs or other weirdness.<br> Thanks, The Management</p>
 		</header>
@@ -610,6 +618,208 @@
 		</section>	
 
 
+
+
+
+		<h1 id="helpers">Helpers</h1>
+
+		<section id="naming">
+			<h2>Note on naming</h2>
+			<div class="notes--guide">			
+				<p>InuitCSS uses the <a href="http://bem.info/method/definitions/">BEM method</a> of <strong>naming its classes</strong>. BEM stands for Block Element Modifier, and it works like this:</p>
+				
+				<p class="text--center gamma">".block__element--modifier"</p>
+				
+				<p>in which "block" is the name of the chunk you're working on, "element" is the name of the smaller piece of the chunk, and "modifier" is a descriptor. For example, the class name <code>.nav__item</code> would refer to an item contained in the nav chunk (or "block"). <code>.nav__item--last</code> would refer to the last nav item in the list. You can use just the item and descriptor parts of the convention too, as in <code>.form--horiz</code>.</p>
+				
+				<p>The exception to this naming convention in Base is the <strong>color classes</strong>, which use intercaps (as in <code>.blueLight</code>).</p> 
+			</div>
+			
+		</section>
+
+		<section id="helpclasses">
+			<h2>Helper classes</h2>
+
+			<p class="notes--guide">Inuit recommends to only use a helper class if an element/component <strong>doesn’t already have a class</strong> to which you could apply this styling, e.g. if you need to float <code>.main-nav</code> left then add <code>float:left;</code> to that ruleset as opposed to adding the <code>.float--left</code> class to the markup. Also note that many of these classes are declared <code>!important</code> because they are intended to <strong>override other selectors</strong>.</p>
+
+			<div class="grid__item">
+				<div class="code grid__item one-whole lap-and-up-one-third">
+					<h3>Add/remove floats</h3>
+					<code>
+						.float--right<br>
+						.float--left<br>
+						.float--none<br>
+					</code>
+				</div><!--
+				--><div class="code grid__item one-whole lap-and-up-one-third">
+					 <h3>Text alignment</h3>
+					<code>
+						.text--left<br>
+						.text--center<br>
+						.text--right<br>
+					</code>
+				</div><!--
+				--><div class="code grid__item one-whole lap-and-up-one-third">
+					<h3>Font weights</h3>
+					<code>
+						.weight--light<br>
+						.weight--normal<br>
+						.weight--semibold<br>
+					</code>
+				</div>
+			</div>
+			<div class="code grid__item">
+				<h3>Add/remove margins</h4>
+				<div class="grid__item one-whole lap-and-up-one-third">
+					<h4>Add</h3>
+					<code>
+						.push<br>
+						.push--top<br> 
+						.push--right<br>
+						.push--bottom<br>
+						.push--left<br>
+						.push--ends <br>   
+						.push--sides<br>
+					</code>
+				</div><!--
+				--><div class="grid__item one-whole lap-and-up-one-third">
+					<h4>Add half space</h4>
+					<code>
+						.push-half<br>      
+						.push-half--top<br> 
+						.push-half--right<br>
+						.push-half--bottom<br> 
+						.push-half--left<br>   
+						.push-half--ends<br>   
+						.push-half--sides<br>
+					</code>
+				</div><!--
+				--><div class="grid__item one-whole lap-and-up-one-third">
+					<h4>Remove</h4>
+					<code>
+						.flush<br>       
+						.flush--top<br>    
+						.flush--right<br>  
+						.flush--bottom<br> 
+						.flush--left<br>   
+						.flush--ends<br>   
+						.flush--sides<br>
+					</code>
+				</div>
+			</div>
+			<div class="code grid__item">
+				<h3>Add/remove paddings</h3>
+				<div class="grid__item one-whole lap-and-up-one-third">
+					<h4>Add</h3>
+					 <code>
+						.soft<br>        
+						.soft--top<br>    
+						.soft--right<br>  
+						.soft--bottom<br> 
+						.soft--left<br>   
+						.soft--ends<br>   
+						.soft--sides<br>  
+					</code>
+				</div><!--
+				--><div class="grid__item one-whole lap-and-up-one-third">
+					<h4>Add half space</h4>
+					<code>
+						.soft-half<br>   
+						.soft-half--top<br> 
+						.soft-half--right<br>  
+						.soft-half--bottom<br> 
+						.soft-half--left<br>   
+						.soft-half--ends<br>   
+						.soft-half--sides<br>  
+					</code>
+				</div><!--
+				--><div class="grid__item one-whole lap-and-up-one-third">
+					<h4>Remove</h4>
+					<code>
+						.hard<br>          
+						.hard--top<br>     
+						.hard--right<br>   
+						.hard--bottom<br>  
+						.hard--left<br>
+						.hard--ends<br>
+						.hard--sides<br>
+					</code>
+				</div>
+			</div>   
+
+			<p class="notes--guide">Prepending the width classes with either pull-- or push-- will move the element with that class to the left (pull) or right(push).</p>
+			<pre class="code prettyprint">&lt;div class=&quot;pull--one-third&quot;&gt;This element is moved over&lt;/div&gt;</pre>
+
+Some Sass helpers
+Clearfix
+Extend .cf, rather than adding the class in the markup.	
+
+
+Create vendor-prefixed CSS in one with @mixin vendor
+@include vendor(border-radius, 4px)
+
+
+<!--
+/**
+ * Hide content off-screen without resorting to `display:none;`, also provide
+ * breakpoint specific hidden elements.
+ */
+@mixin accessibility{
+    border:0!important;
+    clip:rect(0 0 0 0)!important;
+    height:1px!important;
+    margin:-1px!important;
+    overflow:hidden!important;
+    padding:0!important;
+    position: absolute!important;
+    width:1px!important;
+}
+
+.accessibility,
+.visuallyhidden{
+    @include accessibility;
+}
+@if $responsive{
+    @each $state in palm, lap, lap-and-up, portable, desk, desk-wide{
+        @include media-query(#{$state}){
+            .accessibility--#{$state},
+            .visuallyhidden--#{$state}{
+                @include accessibility;
+            }
+        }
+    }
+}
+-->
+			
+			
+			
+			
+		</section>
+
+		<section id="mqs">
+			<h2>Media queries</h2>
+			<p class="notes--guide">You can use the following breakpoints:</p>
+			<pre class="code">
+			palm<br>
+			tablet<br>
+			tablet-and-up<br>
+			lap<br>
+			lap-and-up<br>
+			portable<br>
+			desk<br>
+			desk-wide<br>
+			</pre>
+			
+			<p class="notes--guide">and the following <code>@include</code> in your Sass to take advantage of Inuit's media query mixin:</p>
+			
+			<pre class="code prettyprint">@include media-query(palm){ [styles here] }</pre>
+			
+			
+		</section>
+
+
+
+
 		<h1 id="branding">Branding</h1>
 
 		<section id="palette">
@@ -675,7 +885,7 @@
 		<section id="logo">
 			<h2>Logo</h2>
 			<div class="notes--guide">
-			<p class="unicorns">consult on usage rules we need here</p>
+				<p class="unicorns">consult on the usage rules we need here</p>
 			</div>
 
 			<h4>The logo icon</h4>
@@ -696,6 +906,14 @@
 					--><p class="grid__item five-sixths">The trick is to apply a color to the reverse version of the lion mark that is <em>lighter</em> than the background it sits on. See?</p>	
 				</div>
 				
+		</section>
+		
+		
+		<section id="iconusage">
+			<h2>Icon usage</h2>
+			<div class="notes--guide">
+				<p class="unicorns">usage rules: color and size combos</p>
+			</div>
 		</section>
 		
 
