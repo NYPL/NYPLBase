@@ -36,8 +36,8 @@ pre {
  
 // fixed nav for the style guide
 .nav--guide{
-	background: rgba($white, .95);
-//	display: none; // state on load
+	background: rgba($white, .85);
+	display: none; // state on load
 	margin-top: 3rem;
 	position: fixed;
 	
@@ -79,7 +79,7 @@ pre {
 	color: $blue;
 
 	position: fixed;
-	left: 0;
+	right: 0;
 	top: 0;
 	
 	&:hover{
