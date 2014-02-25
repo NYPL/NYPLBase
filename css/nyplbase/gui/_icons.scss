@@ -6,22 +6,9 @@
  * their originating elements.
  */
  
-/**
- * Experimenting w/ icon size vs. containing text size
- */
-/*
-alpha
-beta
-gamma
-delta
-epsilon
-big
-giga
-mega
-kilo
-*/
 
 
+// increase the size of an element's icon by 125% 
 .icon--increase{
 	vertical-align: middle;
 	&:before{
@@ -29,14 +16,20 @@ kilo
 	}
 }
 
-/* these work but are not super DRY */
-/* First set some display settings to extend... */
+
+
+/* BELOW: EXPERIMENTAL 
+ * icon size/color combos 
+ * (these work but are not super DRY...)
+ */
+ 
+// First set some display settings to extend...
 %icon-size-settings{
 	display: block;
 	text-align: center;
 }
 
-/* ...then set all the icon size classes. */
+// ...then set all the icon size classes.
 .icon-size-alpha{
 	&:before{
 		@extend .alpha;
@@ -57,15 +50,6 @@ kilo
 		@extend %icon-size-settings;
 	}
 }
-
-
-
-/**
- * experimenting with dif. color from origin element
- *
- * can i DRY this w/ mixin? or something?
- */
-
 
 .icon-color-blue{
 	&:before{

@@ -176,12 +176,17 @@
  */
 .chunk__list--icon{
 	@extend .chunk__list;
+	
 	& li:before,
 	& a:before{
 		margin:0 .35em 0 -1.35em;		
 	}
+	
+	& li {
+		padding-left: 1.5rem;	
+	}
+	
 }
-
 
 
 

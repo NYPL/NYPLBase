@@ -2,18 +2,18 @@
     $NYPL-MEDIAQUERIES
 \*------------------------------------*/
 /**
- * Redefining mq/breakpoints from mixins.scss
+ * Redefining mq/breakpoints from /inuit.css/generic/mixins.scss
  */
 
 /*
-palm
-tablet
-tablet-and-up
-lap
-lap-and-up
-portable
-desk
-desk-wide
+palm			 480 max
+tablet			 481 - 601
+tablet-and-up	 481 min
+lap				 601 - 1023
+lap-and-up		 601 min
+portable		1023 max
+desk			1024 min
+desk-wide		1200 min
 */
 
 // from _mixins.scss

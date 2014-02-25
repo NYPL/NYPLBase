@@ -704,35 +704,39 @@ DEFINE THESE INPUT TYPES LATER
 			
 			
 			<h4>Sizes</h4>
+			
 			<div class="notes--guide">
 				<p>If you simply apply either an icon class or a data-icon attribute to an element, the icon that is attached will render at the <strong>same font size as its containing element</strong>. You can add font size classes to any element to affect the size of the text.</p>
 			</div>	
+			
 			<pre class="code prettyprint">
 				&lt;ul class=&quot;nav grid__item four-fifths&quot;&gt;<br>
 				&nbsp; &lt;li class=&quot;zeta icon-cog&quot;&gt;List item here&lt;/li&gt;<br>
 				&nbsp; &lt;li class=&quot;episilon icon-bookmark&quot;&gt;Another item here&lt;/li&gt;<br>
-				&nbsp; &lt;li class=&quot;delta icon-book&quot;&gt;Last one&lt;/li&gt;<br>
+				&nbsp; &lt;li class=&quot;gamma icon-book&quot;&gt;Last one&lt;/li&gt;<br>
 				&lt;/ul&gt;
 			</pre>		
+			
 			<ul class="nav grid__item four-fifths">
 				<li class="zeta icon-cog">List item here</li>
 				<li class="episilon icon-bookmark">Another item here</li>
-				<li class="delta icon-book">Last one</li>
+				<li class="gamma icon-book">Last one</li>
 			</ul>
 			
 			<div class="notes--guide">
-				<p>You can combine 2 elements, one containing the icon and one containing some content, and give each a different font size class.</p>
+				<p>You can combine 2 elements (such as a span and a paragraph), one containing the icon and one containing some content, and give each a <strong>different font size</strong> class. You can also give them <strong>different color classes</strong> (see <a href="#palette">color section</a> for class names).</p>
 			</div>
-			<pre class="code prettyprint grid__item one-whole">
-					&lt;span class=&quot;giga&quot; aria-hidden=&quot;true&quot; data-icon=&quot;&amp;#xe61d;&quot;&gt;&lt;/span&gt;<br><br>
-					&lt;p class=&quot;grid__item four-eighths gamma&quot;&gt;This large icon illustrates this chunk of content.&lt;/p&gt;
-			</pre>
-			<div class="grid__item one-half">
-				<span class="giga" aria-hidden="true" data-icon="&#xe61d;"></span>
-				<p class="grid__item four-eighths gamma">This large icon illustrates this chunk of content.</p>
-			</div><p class="blueNeon">jA: KEEP WORKING ON VERTICAL POSITIONING, LINE HEIGHTS (ESP ON LINE WRAPS) ON VARIOUS SIZES</p>
-
 			
+			<pre class="code prettyprint grid__item one-whole">
+				&lt;span class=&quot;giga blueText&quot; aria-hidden=&quot;true&quot; data-icon=&quot;&amp;#xe61d;&quot;&gt;&lt;/span&gt;
+				&lt;p class=&quot;grid__item four-eighths gamma&quot;&gt;This large icon illustrates this chunk of content.&lt;/p&gt;
+			</pre>
+			
+			<div class="grid__item one-half">
+				<span class="giga blueText" aria-hidden="true" data-icon="&#xe61d;"></span>
+				<p class="grid__item four-eighths gamma">The large icon illustrates this chunk of content.</p>
+			</div>
+
 		</section>	
 
 
@@ -760,7 +764,7 @@ DEFINE THESE INPUT TYPES LATER
 
 			<p class="notes--guide">Inuit recommends to only use a helper class if an element/component <strong>doesn’t already have a class</strong> to which you could apply this styling, e.g. if you need to float <code>.main-nav</code> left then add <code>float:left;</code> to that ruleset as opposed to adding the <code>.float--left</code> class to the markup. Also note that many of these classes are declared <code>!important</code> because they are intended to <strong>override other selectors</strong>.</p>
 
-			<div class="grid__item">
+			<div class="">
 				<div class="code grid__item one-whole lap-and-up-one-third">
 					<h3>Add/remove floats</h3>
 					<code>
@@ -786,10 +790,11 @@ DEFINE THESE INPUT TYPES LATER
 					</code>
 				</div>
 			</div>
-			<div class="code grid__item">
+			<br>
+			<div class="code">
 				<h3>Add/remove margins</h4>
 				<div class="grid__item one-whole lap-and-up-one-third">
-					<h4>Add</h3>
+					<h4>Add</h4>
 					<code>
 						.push<br>
 						.push--top<br> 
@@ -825,7 +830,8 @@ DEFINE THESE INPUT TYPES LATER
 					</code>
 				</div>
 			</div>
-			<div class="code grid__item">
+			<br>
+			<div class="code">
 				<h3>Add/remove paddings</h3>
 				<div class="grid__item one-whole lap-and-up-one-third">
 					<h4>Add</h3>
@@ -864,7 +870,8 @@ DEFINE THESE INPUT TYPES LATER
 					</code>
 				</div>
 			</div>   
-
+			<br>
+			
 			<p class="notes--guide">Prepending the width classes with either pull-- or push-- will move the element with that class to the left (pull) or right(push).</p>
 			<pre class="code prettyprint">&lt;div class=&quot;pull--one-third&quot;&gt;This element is moved over&lt;/div&gt;</pre>
 
@@ -1078,12 +1085,19 @@ $(document).ready(function () {
 	$( ".menu__button" ).click(function() {
 	  $( ".nav--guide" ).toggleClass( "nav--show" );
 	});
+	
+	// hide nav after clicking link
+	$(".nav--guide a").click(function() {
+		$( ".nav--guide" ).removeClass( "nav--show" ); 
+	});
 
 	// hide nav when you click anywhere off of it
+/*
 	$(".content--guide").click(function(e) {
 	    e.stopPropagation();
 	    $( ".nav--guide" ).removeClass( "nav--show" ); 
 	});
+*/
 	
 	
 /* -end- */
