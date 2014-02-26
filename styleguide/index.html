@@ -8,7 +8,7 @@
     
 	<title>NYPL Base: Style Guide</title>
     
-    <link rel="stylesheet" href="../css/style.min.css">
+    <link rel="stylesheet" href="../css/nyplbase.min.css">
     
 </head>
 <body class="grid style-guide">
@@ -48,6 +48,7 @@
 					<li><a href="#iconusage">Icon usage</a></li>
 				</ul>				
 			</li>
+			<li><a href="#patterns">Design patterns</a></li>
 			<li><a href="#thanks">Acknowledgements</a></li>
 
 		</ul>
@@ -86,9 +87,14 @@
 			<pre class="code prettyprint">
 				&lt;div class=&quot;grid__item  one-quarter  lap-one-half  palm-one-whole&quot;&gt; ... &lt;/div&gt;
 			</pre>
-			
-			
-			 
+
+<!-- ADD!		
+// centers grid items inside it
+.grid--center
+// gutterless items
+.grid--full			
+-->
+
 			<p class="notes--guide">Inuit's grid system relies on the inline setting to avoid the usual "float" hack. This means you can use text-level attributes for easier positioning. One caveat: there's a bug in the whitespace attribute, which means <strong>you need to comment out the space in the code between <code>.grid__item</code> elements</strong>. Kind of a pain? sure, but less hacky. And we at NYPL do not play hackysacks.</p>
 		
 			<pre class="code prettyprint">
@@ -381,13 +387,13 @@
 				<p>Below are examples of different configurations of form elements. Text-based inputs are <strong>100% wide by default</strong>, so they can grow or shrink automatically with the available space. </p>
 				
 				<p>The markup for these forms is very simple and straightforward; I'm not doing anything wacky with element order or nesting that the styling would depend on. <code>&lt;label&gt;</code> elements come before <code>&lt;input&gt;</code> elements, unless that doesn't make sense (for example, checkbox labels come after their inputs in the markup).</p>
-				<p>Adding the class <code>.form--callout</code> to the <code>&lt;form&gt;</code> element gives it that nice warm gray <strong>background and border</strong>, plus a little padding.</p>
+				<p>Adding the class <code>.callout--form</code> to the <code>&lt;form&gt;</code> element gives it that nice warm gray <strong>background and border</strong>, plus a little padding.</p>
 			</div>
 			
 			<h3>Form elements: examples</h3>
 			
 			<div class="grid__item two-thirds hard--left">			
-				<form role="form" id="form__feedback" class="form--callout">
+				<form role="form" id="form__feedback" class="callout--form">
 					<label for="name">Name</label>
 					<input id="name" class="text-input" type="text" placeholder="Name" autocomplete="on">
 					
@@ -429,7 +435,7 @@
 			</div>
 				
 			<div class="grid__item one-half hard--left">
-				<form role="form" id="form__login" class="form--callout">
+				<form role="form" id="form__login" class="callout--form">
 					<label for="email">Email</label>
 					<input id="email" class="text-input" type="email" placeholder="Email address" autocomplete="on">
 					
@@ -441,14 +447,14 @@
 			</div>
 
 			<div class="grid__item two-thirds hard--left">				
-				<form role="form" id="form__search" class="form--callout">
+				<form role="form" id="form__search" class="callout--form">
 					<label for="search">Search</label>
 					<input id="search" class="text-input" type="search" placeholder="keyword" autocomplete="on">
 					
 					<fieldset>
 						<legend>Type of results:</legend>
-						<ul class="check-list">
-							<li><input id="imgs" type="checkbox" value="images" />
+						<ul class="check-list">						
+							<li><input id="images" type="checkbox" value="images" />
 							<label for="images">images</label> </li>
 							
 							<li><input id="video" type="checkbox" value="video" />
@@ -476,7 +482,15 @@ DEFINE THESE INPUT TYPES LATER
 					<input type="month" />
 					<input type="time" />
 					<input type="week" />
--->			
+-->		
+
+<!-- ADD!
+// make inputs styling the same
+.form-control	
+// Fixes some positioning on check-lists.
+.check-list--inline
+-->
+
 
 			<h3>Inline form example</h3>
 				
@@ -502,7 +516,7 @@ DEFINE THESE INPUT TYPES LATER
 			</div>				
 		
 			<div class="grid__item two-thirds hard--left">
-				<form role="form" id="form__login" class="form--horiz form--callout">
+				<form role="form" id="form__login" class="form--horiz callout--form">
 					<label for="email" class="one-third">Email</label><input id="email" class="two-thirds" type="email" placeholder="Email address" autocomplete="on">
 					
 					<label for="password" class="one-third">Password</label><input id="password" class="two-thirds" type="password" placeholder="Password" autocomplete="on">
@@ -1044,10 +1058,21 @@ Create vendor-prefixed CSS in one with @mixin vendor
 			</div>
 		</section>
 		
+		
+		<section id="patterns">
+			<h2>Design patterns</h2>
+			<div class="notes--guide">
+				<p>Here there be dragons...well, unfinished guidance anyway. Please stay tuned as I continue to refine the designs that make up NYPLBase's pattern library.</p>
+				<ul>
+					<li><a href="patterns.html">initial pattern collection (beware; currently a hot mess)</a></li>
+					<li><a href="pattern--single-purpose.html">template: single purpose (blog, AV, event)</a></li>
+				</ul>
+			</div>
+		</section>
 
 
 
-		<section id="thanks" class="grid__item one-whole">
+		<section id="thanks">
 			<h2>Acknowledgements</h2>
 			<p>I owe being able to even <em>conceive</em> of a distributable rapid prototyping system (RaProSys?) to <a href="http://twitter.com/mdo">Mark Otto</a> and <a href="http://twitter.com/fat">Jacob Thornton</a>, makers of <a href="http://getbootstrap.com/">Bootstrap</a>.</p>
 			<p>Massive amounts to Harry Roberts and his <a href="http://csswizardry.com/">css wizardry</a> for creating Inuit; I stand on his beefy shoulders and no mistake. The burliness of the Sass in this system is all about Harry's excellent work.</p>

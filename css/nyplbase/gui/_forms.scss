@@ -173,7 +173,7 @@ form{
 /**
  * Apply this style to the form or its container for a bgcolor and border.
  */
-.form--callout{
+.callout--form{
 	@include callout-box($base-ui-color, lighten($warmGrayLighter, 10%));
 } 
 

@@ -54,12 +54,12 @@
 
 
 /*------------------------------------*\
-    Chunks are contained by TIERS
+    Chunks are contained by SECTIONS
 \*------------------------------------*/
 
 /**
- * I imagine the "Tier styles" are going to use the RWD width classes?
- * as in
+ * is incorporating the RWD width classes a good idea?
+ * for example, 
    
    .secondary > .chunk 
    
@@ -69,33 +69,24 @@
  */
 
 
-
-
-.primary{
-	> *{
-//		@extend .grid__item;
-//		background: pink;
-	}
-}
-
-.secondary{
-	
-}
-
-.tertiary{
-	
-}
-
-
+// prevent content from stretching to 100% avail width
 .primary,
 .secondary,
-.tertiary{
+.tertiary,
+.related{
+	@extend .grid__item;
 	max-width: $desk-start;
+	
+	p {
+		// don't overwrite p's botton margin
+		margin-left: auto;
+		margin-right: auto;		
+	}
 }
 
 
 /**
- * Some "tiers" of content need a category/tag as a heading above them.
+ * Some sections of content need a category/tag as a heading above them.
  * These will appear most often above secondary and tertiary tiers.
  */
 .hdg{
@@ -117,18 +108,21 @@
 /*------------------------------------*\
     Chunks that are CHUNKS
 \*------------------------------------*/
+/**
+ * Chunks of content.
+ */
 .chunk{
 	margin-bottom: $base-spacing-unit;
 	position: relative;
 	
 	@include headings(){
 		@include media-query(palm){
-			//@extend .hard--left;
 			padding-left: 0;
 		}
 		
 	}
 	
+	// imgs automatically get the outline
 	img {
 		@extend .img--outline;
 	}
@@ -198,7 +192,7 @@
     Chunks that are CONTEXT-SPECIAL
 \*------------------------------------*/
 /**
- * "Bricks" pattern is currently being used on the home page
+ * "Bricks" pattern is currently being used on the HOME PAGE
  * to feature current events and promoted items.
  */ 
 

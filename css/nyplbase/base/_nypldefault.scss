@@ -66,48 +66,6 @@ ul, ol{
 }
 
 
-/**
- * Some additional classes. (Put in /tools/nyplhelpers???) 
- */
- 
-// additional font size (to go with classes defined in InuitCSS /base/_headings)
-.big{
-    @include font-size($big-size);
-} 
-
-// gives gray bg color and border to item
-.callout{
-	@include callout-box($base-ui-color, $warmGrayLighter);
-}
-
-// styles for "read more"-type links
-.read-more{
-//	@extend .btn-natural;
-
-	background: $warmGrayLightest;
-	border: 1px solid $warmGrayLighter;
-	padding: $half-spacing-unit/2;
-	
-//	@extend .icon-arrow-right2;
-	
-	@extend .zeta;
-	
-/*
-	 &:after{
-		 
-	 }
-*/
-}
-
-// removes bullet from a list
-.nobullet{
-	list-style: none;
-}
-
-// use instead of floats?
-.inline{
-	display: inline;
-}
 
 
 

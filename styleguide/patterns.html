@@ -6,7 +6,7 @@
     
 	<title>NYPL Base: Design patterns</title>
     
-    <link rel="stylesheet" href="../css/style.min.css">
+    <link rel="stylesheet" href="../css/nyplbase.min.css">
     
 </head>
 
@@ -20,29 +20,65 @@
 	</header>
 
 
-				<!--
-				
-				MEDIA OBJECT: use in tier patterns? (this variable is set to true for now)
-				
-					<div class="media">
-						<img src="../img/demo/photo_Deli.jpg" alt="" class="media__img one-third">
-						<p class=media__body>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>
-				
-					<div class="media">
-						<img src="../img/demo/photo_Deli.jpg" alt="" class="media__img--rev one-third">
-						<p class=media__body>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-					</div>	
-				-->
+
+<!-- DOCUMENTATION FOR PATTERNS -->
+
+<!--
+
+NAV
+use the .nav class on the ul or ol container
+extend with:
+.nav--banner (centers)
+.nav--stacked (vertical)
+.nav--fit (100%)
+.nav--keywords (commas)
+
+PRIMARY, SECONDARY, TERTIARY, RELATED SECTIONS
+max width is desktop
+combined w/ body.grid--center, that means section centers itself
+extend .grid__item
+
+HDG
+any element that gets .hdg (shd prob always be a hed or span) gets NYPL heading style
+
+CHUNKS
+are always divs containing content
+(should probably extend .grid__item)
+there are .chunk, .chunk__list, .chunk__list--icon
 
 
+HELPERS
+.read-more
+.callout
+.img--left/right/center
+
+-->
+
+<!--
+
+MEDIA OBJECT: use in tier patterns? (this variable is set to true for now)
+we can also use the .img--right etc classes directly on the images,
+but that's not semantic if the media is not an image
+
+ex.)
+
+	<div class="media">
+		<img src="../img/demo/photo_Deli.jpg" alt="" class="media__img one-third">
+		<p class=media__body>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>
+
+	<div class="media">
+		<img src="../img/demo/photo_Deli.jpg" alt="" class="media__img--rev one-third">
+		<p class=media__body>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</div>	
+-->
 
 
 
 <!-- HP BRICK -->
-<!--
+<section class="primary grid__item">
 	<div class="feature-brick grid__item one-third">
 		<img class="" src="../img/demo/photo_Deli.jpg" alt="">
 		<div class="details">
@@ -55,8 +91,7 @@
 	</div><!--
 
 	
-	
-<div class="feature-brick grid__item one-third">
+	--><div class="feature-brick grid__item one-third">
 		<img class="" src="../img/demo/photo_CBL.jpg" alt="">
 		<div class="details">
 			<span class="hdg">Category</span>
@@ -67,9 +102,8 @@
 		</div>
 	</div><!--
 
-
 	
-<div class="feature-brick grid__item one-third">
+	--><div class="feature-brick grid__item one-third">
 		<img class="" src="../img/demo/illo_lionlambsqtop.jpg" alt="">
 		<div class="details">
 			<span class="hdg">Category</span>
@@ -79,10 +113,9 @@
 			<p>description</p>
 		</div>
 	</div>
+</section>	
 	
-	
-<p></p>
--->
+
 
 
 
@@ -570,8 +603,8 @@ MOSTLY TERTIARY PATTERNS. MOSTLY.
 		    
 		    <li class="last" data-icon="&#xe65a;"><a href="online_projects">VITO: The Life of Gay Activist Vito Russo</a>
 		    </li>
-		</ul>
-		<ul class="chunk__list--icon grid__item one-quarter">
+		</ul><!--
+		--><ul class="chunk__list--icon grid__item one-quarter">
 		    <li data-icon="&#xe65a;"><a href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
 		    </li>
 		    
@@ -583,8 +616,21 @@ MOSTLY TERTIARY PATTERNS. MOSTLY.
 		    
 		    <li class="last" data-icon="&#xe65a;"><a href="online_projects">VITO: The Life of Gay Activist Vito Russo</a>
 		    </li>
-		</ul>
-		<ul class="chunk__list--icon grid__item one-quarter">
+		</ul><!--
+		--><ul class="chunk__list--icon grid__item one-quarter">
+		    <li data-icon="&#xe65a;"><a href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
+		    </li>
+		    
+		    <li data-icon="&#xe65a;"><a href="http://digitalgallery.nypl.org/nypldigital/index.cfm">LGBT Special Libraries and Museums</a>
+		    </li>
+		    
+		    <li data-icon="&#xe65a;"><a href="collections/labs">Booktalking "Tessa Masterson Will Go to the Prom" by Emily Franklin &amp; Brendan Halpin</a>
+		    </li>
+		    
+		    <li class="last" data-icon="&#xe65a;"><a href="online_projects">VITO: The Life of Gay Activist Vito Russo</a>
+		    </li>
+		</ul><!--
+		--><ul class="chunk__list--icon grid__item one-quarter">
 		    <li data-icon="&#xe65a;"><a href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
 		    </li>
 		    
@@ -679,9 +725,9 @@ MOSTLY TERTIARY PATTERNS. MOSTLY.
 		    <li class="icon-book last"><a href="collections/nypl-collections/preservation-division">Preservation of NYPL Collections</a>
 		    <p>The New York Public Library has one of the oldest, largest, and most comprehensive institutional preservation programs in the United States.</p>
 		    </li>
-		</ul>
+		</ul><!--
 		
-		<ul class="chunk__list--icon grid__item one-quarter">
+		--><ul class="chunk__list--icon grid__item one-quarter">
 			<h4 class="hdg">Collections</h4>
 		    <li class="icon-book"><a href="research-collections">Research Collections</a>
 		    <p>Rare books, photos, prints, maps, and media for advanced research.</p>
@@ -698,10 +744,29 @@ MOSTLY TERTIARY PATTERNS. MOSTLY.
 		    <li class="icon-book last"><a href="collections/nypl-collections/preservation-division">Preservation of NYPL Collections</a>
 		    <p>The New York Public Library has one of the oldest, largest, and most comprehensive institutional preservation programs in the United States.</p>
 		    </li>
-		</ul>
+		</ul><!--
 		
-		<ul class="chunk__list--icon grid__item one-quarter">
+		--><ul class="chunk__list--icon grid__item one-quarter">
 			<h4 class="hdg">Blogs</h4>
+		    <li class="icon-book"><a href="research-collections">Research Collections</a>
+		    <p>Rare books, photos, prints, maps, and media for advanced research.</p>
+		    </li>
+		    
+		    <li class="icon-book"><a href="find-archival-materials">Manuscripts and Archives</a>
+		    <p>Over 60,000 linear feet of personal papers and organizational records supporting historical research.</p>
+		    </li>
+		    
+		    <li class="icon-book"><a href="http://wallachprintsandphotos.nypl.org">Prints &amp; Photographs Online Catalog</a>
+		    <p>This catalog provides online access to our holdings. Cataloging of the collection is ongoing and new entries are continually added.</p>
+		    </li>
+		    
+		    <li class="icon-book last"><a href="collections/nypl-collections/preservation-division">Preservation of NYPL Collections</a>
+		    <p>The New York Public Library has one of the oldest, largest, and most comprehensive institutional preservation programs in the United States.</p>
+		    </li>
+		</ul><!--
+		
+		--><ul class="chunk__list--icon grid__item one-quarter">
+			<h4 class="hdg">Collections</h4>
 		    <li class="icon-book"><a href="research-collections">Research Collections</a>
 		    <p>Rare books, photos, prints, maps, and media for advanced research.</p>
 		    </li>
