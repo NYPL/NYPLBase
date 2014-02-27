@@ -23,7 +23,13 @@
 
 // gives gray bg color and border to item
 .callout{
-	@include callout-box($base-ui-color, $warmGrayLighter);
+	@include callout-box(lighten($base-ui-color, 4%), $warmGrayLighter);
+}
+
+// more border styles
+.border--thin{
+	@include vendor(border, 2px solid $warmGray);
+	@include vendor(border-radius, $brand-round);
 }
 
 // styles for "read more"-type links

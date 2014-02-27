@@ -56,19 +56,34 @@
 	</nav><!--
 
 
-
-
 	--><div class="content--guide grid__item one-whole">
 
 
 
 		<header class="header-hed grid__item one-whole flush--left hard--left">
 			<h1 class="kilo">NYPLBase</h1>
-			<p class="subtitle lede text--center"><span class="icon-cogs blueDarkerText">rapid prototyping system</span> <span class="icon-images purpleText">style guide</span> <span class="icon-scissors purpleDarkerText">pattern library</span> <span class="icon-NYPL_mark1_black_pos blueText">branding machine</span></p>
+			<p class="subtitle gamma text--center"><span class="icon-cogs blueDarkerText">rapid prototyping system</span> <span class="icon-images purpleText">style guide</span> <span class="icon-scissors purpleDarkerText">pattern library</span> <span class="icon-NYPL_mark1_black_pos blueText">branding machine</span></p>
 			
-			<p class="unicorns">notes about how Inuit files ARE the d11n, etc.</p>
-			
-			<p class="smallprint text--right">Note: this style guide is a work in progress, so please be patient with any bugs or other weirdness.<br> Thanks, The Management</p>
+			<h2>Note from the designer</h2>
+			<div class="zeta">
+				<img class="one-sixth palm-one-third img--right img--outline" src="../img/demo/the-designer.jpg" alt="the-designer">
+				<p>The Library's various web properties have long been in need of some design and branding unification. To achieve that consistency, we need to be able to easily experiment, develop, codify, and disseminate our design. What we needed was a rapid prototyping system, or what is sometimes called a "<strong>living style guide</strong>."</p>
+				
+				<p>The best-known example of this kind of toolset is <a href="http://getbootstrap.com">Twitter Bootstrap</a>, which was developed by Mark Otto and Jacob Thornton at Twitter as a way to keep their properties and internal tools consistent. Since the release of an open-source version of their project, you can download the Bootstrap package and override the styles. However, I know our content well, and I felt we needed more customization and flexibility than an abundance of overrides could provide. (Also, overrides can take a lot of time and repeated code.)</p>
+	
+				<p>I researched several frameworks and chose <a href="http://inuitcss.com">InuitCSS</a>, because:</p>
+				<ul>
+					<li>it’s built on principles of object-oriented development, which makes it <strong>modular</strong></li>
+					<li>it uses proportional (rather than column-based) layouts, which makes it more <strong>flexible</strong></li>
+					<li>it does not include styling or branding of any kind, which <strong>eliminates the need for overrides</strong></li>
+					<li>it’s device-agnostic and <strong>responsive</strong></li>
+				</ul>
+					
+				<p>Some slightly esoteric/goofy names were in the running for this project, but I went with NYPLBase (or familiarly, "Base") because this code provides a "base" <strong>for all our web properties</strong>. Color palette, typeface, default styles, and a bit of structure is all built into this code package. We can use it internally to rapid-prototype and test right away, we can use it as design reference, we can build a sustainable, adaptable pattern library, and we save time and money on projects because our brand is built in. Future redesigns will benefit from sustainable, consistent branding, time and money saved internally, and a smaller learning curve for our consulting agencies. And even if you're not using the code, you can still look at the demo page as a style guide.</p>
+				
+				<p>Currently I'm using Base to build and test design improvements, and consulting with our Marketing team to make sure the branding is expressed correctly. I'm working directly in the code for Base so that <strong>I can make fixes to the core as I go</strong>. At the moment, I'm the only developer allowed to work like this. At some point I will start accepting pull requests on GitHub from Trusted Colleagues; I imagine once Labs gets ahold of it, they will unearth the need for many more design patterns. and all those ppl will be able (again, when appropriate) to contribute back to the project, so that this code will improve, iterate, and grow.</p>
+				
+				<p class="smallprint text--right">Note: this style guide is a work in progress, so please be patient with any bugs or other weirdness.<br> Thanks, The Management</p></div>
 		</header>
 	
 		
