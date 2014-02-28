@@ -112,7 +112,7 @@
  * Chunks of content.
  */
 .chunk{
-	margin-bottom: $base-spacing-unit;
+	margin-bottom: $base-spacing-unit*2;
 	position: relative;
 	
 	@include headings(){

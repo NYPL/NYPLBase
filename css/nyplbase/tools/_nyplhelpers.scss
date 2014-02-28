@@ -2,10 +2,11 @@
     $NYPL-HELPERS
 \*------------------------------------*/
 
-
 /**
- * Use this placeholder class as an extend to include NYPL transition time
+ * PLACEHOLDERS
  */
+
+// Use this placeholder class as an extend to include NYPL transition time
 %transition{
 	@include vendor (transition, all, $brand-timing);
 } 
@@ -13,14 +14,36 @@
 
 
 /**
- * Some additional classes.
+ * ADDITIONAL CLASSES
  */
- 
+
 // additional font size (to go with classes defined in InuitCSS /base/_headings)
 .big{
     @include font-size($big-size);
 } 
 
+
+/**
+ * Positioning
+ */
+// use instead of floats?
+.inline{
+	display: inline;
+} 
+
+.center--margin{
+	margin: 0 auto;
+	width: 100%;
+}
+
+.list--horiz{
+	@extend .nav;
+}
+
+
+/**
+ * Add styling
+ */
 // gives gray bg color and border to item
 .callout{
 	@include callout-box(lighten($base-ui-color, 4%), $warmGrayLighter);
@@ -30,8 +53,18 @@
 .border--thin{
 	@include vendor(border, 2px solid $warmGray);
 	@include vendor(border-radius, $brand-round);
-}
+} 
 
+// removes bullet from a list
+.nobullet{
+	list-style: none;
+} 
+
+
+/**
+ * Object styling
+ */
+ 
 // styles for "read more"-type links
 .read-more{
 //	@extend .btn-natural;
@@ -49,14 +82,11 @@
 		 
 	 }
 */
-}
+} 
 
-// removes bullet from a list
-.nobullet{
-	list-style: none;
-}
 
-// use instead of floats?
-.inline{
-	display: inline;
-}
+
+
+
+
+
