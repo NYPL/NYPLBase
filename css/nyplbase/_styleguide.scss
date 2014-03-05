@@ -39,14 +39,9 @@ pre {
 	background: rgba($white, .85);
 	display: none; // state on load
 	margin-top: 3rem;
-	position: fixed;
 	
-/*
-	@media only screen and (min-width:$lap-start) { 
-		display: inline-block;
-		position: relative; 
-	}
-*/
+	position: fixed;
+	z-index: 1002;
 	
 	li > ul {
 		margin-left: $half-spacing-unit;
@@ -62,7 +57,7 @@ pre {
 	display: inline-block;
 	position: fixed;
 	bottom: .5rem;
-	right: 0;	
+	left: 0;	
 	z-index: 1001;
 	
 	&:before{
@@ -79,7 +74,7 @@ pre {
 	color: $blue;
 
 	position: fixed;
-	left: .5rem;
+	left: 0;
 	top: 0;
 	
 	&:hover{
@@ -97,7 +92,7 @@ pre {
 
 // container for the the content
 .content--guide{
-	margin-top: 2rem;
+	margin-left: 3.5rem;
 }
 
 section{
@@ -151,8 +146,8 @@ section{
 	padding: $base-spacing-unit 0 $half-spacing-unit;
 }
 
-// notes for discussion with the unicorns 
-.unicorns {
+// highlight the open questions 
+.open-issue {
 	background: yellow;
 }
 

@@ -13,6 +13,54 @@
 </head>
 <body class="grid style-guide">
 
+
+<!-- D11N FOR PATTERNS, TO BE DISPLAYED HERE LATER -->
+
+<!-- ARROWS
+/**
+ * CSS arrows!!! But... before you read on, you might want to grab a coffee...
+ *
+ * This mixin creates a CSS arrow on a given element. We can have the arrow
+ * appear in one of 12 locations, thus:
+ *
+ *       01    02    03
+ *    +------------------+
+ * 12 |                  | 04
+ *    |                  |
+ * 11 |                  | 05
+ *    |                  |
+ * 10 |                  | 06
+ *    +------------------+
+ *       09    08    07
+ *
+ * You pass this position in along with a desired arrow color and optional
+ * border color, for example:
+ *
+ * `@include arrow(top, left, red)`
+ *
+ * for just a single, red arrow, or:
+ *
+ * `@include arrow(bottom, center, red, black)`
+ *
+ * which will create a red triangle with a black border which sits at the bottom
+ * center of the element. Call the mixin thus:
+ *
+   .foo{
+       background-color:#BADA55;
+       border:1px solid #ACE;
+       @include arrow(top, left, #BADA55, #ACE);
+   }
+ *
+ */
+ 
+ ARROW POSTIIONS:
+ top (+ left, center, or right)
+ right (+ top, center, or bottom
+ bottom (+ right, center, or left)
+ left (+ top, center, or bottom)
+ 
+-->
+
 <div id="top"></div>
 <a class="backtotop icon-arrow-up3 big" href="#top"><span class="visuallyhidden">Back to top</span></a>
 <span class="menu__button icon-menu2 big"></span>
@@ -21,6 +69,7 @@
 	<nav class="nav--guide grid__item two-thirds lap-and-up-one-quarter zeta">
 	
 		<ul class="nav nav--stacked">
+			<li><a href="#naming">Note on naming</a></li>
 			<li><a href="#gridsystem">Grid system</a></li>
 			<li><a href="#elements">Basic elements</a>
 				<ul class="nav nav--stacked">
@@ -36,7 +85,6 @@
 			</li>
 			<li><a href="#helpers">Helpers</a>
 				<ul class="nav nav--stacked">
-					<li><a href="#naming">Note on naming</a></li>
 					<li><a href="#helpclasses">Helper classes</a></li>
 					<li><a href="#mqs">Media queries</a></li>
 				</ul>				
@@ -66,10 +114,10 @@
 			
 			<h2>Note from the designer</h2>
 			<div class="zeta">
-				<img class="one-sixth palm-one-third img--right img--outline" src="../img/demo/the-designer.jpg" alt="the-designer">
+				<img class="one-sixth palm-one-third img--left img--outline" src="../img/demo/the-designer.jpg" alt="the-designer">
 				<p>The Library's various web properties have long been in need of some design and branding unification. To achieve that consistency, we need to be able to easily experiment, develop, codify, and disseminate our design. What we needed was a rapid prototyping system, or what is sometimes called a "<strong>living style guide</strong>."</p>
 				
-				<p>The best-known example of this kind of toolset is <a href="http://getbootstrap.com">Twitter Bootstrap</a>, which was developed by Mark Otto and Jacob Thornton at Twitter as a way to keep their properties and internal tools consistent. Since the release of an open-source version of their project, you can download the Bootstrap package and override the styles. However, I know our content well, and I felt we needed more customization and flexibility than an abundance of overrides could provide. (Also, overrides can take a lot of time and repeated code.)</p>
+				<p>The best-known example of this kind of toolset is <a href="http://getbootstrap.com">Twitter Bootstrap</a>, which was developed by Mark Otto and Jacob Thornton at Twitter as a way to keep their properties and internal tools consistent. Since the release of an open-source version of their project, you can download the Bootstrap package and override the styles to suit your own project. However, I know our content well, and I felt we needed more customization and flexibility than overrides could provide. (Also, overrides can take a lot of time and repeated code.)</p>
 	
 				<p>I researched several frameworks and chose <a href="http://inuitcss.com">InuitCSS</a>, because:</p>
 				<ul>
@@ -79,15 +127,26 @@
 					<li>it’s device-agnostic and <strong>responsive</strong></li>
 				</ul>
 					
-				<p>Some slightly esoteric/goofy names were in the running for this project, but I went with NYPLBase (or familiarly, "Base") because this code provides a "base" <strong>for all our web properties</strong>. Color palette, typeface, default styles, and a bit of structure is all built into this code package. We can use it internally to rapid-prototype and test right away, we can use it as design reference, we can build a sustainable, adaptable pattern library, and we save time and money on projects because our brand is built in. Future redesigns will benefit from sustainable, consistent branding, time and money saved internally, and a smaller learning curve for our consulting agencies. And even if you're not using the code, you can still look at the demo page as a style guide.</p>
+				<p>Some slightly esoteric/goofy names were in the running for this project, but I went with NYPLBase (or familiarly, "Base") because this code provides a "base" <strong>for all our web properties</strong>. Color palette, typeface, default styles, and a bit of structure is all built into this code package. We can use it internally to rapid-prototype and test right away, we can use it as design reference, we can build a sustainable, adaptable pattern library, and we save time and money on projects because our brand is built in. Future redesigns will benefit from sustainable, consistent branding, time and money saved internally, and a smaller learning curve for our consulting agency partners. And even if you're not working directly with code, you can still use the style guide.</p>
 				
-				<p>Currently I'm using Base to build and test design improvements, and consulting with our Marketing team to make sure the branding is expressed correctly. I'm working directly in the code for Base so that <strong>I can make fixes to the core as I go</strong>. At the moment, I'm the only developer allowed to work like this. At some point I will start accepting pull requests on GitHub from Trusted Colleagues; I imagine once Labs gets ahold of it, they will unearth the need for many more design patterns. and all those ppl will be able (again, when appropriate) to contribute back to the project, so that this code will improve, iterate, and grow.</p>
+				<p>Currently I'm using Base to build and test design patterns, and consulting with our Marketing team to make sure the branding is expressed correctly. I'm working directly in the code for Base so that <strong>I can make fixes to the core as I go</strong>. At the moment, I'm the only developer allowed to work like this. At some point I will start accepting pull requests on GitHub from Trusted Colleagues; I imagine once Labs gets ahold of it, they will unearth the need for many more design patterns. and all those ppl will be able (again, when appropriate) to contribute back to the project, so that this code will improve, iterate, and grow.</p>
 				
-				<p class="smallprint text--right">Note: this style guide is a work in progress, so please be patient with any bugs or other weirdness.<br> Thanks, The Management</p></div>
+				<p class="smallprint text--right">Note: this style guide is a work in progress, so please be patient with any bugs or other weirdness.<br> Thanks, jennifer "Ace of Base" Anderson, Senior UX Designer/Fierce Ruling Diva</p></div>
 		</header>
 	
-		
-		
+		<section id="naming">
+			<h2>Note on naming</h2>
+			<div class="notes--guide">			
+				<p>InuitCSS uses the <a href="http://bem.info/method/definitions/">BEM method</a> of <strong>naming its classes</strong>. BEM stands for Block Element Modifier, and it works like this:</p>
+				
+				<p class="text--center gamma">".block__element--modifier"</p>
+				
+				<p>in which "block" is the name of the chunk you're working on, "element" is the name of the smaller piece of the chunk, and "modifier" is a descriptor. For example, the class name <code>.nav__item</code> would refer to an item contained in the nav chunk (or "block"). <code>.nav__item--last</code> would refer to the last nav item in the list. You can use just the item and descriptor parts of the convention too, as in <code>.form--horiz</code>.</p>
+				
+				<p>The exception to this naming convention in Base is the <strong>color classes</strong>, which use intercaps (as in <code>.blueLight</code>).</p> 
+			</div>
+			
+		</section>	
 		
 		<section id="gridsystem">
 
@@ -141,7 +200,7 @@
 			 
 			 
 			<div class="notes--guide">	 
-				<p class="unicorns">It's possible to nest grid items; d11n on this is coming pending some testing of how nesting <code>.grid__item</code> items is affected by the left margin setting.</p>	 
+				<p class="open-issue">It's possible to nest grid items; d11n on this is coming pending some testing of how nesting <code>.grid__item</code> items is affected by the left margin setting.</p>	 
 			</div>		
 		
 		</section>
@@ -158,6 +217,7 @@
 				<p>NYPL's <strong >default</strong> body text is set to <strong>16px, with a 24px line height</strong> (or 1rem, 1.5rem line height). The heds and type size classes are set to the standard typographic scale (see Robert Bringhurst, <cite><a href="http://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style">The Elements of Typographic Style</a></cite>).</p>
 				<p>Paragraphs are set to a <strong>maximum width of 50rem</strong>, to prevent an unreadably long line.</p>
 				<p>NYPL's core web typeface is <a href="http://www.latofonts.com/"><strong>Lato</strong></a>.</p>
+				<p class="open-issue">Consider "real" bold/italic font usage vs. "fake bold/italic"; performance issues of many font weights being downloaded</p>
 			</div>
 			
 			<h1>Heading 1</h1>
@@ -183,7 +243,7 @@
 			
 			<h2 id="type-styling">Notes on using type styles</h2>
 			
-			<p class="unicorns">add notes on specific uses of uppercase, bold, etc.</p>
+			<p class="open-issue">add notes on specific uses of uppercase, bold, etc.</p>
 			
 			<div class="notes--guide" id="text-sizes">
 				<p>Inuit comes with a set of <strong>classes that affect font size</strong> only. The first six classes (<code>.alpha</code> through <code>.zeta</code>) correspond to the six heading element settings. Then there are additional very large and very small classes, all listed below.</p>
@@ -774,20 +834,6 @@ DEFINE THESE INPUT TYPES LATER
 
 		<h1 id="helpers">Helpers</h1>
 
-		<section id="naming">
-			<h2>Note on naming</h2>
-			<div class="notes--guide">			
-				<p>InuitCSS uses the <a href="http://bem.info/method/definitions/">BEM method</a> of <strong>naming its classes</strong>. BEM stands for Block Element Modifier, and it works like this:</p>
-				
-				<p class="text--center gamma">".block__element--modifier"</p>
-				
-				<p>in which "block" is the name of the chunk you're working on, "element" is the name of the smaller piece of the chunk, and "modifier" is a descriptor. For example, the class name <code>.nav__item</code> would refer to an item contained in the nav chunk (or "block"). <code>.nav__item--last</code> would refer to the last nav item in the list. You can use just the item and descriptor parts of the convention too, as in <code>.form--horiz</code>.</p>
-				
-				<p>The exception to this naming convention in Base is the <strong>color classes</strong>, which use intercaps (as in <code>.blueLight</code>).</p> 
-			</div>
-			
-		</section>
-
 		<section id="helpclasses">
 			<h2>Helper classes</h2>
 
@@ -983,7 +1029,7 @@ Create vendor-prefixed CSS in one with @mixin vendor
 			
 			<div class="notes--guide">
 				<p>All colors in the palette have an <strong>associated class name</strong>, which are listed below. For example, if you want to give an element a light blue background, add the class <code>.blueLight</code>. The same naming convention applies to <strong>text color classes</strong>, appending "Text"; if you want an element's text to be light blue, add the class <code>.blueLightText</code>.</p>
-				<p class="unicorns">notes about branding usage for these colors</p>
+				<p class="open-issue">notes about branding usage for these colors</p>
 			</div>
 			
 			<div class="color-block red whiteText">red #d62828</div>
@@ -994,7 +1040,7 @@ Create vendor-prefixed CSS in one with @mixin vendor
 			
 			<h3>Secondary palette colors</h3>
 			<div class="notes--guide">
-				<p class="unicorns">notes about branding usage for these colors</p>
+				<p class="open-issue">notes about branding usage for these colors</p>
 			</div>
 			<div class="color-block redDarkest whiteText">redDarkest #690b0b</div>
 			<div class="color-block redDarker whiteText">redDarker #9c191e</div>
@@ -1042,26 +1088,25 @@ Create vendor-prefixed CSS in one with @mixin vendor
 		<section id="logo">
 			<h2>Logo</h2>
 			<div class="notes--guide">
-				<p class="unicorns">consult on the usage rules we need here</p>
+				<p class="open-issue">consult on the usage rules we need here</p>
 			</div>
 
 			<h4>The logo icon</h4>
-				<span class="grid__item one-sixth hard--left giga" aria-hidden="true" data-icon="&#xe600;"></span><!--
-				--><p class="notes--guide grid__item five-sixths">This is the logo (without the "New York Public Library" text, it's referred to as the "lion mark"), conveniently available as part of our icon font! Because it's an icon font, changing the color of the lion mark is as easy as applying a text color.</p>
-	
-				<span class="grid__item one-sixth hard--left giga blueText" aria-hidden="true" data-icon="&#xe600;"></span><!--
-				--><p class="notes--guide grid__item five-sixths">See? All I did was change the color of the text of the element with the icon. Now it's blue!</p>
 			
-				<span class="grid__item one-sixth hard--left giga" aria-hidden="true" data-icon="&#xe601;"></span><!--
-				--><div class="notes--guide grid__item five-sixths">
+				<p class="notes--guide">This is the logo (without the "New York Public Library" text, it's referred to as the "lion mark"), conveniently available as part of our icon font! Because it's an icon font, changing the color of the lion mark is as easy as <strong>applying a text color</strong>.</p>
+				<p class="one-whole push--one-quarter giga" aria-hidden="true" data-icon="&#xe600;"></p>
+	
+				<p class="notes--guide">See? All I did was change the color of the text of the element with the icon. <strong>Now it's blue!</strong></p>
+				<p class="one-whole push--one-quarter giga blueText" aria-hidden="true" data-icon="&#xe600;"></p>
+			
+				<div class="notes--guide">
 					<p>We also have a version of the lion mark in reverse. Here it is, no styling applied.</p>
-					<p>But remember, what you see here is totally wrong. Bad, wrong, no-no. Never use the lion mark with black/dark fills. The thing to remember is: <span class="gamma">the fill is always lighter than the background!</span></p>
+					<p>But remember, what you see here is totally wrong. Bad, wrong, no-no. <strong>Never</strong> use the lion mark with black/dark fills. The thing to remember is: <strong>the fill is always lighter than the background!</strong></p>
 				</div>
-
-				<div class="grid__item one-whole whiteText black">
-					<span class="grid__item one-sixth hard--left giga " aria-hidden="true" data-icon="&#xe601;"></span><!--
-					--><p class="grid__item five-sixths">The trick is to apply a color to the reverse version of the lion mark that is <em>lighter</em> than the background it sits on. See?</p>	
-				</div>
+				<p class="one-whole push--one-quarter giga" aria-hidden="true" data-icon="&#xe601;"></p>
+				
+				<p class="notes--guide">The trick is to apply a color <strong>to the reverse version</strong> of the lion mark that is <em>lighter</em> than the background it sits on. See?</p>
+				<p class="one-quarter push--one-quarter giga whiteText black" aria-hidden="true" data-icon="&#xe601;"></p>
 				
 		</section>
 		
@@ -1069,7 +1114,7 @@ Create vendor-prefixed CSS in one with @mixin vendor
 		<section id="iconusage">
 			<h2>Icon usage</h2>
 			<div class="notes--guide">
-				<p class="unicorns">usage rules: color and size combos</p>
+				<p class="open-issue">usage rules: color and size combos</p>
 			</div>
 		</section>
 		
@@ -1089,10 +1134,10 @@ Create vendor-prefixed CSS in one with @mixin vendor
 
 		<section id="thanks">
 			<h2>Acknowledgements</h2>
-			<p>I owe being able to even <em>conceive</em> of a distributable rapid prototyping system (RaProSys?) to <a href="http://twitter.com/mdo">Mark Otto</a> and <a href="http://twitter.com/fat">Jacob Thornton</a>, makers of <a href="http://getbootstrap.com/">Bootstrap</a>.</p>
-			<p>Massive amounts to Harry Roberts and his <a href="http://csswizardry.com/">css wizardry</a> for creating Inuit; I stand on his beefy shoulders and no mistake. The burliness of the Sass in this system is all about Harry's excellent work.</p>
-			<p>Big thanks to <a href="http://github.com/beefoo">Brian Foo</a>, whose <a href="https://drrstyleguide.herokuapp.com/">DRR Bootstrap</a> (maintained by <a href="https://twitter.com/nypl_labs">NYPL Labs</a>) provided a great starting point. Also, BFoo taught me more than a few sassy Sass tricks.</p>
-			<p>Finally to Sean Redmond, who gave me room to do this exactly how I wanted, and never made me feel bad for not knowing all my command line commands. Thanks man.</p>
+			<p>I owe being able to even <em>conceive</em> of a distributable rapid prototyping system (RaProSys?) to <a href="http://twitter.com/mdo"><strong>Mark Otto</strong></a> and <a href="http://twitter.com/fat"><strong>Jacob Thornton</strong></a>, makers of <a href="http://getbootstrap.com/">Bootstrap</a>.</p>
+			<p>Massive amounts to <strong>Harry Roberts</strong> and his <a href="http://csswizardry.com/">css wizardry</a> for creating Inuit; I stand on his beefy shoulders and no mistake. The burliness of the Sass in this system is all about Harry's excellent work.</p>
+			<p>Big thanks to <a href="http://github.com/beefoo"><strong>Brian Foo</strong></a>, whose <a href="https://drrstyleguide.herokuapp.com/">DRR Bootstrap</a> (maintained by <a href="https://twitter.com/nypl_labs">NYPL Labs</a>) provided a great starting point. Also, BFoo taught me more than a few sassy Sass tricks.</p>
+			<p>Finally to <strong>Sean Redmond</strong>, who gave me room to do this exactly how I wanted, and never made me feel bad for not knowing all my command line commands. Thanks man.</p>
 			<span class="icon-grin alpha blueText"></span><p>Thank you!</p>
 		</section>
 

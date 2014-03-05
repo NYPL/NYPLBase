@@ -2,55 +2,55 @@
     $NYPL-DESIGN-PATTERNS
 \*------------------------------------*/
 /**
- * These are the chunks (ref: @karenmcgrane) of content that 
- * cascade down the page in tiers.
+ * These are the "chunks" (ref: @karenmcgrane and her "content chunks")  
+ * of content that cascade down the page in tiers.
  *
- * (NOTE TO SELF: Probably these should be broken up into smaller partials, by type of pattern?)
  */
+		/** NOTE TO SELF -----------------------------------------
+		 * Probably these should be broken up into 
+		 * smaller partials by type of pattern
+		 * ----------------------------------------------------
+		 */ 
  
 		/** NOTE TO SELF -----------------------------------------
 		 * ANY CLASSES THAT REFER TO SECTION-SPECIFIC PATTERNS
-		 * (LIKE JUST SOMETHING USED IN SUPPORT, OR EVENTS, ETC.)
-		 * SHOULD GO INTO A PARTIAL IN THEIR OWN SUBDIRECTORY
-		 * (EX. /NYPLBASE/EVENTS/
+		 * (like something used specifically in /support, OR for events, etc.)
+		 * SHOULD GO INTO A PARTIAL 
+		 * (EX. /nyplbase/gui/_events.scss
 		 * ----------------------------------------------------
 		 */ 
 
-/** 
- * Some reference on widths:
- * 
- * _vars--nyplbase 
- *		contains breakpoints variables.
- * 
- * inuit.css/generic/mixins
- *		contains the media queries mixin.
- * 
- * inuit.css/generic/widths
- *		contains code for responsive width classes.
 
-	 * If you have set `$responsive` to ‘true’ in `_vars.scss` then you now have
-	 * access to these classes. You can define at which breakpoint you’d like an
-	 * element to be a certain size, e.g.:
-	 *
-	 * `<div class="g  one-quarter  lap-one-half  palm-one-whole"> ... </div>`
-	 *
-	 * This would create a `div` that, at ‘desktop’ sizes, takes up a quarter of the
-	 * horizontal space, a half of that space at ‘tablet’ sizes, and goes full width
-	 * at ‘mobile’ sizes.
-	 *
-	 * Demo: jsfiddle.net/inuitcss/WS4Ge
-	 *
+// currently homeless styles
 
- */
-
-
-
-/*
-.grid__item{
-	padding-left:0;
-	padding-right:$base-spacing-unit;
+.tooltip{
+	background: rgba($blue, .8);
+	color: $white;
+	padding: $half-spacing-unit;
+	
+	max-width: 250px;
+	height: auto;
+	
+	// positioning
+	// NOTE TO SELF: WRITE SOME KIND OF MIXIN FOR THE DIF CONFIGS OF POSITION & ARROW??? 
+	position: absolute;
+	top: 50%;
+	left: -80%;
+	
+	@include arrow(right, center, rgba($blue, .8));
+		
 }
-*/
+
+
+
+// make containers positions relative
+.primary,
+.secondary,
+.tertiary,
+.related,
+.chunk{
+	position: relative;
+}
 
 
 /*------------------------------------*\
@@ -59,13 +59,15 @@
 
 /**
  * is incorporating the RWD width classes a good idea?
- * for example, 
+ * for example, if
    
    .secondary > .chunk 
    
  * extends 
     
    .one-half .palm-one-whole
+
+ * ?
  */
 
 
@@ -109,12 +111,13 @@
     Chunks that are CHUNKS
 \*------------------------------------*/
 /**
- * Chunks of content.
+ * Chunks of content; this is given to EVERY chunk.
  */
 .chunk{
+	// nice bottom margin
 	margin-bottom: $base-spacing-unit*2;
-	position: relative;
 	
+	// no left padding on heds on palm context
 	@include headings(){
 		@include media-query(palm){
 			padding-left: 0;
@@ -149,7 +152,10 @@
  */
 .chunk__list{
 	@extend .block-list;
+	
+	//adapt border styles inherited from .block-list style
 	border-top-width: 0;
+	
 	& .first {
 		border-top-width: 1px;
 	}
@@ -157,25 +163,25 @@
 		border-bottom-width: 0;
 	}
 	
+	// remove left padding on each item
 	li{
 		padding-left: 0;
 	}
 }
 
-/**
- * If the list item wraps a line, give a margin to the text
- * so the icon stands out properly.
- *
- * NOTE TO SELF: ADD CODE FOR DATA-ICON TOO
+/** 
+ * or if the list items have icons...
  */
 .chunk__list--icon{
+	// extends everything from a regular list
 	@extend .chunk__list;
 	
+	// position the icon so it lines up right
+	// NOTE TO SELF: ADD CODE FOR DATA-ICON TOO
 	& li:before,
 	& a:before{
 		margin:0 .35em 0 -1.35em;		
 	}
-	
 	& li {
 		padding-left: 1.5rem;	
 	}
@@ -200,6 +206,10 @@
 	@extend .hard--left;
 	border: 1px solid $warmGrayLightest;
 	box-shadow: 0px 6px 6px -3px $warmGrayLightest;
+	
+	.hdg{
+		border-width: 0;
+	}
 }
 
 

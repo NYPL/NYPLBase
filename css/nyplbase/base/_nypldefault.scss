@@ -5,12 +5,16 @@
 /**
  * All the single HTML elements, put your hands up.
  */
- 
+
+// first, the body,
 body{
 	color: $black;
 	padding: $base-spacing-unit;
 }
 
+
+
+// then everything else, alphabetically.
 a{
 	color: $black;
 	@extend %transition !optional;
@@ -57,9 +61,15 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 // keep the measure readable
-p{
+p,
+blockquote{
 	max-width: $measure;
 }
+
+section{
+	position: relative;
+}
+
 
 ul, ol{
 //	margin-left: 0;
