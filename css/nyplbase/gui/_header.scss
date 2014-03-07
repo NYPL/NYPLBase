@@ -1,0 +1,46 @@
+/*------------------------------------*\
+    STYLE--HEADER.SCSS
+\*------------------------------------*/
+
+/**
+ * The NYPL.org header. 
+ */
+ 
+ 
+// hide some stuff on load
+.dropDownContent, 
+.primary-links,
+.btn--donate--global,
+.btn--sso--global,
+.form--sso, 
+.menu--sso,
+.search--global{
+	display: none;
+}
+
+// show stuff
+.open{
+	display: block;
+}
+
+.header--global{
+	position: relative;
+}
+
+// positioning **WRITE A MIXIN**
+.logo--global,
+.btn--nav--global,
+.btn--search--global{
+	position: absolute;
+	top:0;
+}
+
+.logo--global{
+	left: 0;
+}
+.btn--nav--global{
+	right: 0;
+}
+.btn--search--global{
+	right: 5rem;
+}

@@ -80,19 +80,15 @@ button{
 .btn--friends {
 	@include button-f11y-context(friends);
 }
+.btn--sso {
+	@include button-f11y-context(sso);
+}
+.btn--catalog {
+	@include button-f11y-context(catalog);
+}
+.btn--nyplorg {
+	@include button-f11y-context(nyplorg);
+}
 
 
 
-
-
-/*
-alpha
-beta
-gamma
-delta
-epsilon
-big
-giga
-mega
-kilo
-*/
