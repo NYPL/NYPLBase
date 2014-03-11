@@ -21,7 +21,8 @@
 .btn--sso--global,
 .form--sso, 
 .menu--sso,
-.search--global{
+.search--global,
+.classic-catalog{
 	display: none;
 }
 
@@ -32,12 +33,49 @@
 
 
 /**
+ * Button positioning
+ */
+			 
+.logo--global,
+.btn--nav--global,
+.btn--search--global{
+	position: absolute;
+	top: $half-spacing-unit/3;
+}
+
+.btn--nav--global{
+	right: 0rem;
+}
+.btn--search--global{
+	right: 3rem;
+}
+
+
+
+
+/**
  * Elements of the nav
  */
 .header--global{
 
 	// positioning
 	position: relative;
+}
+
+/** 
+ * Logo
+ */
+
+.logo--global{
+	@extend .kilo;	
+	
+	// positioning
+	left: 0;
+	margin: -.7rem 0 0 -1.5rem;
+	
+	@include media-query(table-and-up){
+		background-image: url("../../img/demo/main-logo.png");
+	}
 }
 
 .buttons--mobile{
@@ -54,45 +92,59 @@
 		color: $white;
 	}
 	
+/*
 	@include media-query(tablet-and-up){
 		display: none;
 	}
+*/
 }
 
 .primary-links{
+	ul{
+		margin:0;
+	}
+	
 	li{
 		@extend .nobullet;
-	}
-	a{
 		padding: .5rem 1rem;
-		text-decoration: none;
-		
+
 		&.active{
 			background: $red;
+		a{
 			color: $white;
 		}
+		}
+	}
+	
+	a{
+		text-decoration: none;
 	}
 	
 	@include media-query(tablet-and-up){
+		background-color: $black;
 		display: block;
 		
 		li{
-			float: left;
+			display: inline;
+			
+			a {
+				color: $white;
+			}
 		}
 	}
 }
 
-
-/** 
- * Logo
+/**
+ * SSO login, Donate button
  */
 
-.logo--global{
-	
-	@include media-query(table-and-up){
-		// NO ICON; SHOW LOGO BG IMG
-	}
+.btn--sso--global,
+.btn--donate--global{
+	padding: .5rem 1rem;
+	text-decoration: none;
 }
+
+
 
 /**
  * Search box
@@ -105,9 +157,23 @@
 	}
 }
 
+.pseudo-select{
+	ul{
+		margin: 0;
+	}
+}
+
 .search-the-catalog,
 .search-the-site{
 	color: $white;
+	text-align: center;
+	width: 120px;
+	
+	@extend .gamma;
+
+	input{
+		display: none;
+	}
 }
 
 .search-the-catalog{
@@ -119,29 +185,4 @@
 }
 
 
-/**
- * Button positioning
- */
 
-			/** --------NOTE TO SELF:
-			 * WRITE A MIXIN FOR POSITIONING
-			 */
-			 
-.logo--global,
-.btn--nav--global,
-.btn--search--global{
-	position: absolute;
-	top:0;
-}
-
-.logo--global{
-	
-	// positioning
-	left: 0;
-}
-.btn--nav--global{
-	right: 0;
-}
-.btn--search--global{
-	right: 3rem;
-}
