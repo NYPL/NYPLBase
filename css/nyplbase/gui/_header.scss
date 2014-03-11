@@ -3,7 +3,14 @@
 \*------------------------------------*/
 
 /**
- * The NYPL.org header. 
+ * The NYPL.org global header.
+ * 
+ * This header goes on ALL web properties 
+ * except for those considered experimental in nature.
+ * Anything that is a core property
+ * (the main site, the archives portal, the Digital Collections portal)
+ * gets the header.
+ * 
  */
  
  
@@ -23,11 +30,103 @@
 	display: block;
 }
 
+
+/**
+ * Elements of the nav
+ */
 .header--global{
+
+	// positioning
 	position: relative;
 }
 
-// positioning **WRITE A MIXIN**
+.buttons--mobile{
+	background-color: $black;
+	color: $white;
+	margin: 0 auto;
+	
+	@extend .alpha;
+	
+	width: 100%;
+	height: $base-spacing-unit*2;
+	
+	.logo--global{
+		color: $white;
+	}
+	
+	@include media-query(tablet-and-up){
+		display: none;
+	}
+}
+
+.primary-links{
+	li{
+		@extend .nobullet;
+	}
+	a{
+		padding: .5rem 1rem;
+		text-decoration: none;
+		
+		&.active{
+			background: $red;
+			color: $white;
+		}
+	}
+	
+	@include media-query(tablet-and-up){
+		display: block;
+		
+		li{
+			float: left;
+		}
+	}
+}
+
+
+/** 
+ * Logo
+ */
+
+.logo--global{
+	
+	@include media-query(table-and-up){
+		// NO ICON; SHOW LOGO BG IMG
+	}
+}
+
+/**
+ * Search box
+ */
+
+.search--global{
+	
+	@include media-query(tablet-and-up){
+		display: block;
+	}
+}
+
+.search-the-catalog,
+.search-the-site{
+	color: $white;
+}
+
+.search-the-catalog{
+	background-color: $blueDarker;
+}
+
+.search-the-site{
+	background-color: $blue;
+}
+
+
+/**
+ * Button positioning
+ */
+
+			/** --------NOTE TO SELF:
+			 * WRITE A MIXIN FOR POSITIONING
+			 */
+			 
 .logo--global,
 .btn--nav--global,
 .btn--search--global{
@@ -36,11 +135,13 @@
 }
 
 .logo--global{
+	
+	// positioning
 	left: 0;
 }
 .btn--nav--global{
 	right: 0;
 }
 .btn--search--global{
-	right: 5rem;
+	right: 3rem;
 }
