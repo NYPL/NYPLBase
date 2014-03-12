@@ -31,50 +31,40 @@
 	display: block;
 }
 
-
-/**
- * Button positioning
- */
-			 
-.logo--global,
-.btn--nav--global,
-.btn--search--global{
-	position: absolute;
-	top: $half-spacing-unit/3;
-}
-
-.btn--nav--global{
-	right: 0rem;
-}
-.btn--search--global{
-	right: 3rem;
-}
-
-
-
-
-/**
- * Elements of the nav
- */
+// set relative positioning
 .header--global{
-
-	// positioning
 	position: relative;
 }
+
+// set absolute positioning		 
+.logo--global,
+.btn--nav--global,
+.btn--search--global,
+.form--sso{
+	position: absolute;
+}
+
+
+
+
 
 /** 
  * Logo
  */
-
 .logo--global{
-	@extend .kilo;	
+	@extend .kilo;
+	
+	color: $white;
 	
 	// positioning
 	left: 0;
 	margin: -.7rem 0 0 -1.5rem;
 	
-	@include media-query(table-and-up){
-		background-image: url("../../img/demo/main-logo.png");
+	@include media-query(tablet-and-up){
+		background: url("../img/main-logo.png") top left no-repeat;
+		color: transparent;
+		width: 202px;
+		height: 118px;
 	}
 }
 
@@ -91,41 +81,66 @@
 	.logo--global{
 		color: $white;
 	}
-	
-/*
+
 	@include media-query(tablet-and-up){
 		display: none;
 	}
-*/
 }
 
+.logo--global,
+.btn--nav--global,
+.btn--search--global{
+	top: $half-spacing-unit/3;
+	
+	&.active{
+		background-color: $white;
+		color: $black;
+	}
+}
+
+.btn--nav--global{
+	right: 0rem;
+}
+.btn--search--global{
+	right: 3rem;
+}
+
+/**
+ * The Global Nav
+ */
 .primary-links{
 	ul{
 		margin:0;
 	}
 	
 	li{
+
 		@extend .nobullet;
 		padding: .5rem 1rem;
 
 		&.active{
 			background: $red;
-		a{
-			color: $white;
-		}
+			a{
+				color: $white;
+			}
 		}
 	}
 	
 	a{
-		text-decoration: none;
+ 		text-decoration: none; 
 	}
 	
 	@include media-query(tablet-and-up){
 		background-color: $black;
 		display: block;
+		width: 100%;
 		
+		// positioning
+		position: absolute;
+		top: 130px;
+
 		li{
-			display: inline;
+ 			display: inline; 
 			
 			a {
 				color: $white;
@@ -138,10 +153,40 @@
  * SSO login, Donate button
  */
 
+.form--sso{
+	top: 3rem;
+}
+
+.login-helptext{
+	@extend .smallprint;
+	@extend .float--right;
+	
+	margin-top: -2rem;
+	
+	a{
+		display: block;
+	}
+	
+}
+
 .btn--sso--global,
 .btn--donate--global{
 	padding: .5rem 1rem;
 	text-decoration: none;
+	
+	@include media-query(tablet-and-up){
+		display: block;
+		
+		// positioning
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+.btn--sso--global{
+	
+	// positioning
+	right: 200px;
 }
 
 
@@ -151,9 +196,15 @@
  */
 
 .search--global{
+	width: 350px;
 	
 	@include media-query(tablet-and-up){
 		display: block;
+		
+		// positioning
+		position: absolute;
+		top: 3rem;
+		right: 0;
 	}
 }
 
@@ -165,23 +216,45 @@
 
 .search-the-catalog,
 .search-the-site{
+	@extend .gamma;
+	
 	color: $white;
 	text-align: center;
 	width: 120px;
 	
-	@extend .gamma;
+	@include media-query(tablet-and-up){
+		width: auto;
+	}
 
 	input{
 		display: none;
+		
+		@include media-query(tablet-and-up){
+			display: inline;
+		}
 	}
 }
 
 .search-the-catalog{
 	background-color: $blueDarker;
+	float: left;
+	
+	@include media-query(tablet-and-up){
+		background-color: transparent;
+		color: $black;
+		clear: both;
+	}
 }
 
 .search-the-site{
 	background-color: $blue;
+	float: right;
+
+	@include media-query(tablet-and-up){
+		background-color: transparent;
+		color: $black;
+		clear: both;
+	}	
 }
 
 

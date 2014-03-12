@@ -84,9 +84,9 @@
 	}
 */
 @mixin button-f11y-context($context-name){
-	@if $context-name == donate {@include button-color($red);text-transform: uppercase;}
+	@if $context-name == donate {@include button-color($red); text-transform: uppercase;}
 	@if $context-name == friends {@include button-color($greenNeon); color: $black; text-transform: uppercase;}
-	@if $context-name == sso {@include button-color($warmGrayDarker); color: $white; text-transform: uppercase;}
+	@if $context-name == sso {@include button-color($warmGrayDarker); text-transform: uppercase;}
 	@if $context-name == catalog {@include button-color($indigo); color: $white; text-transform: none;}
 	@if $context-name == nyplorg {@include button-color($blue); color: $white; text-transform: none;}
 }
