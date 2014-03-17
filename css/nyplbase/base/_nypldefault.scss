@@ -20,7 +20,7 @@ a{
 	@extend %transition !optional;
 	
 	&:visited{
-		color: $black;
+		color: inherit;
 	}
 	
 	&:hover{

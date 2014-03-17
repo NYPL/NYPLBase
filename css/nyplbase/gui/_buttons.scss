@@ -76,12 +76,23 @@ button{
 
 .btn--donate {
 	@include button-f11y-context(donate);
+	
+	&:visited{
+		color: $white;	
+	}
 }
 .btn--friends {
 	@include button-f11y-context(friends);
 }
 .btn--sso {
 	@include button-f11y-context(sso);
+
+	&:visited{
+		color: $white;	
+	}	
+	&:hover{
+		color: $white;
+	}
 }
 .btn--catalog {
 	@include button-f11y-context(catalog);

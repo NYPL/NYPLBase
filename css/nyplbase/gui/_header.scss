@@ -15,15 +15,12 @@
  
  
 // hide some stuff on load
-.dropDownContent, 
 .primary-links,
-.btn--donate--global,
-.btn--sso--global,
 .form--sso, 
 .menu--sso,
 .search--global,
 .classic-catalog{
-	display: none;
+	display: none; //CAN I USE VISUALLYHIDDEN HERE???
 }
 
 // show stuff
@@ -31,12 +28,12 @@
 	display: block;
 }
 
-// set relative positioning
+// set some relative positioning
 .header--global{
 	position: relative;
 }
 
-// set absolute positioning		 
+// set some absolute positioning		 
 .logo--global,
 .btn--nav--global,
 .btn--search--global,
@@ -46,28 +43,10 @@
 
 
 
-
-
-/** 
- * Logo
+/**
+ * Elements of the header
  */
-.logo--global{
-	@extend .kilo;
-	
-	color: $white;
-	
-	// positioning
-	left: 0;
-	margin: -.7rem 0 0 -1.5rem;
-	
-	@include media-query(tablet-and-up){
-		background: url("../img/main-logo.png") top left no-repeat;
-		color: transparent;
-		width: 202px;
-		height: 118px;
-	}
-}
-
+ 
 .buttons--mobile{
 	background-color: $black;
 	color: $white;
@@ -82,15 +61,18 @@
 		color: $white;
 	}
 
-	@include media-query(tablet-and-up){
-		display: none;
-	}
+@include media-query(tablet-and-up){
+	display: none;
+}
 }
 
 .logo--global,
 .btn--nav--global,
 .btn--search--global{
-	top: $half-spacing-unit/3;
+	height: inherit;
+	
+	// positioning
+	top: 0;
 	
 	&.active{
 		background-color: $white;
@@ -105,12 +87,48 @@
 	right: 3rem;
 }
 
+
+/** 
+ * Logo
+ */
+.logo--global{
+	@extend .kilo;
+	color: $white;
+	
+	&:visited{
+		color: $white;
+	}
+	
+	// positioning
+	left: 0;
+	margin: -.7rem 0 0 -1.5rem;
+	
+@include media-query(tablet-and-up){
+	background: url("../img/main-logo.png") top left no-repeat;
+	color: transparent;
+	width: 202px;
+	height: 118px;
+	
+	&::before{
+		display: none;
+	}
+}
+}
+
+
 /**
  * The Global Nav
  */
 .primary-links{
+	z-index: 1001;
+	
 	ul{
 		margin:0;
+		
+	@include media-query(tablet-and-up){
+		height: 2rem;
+		line-height: 2rem;
+	}
 	}
 	
 	li{
@@ -118,10 +136,10 @@
 		@extend .nobullet;
 		padding: .5rem 1rem;
 
-		&.active{
-			background: $red;
+		&.active, &:hover{
+			background: $white;
 			a{
-				color: $white;
+				color: $black;
 			}
 		}
 	}
@@ -130,22 +148,100 @@
  		text-decoration: none; 
 	}
 	
-	@include media-query(tablet-and-up){
-		background-color: $black;
-		display: block;
-		width: 100%;
-		
-		// positioning
-		position: absolute;
-		top: 130px;
+@include media-query(tablet-and-up){
+	background-color: $black;
+	display: block;
+	width: 100%;
+	
+	// positioning
+	position: absolute;
+	top: 130px;
 
-		li{
- 			display: inline; 
-			
-			a {
-				color: $white;
-			}
-		}
+	li{
+			display: inline; 
+	}
+	
+	a {
+		color: $white;
+	}
+}
+}
+
+.primary-links__container{
+@include media-query(tablet-and-up){
+	text-align: center;
+}
+}
+.dropDown{
+	// positioning
+	position: relative;
+	
+	&:hover [class^="dropDownContent"],
+	&:hover [class*="dropDownContent"]{
+	@include media-query(tablet-and-up){
+		left: 0;	
+	}
+	}
+}
+
+[class^="dropDownContent"],
+[class*="dropDownContent"]{
+	text-align: left;
+	
+	
+	// positioning
+	position:absolute;
+    left:-9999px;
+    
+    > ul > li{
+		float: left;    
+    }
+    
+    li{
+    @include media-query(tablet-and-up){
+	    display: list-item;
+    }
+    }
+	
+	a{
+		color: $black;
+	}
+	
+	h5{
+		@extend .zeta;
+		color: $red;
+		margin-bottom: .5rem;
+		text-transform: uppercase;
+	}
+}
+
+.dropDownContent__mynypl{
+	width: 500px;
+}
+.dropDownContent__explore{
+	width: 600px;
+}
+.dropDownContent__research{
+	width: 790px;
+}
+.dropDownContent__using{
+	width: 690px;
+}
+.dropDownContent__locations{
+	width: 300px;
+}
+.dropDownContent__events{
+	width: 200px;
+}
+.dropDownContent__support{
+	width: 300px;
+}
+
+.dropDownContent__locations,
+.dropDownContent__events,
+.dropDownContent__support{
+	li{
+		clear: both;
 	}
 }
 
@@ -155,6 +251,15 @@
 
 .form--sso{
 	top: 3rem;
+	z-index: 2001;
+
+@include media-query(tablet-and-up){
+	width: 350px;
+	
+	// positioning
+	top: 2.5rem;
+	right: 6.5rem;
+}
 }
 
 .login-helptext{
@@ -174,21 +279,22 @@
 	padding: .5rem 1rem;
 	text-decoration: none;
 	
-	@include media-query(tablet-and-up){
-		display: block;
-		
-		// positioning
-		position: absolute;
-		top: 0;
-		right: 0;
-	}
+@include media-query(tablet-and-up){
+	display: block;
+	
+	// positioning
+	position: absolute;
+	top: -154px;
+	right: 0;
+}
 }
 .btn--sso--global{
 	
+@include media-query(tablet-and-up){
 	// positioning
-	right: 200px;
+	right: 105px;
 }
-
+}
 
 
 /**
@@ -198,20 +304,44 @@
 .search--global{
 	width: 350px;
 	
-	@include media-query(tablet-and-up){
-		display: block;
-		
-		// positioning
-		position: absolute;
-		top: 3rem;
-		right: 0;
+@include media-query(tablet-and-up){
+	display: block;
+	
+	// positioning
+	position: absolute;
+	top: 3rem;
+	right: 0;
+	
+	form{
+		background: $warmGrayLightest;
+		padding: $half-spacing-unit/4;
+	}
+}
+}
+
+
+.pseudo-select{
+@include media-query(tablet-and-up){
+	display: none;
+
+	background-color: $white;
+}
+	
+	ul{
+		list-style: none;
+		margin: 0;
 	}
 }
 
-.pseudo-select{
-	ul{
-		margin: 0;
-	}
+
+.search-the-catalog{
+	background-color: $blueDarker;
+	float: left;
+}
+
+.search-the-site{
+	background-color: $blue;
+	float: right;
 }
 
 .search-the-catalog,
@@ -222,40 +352,55 @@
 	text-align: center;
 	width: 120px;
 	
-	@include media-query(tablet-and-up){
-		width: auto;
-	}
+@include media-query(tablet-and-up){
+	background-color: $white;
+	color: $black;
+	font-size: 1rem;
+	float: none;
+	text-align: left;
+	width: auto;
+}
 
 	input{
 		display: none;
 		
-		@include media-query(tablet-and-up){
-			display: inline;
-		}
+	@include media-query(tablet-and-up){
+		display: inline;
+	}
 	}
 }
 
-.search-the-catalog{
-	background-color: $blueDarker;
-	float: left;
+.form-text{
+}
+
+.search_button{
+@include media-query(tablet-and-up){
+	background-color: $warmGrayDarkest;
+	display: block;
+	font-size: 1rem;
+	width: 25px;
+	height: 25px;
 	
-	@include media-query(tablet-and-up){
-		background-color: transparent;
-		color: $black;
-		clear: both;
+	&::before{
+		margin: 0;
 	}
+	
+	// positioning
+	position: absolute;
+	top: 6px;
+	right: 4px;
+}
 }
 
-.search-the-site{
-	background-color: $blue;
-	float: right;
-
-	@include media-query(tablet-and-up){
-		background-color: transparent;
-		color: $black;
-		clear: both;
-	}	
+.classic-catalog{
+@include media-query(tablet-and-up){
+	display: inline;
+	font-size: .8rem;
+	
+	// positioning
+	position: absolute;
+	bottom: -1.5rem;
+	right: 0;
 }
-
-
+}
 
