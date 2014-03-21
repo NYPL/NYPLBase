@@ -6,7 +6,7 @@
  * PLACEHOLDERS
  */
 
-// Use this placeholder class as an extend to include NYPL transition time
+// include NYPL transition timing on ALL settings
 %transition{
 	@include vendor (transition, all, $brand-timing);
 } 
@@ -17,18 +17,15 @@
  * ADDITIONAL CLASSES
  */
 
-// additional font size (to go with classes defined in InuitCSS /base/_headings)
-.big{
-    @include font-size($big-size);
-} 
-
-
 /**
  * Positioning
  */
-// use instead of floats?
+ 
+// use instead of floats; add to parent element to set its children inline
 .inline{
-	display: inline;
+	*{
+		display: inline;	
+	}
 } 
 
 .center--margin{
@@ -42,27 +39,34 @@
 
 
 /**
- * Add styling
+ * Add styling to an object
  */
-// gives gray bg color and border to item
-.callout{
-	@include callout-box(lighten($base-ui-color, 4%), $warmGrayLighter);
-}
+
+// additional font size (to go with classes defined in InuitCSS /base/_headings)
+.big{
+    @include font-size($big-size);
+} 
 
 // more border styles
+// SHD THIS BE A MIXIN? -jA
 .border--thin{
 	@include vendor(border, 2px solid $warmGray);
 	@include vendor(border-radius, $brand-round);
 } 
 
-// removes bullet from a list
+// gives warm gray bg color and border to item
+.callout{
+	@include callout-box(lighten($base-ui-color, 4%), $warmGrayLighter);
+}
+
+// removes bullets from child list items
 .nobullet{
 	list-style: none;
 } 
 
 
 /**
- * Object styling
+ * Specific object styling
  */
  
 // styles for "read more"-type links

@@ -1,14 +1,45 @@
 /*------------------------------------*\
     $NYPL-MIXINS
 \*------------------------------------*/
+
+			/*------------NOTE TO SELF:
+				All mixins and helpers need to be
+				documented in the style guide
+				for developers
+				
+				(That goes for Inuit stuff too!)
+			\*------------------------------------*/
 	
 
 /*------------------------------------*\
  * COLORS & GRADIENTS
 \*------------------------------------*/
+
+/**
+ * Callouts
+ * puts a background color and 1px solid border on a container.
+ 
+ 	@include callout-box($blueLight, $indigo, $indigo);
+ 
+ * creates a light blue background with dark blue border and text.
+ 	
+ */
+@mixin callout-box($bgcolor, $bordercolor, $textcolor: $black){
+	background-color: $bgcolor;
+	border-width: 1px;
+	border-style: solid;
+	border-color: $bordercolor;
+	border-radius:$brand-round;	
+	color: $textcolor;
+	padding: $half-spacing-unit;
+}
  
 /**
- * This makes a simple linear top-to-bottom gradient.
+ * Gradient
+ * makes a simple linear top-to-bottom gradient.
+ 
+ 	@include linear-gradient($blue, $indigo);
+ 
  */
 @mixin linear-gradient($color, $toColor) {
 	background-color: $color;
@@ -16,11 +47,14 @@
 	background-image: 		  linear-gradient(top, $color, $toColor);
 }
 
-
 /**
- * This evaluates the background color of an element 
+ * Text color
+ * evaluates the background color of an element 
  * in order to pick which text color to use on top of it.
- * Particularly handy for buttons!
+ * Also used for within our button-color mixin.
+ 
+	 @include text-on-bg($blue);
+ 
  */ 
 @mixin text-on-bg($color){
 	@if lightness($color) <= 55% {
@@ -32,25 +66,36 @@
 }
 
 
+
+/*------------------------------------*\
+ * OBJECTS
+\*------------------------------------*/
+
 /**
- * Callouts
- * puts a background color and 1px solid border on a container.
+ * Tooltips
+ * STILL WORKING ON THIS ONE -jA
  */
-@mixin callout-box($bgcolor, $bordercolor){
-	background: $bgcolor;
-	border-width: 1px;
-	border-style: solid;
-	border-color: $bordercolor;
-	border-radius:$brand-round;	
+@mixin tooltip ($top, $side, $bgcolor: $blue, $textcolor: $white){
+	background-color: rgba($bgcolor, .8);
+	border-radius:$brand-round;
+	color: $textcolor;
 	padding: $half-spacing-unit;
+	max-width: 80%;
+	height: auto;
+	
+	// positioning
+	position: absolute;
+	top: $top;
+	left: $side;
+	
+	//	@include arrow(right, center, rgba($blue, .8));
+	
 }
-
-
 
 /*------------------------------------*\
  * BUTTONS
 \*------------------------------------*/
- 
+
 // The following mixin is kind of based on http://tallpixels.com/advanced-sass-mixins/
 
 /*

@@ -173,7 +173,7 @@
     @include accessibility;
 }
 @if $responsive{
-    @each $state in palm, lap, lap-and-up, portable, desk, desk-wide{
+    @each $state in palm, tablet, tablet-and-up, lap, lap-and-up, portable, desk, desk-wide{
         @include media-query(#{$state}){
             .accessibility--#{$state},
             .visuallyhidden--#{$state}{

@@ -6,6 +6,7 @@
  */
 
 /*
+
 palm			 480 max
 tablet			 481 - 601
 tablet-and-up	 481 min
@@ -14,9 +15,10 @@ lap-and-up		 601 min
 portable		1023 max
 desk			1024 min
 desk-wide		1200 min
+
 */
 
-// from _mixins.scss
+// Redefining from _mixins.scss
 @mixin media-query($media-query){
 
     @if $media-query == palm{
@@ -75,7 +77,7 @@ desk-wide		1200 min
 
 
 
-// from _widths
+// Redefining from _widths.scss
 
 @if $responsive == true{
 
@@ -107,6 +109,10 @@ desk-wide		1200 min
 
 @include media-query(desk){
     @include grid-setup("desk-");
+}
+
+@include media-query(desk-wide){
+    @include grid-setup("desk-wide-");
 }
 
 } /* endif */

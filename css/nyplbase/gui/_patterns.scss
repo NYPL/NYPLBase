@@ -21,27 +21,6 @@
 		 */ 
 
 
-// currently homeless styles
-
-.tooltip{
-	background: rgba($blue, .8);
-	color: $white;
-	padding: $half-spacing-unit;
-	
-	max-width: 250px;
-	height: auto;
-	
-	// positioning
-	// NOTE TO SELF: WRITE SOME KIND OF MIXIN FOR THE DIF CONFIGS OF POSITION & ARROW??? 
-	position: absolute;
-	top: 50%;
-	left: -80%;
-	
-	@include arrow(right, center, rgba($blue, .8));
-		
-}
-
-
 
 // make containers positions relative
 .primary,
@@ -114,8 +93,13 @@
  * Chunks of content; this is given to EVERY chunk.
  */
 .chunk{
+	@extend .grid__item;
+	
 	// nice bottom margin
 	margin-bottom: $base-spacing-unit*2;
+	
+	// position relative
+	position: relative;
 	
 	// no left padding on heds on palm context
 	@include headings(){
@@ -197,22 +181,60 @@
 /*------------------------------------*\
     Chunks that are CONTEXT-SPECIAL
 \*------------------------------------*/
+
 /**
  * "Bricks" pattern is currently being used on the HOME PAGE
  * to feature current events and promoted items.
  */ 
 
-.feature-brick{ //THIS IS A TERRIBLE CLASS NAME. CHANGE IT.
-	@extend .hard--left;
-	border: 1px solid $warmGrayLightest;
+.feature-brick{ 
+	
+	// gentle border and shadow
+	@include callout-box(transparent, $warmGrayLightest);
 	box-shadow: 0px 6px 6px -3px $warmGrayLightest;
+
 	
 	.hdg{
+		// turn off the bottom border on the .hdg style
 		border-width: 0;
+	}
+	
+	img{
+		margin-bottom: $half-spacing-unit;
+	}
+	
+	&:hover .rec__annotation{
+		// shows annotation on hover
+		left: 0;
 	}
 }
 
 
+/**
+ * Recommendations
+ */
+.rec__cover,
+.rec__description{
+	
+	@include media-query(palm){
+		padding-left: 0;
+	}
+	
+	@include media-query(desk-wide){
+		padding-left: 0;
+	}
+	
+}
 
+.tagged{
+	@include callout-box(rgba($blue, .25), transparent);
+	
+	display: inline-block;
+	margin: 0 $half-spacing-unit/3 $half-spacing-unit/3 0;
+	padding: 0 $half-spacing-unit/3;
+}
+
+.rec__annotation{
+}
 
 
