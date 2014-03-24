@@ -192,7 +192,6 @@
 	// gentle border and shadow
 	@include callout-box(transparent, $warmGrayLightest);
 	box-shadow: 0px 6px 6px -3px $warmGrayLightest;
-
 	
 	.hdg{
 		// turn off the bottom border on the .hdg style
@@ -213,17 +212,29 @@
 /**
  * Recommendations
  */
+.rec{
+	@extend .one-whole;
+	@extend .desk-one-third;
+}
+
+.rec__cover,
+.rec__description{
+	@extend .grid__item;
+	@extend .one-whole;
+	@extend .tablet-and-up-one-half;
+	@extend .desk-one-whole;
+}
+
 .rec__cover,
 .rec__description{
 	
+	// eliminate padding-left on one-whole image width contexts
 	@include media-query(palm){
 		padding-left: 0;
 	}
-	
 	@include media-query(desk-wide){
 		padding-left: 0;
 	}
-	
 }
 
 .tagged{

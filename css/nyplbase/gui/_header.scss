@@ -13,23 +13,12 @@
  * 
  */
  
- 
-// hide some stuff on load
-.primary-links,
-.form--sso, 
-.menu--sso,
-.search--global,
-.classic-catalog{
-	display: none; //CAN I USE VISUALLYHIDDEN HERE???
-}
 
-// show stuff
-.open{
-	display: block;
-}
+
 
 // set some relative positioning
-.header--global{
+.header--global,
+.header--global__top{
 	position: relative;
 }
 
@@ -41,11 +30,31 @@
 	position: absolute;
 }
 
+// hide some stuff on load
+.header__login-donate,
+.primary-links,
+.form--sso, 
+.menu--sso,
+.search--global,
+.classic-catalog{
+ 	display: none; 
+}
+
+// show stuff
+.open{
+	display: block;
+}
+
 
 
 /**
  * Elements of the header
  */
+ 
+.header--global__top{
+	margin: 0 auto;
+	max-width: 960px;
+}
  
 .buttons--mobile{
 	background-color: $black;
@@ -61,9 +70,9 @@
 		color: $white;
 	}
 
-@include media-query(tablet-and-up){
-	display: none;
-}
+	@include media-query(tablet-and-up){
+		display: none;
+	}
 }
 
 .logo--global,
@@ -101,18 +110,20 @@
 	
 	// positioning
 	left: 0;
-	margin: -.7rem 0 0 -1.5rem;
+	margin: -3.5rem 0 0 -1.5rem;
 	
-@include media-query(tablet-and-up){
-	background: url("../img/main-logo.png") top left no-repeat;
-	color: transparent;
-	width: 202px;
-	height: 118px;
-	
-	&::before{
-		display: none;
+	@include media-query(tablet-and-up){
+		background: url("../img/main-logo.png") top left no-repeat;
+		color: transparent;
+		margin: 0;
+		
+		width: 202px;
+		height: 118px;
+		
+		&::before{
+			display: none;
+		}
 	}
-}
 }
 
 
@@ -148,29 +159,29 @@
  		text-decoration: none; 
 	}
 	
-@include media-query(tablet-and-up){
-	background-color: $black;
-	display: block;
-	width: 100%;
+	@include media-query(tablet-and-up){
+		background-color: $black;
+		display: block;
+		width: 100%;
+		
+		// positioning
+		position: absolute;
+		top: 130px;
 	
-	// positioning
-	position: absolute;
-	top: 130px;
-
-	li{
-			display: inline; 
+		li{
+				display: inline; 
+		}
+		
+		a {
+			color: $white;
+		}
 	}
-	
-	a {
-		color: $white;
-	}
-}
 }
 
 .primary-links__container{
-@include media-query(tablet-and-up){
-	text-align: center;
-}
+	@include media-query(tablet-and-up){
+		text-align: center;
+	}
 }
 .dropDown{
 	// positioning
@@ -178,9 +189,9 @@
 	
 	&:hover [class^="dropDownContent"],
 	&:hover [class*="dropDownContent"]{
-	@include media-query(tablet-and-up){
-		left: 0;	
-	}
+		@include media-query(tablet-and-up){
+			left: 0;	
+		}
 	}
 }
 
@@ -198,9 +209,9 @@
     }
     
     li{
-    @include media-query(tablet-and-up){
-	    display: list-item;
-    }
+	    @include media-query(tablet-and-up){
+		    display: list-item;
+	    }
     }
 	
 	a{
@@ -215,6 +226,7 @@
 	}
 }
 
+// each dropDownContent needs width
 .dropDownContent__mynypl{
 	width: 500px;
 }
@@ -246,20 +258,41 @@
 }
 
 /**
- * SSO login, Donate button
+ * SSO login elements, Donate button
  */
+
+.header__login-donate{
+
+	// positioning
+	position: absolute;
+	top: 330px;
+	right: 0;
+	
+	@include media-query(tablet-and-up){
+		display: block;
+		top: 0;
+		right: 0;
+	}
+}
+
+.btn--sso--global,
+.btn--donate--global{
+	padding: .5rem 1rem;
+	text-decoration: none;	
+}
+
 
 .form--sso{
 	top: 3rem;
 	z-index: 2001;
 
-@include media-query(tablet-and-up){
-	width: 350px;
-	
-	// positioning
-	top: 2.5rem;
-	right: 6.5rem;
-}
+	@include media-query(tablet-and-up){
+		width: 350px;
+		
+		// positioning
+		top: 2.5rem;
+		right: 6.5rem;
+	}
 }
 
 .login-helptext{
@@ -271,29 +304,6 @@
 	a{
 		display: block;
 	}
-	
-}
-
-.btn--sso--global,
-.btn--donate--global{
-	padding: .5rem 1rem;
-	text-decoration: none;
-	
-@include media-query(tablet-and-up){
-	display: block;
-	
-	// positioning
-	position: absolute;
-	top: -154px;
-	right: 0;
-}
-}
-.btn--sso--global{
-	
-@include media-query(tablet-and-up){
-	// positioning
-	right: 105px;
-}
 }
 
 
@@ -304,28 +314,28 @@
 .search--global{
 	width: 350px;
 	
-@include media-query(tablet-and-up){
-	display: block;
-	
-	// positioning
-	position: absolute;
-	top: 3rem;
-	right: 0;
-	
-	form{
-		background: $warmGrayLightest;
-		padding: $half-spacing-unit/4;
+	@include media-query(tablet-and-up){
+		display: block;
+		
+		// positioning
+		position: absolute;
+		top: 3rem;
+		right: 0;
+		
+		form{
+			background: $warmGrayLightest;
+			padding: $half-spacing-unit/4;
+		}
 	}
-}
 }
 
 
 .pseudo-select{
-@include media-query(tablet-and-up){
-	display: none;
-
-	background-color: $white;
-}
+	@include media-query(tablet-and-up){
+		display: none;
+	
+		background-color: $white;
+	}
 	
 	ul{
 		list-style: none;
@@ -352,21 +362,21 @@
 	text-align: center;
 	width: 120px;
 	
-@include media-query(tablet-and-up){
-	background-color: $white;
-	color: $black;
-	font-size: 1rem;
-	float: none;
-	text-align: left;
-	width: auto;
-}
+	@include media-query(tablet-and-up){
+		background-color: $white;
+		color: $black;
+		font-size: 1rem;
+		float: none;
+		text-align: left;
+		width: auto;
+	}
 
 	input{
 		display: none;
 		
-	@include media-query(tablet-and-up){
-		display: inline;
-	}
+		@include media-query(tablet-and-up){
+			display: inline;
+		}
 	}
 }
 
@@ -374,33 +384,33 @@
 }
 
 .search_button{
-@include media-query(tablet-and-up){
-	background-color: $warmGrayDarkest;
-	display: block;
-	font-size: 1rem;
-	width: 25px;
-	height: 25px;
-	
-	&::before{
-		margin: 0;
+	@include media-query(tablet-and-up){
+		background-color: $warmGrayDarkest;
+		display: block;
+		font-size: 1rem;
+		width: 25px;
+		height: 25px;
+		
+		&::before{
+			margin: 0;
+		}
+		
+		// positioning
+		position: absolute;
+		top: 6px;
+		right: 4px;
 	}
-	
-	// positioning
-	position: absolute;
-	top: 6px;
-	right: 4px;
-}
 }
 
 .classic-catalog{
-@include media-query(tablet-and-up){
-	display: inline;
-	font-size: .8rem;
-	
-	// positioning
-	position: absolute;
-	bottom: -1.5rem;
-	right: 0;
-}
+	@include media-query(tablet-and-up){
+		display: inline;
+		font-size: .8rem;
+		
+		// positioning
+		position: absolute;
+		bottom: -1.5rem;
+		right: 0;
+	}
 }
 
