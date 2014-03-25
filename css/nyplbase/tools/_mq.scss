@@ -7,12 +7,25 @@
 
 /*
 
+$tablet-start:			481px;
+$lap-start:				601px;
+$lap-lg-start:			800px;
+$desk-start:     	  	1024px!default;
+$desk-wide-start:  		1200px!default;
+
+//from _mixins
+$palm-end:              $tablet-start - 1px;
+$lap-end:               $desk-start - 1px;
+
+-----------------------------
+
 palm			 480 max
 tablet			 481 - 601
 tablet-and-up	 481 min
 
 lap				 601 - 1023
 lap-and-up		 601 min
+lap-lg			 800 - 1023
 
 portable		1023 max
 desk			1024 min
@@ -40,8 +53,6 @@ desk-wide		1200 min
 			
 			@media only screen and (min-width:$tablet-start) { @content; }
 		}
-
-
 	// end of additional tablet breakpoint
 
     @if $media-query == lap{
@@ -55,6 +66,17 @@ desk-wide		1200 min
         @media only screen and (min-width:$lap-start) { @content; }
 
     }
+
+
+	// adding lap-lg breakpoint
+	    @if $media-query == lap-lg{
+	
+	        @media only screen and (min-width:$lap-lg-start) and (max-width:$lap-end) { @content; }
+	
+	    }
+	// end of additional lap-lg breakpoint
+
+
 
     @if $media-query == portable{
 
@@ -104,6 +126,12 @@ desk-wide		1200 min
 @include media-query(lap-and-up){
     @include grid-setup("lap-and-up-");
 }
+
+// adding lap-lg grid
+@include media-query(lap-lg){
+    @include grid-setup("lap-lg-");
+}
+// end lap-lg grid
 
 @include media-query(portable){
     @include grid-setup("portable-");
