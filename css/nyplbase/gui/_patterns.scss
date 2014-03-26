@@ -192,6 +192,7 @@
  */ 
 
 .feature-brick{ 
+	@extend .cf;
 	
 	// gentle border and shadow
 	@include callout-box(transparent, $warmGrayLightest);
@@ -217,34 +218,44 @@
  * Recommendations
  */
 .rec{
+	@extend .cf;
+	
+	// grid width settings
 	@extend .one-whole;
 	@extend .lap-lg-one-half;
 	@extend .desk-one-third;
 }
 
 .rec__heading{
+
+	// grid width settings
+	@extend .grid__item;
+	@extend .one-whole;
+	
+	@extend .text--center;
 	
 	h1{
-		text-align: center;
-	
+		@extend .big;
+		@extend .orangeDarkerText;
+		
 		@include media-query(tablet-and-up){
 		font-size: 3rem;
-		text-align: left;
 		}
 	}	
 }
 
-.rec__cover,
-.rec__description{
+.rec__cover{
+
+	// grid width settings
 	@extend .grid__item;
 	@extend .one-whole;
 	@extend .tablet-and-up-one-half;
-	@extend .lap-lg-one-whole;
 	@extend .desk-one-whole;
-}
 
-.rec__cover{
-	@extend .hard--left; /* FOR EVERY IMG? -jA */
+	@extend .hard--left; /* ADD IN BASE TO IMG BY DEFAULT? -jA */
+	@extend .float--left;
+	
+	margin: 0 $half-spacing-unit $half-spacing-unit 0;
 }
 
 .tagged{
@@ -264,12 +275,16 @@
 		text-decoration: none;
 		color: inherit;
 	}
+	
+	&.current{
+		background-color: rgba($blue, .1);
+	}
 }
 
 .rec__annotation{
 }
 
-
+// ONLY FOR HEADER IFRAME IN DEMOS
 .container--header{
 	width: 100%;
 	height: 80px;

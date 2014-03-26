@@ -2,13 +2,13 @@
     $COLORLABELS
 \*------------------------------------*/
 /**
- *	 These are classes you can use to add specific backgrounds and text colors, if needed.
+ *	 These are classes you can use to add specific background-colors and text colors, if needed.
  * 	 Special circumstances only! Don't mess with the branding choices!
  */
 
 
-.white {background: $white}
-.black {background: $black}
+.white {background-color: $white}
+.black {background-color: $black}
 
 	.whiteText {color: $white}
 	.blackText {color: $black}
@@ -16,11 +16,11 @@
 	
 // Primary palette colors
 // -------------------------
-.red {background: $red}
-.orange {background: $orange}
-.green {background: $green}
-.blue {background: $blue}
-.purple {background: $purple}
+.red {background-color: $red}
+.orange {background-color: $orange}
+.green {background-color: $green}
+.blue {background-color: $blue}
+.purple {background-color: $purple}
 
 	.redText {color: $red}
 	.orangeText {color: $orange}
@@ -31,50 +31,50 @@
 
 // Secondary palette colors
 // -------------------------
-.redDarkest {background: $redDarkest}
-.redDarker {background: $redDarker}
-.pink {background: $pink}
-.salmon {background: $salmon}
+.redDarkest {background-color: $redDarkest}
+.redDarker {background-color: $redDarker}
+.pink {background-color: $pink}
+.salmon {background-color: $salmon}
 
 	.redDarkestText {color: $redDarkest}
 	.redDarkerText {color: $redDarker}
 	.pinkText {color: $pink}
 	.salmonText {color: $salmon}
 
-.orangeDarkest {background: $orangeDarkest}
-.orangeDarker {background: $orangeDarker}
-.yellow {background: $yellow}
-.yellowLight {background: $yellowLight}
+.orangeDarkest {background-color: $orangeDarkest}
+.orangeDarker {background-color: $orangeDarker}
+.yellow {background-color: $yellow}
+.yellowLight {background-color: $yellowLight}
 
 	.orangeDarkestText {color: $orangeDarkest}
 	.orangeDarkerText {color: $orangeDarker}
 	.yellowText {color: $yellow}
 	.yellowLightText {color: $yellowLight}
 
-.greenDarkest {background: $greenDarkest}
-.greenDarker {background: $greenDarker}
-.greenNeon {background: $greenNeon}
-.greenLight{background: $greenLight}
+.greenDarkest {background-color: $greenDarkest}
+.greenDarker {background-color: $greenDarker}
+.greenNeon {background-color: $greenNeon}
+.greenLight{background-color: $greenLight}
 
 	.greenDarkestText {color: $greenDarkest}
 	.greenDarkerText {color: $greenDarker}
 	.greenNeonText {color: $greenNeon}
 	.greenLightText {color: $greenLight}
 
-.indigo {background: $indigo}
-.blueDarker {background: $blueDarker}
-.blueNeon {background: $blueNeon}
-.blueLight {background: $blueLight}
+.indigo {background-color: $indigo}
+.blueDarker {background-color: $blueDarker}
+.blueNeon {background-color: $blueNeon}
+.blueLight {background-color: $blueLight}
 
 	.indigoText {color: $indigo}
 	.blueDarkerText {color: $blueDarker}
 	.blueNeonText {color: $blueNeon}
 	.blueLightText {color: $blueLight}
 
-.purpleDarkest {background: $purpleDarkest}
-.purpleDarker {background: $purpleDarker}
-.purpleNeon {background: $purpleNeon}
-.purpleLight {background: $purpleLight}
+.purpleDarkest {background-color: $purpleDarkest}
+.purpleDarker {background-color: $purpleDarker}
+.purpleNeon {background-color: $purpleNeon}
+.purpleLight {background-color: $purpleLight}
 
 	.purpleDarkestText {color: $purpleDarkest}
 	.purpleDarkerText {color: $purpleDarker}
@@ -83,11 +83,11 @@
 
 // Cool grays
 // -------------------------
-.coolGrayDarkest {background: $coolGrayDarkest}
-.coolGrayDarker {background: $coolGrayDarker}
-.coolGray {background: $coolGray}
-.coolGrayLighter {background: $coolGrayLighter}
-.coolGrayLightest {background: $coolGrayLightest}
+.coolGrayDarkest {background-color: $coolGrayDarkest}
+.coolGrayDarker {background-color: $coolGrayDarker}
+.coolGray {background-color: $coolGray}
+.coolGrayLighter {background-color: $coolGrayLighter}
+.coolGrayLightest {background-color: $coolGrayLightest}
 
 	.coolGrayDarkestText {color: $coolGrayDarkest}
 	.coolGrayDarkerText {color: $coolGrayDarker}
@@ -97,11 +97,11 @@
 
 // Warm grays
 // -------------------------
-.warmGrayDarkest {background: $warmGrayDarkest}
-.warmGrayDarker {background: $warmGrayDarker}
-.warmGray {background: $warmGray}
-.warmGrayLighter {background: $warmGrayLighter}
-.warmGrayLightest {background: $warmGrayLightest}
+.warmGrayDarkest {background-color: $warmGrayDarkest}
+.warmGrayDarker {background-color: $warmGrayDarker}
+.warmGray {background-color: $warmGray}
+.warmGrayLighter {background-color: $warmGrayLighter}
+.warmGrayLightest {background-color: $warmGrayLightest}
 
 	.warmGrayDarkestText {color: $warmGrayDarkest}
 	.warmGrayDarkerText {color: $warmGrayDarker}
