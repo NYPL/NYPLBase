@@ -25,6 +25,10 @@ a{
 	
 	&:hover{
 		color: $blue;
+		
+		img{
+			outline-color: rgba($blue, .5);
+		}
 	}
 }
 

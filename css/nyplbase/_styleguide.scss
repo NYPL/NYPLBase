@@ -29,6 +29,17 @@ pre {
 }
 
 
+// FOR HEADER IFRAME IN DEMOS
+.container--header{
+	width: 100%;
+	height: 80px;
+	border: 0;
+	
+	@include media-query(tablet-and-up){
+		height: 200px;
+	}
+}
+
 
 /**
  * Navigation

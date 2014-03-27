@@ -36,26 +36,25 @@
     Chunks are contained by SECTIONS
 \*------------------------------------*/
 
-/**
- * is incorporating the RWD width classes a good idea?
- * for example, if
-   
-   .secondary > .chunk 
-   
- * extends 
-    
-   .one-half .palm-one-whole
-
- * ?
- */
+		/**-------NOTE TO SELF-----------------
+		 * is incorporating the RWD width classes a good idea?
+		 * for example: 
+		   
+		   .secondary > .chunk{
+		   		@extend .desk-one-half	
+		   }
+		   
+		 * ?
+		 */
 
 
-// prevent content from stretching to 100% avail width
+
 .primary,
 .secondary,
 .tertiary,
 .related{
 	@extend .grid__item;
+	// prevent content from stretching to 100% available width
 	max-width: $desk-start;
 	
 	p {
@@ -98,7 +97,7 @@
 	// nice bottom margin
 	margin-bottom: $base-spacing-unit*2;
 	
-	// position relative
+	// positioning
 	position: relative;
 	
 	// no left padding on heds on palm context
@@ -218,12 +217,11 @@
  * Recommendations
  */
 .rec{
-	@extend .cf;
-	
 	// grid width settings
 	@extend .one-whole;
 	@extend .lap-lg-one-half;
 	@extend .desk-one-third;
+		
 }
 
 .rec__heading{
@@ -244,7 +242,7 @@
 	}	
 }
 
-.rec__cover{
+.cover{
 
 	// grid width settings
 	@extend .grid__item;
@@ -278,19 +276,5 @@
 	
 	&.current{
 		background-color: rgba($blue, .1);
-	}
-}
-
-.rec__annotation{
-}
-
-// ONLY FOR HEADER IFRAME IN DEMOS
-.container--header{
-	width: 100%;
-	height: 80px;
-	border: 0;
-	
-	@include media-query(tablet-and-up){
-		height: 200px;
 	}
 }
