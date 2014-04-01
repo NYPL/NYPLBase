@@ -143,10 +143,11 @@ License:	CC BY 3.0 -- http://creativecommons.org/licenses/by/3.0/
   height: auto;
 }
 
-// removes list bullet if you are using icons in a list
+// removes list bullet if you are using icons in a list, preserves line-height
 li[data-icon],
 li[class^="icon-"],
 li[class*=" icon-"] {
+	line-height: inherit;
 	list-style-type: none;
 }
 

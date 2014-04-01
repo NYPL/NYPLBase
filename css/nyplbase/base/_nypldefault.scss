@@ -15,7 +15,7 @@ body{
 
 
 // then everything else, alphabetically.
-a{
+a{ 
 	color: $black;
 	@extend %transition !optional;
 	

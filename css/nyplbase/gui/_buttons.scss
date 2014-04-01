@@ -34,9 +34,11 @@
 		* ------------------------------------
 		*/
 
-.btn{
+.btn, a.btn{
  	@include button-color($beautons);
 	@extend %transition !optional;
+	
+	margin: $half-spacing-unit/2;
 }
 
 button{
