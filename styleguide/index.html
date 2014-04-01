@@ -14,52 +14,52 @@
 <body class="grid style-guide">
 
 
-<!-- D11N FOR PATTERNS, TO BE DISPLAYED HERE LATER -->
+<!-- ADD THE FOLLOWING D11N TO STYLEGUIDE OR PATTERNS -->
 
-<!-- ARROWS
-/**
- * CSS arrows!!! But... before you read on, you might want to grab a coffee...
- *
- * This mixin creates a CSS arrow on a given element. We can have the arrow
- * appear in one of 12 locations, thus:
- *
- *       01    02    03
- *    +------------------+
- * 12 |                  | 04
- *    |                  |
- * 11 |                  | 05
- *    |                  |
- * 10 |                  | 06
- *    +------------------+
- *       09    08    07
- *
- * You pass this position in along with a desired arrow color and optional
- * border color, for example:
- *
- * `@include arrow(top, left, red)`
- *
- * for just a single, red arrow, or:
- *
- * `@include arrow(bottom, center, red, black)`
- *
- * which will create a red triangle with a black border which sits at the bottom
- * center of the element. Call the mixin thus:
- *
-   .foo{
-       background-color:#BADA55;
-       border:1px solid #ACE;
-       @include arrow(top, left, #BADA55, #ACE);
-   }
- *
- */
- 
- ARROW POSTIIONS:
- top (+ left, center, or right)
- right (+ top, center, or bottom
- bottom (+ right, center, or left)
- left (+ top, center, or bottom)
- 
--->
+			<!-- ARROWS
+			/**
+			 * CSS arrows!!! But... before you read on, you might want to grab a coffee...
+			 *
+			 * This mixin creates a CSS arrow on a given element. We can have the arrow
+			 * appear in one of 12 locations, thus:
+			 *
+			 *       01    02    03
+			 *    +------------------+
+			 * 12 |                  | 04
+			 *    |                  |
+			 * 11 |                  | 05
+			 *    |                  |
+			 * 10 |                  | 06
+			 *    +------------------+
+			 *       09    08    07
+			 *
+			 * You pass this position in along with a desired arrow color and optional
+			 * border color, for example:
+			 *
+			 * `@include arrow(top, left, red)`
+			 *
+			 * for just a single, red arrow, or:
+			 *
+			 * `@include arrow(bottom, center, red, black)`
+			 *
+			 * which will create a red triangle with a black border which sits at the bottom
+			 * center of the element. Call the mixin thus:
+			 *
+			   .foo{
+			       background-color:#BADA55;
+			       border:1px solid #ACE;
+			       @include arrow(top, left, #BADA55, #ACE);
+			   }
+			 *
+			 */
+			 
+			 ARROW POSTIIONS:
+			 top (+ left, center, or right)
+			 right (+ top, center, or bottom
+			 bottom (+ right, center, or left)
+			 left (+ top, center, or bottom)
+			 
+			-->
 
 <div id="top"></div>
 <a class="backtotop icon-arrow-up3 big" href="#top"><span class="visuallyhidden">Back to top</span></a>

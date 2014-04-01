@@ -72,29 +72,8 @@
 \*------------------------------------*/
 
 /**
- * Tooltips
- * STILL WORKING ON THIS ONE -jA
+ * Buttons
  */
-@mixin tooltip ($top, $side, $bgcolor: $blue, $textcolor: $white){
-	background-color: rgba($bgcolor, .8);
-	border-radius:$brand-round;
-	color: $textcolor;
-	padding: $half-spacing-unit;
-	max-width: 80%;
-	height: auto;
-	
-	// positioning
-	position: absolute;
-	top: $top;
-	left: $side;
-	
-	//	@include arrow(right, center, rgba($blue, .8));
-	
-}
-
-/*------------------------------------*\
- * BUTTONS
-\*------------------------------------*/
 
 // The following mixin is kind of based on http://tallpixels.com/advanced-sass-mixins/
 
@@ -123,10 +102,10 @@
  * Add context names here to add specific styling;
  * the name you add provides the second part of the class name.
    
-	USAGE:
 	.btn--donate {
 		@include f11y-context(donate)
 	}
+	
 */
 @mixin button-f11y-context($context-name){
 	@if $context-name == donate {@include button-color($red); text-transform: uppercase;}
@@ -134,4 +113,55 @@
 	@if $context-name == sso {@include button-color($warmGrayDarker); text-transform: uppercase;}
 	@if $context-name == catalog {@include button-color($indigo); color: $white; text-transform: none;}
 	@if $context-name == nyplorg {@include button-color($blue); color: $white; text-transform: none;}
+}
+
+/**
+ * Icons
+ */
+
+/**
+ * Use this to extend an icon into a style,
+ * which you can't do without a mixin.
+ * (The argument is the name of the icon class.)
+ 
+ @include extend-icon(icon-arrow-right2);
+ 
+ */
+@mixin extend-icon($name, $color: inherit){
+	&::before{
+		@include nypl-icon();
+		color: $color;
+	}
+	
+	@extend .#{$name};
+	
+}
+
+
+/**
+ * Tooltips
+ * STILL WORKING ON THIS ONE -jA
+ */
+ 
+ /*
+ 
+ 	.tip--foo{
+ 		@include arrow(right, center, rgba($blue, .8));
+ 	}
+	
+ */
+@mixin tooltip ($top, $side, $bgcolor: $blue, $textcolor: $white){
+	background-color: rgba($bgcolor, .8);
+	border-radius:$brand-round;
+	color: $textcolor;
+	padding: $half-spacing-unit;
+	max-width: 80%;
+	height: auto;
+	
+	// positioning
+	position: absolute;
+	top: $top;
+	left: $side;
+	
+
 }

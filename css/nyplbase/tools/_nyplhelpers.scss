@@ -18,7 +18,7 @@
  */
 
 /**
- * Positioning
+ * Positioning and Layout
  */
  
 // use instead of floats; add to parent element to set its children inline
@@ -28,14 +28,17 @@
 	}
 } 
 
+// center horizontally
 .center--margin{
 	margin: 0 auto;
 	width: 100%;
 }
 
+// lay out a list horizontally, but stay semantic (ie. it's not a nav or a checklist)
 .list--horiz{
 	@extend .nav;
 }
+
 
 
 /**
@@ -69,22 +72,32 @@
  * Specific object styling
  */
  
+//styles for contextual/targeted appeals
+.appeal{
+	@include callout-box(lighten($warmGrayLightest, 7%), $warmGrayLighter);
+	
+	border-width: 3px;
+	border-style: double;
+	text-align: center;
+	
+	p{
+		@extend .beta;
+	}
+}
+
 // styles for "read more"-type links
 .read-more{
-//	@extend .btn-natural;
+	@extend .zeta;
+	@include extend-icon(icon-arrow-right2, $blue);
 
-	background: $warmGrayLightest;
-	border: 1px solid $warmGrayLighter;
 	padding: $half-spacing-unit/2;
 	
-//	@extend .icon-arrow-right2;
-	
-	@extend .zeta;
-	
+
 /*
-	 &:after{
-		 
-	 }
+	&:before{
+		@include nypl-icon();
+	}
+	@extend .icon-arrow-right2;
 */
 } 
 
