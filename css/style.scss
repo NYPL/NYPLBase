@@ -49,7 +49,6 @@
  */
 @import "nyplbase/tools/mq";
 @import "nyplbase/tools/nyplmixins";
-@import "nyplbase/tools/nyplhelpers";
  
  
  
@@ -71,7 +70,7 @@
  * Objects and abstractions, which provide structure for components.
  */
  		/** NOTE TO SELF --------------------------
-		 * What would NYPL-specific objects/abstractions be
+		 * Will there even be NYPL-specific objects/abstractions
 		 * (that are not provided by InuitCSS)? 
 		 * -------------------------------------
 		 */
@@ -91,7 +90,17 @@
 @import "nyplbase/gui/nav";
 @import "nyplbase/gui/patterns";
  
+
+ /*------------------------------------*\
+    $NYPL.ORG
+\*------------------------------------*/
+/**
+ * GUI components which are specific to the NYPL.org site.
+ */
+
+@import "nyplbase/nypl.org/locations";
  
+
  /*------------------------------------*\
     $OVERRIDES
 \*------------------------------------*/
@@ -99,7 +108,7 @@
  * Overrides and helper classes which need to trump everything else that came before them.
  */
 
-
+@import "nyplbase/tools/nyplhelpers";
 
 
 /*------------------------------------*\

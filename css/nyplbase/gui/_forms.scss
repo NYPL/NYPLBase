@@ -139,12 +139,11 @@ form{
  * to lay out the elements in a row.
  */
 .form--inline{
-	@include media-query(lap-and-up){
-		*{
-			display: inline-block;
-			margin-right: $half-spacing-unit;
-			width: auto !important;
-		}
+	*{
+		display: inline-block;
+		margin-right: $half-spacing-unit;
+		width: auto !important;
+		
 	}
 }
 

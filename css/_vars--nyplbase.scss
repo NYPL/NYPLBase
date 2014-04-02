@@ -31,12 +31,9 @@
 /**
  *  turn on/off NYPL-specific partials below
  */
-			/**
-			 * NOTETOSELF --------------------------------------
-			 * is the style guide the only NYPL-specific partial?
-			 * -------------------------------------------------
-			 */
-$use-styleguide:         true; 
+$use-styleguide:		true!default;
+
+$use-locations:			true!default;
 
 
 
