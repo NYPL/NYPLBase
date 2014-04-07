@@ -181,18 +181,13 @@
     Chunks that are CONTEXT-SPECIAL
 \*------------------------------------*/
 /** 
- * These styles probably need to move to their own partials
+ * These styles may need to move to their own partials
  * in the /gui directory.
  */
 
-/**
- * "Bricks" pattern is currently being used on the HOME PAGE
- * to feature current events and promoted items.
- */ 
-
 .feature-brick{ 
 	@extend .cf;
-	
+		
 	// gentle border and shadow
 	@include callout-box(transparent, $warmGrayLightest);
 	box-shadow: 0px 6px 6px -3px $warmGrayLightest;
@@ -216,38 +211,20 @@
 /**
  * Recommendations
  */
+
 .rec{
 	// grid width settings
 	@extend .one-whole;
 	@extend .lap-lg-one-half;
 	@extend .desk-one-third;
-		
-}
-
-.rec__heading{
-
-	// grid width settings
-	@extend .grid__item;
-	@extend .one-whole;
-	
-	@extend .text--center;
-	
-	h1{
-		@extend .big;
-		@extend .orangeDarkerText;
-		
-		@include media-query(tablet-and-up){
-		font-size: 3rem;
-		}
-	}	
 }
 
 .cover{
 
 	// grid width settings
 	@extend .grid__item;
-	@extend .one-whole;
-	@extend .tablet-and-up-one-half;
+	@extend .one-half;
+	@extend .tablet-and-up-one-third;
 	@extend .desk-one-whole;
 
 	@extend .hard--left; /* ADD IN BASE TO IMG BY DEFAULT? -jA */
