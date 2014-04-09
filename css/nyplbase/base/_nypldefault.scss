@@ -9,7 +9,6 @@
 // first, the body,
 body{
 	color: $black;
-	padding: $base-spacing-unit;
 }
 
 
@@ -43,7 +42,7 @@ code{
 }
 
 figure{
-	background: $warmGrayLightest;
+	background: rgba($warmGrayLightest, .5);
 	padding: $half-spacing-unit;
 }
 

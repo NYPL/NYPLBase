@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700|Open+Sans:400italic,400,700,800&subset=latin,latin-ext);
 /*------------------------------------*\
     STYLE.CSS
 \*------------------------------------*/
@@ -989,7 +990,7 @@ h2, .beta, .icon-size-beta:before, .form--locinator, .appeal p {
   line-height: 1; }
 
 h3, .gamma, .search-the-catalog,
-.search-the-site {
+.search-the-site, .share {
   font-size: 21px;
   font-size: 1.3125rem;
   line-height: 1.14286; }
@@ -1713,8 +1714,7 @@ select:focus + .extra-help,
  */
 .grid__item, .primary,
 .secondary,
-.tertiary,
-.related, .chunk, .cover {
+.tertiary, .chunk, .cover {
   display: inline-block;
   width: 100%;
   padding-left: 24px;
@@ -1728,8 +1728,7 @@ select:focus + .extra-help,
   text-align: right; }
   .grid--rev > .grid__item, .grid--rev > .primary,
   .grid--rev > .secondary,
-  .grid--rev > .tertiary,
-  .grid--rev > .related, .grid--rev > .chunk, .grid--rev > .cover {
+  .grid--rev > .tertiary, .grid--rev > .chunk, .grid--rev > .cover {
     direction: ltr;
     text-align: left; }
 
@@ -1740,8 +1739,7 @@ select:focus + .extra-help,
   margin-left: 0; }
   .grid--full > .grid__item, .grid--full > .primary,
   .grid--full > .secondary,
-  .grid--full > .tertiary,
-  .grid--full > .related, .grid--full > .chunk, .grid--full > .cover {
+  .grid--full > .tertiary, .grid--full > .chunk, .grid--full > .cover {
     padding-left: 0; }
 
 /**
@@ -1752,8 +1750,7 @@ select:focus + .extra-help,
   text-align: center; }
   .grid--center > .grid__item, .grid--center > .primary,
   .grid--center > .secondary,
-  .grid--center > .tertiary,
-  .grid--center > .related, .grid--center > .chunk, .grid--center > .cover {
+  .grid--center > .tertiary, .grid--center > .chunk, .grid--center > .cover {
     text-align: left; }
 
 /*------------------------------------*\
@@ -4352,7 +4349,7 @@ input[type="button"]:focus {
 .text--left {
   text-align: left  !important; }
 
-.text--center {
+.text--center, .blog__title, .share {
   text-align: center !important; }
 
 .text--right, .form--horiz > label {
@@ -7182,8 +7179,7 @@ li[class*=" icon-"] {
  * All the single HTML elements, put your hands up.
  */
 body {
-  color: #333333;
-  padding: 24px; }
+  color: #333333; }
 
 a {
   color: #333333; }
@@ -7203,7 +7199,7 @@ code {
   color: #aa137e; }
 
 figure {
-  background: #e2dedb;
+  background: rgba(226, 222, 219, 0.5);
   padding: 12px; }
 
 figcaption {
@@ -8032,13 +8028,11 @@ form .disabled {
  */
 .primary,
 .secondary,
-.tertiary,
-.related {
+.tertiary {
   max-width: 1024px; }
   .primary p,
   .secondary p,
-  .tertiary p,
-  .related p {
+  .tertiary p {
     margin-left: auto;
     margin-right: auto; }
 
@@ -8142,6 +8136,100 @@ form .disabled {
   .tagged.current {
     background-color: rgba(0, 144, 196, 0.1); }
 
+/** 
+ * Blogs
+ */
+.blog {
+  max-width: 50rem; }
+
+.blog__header {
+  background-color: #111;
+  background-image: url("../prototypes/img/nypl-header-mobile.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 50px;
+  margin-bottom: 48px; }
+  @media only screen and (min-width: 601px) {
+    .blog__header {
+      background-image: url("../prototypes/img/nypl-header-short.png");
+      background-size: contain; } }
+  .blog__header img {
+    display: inline !important; }
+
+.blog__title {
+  color: #acb737;
+  font-family: "Roboto Slab", serif;
+  text-shadow: 2px 2px 1px #e2dedb; }
+  @media only screen and (min-width: 601px) {
+    .blog__title {
+      font-size: 50px;
+      font-size: 3.125rem;
+      line-height: 1.44; } }
+
+.blog__about {
+  font-style: italic;
+  margin-bottom: 24px; }
+
+.blog__tags {
+  margin: 24px 0; }
+
+.blog__img {
+  position: relative; }
+
+.blog__img--pinterest {
+  color: white;
+  position: absolute;
+  bottom: 24px;
+  left: 0; }
+
+.blog p {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.33333;
+  font-family: "Open Sans", serif;
+  line-height: 2rem;
+  position: relative; }
+  .blog p:hover .comment__button {
+    left: -60px; }
+
+.share li {
+  list-style-type: none; }
+  .share li a {
+    color: #0090c4; }
+    .share li a:hover {
+      color: #006b91; }
+@media only screen and (min-width: 1024px) {
+  .share {
+    font-size: 28px;
+    font-size: 1.75rem;
+    line-height: 1.71429;
+    line-height: 1.3;
+    position: fixed;
+    right: 1%; }
+    .share li {
+      display: list-item; } }
+
+.comment {
+  background-color: rgba(0, 144, 196, 0.15);
+  border-radius: 2px;
+  padding: 6px;
+  width: 150px;
+  position: absolute;
+  left: -170px; }
+  .comment.show {
+    left: -160px; }
+
+.comment__button {
+  color: #e2dedb;
+  position: absolute;
+  left: -9999px; }
+  .comment__button:hover {
+    color: rgba(0, 144, 196, 0.5); }
+
+.comment__comment {
+  resize: none;
+  height: 200px; }
+
  /*------------------------------------*\
     $NYPL.ORG
 \*------------------------------------*/
@@ -8177,7 +8265,7 @@ form .disabled {
  * PLACEHOLDERS
  */
 a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .btn, button, input[type="submit"],
-input[type="button"], a.btn, .tagged:hover, .backtotop:hover, .menu__button:hover {
+input[type="button"], a.btn, .tagged:hover, .read-more, .backtotop:hover, .menu__button:hover {
   -webkit-transition: all, 0.15s;
   -moz-transition: all, 0.15s;
   -ms-transition: all, 0.15s;
@@ -8206,11 +8294,11 @@ input[type="button"], a.btn, .tagged:hover, .backtotop:hover, .menu__button:hove
   line-height: 1; }
 
 .border--thin {
-  -webkit-border: 2px solid #a29d97;
-  -moz-border: 2px solid #a29d97;
-  -ms-border: 2px solid #a29d97;
-  -o-border: 2px solid #a29d97;
-  border: 2px solid #a29d97;
+  -webkit-border: 1px solid #a29d97;
+  -moz-border: 1px solid #a29d97;
+  -ms-border: 1px solid #a29d97;
+  -o-border: 1px solid #a29d97;
+  border: 1px solid #a29d97;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -8245,6 +8333,7 @@ input[type="button"], a.btn, .tagged:hover, .backtotop:hover, .menu__button:hove
   text-align: center; }
 
 .read-more {
+  background-color: transparent;
   padding: 6px;
   /*
   	&:before{
@@ -8267,6 +8356,8 @@ input[type="button"], a.btn, .tagged:hover, .backtotop:hover, .menu__button:hove
     height: auto;
     -webkit-font-smoothing: antialiased;
     color: #0090c4; }
+  .read-more:hover {
+    background-color: rgba(0, 144, 196, 0.15); }
 
 /*------------------------------------*\
     $STYLE-GUIDE-ONLY

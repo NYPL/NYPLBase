@@ -36,6 +36,10 @@
  * Styling choices that express our brand,
  * like brand colours etc., stored in variables.
  */
+
+// import some Google fonts for blog experiment -jA
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700|Open+Sans:400italic,400,700,800&subset=latin,latin-ext);
+
 @import "nyplbase/settings/colorlabels";
 @import "nyplbase/settings/fonts";
 

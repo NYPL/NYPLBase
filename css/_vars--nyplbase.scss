@@ -50,16 +50,18 @@ $measure:			50rem;
 /**
  * Redefine $base-font-family before declaring the config variables
  */
-$base-font-family:			"Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family:				"Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-$light-font-family:  		"Lato Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$lightital-font-family:		"Lato Light Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$baseital-font-family:		"Lato Regular Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$bold-font-family:			"Lato Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$boldital-font-family:		"Lato Bold Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$black-font-family:			"Lato Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$blackital-font-family:		"Lato Black Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-light:  					"Lato Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-lightital:				"Lato Light Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-ital:						"Lato Regular Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-bold:						"Lato Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-boldital:					"Lato Bold Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-black:					"Lato Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-blackital:				"Lato Black Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
+$blog-font-family--display:		"Roboto Slab", serif;
+$blog-font-family:				"Open Sans", serif;
 
 /**
  * Define icon font

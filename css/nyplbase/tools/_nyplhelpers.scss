@@ -53,7 +53,7 @@
 // more border styles
 // SHD THIS BE A MIXIN? -jA
 .border--thin{
-	@include vendor(border, 2px solid $warmGray);
+	@include vendor(border, 1px solid $warmGray);
 	@include vendor(border-radius, $brand-round);
 } 
 
@@ -89,8 +89,14 @@
 .read-more{
 	@extend .zeta;
 	@include extend-icon(icon-arrow-right2, $blue);
-
+	@extend %transition !optional;
+	
+	background-color: transparent;
 	padding: $half-spacing-unit/2;
+	
+	&:hover{
+		background-color: rgba($blue, .15);
+	}
 	
 
 /*
