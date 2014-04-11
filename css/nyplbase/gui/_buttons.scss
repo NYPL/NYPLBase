@@ -71,23 +71,33 @@ button{
 	@include button-color($black);
 }
 
+
+
+
+
 /**
- * These purpose-specific buttons have styles defined for them
- * in the mixin. There is almost certainly a better way to do this.
+ * These purpose-specific buttons have specific styles.
  */ 
 
 .btn--donate {
-	@include button-f11y-context(donate);
+	@include button-color($red); 
+	
+	text-transform: uppercase;
 	
 	&:visited{
 		color: $white;	
 	}
 }
 .btn--friends {
-	@include button-f11y-context(friends);
+	@include button-color($greenNeon); 
+	
+	color: $black; 
+	text-transform: uppercase;
 }
 .btn--sso {
-	@include button-f11y-context(sso);
+	@include button-color($warmGrayDarker); 
+	
+	text-transform: uppercase;
 
 	&:visited{
 		color: $white;	
@@ -97,10 +107,16 @@ button{
 	}
 }
 .btn--catalog {
-	@include button-f11y-context(catalog);
+	@include button-color($indigo); 
+	
+	color: $white; 
+	text-transform: none;
 }
 .btn--nyplorg {
-	@include button-f11y-context(nyplorg);
+	@include button-color($blue); 
+	
+	color: $white; 
+	text-transform: none;
 }
 
 

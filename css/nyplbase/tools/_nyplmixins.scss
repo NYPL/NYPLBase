@@ -92,28 +92,11 @@
 	}
 
 	&:hover{
-		opacity: .85;
+		opacity: .55;
 	}
 }
 
-/* 
- * Some buttons have specific use cases, such as the Donate button,
- * and must be styled very specifically.
- * Add context names here to add specific styling;
- * the name you add provides the second part of the class name.
-   
-	.btn--donate {
-		@include f11y-context(donate)
-	}
-	
-*/
-@mixin button-f11y-context($context-name){
-	@if $context-name == donate {@include button-color($red); text-transform: uppercase;}
-	@if $context-name == friends {@include button-color($greenNeon); color: $black; text-transform: uppercase;}
-	@if $context-name == sso {@include button-color($warmGrayDarker); text-transform: uppercase;}
-	@if $context-name == catalog {@include button-color($indigo); color: $white; text-transform: none;}
-	@if $context-name == nyplorg {@include button-color($blue); color: $white; text-transform: none;}
-}
+
 
 /**
  * Icons

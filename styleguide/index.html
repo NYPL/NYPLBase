@@ -13,57 +13,12 @@
 </head>
 <body class="grid style-guide">
 
-
-<!-- ADD THE FOLLOWING D11N TO STYLEGUIDE OR PATTERNS -->
-
-			<!-- ARROWS
-			/**
-			 * CSS arrows!!! But... before you read on, you might want to grab a coffee...
-			 *
-			 * This mixin creates a CSS arrow on a given element. We can have the arrow
-			 * appear in one of 12 locations, thus:
-			 *
-			 *       01    02    03
-			 *    +------------------+
-			 * 12 |                  | 04
-			 *    |                  |
-			 * 11 |                  | 05
-			 *    |                  |
-			 * 10 |                  | 06
-			 *    +------------------+
-			 *       09    08    07
-			 *
-			 * You pass this position in along with a desired arrow color and optional
-			 * border color, for example:
-			 *
-			 * `@include arrow(top, left, red)`
-			 *
-			 * for just a single, red arrow, or:
-			 *
-			 * `@include arrow(bottom, center, red, black)`
-			 *
-			 * which will create a red triangle with a black border which sits at the bottom
-			 * center of the element. Call the mixin thus:
-			 *
-			   .foo{
-			       background-color:#BADA55;
-			       border:1px solid #ACE;
-			       @include arrow(top, left, #BADA55, #ACE);
-			   }
-			 *
-			 */
-			 
-			 ARROW POSTIIONS:
-			 top (+ left, center, or right)
-			 right (+ top, center, or bottom
-			 bottom (+ right, center, or left)
-			 left (+ top, center, or bottom)
-			 
-			-->
-
-<div id="top"></div>
-<a class="backtotop icon-arrow-up3 big" href="#top"><span class="visuallyhidden">Back to top</span></a>
-<span class="menu__button icon-menu2 big"></span>
+	<!-- TOP ANCHOR -->
+	<div id="top"></div>
+	<!-- BACK TO TOP -->
+	<a class="backtotop icon-arrow-up3 big" href="#top"><span class="visuallyhidden">Back to top</span></a>
+	<!-- MENU BUTTON -->
+	<span class="menu__button icon-menu2 big"></span>
 
 
 	<nav class="nav--guide grid__item two-thirds lap-and-up-one-quarter zeta">
@@ -101,17 +56,20 @@
 
 		</ul>
 		
-	</nav><!--
+	</nav>
 
 
-	--><div class="content--guide grid__item one-whole">
+	<div class="content--guide">
 
 
 
 		<header class="header-hed grid__item one-whole flush--left hard--left">
 			<h1 class="kilo">NYPLBase</h1>
 			<p class="subtitle gamma text--center"><span class="icon-cogs blueDarkerText">rapid prototyping system</span> <span class="icon-images purpleText">style guide</span> <span class="icon-scissors purpleDarkerText">pattern library</span> <span class="icon-NYPL_mark1_black_pos blueText">branding machine</span></p>
-			
+		</header>
+
+
+		<section id="from-designer">
 			<h2>Note from the designer</h2>
 			<div class="zeta">
 				<img class="one-sixth palm-one-third img--left img--outline" src="../img/demo/the-designer.jpg" alt="the-designer">
@@ -131,8 +89,8 @@
 				
 				<p>Currently I'm using Base to build and test design patterns, and consulting with our Marketing team to make sure the branding is expressed correctly. I'm working directly in the code for Base so that <strong>I can make fixes to the core as I go</strong>. At the moment, I'm the only developer allowed to work like this. At some point I will start accepting pull requests on GitHub from Trusted Colleagues; I imagine once Labs gets ahold of it, they will unearth the need for many more design patterns. and all those ppl will be able (again, when appropriate) to contribute back to the project, so that this code will improve, iterate, and grow.</p>
 				
-				<p class="smallprint text--right">Note: this style guide is a work in progress, so please be patient with any bugs or other weirdness.<br> Thanks, jennifer "Ace of Base" Anderson, Senior UX Designer/Fierce Ruling Diva</p></div>
-		</header>
+				<p class="smallprint text--right">Note: this style guide is a work in progress, and runs off of Base itself, so please be patient with any bugs or other weirdness.<br> Thanks, jennifer "Ace of Base" Anderson, Senior UX Designer/Fierce Ruling Diva</p></div>
+		</section>
 	
 		<section id="naming">
 			<h2>Note on naming</h2>
@@ -1134,8 +1092,8 @@ Create vendor-prefixed CSS in one with @mixin vendor
 
 		<section id="thanks">
 			<h2>Acknowledgements</h2>
-			<p>I owe being able to even <em>conceive</em> of a distributable rapid prototyping system (RaProSys?) to <a href="http://twitter.com/mdo"><strong>Mark Otto</strong></a> and <a href="http://twitter.com/fat"><strong>Jacob Thornton</strong></a>, makers of <a href="http://getbootstrap.com/">Bootstrap</a>.</p>
-			<p>Massive amounts to <strong>Harry Roberts</strong> and his <a href="http://csswizardry.com/">css wizardry</a> for creating Inuit; I stand on his beefy shoulders and no mistake. The burliness of the Sass in this system is all about Harry's excellent work.</p>
+			<p>I owe being able to even <em>conceive</em> of a distributable rapid prototyping system (RaProSys? that's terrible) to <a href="http://twitter.com/mdo"><strong>Mark Otto</strong></a> and <a href="http://twitter.com/fat"><strong>Jacob Thornton</strong></a>, makers of <a href="http://getbootstrap.com/">Bootstrap</a>.</p>
+			<p>Massive amounts to <a href="https://twitter.com/csswizardry"><strong>Harry Roberts</strong></a> and his <a href="http://csswizardry.com/">css wizardry</a> for creating Inuit; I stand on his beefy shoulders and no mistake. The burliness of the Sass in this system is all about Harry's excellent work.</p>
 			<p>Big thanks to <a href="http://github.com/beefoo"><strong>Brian Foo</strong></a>, whose <a href="https://drrstyleguide.herokuapp.com/">DRR Bootstrap</a> (maintained by <a href="https://twitter.com/nypl_labs">NYPL Labs</a>) provided a great starting point. Also, BFoo taught me more than a few sassy Sass tricks.</p>
 			<p>Finally to <strong>Sean Redmond</strong>, who gave me room to do this exactly how I wanted, and never made me feel bad for not knowing all my command line commands. Thanks man.</p>
 			<span class="icon-grin alpha blueText"></span><p>Thank you!</p>

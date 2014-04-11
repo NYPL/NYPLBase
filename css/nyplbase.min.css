@@ -7133,17 +7133,6 @@ li[class*=" icon-"] {
  * It also concatenates the ".gradient" class so that the mixin
  * can use the background color to evaluate the darker stop color.
 */
-/* 
- * Some buttons have specific use cases, such as the Donate button,
- * and must be styled very specifically.
- * Add context names here to add specific styling;
- * the name you add provides the second part of the class name.
-   
-	.btn--donate {
-		@include f11y-context(donate)
-	}
-	
-*/
 /**
  * Icons
  */
@@ -7279,7 +7268,7 @@ input[type="button"], a.btn {
     background-image: linear-gradient(top, #0090c4, #0076a0); }
   .btn:hover, button:hover, input[type="submit"]:hover,
   input[type="button"]:hover, a.btn:hover {
-    opacity: .85; }
+    opacity: .55; }
 
 .btn--inactive {
   background: #c5c2bb;
@@ -7300,7 +7289,7 @@ input[type="button"], a.btn {
     background-image: -webkit-linear-gradient(top, #ece94c, #e9e52c);
     background-image: linear-gradient(top, #ece94c, #e9e52c); }
   .btn--greenNeon:hover {
-    opacity: .85; }
+    opacity: .55; }
 
 .btn--orange {
   background: #f0731f;
@@ -7310,7 +7299,7 @@ input[type="button"], a.btn {
     background-image: -webkit-linear-gradient(top, #f0731f, #dd610f);
     background-image: linear-gradient(top, #f0731f, #dd610f); }
   .btn--orange:hover {
-    opacity: .85; }
+    opacity: .55; }
 
 .btn--black {
   background: #333333;
@@ -7320,11 +7309,10 @@ input[type="button"], a.btn {
     background-image: -webkit-linear-gradient(top, #333333, #212121);
     background-image: linear-gradient(top, #333333, #212121); }
   .btn--black:hover {
-    opacity: .85; }
+    opacity: .55; }
 
 /**
- * These purpose-specific buttons have styles defined for them
- * in the mixin. There is almost certainly a better way to do this.
+ * These purpose-specific buttons have specific styles.
  */
 .btn--donate {
   background: #d62828;
@@ -7335,7 +7323,7 @@ input[type="button"], a.btn {
     background-image: -webkit-linear-gradient(top, #d62828, #b82222);
     background-image: linear-gradient(top, #d62828, #b82222); }
   .btn--donate:hover {
-    opacity: .85; }
+    opacity: .55; }
   .btn--donate:visited {
     color: white; }
 
@@ -7349,7 +7337,7 @@ input[type="button"], a.btn {
     background-image: -webkit-linear-gradient(top, #ece94c, #e9e52c);
     background-image: linear-gradient(top, #ece94c, #e9e52c); }
   .btn--friends:hover {
-    opacity: .85; }
+    opacity: .55; }
 
 .btn--sso {
   background: #7d7872;
@@ -7360,7 +7348,7 @@ input[type="button"], a.btn {
     background-image: -webkit-linear-gradient(top, #7d7872, #6a6661);
     background-image: linear-gradient(top, #7d7872, #6a6661); }
   .btn--sso:hover {
-    opacity: .85; }
+    opacity: .55; }
   .btn--sso:visited {
     color: white; }
   .btn--sso:hover {
@@ -7376,7 +7364,7 @@ input[type="button"], a.btn {
     background-image: -webkit-linear-gradient(top, #3c3449, #2b2534);
     background-image: linear-gradient(top, #3c3449, #2b2534); }
   .btn--catalog:hover {
-    opacity: .85; }
+    opacity: .55; }
 
 .btn--nyplorg {
   background: #0090c4;
@@ -7388,7 +7376,7 @@ input[type="button"], a.btn {
     background-image: -webkit-linear-gradient(top, #0090c4, #0076a0);
     background-image: linear-gradient(top, #0090c4, #0076a0); }
   .btn--nyplorg:hover {
-    opacity: .85; }
+    opacity: .55; }
 
 /*------------------------------------*\
     $NYPL-FORMS
@@ -7470,7 +7458,7 @@ input[type="button"] {
       background-image: linear-gradient(top, #c5c2bb, #b5b1a8); }
     input[type="submit"].btn--inactive:hover,
     input[type="button"].btn--inactive:hover {
-      opacity: .85; }
+      opacity: .55; }
 
 input[type="search"] {
   width: 95%; }
@@ -8425,7 +8413,7 @@ pre {
 .menu__button {
   color: #0090c4;
   position: fixed;
-  left: 0;
+  right: 0;
   top: 0; }
   .menu__button:hover {
     color: #00b5f7; }
@@ -8434,7 +8422,7 @@ pre {
  * Sections
  */
 .content--guide {
-  margin-left: 3.5rem; }
+  margin: 0 3.5rem; }
 
 .style-guide section {
   border-bottom: 1px solid #c5c2bb;
