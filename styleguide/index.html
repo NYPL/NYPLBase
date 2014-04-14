@@ -42,6 +42,7 @@
 				<ul class="nav nav--stacked">
 					<li><a href="#helpclasses">Helper classes</a></li>
 					<li><a href="#mqs">Media queries</a></li>
+					<li><a href="#mixins">Mixins</a></li>
 				</ul>				
 			</li>
 			<li><a href="#branding">Branding</a>
@@ -59,7 +60,7 @@
 	</nav>
 
 
-	<div class="content--guide">
+	<div class="content--guide ten-twelfths push--one-twelfth">
 
 
 
@@ -797,6 +798,35 @@ DEFINE THESE INPUT TYPES LATER
 
 			<p class="notes--guide">Inuit recommends to only use a helper class if an element/component <strong>doesn’t already have a class</strong> to which you could apply this styling, e.g. if you need to float <code>.main-nav</code> left then add <code>float:left;</code> to that ruleset as opposed to adding the <code>.float--left</code> class to the markup. Also note that many of these classes are declared <code>!important</code> because they are intended to <strong>override other selectors</strong>.</p>
 
+
+			<div class="">
+				<div class="code grid__item one-whole lap-and-up-one-third">
+					<h3>Image positions (floats)</h3>
+					<code>
+						.img--right<br>
+						.img--left<br>
+						.img--center<br>
+					</code>
+				</div><!--
+				--><div class="code grid__item one-whole lap-and-up-one-third">
+					 <h3>Clearfix</h3>
+					<code>
+						.cf<br>
+						<p class="notes--guide brand-face">You can use this class in the markup, but Inuit recommends extending it with Sass to avoid over-usage.</p>
+					</code>
+				</div><!--
+				--><div class="code grid__item one-whole lap-and-up-one-third">
+					<h3>Hide from view</h3>
+					<code>
+						.accessibility<br>
+						.visuallyhidden<br>
+						<p class="notes--guide brand-face">Both these classes do the same thing, which is to hide the element from view but not from screen readers.</p>
+					</code>
+				</div>
+			</div>
+			
+			<br>
+
 			<div class="">
 				<div class="code grid__item one-whole lap-and-up-one-third">
 					<h3>Add/remove floats</h3>
@@ -823,7 +853,9 @@ DEFINE THESE INPUT TYPES LATER
 					</code>
 				</div>
 			</div>
+			
 			<br>
+			
 			<div class="code">
 				<h3>Add/remove margins</h4>
 				<div class="grid__item one-whole lap-and-up-one-third">
@@ -908,50 +940,6 @@ DEFINE THESE INPUT TYPES LATER
 			<p class="notes--guide">Prepending the width classes with either pull-- or push-- will move the element with that class to the left (pull) or right(push).</p>
 			<pre class="code prettyprint">&lt;div class=&quot;pull--one-third&quot;&gt;This element is moved over&lt;/div&gt;</pre>
 
-Some Sass helpers
-Clearfix
-Extend .cf, rather than adding the class in the markup.	
-
-
-Create vendor-prefixed CSS in one with @mixin vendor
-@include vendor(border-radius, 4px)
-
-
-<!--
-/**
- * Hide content off-screen without resorting to `display:none;`, also provide
- * breakpoint specific hidden elements.
- */
-@mixin accessibility{
-    border:0!important;
-    clip:rect(0 0 0 0)!important;
-    height:1px!important;
-    margin:-1px!important;
-    overflow:hidden!important;
-    padding:0!important;
-    position: absolute!important;
-    width:1px!important;
-}
-
-.accessibility,
-.visuallyhidden{
-    @include accessibility;
-}
-@if $responsive{
-    @each $state in palm, lap, lap-and-up, portable, desk, desk-wide{
-        @include media-query(#{$state}){
-            .accessibility--#{$state},
-            .visuallyhidden--#{$state}{
-                @include accessibility;
-            }
-        }
-    }
-}
--->
-			
-			
-			
-			
 		</section>
 
 		<section id="mqs">
@@ -970,12 +958,65 @@ Create vendor-prefixed CSS in one with @mixin vendor
 			
 			<p class="notes--guide">and the following <code>@include</code> in your Sass to take advantage of Inuit's media query mixin:</p>
 			
-			<pre class="code prettyprint">@include media-query(palm){ [styles here] }</pre>
-			
+			<pre class="code prettyprint">@include media-query(palm){ [styles here] }</pre>		
 			
 		</section>
 
+		<section id="mixins">
+			<h2>Mixins</h2>
+			<p class="notes--guide">If you're working with the Sass, you can take advantage of variables, media queries, and some handy mixins.</p>
+			
+			<h3>Create type</h3>
+			<p class="notes--guide">Create a fully formed type style (sizing and vertical rhythm) by passing in a single value, e.g.:</p>
+			<pre class="code prettyprint">@include font-size(10px);</pre>		
+			
+			<h3>CSS vendor prefixes</h3>
+			<p class="notes--guide">Create vendor-prefixed CSS in one go:</p>
+			<pre class="code prettyprint">@include vendor(border-radius, 4px);</pre>		
+			
+			<h3>CSS keyframes</h3>
+			<p class="notes--guide">Create CSS keyframe animations for all vendors in one go:</p>
+			<pre class="code prettyprint">   
+			.foo{<br>
+			&nbsp;&nbsp;&nbsp;@include vendor(animation, shrink 3s);<br>
+			}<br>
+			
+		   @include keyframe(shrink){<br>
+		   &nbsp;&nbsp;&nbsp;from{<br>
+		   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size:5em;<br>
+		   &nbsp;&nbsp;&nbsp;}<br>
+		   }</pre>		
+								
+		</section>
+<!--
 
+MIXINS
+/**
+
+ 
+/**
+ * Create CSS keyframe animations for all vendors in one go, e.g.:
+ *
+   .foo{
+       @include vendor(animation, shrink 3s);
+   }
+
+   @include keyframe(shrink){
+       from{
+           font-size:5em;
+       }
+   }
+ *
+ * Courtesy of @integralist: twitter.com/integralist/status/260484115315437569
+ */
+
+arrows
+
+
+ 
+ 
+
+-->
 
 
 		<h1 id="branding">Branding</h1>
@@ -1095,7 +1136,7 @@ Create vendor-prefixed CSS in one with @mixin vendor
 			<p>I owe being able to even <em>conceive</em> of a distributable rapid prototyping system (RaProSys? that's terrible) to <a href="http://twitter.com/mdo"><strong>Mark Otto</strong></a> and <a href="http://twitter.com/fat"><strong>Jacob Thornton</strong></a>, makers of <a href="http://getbootstrap.com/">Bootstrap</a>.</p>
 			<p>Massive amounts to <a href="https://twitter.com/csswizardry"><strong>Harry Roberts</strong></a> and his <a href="http://csswizardry.com/">css wizardry</a> for creating Inuit; I stand on his beefy shoulders and no mistake. The burliness of the Sass in this system is all about Harry's excellent work.</p>
 			<p>Big thanks to <a href="http://github.com/beefoo"><strong>Brian Foo</strong></a>, whose <a href="https://drrstyleguide.herokuapp.com/">DRR Bootstrap</a> (maintained by <a href="https://twitter.com/nypl_labs">NYPL Labs</a>) provided a great starting point. Also, BFoo taught me more than a few sassy Sass tricks.</p>
-			<p>Finally to <strong>Sean Redmond</strong>, who gave me room to do this exactly how I wanted, and never made me feel bad for not knowing all my command line commands. Thanks man.</p>
+			<p>Finally to <a href="https://github.com/seanredmond"><strong>Sean Redmond</strong></a>, who gave me room to do this exactly how I wanted, and never made me feel bad for not knowing all my command line commands. Thanks man.</p>
 			<span class="icon-grin alpha blueText"></span><p>Thank you!</p>
 		</section>
 
