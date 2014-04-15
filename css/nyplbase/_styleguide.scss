@@ -85,8 +85,9 @@ pre {
 	color: $blue;
 
 	position: fixed;
-	right: 0;
+	left: 0;
 	top: 0;
+	z-index: 2001;
 	
 	&:hover{
 		color: lighten($blue, 10%);	
