@@ -7,104 +7,104 @@
  */
 
 
-.white {background-color: $white}
-.black {background-color: $black}
+.white {background-color: $white !important;}
+.black {background-color: $black !important;}
 
-	.whiteText {color: $white}
-	.blackText {color: $black}
+	.whiteText {color: $white !important;}
+	.blackText {color: $black !important;}
 	
 	
 // Primary palette colors
 // -------------------------
-.red {background-color: $red}
-.orange {background-color: $orange}
-.green {background-color: $green}
-.blue {background-color: $blue}
-.purple {background-color: $purple}
+.red {background-color: $red !important;}
+.orange {background-color: $orange !important;}
+.green {background-color: $green !important;}
+.blue {background-color: $blue !important;}
+.purple {background-color: $purple !important;}
 
-	.redText {color: $red}
-	.orangeText {color: $orange}
-	.greenText {color: $green}
-	.blueText {color: $blue}
-	.purpleText {color: $purple}
+	.redText {color: $red !important;}
+	.orangeText {color: $orange !important;}
+	.greenText {color: $green !important;}
+	.blueText {color: $blue !important;}
+	.purpleText {color: $purple !important;}
 
 
 // Secondary palette colors
 // -------------------------
-.redDarkest {background-color: $redDarkest}
-.redDarker {background-color: $redDarker}
-.pink {background-color: $pink}
-.salmon {background-color: $salmon}
+.redDarkest {background-color: $redDarkest !important;}
+.redDarker {background-color: $redDarker !important;}
+.pink {background-color: $pink !important;}
+.salmon {background-color: $salmon !important;}
 
-	.redDarkestText {color: $redDarkest}
-	.redDarkerText {color: $redDarker}
-	.pinkText {color: $pink}
-	.salmonText {color: $salmon}
+	.redDarkestText {color: $redDarkest !important;}
+	.redDarkerText {color: $redDarker !important;}
+	.pinkText {color: $pink !important;}
+	.salmonText {color: $salmon !important;}
 
-.orangeDarkest {background-color: $orangeDarkest}
-.orangeDarker {background-color: $orangeDarker}
-.yellow {background-color: $yellow}
-.yellowLight {background-color: $yellowLight}
+.orangeDarkest {background-color: $orangeDarkest !important;}
+.orangeDarker {background-color: $orangeDarker !important;}
+.yellow {background-color: $yellow !important;}
+.yellowLight {background-color: $yellowLight !important;}
 
-	.orangeDarkestText {color: $orangeDarkest}
-	.orangeDarkerText {color: $orangeDarker}
-	.yellowText {color: $yellow}
-	.yellowLightText {color: $yellowLight}
+	.orangeDarkestText {color: $orangeDarkest !important;}
+	.orangeDarkerText {color: $orangeDarker !important;}
+	.yellowText {color: $yellow !important;}
+	.yellowLightText {color: $yellowLight !important;}
 
-.greenDarkest {background-color: $greenDarkest}
-.greenDarker {background-color: $greenDarker}
-.greenNeon {background-color: $greenNeon}
-.greenLight{background-color: $greenLight}
+.greenDarkest {background-color: $greenDarkest !important;}
+.greenDarker {background-color: $greenDarker !important;}
+.greenNeon {background-color: $greenNeon !important;}
+.greenLight{background-color: $greenLight !important;}
 
-	.greenDarkestText {color: $greenDarkest}
-	.greenDarkerText {color: $greenDarker}
-	.greenNeonText {color: $greenNeon}
-	.greenLightText {color: $greenLight}
+	.greenDarkestText {color: $greenDarkest !important;}
+	.greenDarkerText {color: $greenDarker !important;}
+	.greenNeonText {color: $greenNeon !important;}
+	.greenLightText {color: $greenLight !important;}
 
-.indigo {background-color: $indigo}
-.blueDarker {background-color: $blueDarker}
-.blueNeon {background-color: $blueNeon}
-.blueLight {background-color: $blueLight}
+.indigo {background-color: $indigo !important;}
+.blueDarker {background-color: $blueDarker !important;}
+.blueNeon {background-color: $blueNeon !important;}
+.blueLight {background-color: $blueLight !important;}
 
-	.indigoText {color: $indigo}
-	.blueDarkerText {color: $blueDarker}
-	.blueNeonText {color: $blueNeon}
-	.blueLightText {color: $blueLight}
+	.indigoText {color: $indigo !important;}
+	.blueDarkerText {color: $blueDarker !important;}
+	.blueNeonText {color: $blueNeon !important;}
+	.blueLightText {color: $blueLight !important;}
 
-.purpleDarkest {background-color: $purpleDarkest}
-.purpleDarker {background-color: $purpleDarker}
-.purpleNeon {background-color: $purpleNeon}
-.purpleLight {background-color: $purpleLight}
+.purpleDarkest {background-color: $purpleDarkest !important;}
+.purpleDarker {background-color: $purpleDarker !important;}
+.purpleNeon {background-color: $purpleNeon !important;}
+.purpleLight {background-color: $purpleLight !important;}
 
-	.purpleDarkestText {color: $purpleDarkest}
-	.purpleDarkerText {color: $purpleDarker}
-	.purpleNeonText {color: $purpleNeon}
-	.purpleLightText {color: $purpleLight}
+	.purpleDarkestText {color: $purpleDarkest !important;}
+	.purpleDarkerText {color: $purpleDarker !important;}
+	.purpleNeonText {color: $purpleNeon !important;}
+	.purpleLightText {color: $purpleLight !important;}
 
 // Cool grays
 // -------------------------
-.coolGrayDarkest {background-color: $coolGrayDarkest}
-.coolGrayDarker {background-color: $coolGrayDarker}
-.coolGray {background-color: $coolGray}
-.coolGrayLighter {background-color: $coolGrayLighter}
-.coolGrayLightest {background-color: $coolGrayLightest}
+.coolGrayDarkest {background-color: $coolGrayDarkest !important;}
+.coolGrayDarker {background-color: $coolGrayDarker !important;}
+.coolGray {background-color: $coolGray !important;}
+.coolGrayLighter {background-color: $coolGrayLighter !important;}
+.coolGrayLightest {background-color: $coolGrayLightest !important;}
 
-	.coolGrayDarkestText {color: $coolGrayDarkest}
-	.coolGrayDarkerText {color: $coolGrayDarker}
-	.coolGrayText {color: $coolGray}
-	.coolGrayLighterText {color: $coolGrayLighter}
-	.coolGrayLightestText {color: $coolGrayLightest}
+	.coolGrayDarkestText {color: $coolGrayDarkest !important;}
+	.coolGrayDarkerText {color: $coolGrayDarker !important;}
+	.coolGrayText {color: $coolGray !important;}
+	.coolGrayLighterText {color: $coolGrayLighter !important;}
+	.coolGrayLightestText {color: $coolGrayLightest !important;}
 
 // Warm grays
 // -------------------------
-.warmGrayDarkest {background-color: $warmGrayDarkest}
-.warmGrayDarker {background-color: $warmGrayDarker}
-.warmGray {background-color: $warmGray}
-.warmGrayLighter {background-color: $warmGrayLighter}
-.warmGrayLightest {background-color: $warmGrayLightest}
+.warmGrayDarkest {background-color: $warmGrayDarkest !important;}
+.warmGrayDarker {background-color: $warmGrayDarker !important;}
+.warmGray {background-color: $warmGray !important;}
+.warmGrayLighter {background-color: $warmGrayLighter !important;}
+.warmGrayLightest {background-color: $warmGrayLightest !important;}
 
-	.warmGrayDarkestText {color: $warmGrayDarkest}
-	.warmGrayDarkerText {color: $warmGrayDarker}
-	.warmGrayText {color: $warmGray}
-	.warmGrayLighterText {color: $warmGrayLighter}
-	.warmGrayLightestText {color: $warmGrayLightest}
+	.warmGrayDarkestText {color: $warmGrayDarkest !important;}
+	.warmGrayDarkerText {color: $warmGrayDarker !important;}
+	.warmGrayText {color: $warmGray !important;}
+	.warmGrayLighterText {color: $warmGrayLighter !important;}
+	.warmGrayLightestText {color: $warmGrayLightest !important;}
