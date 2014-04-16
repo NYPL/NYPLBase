@@ -2,14 +2,8 @@
     $NYPL-MIXINS
 \*------------------------------------*/
 
-			/*------------NOTE TO SELF:
-				All mixins and helpers need to be
-				documented in the style guide
-				for developers
-				
-				(That goes for Inuit stuff too!)
-			\*------------------------------------*/
-	
+
+
 
 /*------------------------------------*\
  * COLORS & GRADIENTS
@@ -104,7 +98,7 @@
 
 /**
  * Use this to extend an icon into a style,
- * which you can't do without a mixin.
+ * which you can't do with a regular @extend.
  * (The argument is the name of the icon class.)
  
  @include extend-icon(icon-arrow-right2);
@@ -116,9 +110,9 @@
 		color: $color;
 	}
 	
-	@extend .#{$name};
-	
+	@extend .#{$name};	
 }
+
 
 /** ALTER THIS FOR ARROW ICON???
  * Add a right-angled quote to links that imply movement, e.g.:

@@ -88,23 +88,22 @@
 // styles for "read more"-type links
 .read-more{
 	@extend .zeta;
-	@include extend-icon(icon-arrow-right2, $blue);
+//	@include extend-icon(icon-arrow-right2, $blue);
 	@extend %transition !optional;
 	
 	background-color: transparent;
+	color: $blue;
 	padding: $half-spacing-unit/2;
 	
 	&:hover{
 		background-color: rgba($blue, .15);
 	}
 	
-
-/*
-	&:before{
+	&::after{
 		@include nypl-icon();
+		content: "\e72c";
+		margin-left: .35rem;
 	}
-	@extend .icon-arrow-right2;
-*/
 } 
 
 
