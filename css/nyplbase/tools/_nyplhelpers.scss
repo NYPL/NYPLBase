@@ -45,11 +45,6 @@
  * Add styling to an object
  */
 
-// additional font size (to go with classes defined in InuitCSS /base/_headings)
-.big{
-    @include font-size($big-size);
-} 
-
 // more border styles
 // SHD THIS BE A MIXIN? -jA
 .border--thin{

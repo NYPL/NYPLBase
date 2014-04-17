@@ -70,6 +70,10 @@
 
 
 
+// additional font size (to go with classes defined in InuitCSS /base/_headings)
+.big{
+    @include font-size($big-size);
+} 
 
 
 
