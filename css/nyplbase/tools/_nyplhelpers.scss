@@ -85,13 +85,14 @@
 	@extend .zeta;
 //	@include extend-icon(icon-arrow-right2, $blue);
 	@extend %transition !optional;
+	@include callout-box(rgba($blue, .15), transparent);
 	
-	background-color: transparent;
 	color: $blue;
-	padding: $half-spacing-unit/2;
+	padding: $half-spacing-unit/6;
 	
 	&:hover{
-		background-color: rgba($blue, .15);
+//		background-color: $blue;
+		border: 1px solid $blue;
 	}
 	
 	&::after{

@@ -240,7 +240,8 @@
 	padding: 0 $half-spacing-unit/3;
 	
 	&:hover{
-		background-color: rgba($blue, .5);
+		border-color: $blue;
+		color: $blue;
 		
 		@extend %transition;
 	}
