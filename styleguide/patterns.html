@@ -12,7 +12,7 @@
 
 <body class="grid--center">
 
-	<header class="grid__item one-whole">
+	<header class="push-half--sides grid__item one-whole">
 		<h1>NYPL Design Patterns</h1>
 		<p>This is a page of "patterns," which are chunks of content designed for a particular display purpose. I'm still refining (and adding!) a lot of patterns to Base, so while this page might sometimes look like a hot mess, it's a fairly accurate snapshot of all the classes and code working together.</p>
 		
@@ -80,43 +80,42 @@ ex.)
 <!-- HP BRICK -->
 <section class="primary grid__item">
 
-	<div class="chunk feature-brick grid__item one-third">
-	
-		<div class="tooltip">
-			<p>This is some explanation of whatever pattern is happening. </p>
-		</div>
-	
-		<img class="" src="../img/demo/photo_Deli.jpg" alt="">
-		<div class="details">
-			<span class="hdg">Category</span>
-			<h2>Title</h2>
-			<p>date</p>
-			<p>location</p>
-			<p>description</p>
+	<div class="chunk  grid__item one-whole tablet-and-up-one-half desk-one-third">
+		<div class="feature-brick">
+			<img class="" src="../img/demo/photo_Deli.jpg" alt="">
+			<div class="details">
+				<span class="hdg">Category</span>
+				<h2>Title</h2>
+				<p>date</p>
+				<p>location</p>
+				<p>description</p>
+			</div>
 		</div>
 	</div><!--
-
 	
-	--><div class="feature-brick grid__item one-third">
-		<img class="" src="../img/demo/photo_CBL.jpg" alt="">
-		<div class="details">
-			<span class="hdg">Category</span>
-			<h2>Title</h2>
-			<p>date</p>
-			<p>location</p>
-			<p>description</p>
+	--><div class="chunk  grid__item one-whole tablet-and-up-one-half desk-one-third">
+		<div class="feature-brick">
+			<img class="" src="../img/demo/illo_Japan.jpg" alt="">
+			<div class="details">
+				<span class="hdg">Category</span>
+				<h2>Title</h2>
+				<p>date</p>
+				<p>location</p>
+				<p>description</p>
+			</div>
 		</div>
 	</div><!--
-
 	
-	--><div class="feature-brick grid__item one-third">
-		<img class="" src="../img/demo/illo_lionlambsqtop.jpg" alt="">
-		<div class="details">
-			<span class="hdg">Category</span>
-			<h2>Title</h2>
-			<p>date</p>
-			<p>location</p>
-			<p>description</p>
+	--><div class="chunk  grid__item one-whole tablet-and-up-one-half desk-one-third">
+		<div class="feature-brick">
+			<img class="" src="../img/demo/photo_Deli.jpg" alt="">
+			<div class="details">
+				<span class="hdg">Category</span>
+				<h2>Title</h2>
+				<p>date</p>
+				<p>location</p>
+				<p>description</p>
+			</div>
 		</div>
 	</div>
 
@@ -145,17 +144,17 @@ PRIMARY PATTERNS
 	<div class="grid__item chunk">
 	
 		<img class="one-whole" src="../img/demo/nyplphotobooth_jA_orig.jpg" />
-		
-		<h2><a href="">Topmost Primary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2>
-		
-		<p class="grid__item desk-one-half">The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p><!--
-		
-		--><p class="grid__item desk-one-half callout">
-			<span class="location">Stephen A. Schwarzman Building</span>
-			<span class="date">Thursday, January 16, 4:00pm</span>
-		</p>
-		
-		<button class="gradient">Sign up</button>
+
+		<div class="chunk__hero-container">		
+			<h2><a href="">Topmost Primary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2>
+			
+			<p class="grid__item desk-one-half">The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p><!--
+			
+			--><p class="grid__item desk-one-half ">
+				<span class="location">Stephen A. Schwarzman Building</span>
+				<span class="date">Thursday, January 16, 4:00pm</span>
+			</p>
+		</div>
 		
 	</div>
 
@@ -167,14 +166,14 @@ PRIMARY PATTERNS
 <!-- .primary .chunk--half -->
 
 	<div class="grid__item chunk">
-		<img class="one-whole desk-one-half" src="../img/demo/nyplphotobooth_jA_orig.jpg" /><!--
-		--><h2 class="grid__item desk-one-half"><a href="">Primary Tier Article Goes Halvsies in Desktop Context: It Could Be a Blog Post, or Even an Exhibition</a></h2>
+		<img class="one-whole desk-one-half float--left" src="../img/demo/nyplphotobooth_jA_orig.jpg" />
+		<h2 class="grid__item desk-one-half"><a href="">Primary Tier Article Goes Halvsies in Desktop Context: It Could Be a Blog Post, or Even an Exhibition</a></h2>
 
-		<p class="grid__item desk-one-half">The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p><!--
-		--><p class="grid__item desk-one-half callout">
+		<p class="grid__item desk-one-half callout">
 			<span class="location">Stephen A. Schwarzman Building</span>
 			<span class="date">Thursday, January 16, 4:00pm</span>
 		</p>
+		<p class="grid__item desk-one-half">The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 		
 		<button class="gradient">Sign up</button>
 	</div>
@@ -250,25 +249,6 @@ SECONDARY & TERTIARY PATTERNS
 
 	<h1>Secondary & Tertiary patterns</h1>
 	
-
-<!-- IMG + HED, BLURB, CALLOUT, CALLTOACTION -->
-
-<!-- .secondary .chunk -->
-
-	<div class="grid__item chunk">
-		<img class="one-whole desk-one-half" src="../img/demo/nyplphotobooth_jA_orig.jpg" /><!--
-		--><h2 class="grid__item desk-one-half"><a href="">Secondary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2><!--
-		--><p class="grid__item desk-one-half">The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
-		<p class="callout">
-			<span class="location">Stephen A. Schwarzman Building</span>
-			<span class="date">Thursday, January 16, 4:00pm</span>
-		</p>
-		<button class="gradient">Sign up</button>
-	</div>
-
-
-
-
 
 <!-- 2 CHUNKS NEXT TO EACH OTHER -->
 

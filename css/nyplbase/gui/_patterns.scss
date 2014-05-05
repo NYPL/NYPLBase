@@ -207,6 +207,21 @@
 }
 
 
+.chunk__hero-container{
+	@include media-query(lap-and-up){
+		width: 70%;
+		background: rgba($white, .5);
+		padding: $half-spacing-unit $base-spacing-unit;
+		
+		//positioning
+		position: absolute;
+		bottom: 7px;
+	}
+
+}
+
+
+
 /**
  * Recommendations
  */
