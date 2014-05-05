@@ -21,7 +21,7 @@
 	<span class="menu__button icon-menu2 big"></span>
 
 
-	<nav class="nav--guide grid__item two-thirds lap-and-up-one-quarter zeta">
+	<nav class="nav--guide grid__item two-thirds lap-and-up-one-quarter push-half--left epsilon">
 	
 		<ul class="nav nav--stacked">
 			<li><a href="#naming">Note on naming</a></li>
@@ -35,7 +35,6 @@
 					<li><a href="#forms">Forms</a></li>
 					<li><a href="#images">Images</a></li>
 					<li><a href="#navigational">Nav elements</a></li>
-					<li><a href="#icons">Icons</a></li>
 				</ul>
 			</li>
 			<li><a href="#helpers">Helpers</a>
@@ -48,8 +47,8 @@
 			<li><a href="#branding">Branding</a>
 				<ul class="nav nav--stacked">
 					<li><a href="#palette">Color palette</a></li>
+					<li><a href="#icons">Icons</a></li>
 					<li><a href="#logo">Logo</a></li>
-					<li><a href="#iconusage">Icon usage</a></li>
 				</ul>				
 			</li>
 			<li><a href="#patterns">Design patterns</a></li>
@@ -719,77 +718,6 @@ DEFINE THESE INPUT TYPES LATER
 
 
 
-		<section id="icons">
-		
-			<h2>Icons</h2>
-			
-			<div class="notes--guide">
-				<p>We use a custom export of <a href="http://icomoon.io/"><strong>Icomoon</strong>'s</a> proprietary icons, which are available for use under the <a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License</a>. Included as part of the icon set are two icons of the "lion mark" (just the lion part) logo. (More on how to use those further on in the guide!)</p>
-				<p>This is the <a href="../fonts/icons-demo/demo.html"><strong>current set</strong></a>, which is handy reference for choosing icons.</p>
-			</div>
-
-
-
-			<h3>How to use the icons</h3>
-			
-			<h4>Class name</h4>
-			
-			<pre class="code prettyprint">
-				&lt;p class=&quot;icon-cog&quot;&gt;This is some text&lt;/p&gt;
-			</pre>
-			
-			<p class="icon-cog">This is some text</p>
-			
-			<h4>Data-icon attribute</h4>
-			
-			<pre class="code prettyprint">
-				&lt;p aria-hidden=&quot;true&quot; data-icon=&quot;&amp;#xf013;&quot;&gt;This is also some text&lt;/p&gt;
-			</pre>
-			
-			<p class="fs1" aria-hidden="true" data-icon="&#xe690;">This is also some text</p>
-			
-
-			
-			
-			<h4>Sizes</h4>
-			
-			<div class="notes--guide">
-				<p>If you simply apply either an icon class or a data-icon attribute to an element, the icon that is attached will render at the <strong>same font size as its containing element</strong>. You can add font size classes to any element to affect the size of the text.</p>
-			</div>	
-			
-			<pre class="code prettyprint">
-				&lt;ul class=&quot;nav grid__item four-fifths&quot;&gt;<br>
-				&nbsp; &lt;li class=&quot;zeta icon-cog&quot;&gt;List item here&lt;/li&gt;<br>
-				&nbsp; &lt;li class=&quot;episilon icon-bookmark&quot;&gt;Another item here&lt;/li&gt;<br>
-				&nbsp; &lt;li class=&quot;gamma icon-book&quot;&gt;Last one&lt;/li&gt;<br>
-				&lt;/ul&gt;
-			</pre>		
-			
-			<ul class="nav grid__item four-fifths">
-				<li class="zeta icon-cog">List item here</li>
-				<li class="episilon icon-bookmark">Another item here</li>
-				<li class="gamma icon-book">Last one</li>
-			</ul>
-			
-			<div class="notes--guide">
-				<p>You can combine 2 elements (such as a span and a paragraph), one containing the icon and one containing some content, and give each a <strong>different font size</strong> class. You can also give them <strong>different color classes</strong> (see <a href="#palette">color section</a> for class names).</p>
-			</div>
-			
-			<pre class="code prettyprint grid__item one-whole">
-				&lt;span class=&quot;giga blueText&quot; aria-hidden=&quot;true&quot; data-icon=&quot;&amp;#xe61d;&quot;&gt;&lt;/span&gt;
-				&lt;p class=&quot;grid__item four-eighths gamma&quot;&gt;This large icon illustrates this chunk of content.&lt;/p&gt;
-			</pre>
-			
-			<div class="grid__item one-half">
-				<span class="giga blueText" aria-hidden="true" data-icon="&#xe61d;"></span>
-				<p class="grid__item four-eighths gamma">The large icon illustrates this chunk of content.</p>
-			</div>
-
-		</section>	
-
-
-
-
 
 		<h1 id="helpers">Helpers</h1>
 
@@ -1084,6 +1012,78 @@ arrows
 
 
 
+
+		
+		<section id="icons">
+		
+			<h2>Icons</h2>
+			
+			<div class="notes--guide">
+				<p>We use a custom export of <a href="http://icomoon.io/"><strong>Icomoon</strong>'s</a> proprietary icons, which are available for use under the <a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License</a>. Included as part of the icon set are two icons of the "lion mark" (just the lion part) logo. (More on how to use those further on in the guide!)</p>
+				<p>This is the <a href="../fonts/icons-demo/demo.html"><strong>current set</strong></a>, which is handy reference for choosing icons.</p>
+			</div>
+
+
+
+			<h3>How to use the icons</h3>
+			
+			<h4>Class name</h4>
+			
+			<pre class="code prettyprint">
+				&lt;p class=&quot;icon-cog&quot;&gt;This is some text&lt;/p&gt;
+			</pre>
+			
+			<p class="icon-cog">This is some text</p>
+			
+			<h4>Data-icon attribute</h4>
+			
+			<pre class="code prettyprint">
+				&lt;p aria-hidden=&quot;true&quot; data-icon=&quot;&amp;#xf013;&quot;&gt;This is also some text&lt;/p&gt;
+			</pre>
+			
+			<p class="fs1" aria-hidden="true" data-icon="&#xe690;">This is also some text</p>
+			
+
+			
+			
+			<h4>Sizes</h4>
+			
+			<div class="notes--guide">
+				<p>If you simply apply either an icon class or a data-icon attribute to an element, the icon that is attached will render at the <strong>same font size as its containing element</strong>. You can add font size classes to any element to affect the size of the text.</p>
+			</div>	
+			
+			<pre class="code prettyprint">
+				&lt;ul class=&quot;nav grid__item four-fifths&quot;&gt;<br>
+				&nbsp; &lt;li class=&quot;zeta icon-cog&quot;&gt;List item here&lt;/li&gt;<br>
+				&nbsp; &lt;li class=&quot;episilon icon-bookmark&quot;&gt;Another item here&lt;/li&gt;<br>
+				&nbsp; &lt;li class=&quot;gamma icon-book&quot;&gt;Last one&lt;/li&gt;<br>
+				&lt;/ul&gt;
+			</pre>		
+			
+			<ul class="nav grid__item four-fifths">
+				<li class="zeta icon-cog">List item here</li>
+				<li class="episilon icon-bookmark">Another item here</li>
+				<li class="gamma icon-book">Last one</li>
+			</ul>
+			
+			<div class="notes--guide">
+				<p>You can combine 2 elements (such as a span and a paragraph), one containing the icon and one containing some content, and give each a <strong>different font size</strong> class. You can also give them <strong>different color classes</strong> (see <a href="#palette">color section</a> for class names).</p>
+			</div>
+			
+			<pre class="code prettyprint grid__item one-whole">
+				&lt;span class=&quot;giga blueText&quot; aria-hidden=&quot;true&quot; data-icon=&quot;&amp;#xe61d;&quot;&gt;&lt;/span&gt;
+				&lt;p class=&quot;grid__item four-eighths gamma&quot;&gt;This large icon illustrates this chunk of content.&lt;/p&gt;
+			</pre>
+			
+			<div class="grid__item one-half">
+				<span class="giga blueText" aria-hidden="true" data-icon="&#xe61d;"></span>
+				<p class="grid__item four-eighths gamma">The large icon illustrates this chunk of content.</p>
+			</div>
+
+		</section>	
+		
+
+
 		<section id="logo">
 			<h2>Logo</h2>
 			<div class="notes--guide">
@@ -1108,14 +1108,7 @@ arrows
 				<p class="one-quarter push--one-quarter giga whiteText black" aria-hidden="true" data-icon="&#xe601;"></p>
 				
 		</section>
-		
-		
-		<section id="iconusage">
-			<h2>Icon usage</h2>
-			<div class="notes--guide">
-				<p class="open-issue">usage rules: color and size combos</p>
-			</div>
-		</section>
+
 		
 		
 		<section id="patterns">
