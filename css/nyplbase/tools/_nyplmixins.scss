@@ -86,7 +86,8 @@
 	}
 
 	&:hover{
-		opacity: .55;
+		//opacity: .55;
+		background: lighten($color, .15);
 	}
 }
 

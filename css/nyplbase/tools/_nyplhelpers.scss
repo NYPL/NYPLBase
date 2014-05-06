@@ -63,6 +63,7 @@
 } 
 
 
+
 /**
  * Specific object styling
  */
@@ -104,7 +105,44 @@
 
 
 
+/**
+ * AskNYPL
+ */
+.asknypl{
+	color: #5e564b;
+	text-align: center;
 
+	
+	[data-icon]:before, [class^="icon-"]:before, [class*=" icon-"]:before {
+		vertical-align: baseline;
+	}
+	
+	h1{
+		font-weight: normal;
+	}
+	
+	.asknypl__items{
+		list-style-type: none;
+		
+		li{
+			margin-bottom: $half-spacing-unit;
+		}
+	}
+	
+	.askchat,.askemail{
+		@extend .gamma;
+		
+		background-color: #ece94c;
+		border-radius: 2px;
+		color: #5e564b;
+		padding: 6px;		
+		text-decoration: none;
+		
+		&:hover{
+			background-color: lighten(#ece94c, 20%);
+		}
+	}
+}
 
 
 
