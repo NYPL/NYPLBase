@@ -51,9 +51,16 @@
 
 .primary,
 .secondary,
-.tertiary,
-.related{
-	@extend .grid__item;
+.tertiary{
+	// bc these sections contain grid__items...
+	@extend .grid;
+	
+	@extend .push-half--sides;
+	
+	// works with body.grid--center to fix alignment
+	display: inline-block;
+	text-align: left;
+
 	// prevent content from stretching to 100% available width
 	max-width: $desk-start;
 	
@@ -83,8 +90,6 @@
 
 
 
-
-
 /*------------------------------------*\
     Chunks that are CHUNKS
 \*------------------------------------*/
@@ -108,9 +113,21 @@
 		
 	}
 	
-	// imgs automatically get the outline
+	// no left padding on grafs on palm context
+	p{
+		@include media-query(palm){
+			padding-left: 0;
+		}
+		
+	}
+
+
+	
 	img {
+		// imgs automatically get the outline
 		@extend .img--outline;
+		// but no left padding as a grid__item
+		padding-left: 0;
 	}
 }
 
@@ -120,9 +137,6 @@
 .chunk--icon{
 	
 }
-
-
-
 
 
 
@@ -211,7 +225,7 @@
 .chunk__hero-container{
 	@include media-query(lap-and-up){
 		width: 70%;
-		background: rgba($white, .5);
+		background: rgba($white, .8);
 		padding: $half-spacing-unit $base-spacing-unit;
 		
 		//positioning

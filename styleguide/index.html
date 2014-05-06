@@ -173,7 +173,7 @@
 		
 			<h2>Text</h2>
 			<div class="notes--guide">
-				<p>NYPL's <strong >default</strong> body text is set to <strong>16px, with a 24px line height</strong> (or 1rem, 1.5rem line height). The heds and type size classes are set to the standard typographic scale (see Robert Bringhurst, <cite><a href="http://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style">The Elements of Typographic Style</a></cite>).</p>
+				<p>NYPL's <strong >default</strong> body text is set to <strong>16px, with a 24px line height</strong> (or 1rem, 1.5rem line height). The heds and type size classes are set to the standard diatonic typographic scale (see Robert Bringhurst, <cite><a href="http://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style">The Elements of Typographic Style</a></cite>).</p>
 				<p>Paragraphs are set to a <strong>maximum width of 50rem</strong>, to prevent an unreadably long line.</p>
 				<p>NYPL's core web typeface is <a href="http://www.latofonts.com/"><strong>Lato</strong></a>.</p>
 				<p class="open-issue">Consider "real" bold/italic font usage vs. "fake bold/italic"; performance issues of many font weights being downloaded</p>
@@ -926,8 +926,10 @@ DEFINE THESE INPUT TYPES LATER
 			<h2>General notes on branding</h2>
 			
 			<div class="notes--guide">
-				<p>In general, the NYPL web style is minimal--the basis of the palette is warm grays on white, with the accent colors drawn from the primary palette. The most used color for this purpose is <span class="blue whiteText">blue #0090c4</span>. Red is generally reserved, unless the project is not a core site and uses red as a primary palette color. (On the main site, red is specifically reserved for the "Donate" button.)</p>
-				<p>Rounded corners are 2px. </p>
+				<p>In general, the NYPL web style is minimal, with subtle touches. (For example, we do use rounded corners, but at 2px for a gentle effect.) The colors used are flat, except for a subtle top-to-bottom gradient used on buttons.</p>
+				<p>The basis of color on the site is warm grays and white, with accent colors drawn from the primary palette. The primary accent color is <span class="blue whiteText">blue #0090c4</span>. Red is generally reserved, unless the project is not a core site and uses red as a primary palette color. (On the main site, red is specifically reserved for the "Donate" button.)</p>
+				<p>Text-on-background color combinations must provide enough contrast to be readable to users with protonopia; the recommended contrast ratio is 4.5:1 (see <a href="http://www.w3.org/TR/WCAG/#visual-audio-contrast">WCAG level AA</a>). </p>
+				<p>Icons come from Icomoon's "Ultimate" icon set, and may be augmented by approved custom icons. All additional icons must be exported as SVG format for incorporation into the icon font. </p>
 			</div>
 		</section>
 
@@ -976,6 +978,12 @@ DEFINE THESE INPUT TYPES LATER
 			<div class="color-block purpleNeon ">purpleNeon #eb4197</div>
 			<div class="color-block purpleLight ">purpleLight #eae7ae</div>
 			
+			<h3>Warm grays</h3>
+			<div class="color-block warmGrayDarkest whiteText">warmGrayDarkest #5e564b</div>
+			<div class="color-block warmGrayDarker whiteText">warmGrayDarker #7d7872</div>
+			<div class="color-block warmGray ">warmGray #a29d97</div>
+			<div class="color-block warmGrayLighter ">warmGrayLighter #c5c2bb</div>
+			<div class="color-block warmGrayLightest ">warmGrayLightest #e2dedb</div>
 			<h3>Cool grays</h3>
 			<div class="color-block coolGrayDarkest whiteText">coolGrayDarkest #62656c</div>
 			<div class="color-block coolGrayDarker whiteText">coolGrayDarker #858e95</div>
@@ -983,12 +991,6 @@ DEFINE THESE INPUT TYPES LATER
 			<div class="color-block coolGrayLighter ">coolGrayLighter #cbccd0</div>
 			<div class="color-block coolGrayLightest ">coolGrayLightest #dedede</div>
 			
-			<h3>Warm grays</h3>
-			<div class="color-block warmGrayDarkest whiteText">warmGrayDarkest #5e564b</div>
-			<div class="color-block warmGrayDarker whiteText">warmGrayDarker #7d7872</div>
-			<div class="color-block warmGray ">warmGray #a29d97</div>
-			<div class="color-block warmGrayLighter ">warmGrayLighter #c5c2bb</div>
-			<div class="color-block warmGrayLightest ">warmGrayLightest #e2dedb</div>
 		</section>
 
 
