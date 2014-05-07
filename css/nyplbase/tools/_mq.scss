@@ -26,6 +26,7 @@ tablet-and-up	 481 min
 lap				 601 - 1023
 lap-and-up		 601 min
 lap-lg			 800 - 1023
+lap-lg-and-up	 800 min
 
 portable		1023 max
 desk			1024 min
@@ -74,6 +75,12 @@ desk-wide		1200 min
 	        @media only screen and (min-width:$lap-lg-start) and (max-width:$lap-end) { @content; }
 	
 	    }
+
+	    @if $media-query == lap-lg-and-up{
+	
+	        @media only screen and (min-width:$lap-lg-start) { @content; }
+	
+	    }	    
 	// end of additional lap-lg breakpoint
 
 
@@ -130,6 +137,10 @@ desk-wide		1200 min
 // adding lap-lg grid
 @include media-query(lap-lg){
     @include grid-setup("lap-lg-");
+}
+
+@include media-query(lap-lg-and-up){
+    @include grid-setup("lap-lg-and-up-");
 }
 // end lap-lg grid
 

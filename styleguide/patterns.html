@@ -10,11 +10,11 @@
     
 </head>
 
-<body class="grid--center">
+<body class="grid--center push-half--sides">
 
-	<header class="push-half--sides grid__item one-whole">
+	<header class="">
 		<h1>NYPL Design Patterns</h1>
-		<p>This is a page of "patterns," which are chunks of content designed for a particular display purpose. I'm still refining (and adding!) a lot of patterns to Base, so while this page might sometimes look like a hot mess, it's a fairly accurate snapshot of all the classes and code working together.</p>
+		<p>This is a page of "patterns," which are chunks of design for a particular display purpose. I'm still refining and adding a lot of patterns to Base, so while this page might sometimes look like a hot mess, it's a fairly accurate snapshot of all the classes and code working together.</p>
 		
 		<p class="unicorns">(Note to self: make sure to test patterns using light text on dark bg)</p>
 	</header>
@@ -82,7 +82,7 @@ ex.)
 
 	<h1>Discovery page patterns</h1>
 
-	<div class="chunk  one-whole tablet-and-up-one-half desk-one-third">
+	<div class="chunk  one-whole lap-and-up-one-half desk-one-third">
 		<div class="feature-brick">
 			<img class="" src="../img/demo/photo_Deli.jpg" alt="">
 			<div class="details">
@@ -95,7 +95,7 @@ ex.)
 		</div>
 	</div><!--
 	
-	--><div class="chunk one-whole tablet-and-up-one-half desk-one-third">
+	--><div class="chunk one-whole lap-and-up-one-half desk-one-third">
 		<div class="feature-brick">
 			<img class="" src="../img/demo/illo_Japan.jpg" alt="">
 			<div class="details">
@@ -108,7 +108,7 @@ ex.)
 		</div>
 	</div><!--
 	
-	--><div class="chunk one-whole tablet-and-up-one-half desk-one-third">
+	--><div class="chunk one-whole lap-and-up-one-half desk-one-third">
 		<div class="feature-brick">
 			<img class="" src="../img/demo/photo_Deli.jpg" alt="">
 			<div class="details">
@@ -150,13 +150,13 @@ PRIMARY PATTERNS
 		<div class="chunk__hero-container">		
 			<h2><a href="">Topmost Primary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2>
 			
-			<p class="grid__item desk-one-half"><em>The ABC of It</em> is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p><!--
-			
-			--><div class="grid__item desk-one-half callout">
+			<div class="grid__item one-whole tablet-and-up-one-half callout">
 				<div class="location">Stephen A. Schwarzman Building</div>
 				<div class="date">Thursday, January 16, 4:00pm</div>
 				<button class="btn--natural">Sign up</button>
-			</div>
+			</div><!--
+			
+			--><p class="grid__item one-whole tablet-and-up-one-half"><em>The ABC of It</em> is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 		</div>
 		
 	</div>
@@ -171,12 +171,12 @@ PRIMARY PATTERNS
 	<div class="chunk">
 		<img class="grid__item one-whole desk-one-half push--bottom" src="../img/demo/photo_Deli.jpg"><!--
 		--><h2 class="grid__item one-whole desk-one-half alpha">Primary Tier Article: It Could Be a Blog Post, or Even an Exhibition</h2><!--
-		--><div class="grid__item one-whole desk-one-half callout text--center details--event">
+		--><div class="grid__item one-whole desk-one-third callout text--center details--event">
 				<div class="location">Stephen A. Schwarzman Building</div>
 				<div class="date ">Thursday, January 16, 4:00pm</div>
 				<button class="">Sign up</button>
 			</div><!--
-		--><p class="grid__item one-whole desk-one-half gamma"><em>The ABC of It</em> is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+		--><p class="grid__item one-whole desk-two-thirds gamma"><em>The ABC of It</em> is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 	</div>
 
 
@@ -187,14 +187,14 @@ PRIMARY PATTERNS
 <!-- .primary .chunk (same as the first one, just doesn't have an img) -->
 
 	<div class=" chunk">
-		<h2 class="grid__item one-whole big"><a href="">Primary Tier Article No Image: It Could Be a Blog Post, or Even an Exhibition</a></h2>
+		<h2 class="big"><a href="">Primary Tier Article, with No Image: It Could Be a Blog Post, or Even an Exhibition</a></h2>
 		
-		<p class="grid__item one-whole desk-one-half gamma">The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p><!--
-		--><div class="grid__item one-whole desk-one-half callout text--center details--event">
+		<div class="grid__item one-whole desk-one-third callout text--center details--event">
 				<div class="location">Stephen A. Schwarzman Building</div>
 				<div class="date ">Thursday, January 16, 4:00pm</div>
 				<button class="">Sign up</button>
-			</div>
+			</div><!--
+		--><p class="grid__item one-whole desk-two-thirds gamma"><em>The ABC of It</em> is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 	</div>
 
 
@@ -205,7 +205,7 @@ PRIMARY PATTERNS
 <!-- .primary .chunk--icons -->
 
 	<div class="chunk grid--center">
-		<h2>Primary Tier Icon Items</h2>
+		<h2>Primary Tier: Items with Icons</h2>
 		
 		<div class="grid__item one-whole desk-one-third beta icon-size-kilo text--center" data-icon="&#xe608;">Join a Writing Group</div><!--
 		
@@ -461,9 +461,9 @@ SECONDARY & TERTIARY PATTERNS
 	<div class="chunk grid--center">
 		<h2>Secondary Tier Icon Items</h2>
 		
-		<div class="grid__item one-whole desk-one-half beta icon-size-kilo" data-icon="&#xe690;">Get a Library Card Today</div><!--
+		<div class="grid__item one-whole desk-one-half beta icon-size-kilo text--center" data-icon="&#xe690;">Get a Library Card Today</div><!--
 
-	--><div class="grid__item one-whole desk-one-half beta icon-size-kilo" data-icon="&#xe690;">Get a Library Card Today</div>
+	--><div class="grid__item one-whole desk-one-half beta icon-size-kilo text--center" data-icon="&#xe690;">Get a Library Card Today</div>
 	</div>
 
 
@@ -484,61 +484,77 @@ SECONDARY & TERTIARY PATTERNS
 <!-- .secondary .chunk__list -->
 
 	<div class="chunk">
-	<h4 class="hdg">TEXT CHUNKS WITH IMAGES</h4>
+	<h1 class="hdg">TEXT CHUNKS WITH IMAGES</h1>
 	
-		<ul class="nobullet">
-			<li>
-			    <a href=""><img class="one-fifth" src="../img/demo/nyplphotobooth_jA_orig.jpg"></a><!--
-			    --><div class="grid__item four-fifths">
-			        <p><a href="/support/membership/friends-library">Friends</a></p>
-				    <p class="membership-level">$25 - $1,499</p>
-				    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
-				    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
+		<ul class="nobullet flush--left">
+		
+			<li class="media">
+			    <a href=""><img class="one-fifth media__img" src="../img/demo/nyplphotobooth_jA_orig.jpg"></a><!--
+			    --><div class=" media__body">
+			        <h2><a class="beta" href="/support/membership/friends-library">Friends: $15 - $100</a></h2>
+				    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters. </p>
+					<a class="read-more" href="/support/membership/friends-library">Become a Friend</a>	    
 			    </div>
 			</li>
-			
-			<li>
-			    <a href=""><img class="one-fifth" src="../img/demo/nyplphotobooth_jA_orig.jpg"></a><!--
-			    --><div class="grid__item four-fifths">
-			        <p><a href="/support/membership/friends-library">Friends</a></p>
-				    <p class="membership-level">$25 - $1,499</p>
+
+			<li class="media">
+			    <a href=""><img class="one-fifth media__img" src="../img/demo/nyplphotobooth_jA_orig.jpg"></a><!--
+			    --><div class=" media__body">
+			        <h2><a class="beta" href="/support/membership/friends-library">Conservators: $150 - $1000</a></h2>
 				    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
-				    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
+				    <a class="read-more" href="/support/membership/friends-library">Become a Conservator</a>
 			    </div>
-			</li>
-			
-			<li>
-			    <a href=""><img class="one-fifth" src="../img/demo/nyplphotobooth_jA_orig.jpg"></a><!--
-			    --><div class="grid__item four-fifths">
-			        <p><a href="/support/membership/friends-library">Friends</a></p>
-				    <p class="membership-level">$25 - $1,499</p>
+			</li>	
+
+			<li class="media">
+			    <a href=""><img class="one-fifth media__img" src="../img/demo/nyplphotobooth_jA_orig.jpg"></a><!--
+			    --><div class=" media__body">
+			        <h2><a class="beta" href="/support/membership/friends-library">Mega-Donors: $1500 - $10,000</a></h2>
 				    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
-				    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
+				    <a class="read-more" href="/support/membership/friends-library">Become a Mega-Donor</a>
 			    </div>
-			</li>
-			
-			<li>
-			    <a href=""><img class="one-fifth" src="../img/demo/nyplphotobooth_jA_orig.jpg"></a><!--
-			    --><div class="grid__item four-fifths">
-			        <p><a href="/support/membership/friends-library">Friends</a></p>
-				    <p class="membership-level">$25 - $1,499</p>
-				    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
-				    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
-			    </div>
-			</li>
-			
-			<li>
-			    <a href=""><img class="one-fifth" src="../img/demo/nyplphotobooth_jA_orig.jpg"></a><!--
-			    --><div class="grid__item four-fifths">
-			        <p><a href="/support/membership/friends-library">Friends</a></p>
-				    <p class="membership-level">$25 - $1,499</p>
-				    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
-				    <a class="join-link" href="/support/membership/friends-library">Learn more</a>
-			    </div>
-			</li>
+			</li>	
+
 		</ul>
 	</div>
 	
+
+
+
+	<div class="chunk">
+	<h1 class="hdg">TEXT CHUNKS WITH IMAGES</h1>
+	
+		<ul class="nobullet flush--left">
+						
+			<li class="media">
+			    <a href=""><span class="icon-size-kilo media__img" data-icon="&#xe690;"></span></a><!--
+			    --><div class=" media__body">
+			        <h2><a class="beta" href="/support/membership/friends-library">Friends: $15 - $100</a></h2>
+				    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
+				    <a class="read-more" href="/support/membership/friends-library">Become a Friend</a>
+			    </div>
+			</li>
+						
+			<li class="media">
+			    <a href=""><span class="icon-size-kilo media__img" data-icon="&#xe690;"></span></a><!--
+			    --><div class=" media__body">
+			        <h2><a class="beta" href="/support/membership/friends-library">Conservators: $150 - $1000</a></h2>
+				    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
+				    <a class="read-more" href="/support/membership/friends-library">Become a Conservator</a>
+			    </div>
+			</li>
+						
+			<li class="media">
+			    <a href=""><span class="icon-size-kilo media__img" data-icon="&#xe690;"></span></a><!--
+			    --><div class=" media__body">
+			        <h2><a class="beta" href="/support/membership/friends-library">Mega-Donors: $1500 - $10,000</a></h2>
+				    <p>Join our largest community of donors and receive exclusive invitations to the Holiday Gala and exhibition previews, discounts on tickets and merchandise, and year-round opportunities to celebrate with your fellow supporters.</p>
+				    <a class="read-more" href="/support/membership/friends-library">Become a Mega-Donor</a>
+			    </div>
+			</li>
+						
+		</ul>
+	</div>
 
 </section>
 
@@ -629,7 +645,7 @@ MOSTLY TERTIARY PATTERNS. MOSTLY.
 	
 		<h4 class="hdg">Text List</h4>
 		
-		<ul class="grid__item one-third chunk__list">
+		<ul class="chunk__list one-whole desk-one-third ">
 		    <li><a href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
 		    </li>
 		    
@@ -642,7 +658,7 @@ MOSTLY TERTIARY PATTERNS. MOSTLY.
 		    </li>
 		</ul><!--
 		
-		--><ul class="grid__item one-third chunk__list">
+		--><ul class="chunk__list one-whole desk-one-third">
 		    <li><a href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
 		    </li>
 		    
@@ -655,7 +671,7 @@ MOSTLY TERTIARY PATTERNS. MOSTLY.
 		    </li>
 		</ul><!--
 		
-		--><ul class="grid__item one-third chunk__list">
+		--><ul class="chunk__list one-whole desk-one-third">
 		    <li><a href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
 		    </li>
 		    
@@ -679,7 +695,7 @@ MOSTLY TERTIARY PATTERNS. MOSTLY.
 <!-- .tertiary .chunk__list--icon -->
 
 	<div>
-		<ul class="chunk__list--icon grid__item one-quarter">
+		<ul class="chunk__list--icon  one-whole desk-one-quarter">
 			<h4 class="hdg">Text Chunks List with Icons</h4>
 		    <li class="icon-book"><a href="research-collections">Research Collections</a>
 		    <p>Rare books, photos, prints, maps, and media for advanced research.</p>
@@ -698,7 +714,7 @@ MOSTLY TERTIARY PATTERNS. MOSTLY.
 		    </li>
 		</ul><!--
 		
-		--><ul class="chunk__list--icon grid__item one-quarter">
+		--><ul class="chunk__list--icon  one-whole desk-one-quarter">
 			<h4 class="hdg">Collections</h4>
 		    <li class="icon-book"><a href="research-collections">Research Collections</a>
 		    <p>Rare books, photos, prints, maps, and media for advanced research.</p>
@@ -717,7 +733,7 @@ MOSTLY TERTIARY PATTERNS. MOSTLY.
 		    </li>
 		</ul><!--
 		
-		--><ul class="chunk__list--icon grid__item one-quarter">
+		--><ul class="chunk__list--icon  one-whole desk-one-quarter">
 			<h4 class="hdg">Blogs</h4>
 		    <li class="icon-book"><a href="research-collections">Research Collections</a>
 		    <p>Rare books, photos, prints, maps, and media for advanced research.</p>
@@ -736,7 +752,7 @@ MOSTLY TERTIARY PATTERNS. MOSTLY.
 		    </li>
 		</ul><!--
 		
-		--><ul class="chunk__list--icon grid__item one-quarter">
+		--><ul class="chunk__list--icon  one-whole desk-one-quarter">
 			<h4 class="hdg">Collections</h4>
 		    <li class="icon-book"><a href="research-collections">Research Collections</a>
 		    <p>Rare books, photos, prints, maps, and media for advanced research.</p>
@@ -765,10 +781,10 @@ MOSTLY TERTIARY PATTERNS. MOSTLY.
 <!-- .tertiary .chunk__list -->
 
 	<div>
-		<h4 class="hdg">Text Chunks List</h4>
+		<h4 class="hdg push--sides">Text Chunks List</h4>
 		
-		<ul class="chunk__list grid__item desk-one-quarter">
-		    <li><a class="gamma" href="research-collections">Research Collections</a>
+		<ul class="chunk__list one-whole desk-one-third">
+		    <li><a class="gamma push-half--bottom" href="research-collections">Research Collections</a>
 		    <p>Rare books, photos, prints, maps, and media for advanced research.</p>
 		    </li>
 		    <li><a class="gamma" href="find-archival-materials">Manuscripts and Archives</a>
@@ -780,34 +796,34 @@ MOSTLY TERTIARY PATTERNS. MOSTLY.
 		    <li class="last"><a class="gamma" href="collections/nypl-collections/preservation-division">Preservation of NYPL Collections</a>
 		    <p>The New York Public Library has one of the oldest, largest, and most comprehensive institutional preservation programs in the United States.</p>
 		    </li>
-		</ul>
+		</ul><!--
 		
-		<ul class="chunk__list grid__item desk-one-quarter">
-		    <li><a class="delta" href="research-collections">Research Collections</a>
+		--><ul class="chunk__list one-whole desk-one-third">
+		    <li><a class="gamma push-half--bottom" href="research-collections">Research Collections</a>
 		    <p>Rare books, photos, prints, maps, and media for advanced research.</p>
 		    </li>
-		    <li><a class="delta" href="find-archival-materials">Manuscripts and Archives</a>
+		    <li><a class="gamma" href="find-archival-materials">Manuscripts and Archives</a>
 		    <p>Over 60,000 linear feet of personal papers and organizational records supporting historical research.</p>
 		    </li>
-		    <li><a class="delta" href="http://wallachprintsandphotos.nypl.org">Prints &amp; Photographs Online Catalog</a>
+		    <li><a class="gamma" href="http://wallachprintsandphotos.nypl.org">Prints &amp; Photographs Online Catalog</a>
 		    <p>This catalog provides online access to our holdings. Cataloging of the collection is ongoing and new entries are continually added.</p>
 		    </li>
-		    <li class="last"><a class="delta" href="collections/nypl-collections/preservation-division">Preservation of NYPL Collections</a>
+		    <li class="last"><a class="gamma" href="collections/nypl-collections/preservation-division">Preservation of NYPL Collections</a>
 		    <p>The New York Public Library has one of the oldest, largest, and most comprehensive institutional preservation programs in the United States.</p>
 		    </li>
-		</ul>
+		</ul><!--
 		
-		<ul class="chunk__list grid__item desk-one-quarter">
-		    <li><a class="delta" href="research-collections">Research Collections</a>
+		--><ul class="chunk__list one-whole desk-one-third">
+		    <li><a class="gamma push-half--bottom" href="research-collections">Research Collections</a>
 		    <p>Rare books, photos, prints, maps, and media for advanced research.</p>
 		    </li>
-		    <li><a class="delta" href="find-archival-materials">Manuscripts and Archives</a>
+		    <li><a class="gamma" href="find-archival-materials">Manuscripts and Archives</a>
 		    <p>Over 60,000 linear feet of personal papers and organizational records supporting historical research.</p>
 		    </li>
-		    <li><a class="delta" href="http://wallachprintsandphotos.nypl.org">Prints &amp; Photographs Online Catalog</a>
+		    <li><a class="gamma" href="http://wallachprintsandphotos.nypl.org">Prints &amp; Photographs Online Catalog</a>
 		    <p>This catalog provides online access to our holdings. Cataloging of the collection is ongoing and new entries are continually added.</p>
 		    </li>
-		    <li class="last"><a class="delta" href="collections/nypl-collections/preservation-division">Preservation of NYPL Collections</a>
+		    <li class="last"><a class="gamma" href="collections/nypl-collections/preservation-division">Preservation of NYPL Collections</a>
 		    <p>The New York Public Library has one of the oldest, largest, and most comprehensive institutional preservation programs in the United States.</p>
 		    </li>
 		</ul>

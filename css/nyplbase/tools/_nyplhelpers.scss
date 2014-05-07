@@ -89,10 +89,9 @@
 	@include callout-box(rgba($blue, .15), transparent);
 	
 	color: $blue;
-	padding: $half-spacing-unit/6;
+	padding: $half-spacing-unit/2;
 	
 	&:hover{
-//		background-color: $blue;
 		border: 1px solid $blue;
 	}
 	

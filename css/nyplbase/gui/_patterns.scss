@@ -55,20 +55,13 @@
 	// bc these sections contain grid__items...
 	@extend .grid;
 	
-	@extend .push-half--sides;
-	
-	// works with body.grid--center to fix alignment
+	// fix alignment from body.grid--center
 	display: inline-block;
 	text-align: left;
 
 	// prevent content from stretching to 100% available width
 	max-width: $desk-start;
 	
-	p {
-		// don't overwrite p's botton margin
-		margin-left: auto;
-		margin-right: auto;		
-	}
 }
 
 
@@ -148,6 +141,7 @@
  * Extending "block-list" Inuit object for chunks that are lists.
  */
 .chunk__list{
+	@extend .chunk;
 	@extend .block-list;
 	
 	//adapt border styles inherited from .block-list style
@@ -234,6 +228,10 @@
 	}
 
 }
+
+
+
+
 
 
 
