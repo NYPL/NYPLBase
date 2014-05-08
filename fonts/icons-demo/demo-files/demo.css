@@ -45,9 +45,9 @@ input:focus {
 }
 .glyph {
 	font-size: 16px;
- 	width: 15em;
+	width: 15em;
 	padding-bottom: 1em;
- 	margin-right: 1em;
+	margin-right: 4em;
 	margin-bottom: 1em;
 	float: left;
 	overflow: hidden;
@@ -130,7 +130,7 @@ p {
 .clearfix:after {
 	clear: both;
 }
-.noLiga-true {
+.hidden-true {
 	display: none;
 }
 .textbox0 {
@@ -147,9 +147,5 @@ p {
 	font-size: 16px;
 }
 .fs1 {
-	font-size: 32px;
-	width: 15em;
-}
-.fs2 {
 	font-size: 32px;
 }
