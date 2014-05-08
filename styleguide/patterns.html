@@ -12,11 +12,9 @@
 
 <body class="grid--center push-half--sides">
 
-	<header class="">
+	<header class="grid__item one-whole warmGrayLightest">
 		<h1>NYPL Design Patterns</h1>
 		<p>This is a page of "patterns," which are chunks of design for a particular display purpose. I'm still refining and adding a lot of patterns to Base, so while this page might sometimes look like a hot mess, it's a fairly accurate snapshot of all the classes and code working together.</p>
-		
-		<p class="unicorns">(Note to self: make sure to test patterns using light text on dark bg)</p>
 	</header>
 
 
@@ -80,7 +78,7 @@ ex.)
 <!-- HP BRICK -->
 <section class="primary">
 
-	<h1>Discovery page patterns</h1>
+	<h1 class="grid__item one-whole">Discovery page patterns</h1>
 
 	<div class="chunk  one-whole lap-and-up-one-half desk-one-third">
 		<div class="feature-brick">
@@ -137,15 +135,15 @@ PRIMARY PATTERNS
 
 <section class="primary ">
 
-	<h1>Primary patterns</h1>
+	<h1 class="grid__item one-whole">Primary patterns</h1>
 
 <!-- FULL WIDTH IMG + HED, BLURB, CALLOUT, CALLTOACTION -->
 
-<!-- .primary .chunk -->
+<!-- .primary .chunk--hero -->
 
-	<div class=" chunk">
+	<div class="chunk chunk--hero">
 	
-		<img class="one-whole" src="../img/demo/photo_Deli.jpg" />
+		<img class="grid__item one-whole" src="../img/demo/photo_Deli.jpg" />
 
 		<div class="chunk__hero-container">		
 			<h2><a href="">Topmost Primary Tier Article: It Could Be a Blog Post, or Even an Exhibition</a></h2>
@@ -166,17 +164,19 @@ PRIMARY PATTERNS
 
 <!-- DESK = HALFS: FULL WIDTH IMG + HED, BLURB, CALLOUT, CALLTOACTION  -->
 
-<!-- .primary .chunk--half -->
+<!-- .primary .chunk -->
 
 	<div class="chunk">
-		<img class="grid__item one-whole desk-one-half push--bottom" src="../img/demo/photo_Deli.jpg"><!--
-		--><h2 class="grid__item one-whole desk-one-half alpha">Primary Tier Article: It Could Be a Blog Post, or Even an Exhibition</h2><!--
-		--><div class="grid__item one-whole desk-one-third callout text--center details--event">
+	
+		<img class="grid__item one-whole lap-lg-and-up-one-half push--bottom" src="../img/demo/photo_Deli.jpg"><!--
+		--><h2 class="grid__item one-whole lap-lg-and-up-one-half alpha">Primary Tier Article: It Could Be a Blog Post, or Even an Exhibition </h2><!--
+		--><div class="grid__item one-whole lap-lg-and-up-one-third callout text--center details--event">
 				<div class="location">Stephen A. Schwarzman Building</div>
 				<div class="date ">Thursday, January 16, 4:00pm</div>
 				<button class="">Sign up</button>
 			</div><!--
-		--><p class="grid__item one-whole desk-two-thirds gamma"><em>The ABC of It</em> is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+		--><p class="grid__item one-whole lap-lg-and-up-two-thirds gamma"><em>The ABC of It</em> is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
+		
 	</div>
 
 
@@ -230,7 +230,7 @@ SECONDARY & TERTIARY PATTERNS
 -->
 <section class="secondary">
 
-	<h1>Secondary & Tertiary patterns</h1>
+	<h1 class="grid__item one-whole">Secondary & Tertiary patterns</h1>
 	
 
 <!-- 2 CHUNKS NEXT TO EACH OTHER -->
@@ -238,7 +238,7 @@ SECONDARY & TERTIARY PATTERNS
 <!-- .secondary .chunk--half -->
 
 	<div class="chunk desk-one-half ">
-		<img class="one-whole" src="../img/demo/illo_Japan.jpg" />
+		<img src="../img/demo/illo_Japan.jpg" />
 		<h2><a href="">Secondary Tier Article Two Across: It Could Be a Blog Post, or Even an Exhibition</a></h2>
 		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 		<p class="callout">
@@ -309,10 +309,10 @@ SECONDARY & TERTIARY PATTERNS
 
 <!-- .secondary .chunk--half -->
 
-	<div class="chunk desk-one-half ">
+	<div class="chunk one-whole desk-one-half ">
 		<h4 class="hdg">Tag or Heading</h4>
 		<img class="one-whole desk-one-third" src="../img/demo/nyplphotobooth_jA_orig.jpg" /><!--
-		--><h2 class="grid__item desk-two-thirds"><a href="">Two Across with Small Image: It Could Be a Blog Post, or Even an Exhibition</a></h2>
+		--><h2 class="grid__item one-whole desk-two-thirds"><a href="">Two Across with Small Image: It Could Be a Blog Post, or Even an Exhibition</a></h2>
 		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
 		<p class="callout">
 			<span class="location">Stephen A. Schwarzman Building</span>
@@ -321,7 +321,7 @@ SECONDARY & TERTIARY PATTERNS
 		<button>Sign up</button>
 	</div><!--
 
---><div class="chunk desk-one-half ">
+--><div class="chunk one-whole desk-one-half ">
 		<h4 class="hdg">Tag or Heading</h4>
 		<img class="one-whole desk-one-third" src="../img/demo/photo_Toni_Junot.png" /><!--
 		--><h2 class="grid__item desk-two-thirds"><a href="">Two Across with Small Image: It Could Be a Blog Post, or Even an Exhibition</a></h2>
@@ -332,52 +332,6 @@ SECONDARY & TERTIARY PATTERNS
 		</p>
 		<button>Sign up</button>
 	</div>
-
-
-
-
-
-
-<!-- 3 CHUNKS NEXT TO EACH OTHER, SM IMG -->
-
-<!-- .secondary .chunk--third -->
-
-	<div class="chunk desk-one-third ">
-		<h4 class="hdg">Tag or Heading</h4>
-		<img class="one-whole desk-one-third" src="../img/demo/nyplphotobooth_jA_orig.jpg" /><!--
-		--><h2 class="grid__item desk-two-thirds"><a href="">Three Across with Small Image: It Could Be a Blog Post, or Even an Exhibition</a></h2>
-		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
-		<p class="callout">
-			<span class="location">Stephen A. Schwarzman Building</span>
-			<span class="date">Thursday, January 16, 4:00pm</span>
-		</p>
-		<button>Sign up</button>
-	</div><!--
-
---><div class="chunk desk-one-third ">
-		<h4 class="hdg">Tag or Heading</h4>
-		<img class="one-whole desk-one-third" src="../img/demo/illo_Japan.jpg" /><!--
-		--><h2 class="grid__item desk-two-thirds"><a href="">Three Across with Small Image: It Could Be a Blog Post, or Even an Exhibition</a></h2>
-		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
-		<p class="callout">
-			<span class="location">Stephen A. Schwarzman Building</span>
-			<span class="date">Thursday, January 16, 4:00pm</span>
-		</p>
-		<button>Sign up</button>
-	</div><!--
-
---><div class="chunk desk-one-third ">
-		<h4 class="hdg">Tag or Heading</h4>
-		<img class="one-whole desk-one-third" src="../img/demo/photo_Toni_Junot.png" /><!--
-		--><h2 class="grid__item desk-two-thirds"><a href="">Three Across with Small Image: It Could Be a Blog Post, or Even an Exhibition</a></h2>
-		<p>The ABC of It is an examination of why children’s books are important: what and how they teach children, and what they reveal about the societies that produced them.</p>
-		<p class="callout">
-			<span class="location">Stephen A. Schwarzman Building</span>
-			<span class="date">Thursday, January 16, 4:00pm</span>
-		</p>
-		<button>Sign up</button>
-	</div>
-
 
 
 
@@ -387,7 +341,7 @@ SECONDARY & TERTIARY PATTERNS
 
 <!-- .secondary .chunk--half -->
 
-	<h4 class="hdg">Tag or Heading</h4>
+	<h4 class="hdg push--left">Tag or Heading</h4>
 	
 	<div class="chunk desk-one-half ">
 		<h2 class="grid__item one-whole"><a href="">Secondary Tier Article No Image Two Across: It Could Be a Blog Post, or Even an Exhibition</a></h2>
@@ -417,7 +371,7 @@ SECONDARY & TERTIARY PATTERNS
 
 <!-- .secondary .chunk--third -->
 
-	<h4 class="hdg">Tag or Heading</h4>
+	<h4 class="hdg push--left">Tag or Heading</h4>
 	
 	<div class="chunk desk-one-third">
 		<h2 class="grid__item one-whole"><a href="">Secondary Tier Article No Image Three Across: It Could Be a Blog Post, or Even an Exhibition</a></h2>
@@ -481,9 +435,9 @@ SECONDARY & TERTIARY PATTERNS
 					CAN I USE chunk__list HERE???
 					-->
 
-<!-- .secondary .chunk__list -->
+<!-- .secondary .chunk__list--images -->
 
-	<div class="chunk">
+	<div class="chunk chunk__list chunk__list--images">
 	<h1 class="hdg">TEXT CHUNKS WITH IMAGES</h1>
 	
 		<ul class="nobullet flush--left">
@@ -566,7 +520,7 @@ MOSTLY TERTIARY PATTERNS. MOSTLY.
 ****************
 -->
 <section class="tertiary">
-	<h1>Mostly Tertiary patterns</h1>
+	<h1 class="grid__item one-whole ">Mostly Tertiary patterns</h1>
 
 
 
@@ -578,7 +532,7 @@ MOSTLY TERTIARY PATTERNS. MOSTLY.
 	
 		<h4 class="hdg">Text List with Icons</h4>
 		
-		<ul class="chunk__list--icon grid__item one-quarter">
+		<ul class="chunk__list--icon grid__item one-whole desk-one-quarter">
 		    <li data-icon="&#xe65a;"><a href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
 		    </li>
 		    
@@ -591,7 +545,7 @@ MOSTLY TERTIARY PATTERNS. MOSTLY.
 		    <li class="last" data-icon="&#xe65a;"><a href="online_projects">VITO: The Life of Gay Activist Vito Russo</a>
 		    </li>
 		</ul><!--
-		--><ul class="chunk__list--icon grid__item one-quarter">
+		--><ul class="chunk__list--icon grid__item one-whole desk-one-quarter">
 		    <li data-icon="&#xe65a;"><a href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
 		    </li>
 		    
@@ -604,7 +558,7 @@ MOSTLY TERTIARY PATTERNS. MOSTLY.
 		    <li class="last" data-icon="&#xe65a;"><a href="online_projects">VITO: The Life of Gay Activist Vito Russo</a>
 		    </li>
 		</ul><!--
-		--><ul class="chunk__list--icon grid__item one-quarter">
+		--><ul class="chunk__list--icon grid__item one-whole desk-one-quarter">
 		    <li data-icon="&#xe65a;"><a href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
 		    </li>
 		    
@@ -617,7 +571,7 @@ MOSTLY TERTIARY PATTERNS. MOSTLY.
 		    <li class="last" data-icon="&#xe65a;"><a href="online_projects">VITO: The Life of Gay Activist Vito Russo</a>
 		    </li>
 		</ul><!--
-		--><ul class="chunk__list--icon grid__item one-quarter">
+		--><ul class="chunk__list--icon grid__item one-whole desk-one-quarter">
 		    <li data-icon="&#xe65a;"><a href="collections/articles-databases">Pic Pick (LGBTQ Edition): King &amp; King by Linda de Haan and Stern Nijland</a>
 		    </li>
 		    
