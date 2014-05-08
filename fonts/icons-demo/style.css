@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'NYPL-icomoon';
-	src:url('fonts/NYPL-icomoon.eot?-4i91hb');
-	src:url('fonts/NYPL-icomoon.eot?#iefix-4i91hb') format('embedded-opentype'),
-		url('fonts/NYPL-icomoon.woff?-4i91hb') format('woff'),
-		url('fonts/NYPL-icomoon.ttf?-4i91hb') format('truetype'),
-		url('fonts/NYPL-icomoon.svg?-4i91hb#NYPL-icomoon') format('svg');
+	src:url('../NYPL-icomoon.eot?-4i91hb');
+	src:url('../NYPL-icomoon.eot?#iefix-4i91hb') format('embedded-opentype'),
+		url('../NYPL-icomoon.woff?-4i91hb') format('woff'),
+		url('../NYPL-icomoon.ttf?-4i91hb') format('truetype'),
+		url('../NYPL-icomoon.svg?-4i91hb#NYPL-icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }

@@ -64,6 +64,15 @@
 	
 }
 
+.primary{
+	h1, h2{
+		// normalize heds on palm no matter what font class is applied
+		@include media-query(palm){
+			font-size: 1.5em;
+		}
+	}
+}
+
 
 /**
  * Some sections of content need a category/tag as a heading above them.
@@ -106,16 +115,6 @@
 		
 	}
 	
-	// no left padding on grafs on palm context
-	p{
-		@include media-query(palm){
-			padding-left: 0;
-		}
-		
-	}
-
-
-	
 	img {
 		// imgs automatically get the outline
 		@extend .img--outline;
@@ -123,6 +122,8 @@
 		padding-left: 0;
 	}
 }
+
+
 
 /**
  * Chunks of text that has a large icon illustrating it.
@@ -179,7 +180,19 @@
 	
 }
 
-
+/**
+ * or slightly larger images.
+ * 
+ * (extend the .media object stuff here?)
+ *
+ */
+.chunk__list--images{
+	.media__img{
+		@include media-query (palm){
+			display: none;			
+		}
+	}
+}
 
 
 
@@ -189,7 +202,7 @@
     Chunks that are CONTEXT-SPECIAL
 \*------------------------------------*/
 /** 
- * These styles may need to move to their own partials
+ * Some of these styles may need to move to their own partials
  * in the /gui directory.
  */
 
@@ -224,7 +237,7 @@
 		
 		//positioning
 		position: absolute;
-		bottom: 7px;
+		bottom: 0px;
 	}
 
 }
@@ -235,8 +248,12 @@
 
 
 
+
+
+
+
 /**
- * Recommendations
+ * Recommendations demo
  */
 
 .rec{
@@ -286,7 +303,7 @@
 
 
 /** 
- * Blogs
+ * Blogs demo
  */
 // reduce width of blog post to the measure
 .blog{
