@@ -54,6 +54,14 @@ pre {
 	position: fixed;
 	z-index: 1002;
 	
+	> ul > li {
+		@extend .gamma;
+		
+		> ul{
+			@extend .epsilon;
+		}
+	}
+	
 	li > ul {
 		margin-left: $half-spacing-unit;
 	}
