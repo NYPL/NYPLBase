@@ -24,7 +24,11 @@
 	<nav class="nav--guide grid__item two-thirds lap-and-up-one-quarter push-half--left epsilon">
 	
 		<ul class="nav nav--stacked">
-			<li><a href="#naming">Note on naming</a></li>
+			<li><a href="#from-designer">Note from the designer</a>
+				<ul class="nav nav--stacked">
+					<li><a href="#naming">Note on naming</a></li>
+				</ul>
+			</li>
 			<li><a href="#gridsystem">Grid system</a></li>
 			<li><a href="#elements">Basic elements</a>
 				<ul class="nav nav--stacked">
@@ -52,7 +56,12 @@
 					<li><a href="#logo">Logo</a></li>
 				</ul>				
 			</li>
-			<li><a href="#patterns">Design patterns</a></li>
+			<li><a href="#coding">Coding</a>
+				<ul class="nav nav--stacked">
+					<li><a href="#structure">How to structure layout</a></li>
+					<li><a href="#patterns">Design patterns</a></li></li>
+				</ul>
+						
 			<li><a href="#thanks">Acknowledgements</a></li>
 
 		</ul>
@@ -60,12 +69,12 @@
 	</nav>
 
 
-	<div class="content--guide ten-twelfths push--one-twelfth">
+	<div class="content--guide ">
 
 
 
 		<header class="header-hed grid__item one-whole flush--left hard--left">
-			<h1 class="kilo">NYPLBase</h1>
+			<h1 class="kilo push--one-tenth">NYPLBase</h1>
 			<p class="subtitle gamma text--center"><span class="icon-cogs blueDarkerText">rapid prototyping system</span> <span class="icon-images purpleText">style guide</span> <span class="icon-scissors purpleDarkerText">pattern library</span> <span class="icon-NYPL_mark1_black_pos blueText">branding machine</span></p>
 		</header>
 
@@ -1095,15 +1104,109 @@ DEFINE THESE INPUT TYPES LATER
 
 		
 		
+		<h1 id="coding">Coding</h1>
+		
+		<section id="structure">
+			<h2>How to structure layout</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+			<p class="notes--guide">First, start with sections:</p>
+			
+			<pre class="code prettyprint">
+				&lt;section&gt;<br>
+				&lt;/section&gt;
+			</pre>
+			
+			<p class="notes--guide">Each section is given a class of .primary, .secondary, or .tertiary, to designate what priority of content they contain. (Sections contain .grid__items, so those section class names also extend the class .grid.)</p>
+			
+			<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
+			&lt;/section&gt;</pre>
+
+			<p class="notes--guide">To build a chunk of content, start with a div and the class name .chunk (.chunk extends the class .grid__item):</p>
+			
+			<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
+			&nbsp; &lt;div class=&quot;chunk&quot;&gt;<br>
+			&nbsp; &lt;/div&gt;<br>
+			&lt;/section&gt;</pre> 
+			
+			<p class="notes--guide">You can then add grid classes to tell the chunk how to behave in different device contexts:</p>
+			
+			<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
+			&nbsp; &lt;div class=&quot;chunk one-whole lap-and-up-one-half desk-one-third&quot;&gt;<br>
+			&nbsp; &lt;/div&gt;<br>
+			&lt;/section&gt;</pre>		
+			
+			<p class="notes--guide">Elements within the chunk can respond to the context too (don't forget to comment out the code whitespace between elements you want to align in the grid system):</p>
+			
+			<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
+			&nbsp; &lt;div class=&quot;chunk one-whole lap-and-up-one-half desk-one-third&quot;&gt;<br>
+			&nbsp; &nbsp; &lt;img class=&quot;one-whole&quot;&gt;<br>
+			&nbsp; &nbsp; &lt;h2 class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/h2&gt;&lt;!--<br>
+			&nbsp; &nbsp; --&gt;&lt;p class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/p&gt;<br>
+			&nbsp; &lt;/div&gt;<br>
+			&lt;/section&gt;</pre>	
+
+			<p class="notes--guide">Keep building the structure of the page in this way.</p>
+
+			<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
+			&nbsp; &lt;div class=&quot;chunk one-whole lap-and-up-one-half desk-one-third&quot;&gt;<br>
+			&nbsp; &nbsp; &lt;img class=&quot;one-whole&quot;&gt;<br>
+			&nbsp; &nbsp; &lt;h2 class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/h2&gt;&lt;!--<br>
+			&nbsp; &nbsp; --&gt;&lt;p class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/p&gt;<br>
+			&nbsp; &lt;/div&gt;&lt;!--<br>
+				<br>
+			&nbsp; --&gt;&lt;div class=&quot;chunk one-whole lap-and-up-one-half desk-one-third&quot;&gt;<br>
+			&nbsp; &nbsp; &lt;img class=&quot;one-whole&quot;&gt;<br>
+			&nbsp; &nbsp; &lt;h2 class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/h2&gt;&lt;!--<br>
+			&nbsp; &nbsp; --&gt;&lt;p class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/p&gt;<br>
+			&nbsp; &lt;/div&gt;&lt;!--<br>
+				<br>
+			&nbsp; --&gt;&lt;div class=&quot;chunk one-whole lap-and-up-one-half desk-one-third&quot;&gt;<br>
+			&nbsp; &nbsp; &lt;img class=&quot;one-whole&quot;&gt;<br>
+			&nbsp; &nbsp; &lt;h2 class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/h2&gt;&lt;!--<br>
+			&nbsp; &nbsp; --&gt;&lt;p class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/p&gt;<br>
+			&nbsp; &lt;/div&gt;<br>
+			&lt;/section&gt;</pre>
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+			
+		</section>
+
+
 		<section id="patterns">
 			<h2>Design patterns</h2>
 			
 			<div class="notes--guide">
-				<p>Here there be dragons...well, unfinished guidance anyway. The following page of design chunks represents NYPLBase's current pattern library. This collection will be continually refined as patterns emerge and solidify.</p>
-				<p class=""><a href="patterns.html">General pattern collection (beware; currently a hot mess)</a></p>
+				<p>Here there be dragons...well, unfinished guidance anyway. The following page of design chunks represents NYPLBase's current pattern library. <strong>This collection will be continually refined as patterns emerge and solidify.</strong></p>
+			</div>
+			<p class="beta"><a href="patterns.html">General pattern collection</a></p>
 				
-				
+			<div class="notes--guide">
 				<p>The following demos are prototypes in various states of polish, all of which are linked from my internal "sandbox" development server (i.e. you must be behind the NYPL firewall to view them.). For the time being, they'll stay that way, linked here for reference; in the future a finished version of each demo will become a "template" and get migrated to the same server that houses the style guide.</p>
+			</div>
+			
 				<ul>
 					<h3>Single page/single purpose content</h3>
 					<li><a href="../prototypes/AV/demo_AV.html">AV content item</a></li>
@@ -1131,7 +1234,7 @@ DEFINE THESE INPUT TYPES LATER
 					<li><a class="warmGrayLighterText" href="">Exhibitions or programs (content w/ promotional purpose)</a></li>
 					<li><a href="../prototypes/recommendations/demo_recs-adult.html">Recommendations</a></li>
 				</ul>
-			</div>
+				
 		</section>
 
 
