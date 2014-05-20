@@ -50,19 +50,21 @@ $measure:			50rem;
 /**
  * Redefine $base-font-family before declaring the config variables
  */
-$base-font-family:				"Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family:				"Lato", "Lucida Grande", Helvetica, Arial, sans-serif;
 
-$font-light:  					"Lato Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-lightital:				"Lato Light Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-ital:						"Lato Regular Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-bold:						"Lato Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-boldital:					"Lato Bold Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-black:					"Lato Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-blackital:				"Lato Black Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+// individual font variables
+$font-light:  					"Lato Light", "Lucida Grande", Helvetica, Arial, sans-serif;
+$font-lightital:				"Lato Light Italic", "Lucida Grande", Helvetica, Arial, sans-serif;
+$font-ital:						"Lato Regular Italic", "Lucida Grande", Helvetica, Arial, sans-serif;
+$font-bold:						"Lato Bold", "Lucida Grande", Helvetica, Arial, sans-serif;
+$font-boldital:					"Lato Bold Italic", "Lucida Grande", Helvetica, Arial, sans-serif;
+$font-black:					"Lato Black", "Lucida Grande", Helvetica, Arial, sans-serif;
+$font-blackital:				"Lato Black Italic", "Lucida Grande", Helvetica, Arial, sans-serif;
 
-// trying these out...see blog post prototype
-$blog-font-family--display:		"Roboto Slab", serif;
-$blog-font-family:				"Open Sans", serif;
+		// trying these out...see blog post prototype
+		// both from Google webfonts
+		$blog-font-family--display:		"Roboto Slab", serif;
+		$blog-font-family:				"Open Sans", serif;
 
 /**
  * Define icon font

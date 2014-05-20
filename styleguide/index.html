@@ -1109,30 +1109,24 @@ DEFINE THESE INPUT TYPES LATER
 		<section id="structure">
 			<h2>How to structure layout</h2>
 
+			<p class="notes--guide">First, give the <code>body</code> a class of <code>.grid--center</code> (this will work with some other classes to center its contained elements):</p>
+			
+			<pre class="code prettyprint">&lt;body class=&quot;grid--center&quot;&gt;</pre>
 
 
-
-
-
-
-
-
-
-
-
-			<p class="notes--guide">First, start with sections:</p>
+			<p class="notes--guide">Then start with <code>sections</code> (which have a set max-width so that the content doesn't stretch unreasonably).</p>
 			
 			<pre class="code prettyprint">
 				&lt;section&gt;<br>
 				&lt;/section&gt;
 			</pre>
 			
-			<p class="notes--guide">Each section is given a class of .primary, .secondary, or .tertiary, to designate what priority of content they contain. (Sections contain .grid__items, so those section class names also extend the class .grid.)</p>
+			<p class="notes--guide">Each <code>section</code> is given a class of <code>.primary</code>, <code>.secondary</code>, or <code>.tertiary</code>, to designate what priority of content they contain. (<code>Section</code>s contain <code>.grid__item</code>s, so those <code>section</code> class names also extend the class <code>.grid</code>.)</p>
 			
 			<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
 			&lt;/section&gt;</pre>
 
-			<p class="notes--guide">To build a chunk of content, start with a div and the class name .chunk (.chunk extends the class .grid__item):</p>
+			<p class="notes--guide">To build a chunk of content, start with a <code>div</code> and the class name <code>.chunk</code> (<code>.chunk</code> extends the class <code>.grid__item</code>):</p>
 			
 			<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
 			&nbsp; &lt;div class=&quot;chunk&quot;&gt;<br>
@@ -1144,7 +1138,17 @@ DEFINE THESE INPUT TYPES LATER
 			<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
 			&nbsp; &lt;div class=&quot;chunk one-whole lap-and-up-one-half desk-one-third&quot;&gt;<br>
 			&nbsp; &lt;/div&gt;<br>
-			&lt;/section&gt;</pre>		
+			&lt;/section&gt;</pre>	
+			
+			
+			
+			<p class="notes--guide">Your section doesn't have to contain <code>div</code>s; maybe the more appropriate containers are article and sidebar, in which case your code might start like this:</p>
+			
+			<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
+			&nbsp; &lt;article class=&quot;grid__item one-whole desk-two-thirds&quot;&gt;&lt;/article&gt;<br>
+			&nbsp; &lt;sidebar class=&quot;grid__item one-whole desk-one-third&quot;&gt;&lt;/sidebar&gt;<br>
+			&lt;/section&gt;</pre>
+				
 			
 			<p class="notes--guide">Elements within the chunk can respond to the context too (don't forget to comment out the code whitespace between elements you want to align in the grid system):</p>
 			
@@ -1177,20 +1181,6 @@ DEFINE THESE INPUT TYPES LATER
 			&nbsp; &nbsp; --&gt;&lt;p class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/p&gt;<br>
 			&nbsp; &lt;/div&gt;<br>
 			&lt;/section&gt;</pre>
-
-			
-
-
-
-
-
-
-
-
-
-
-
-
 			
 		</section>
 
@@ -1204,23 +1194,25 @@ DEFINE THESE INPUT TYPES LATER
 			<p class="beta"><a href="patterns.html">General pattern collection</a></p>
 				
 			<div class="notes--guide">
-				<p>The following demos are prototypes in various states of polish, all of which are linked from my internal "sandbox" development server (i.e. you must be behind the NYPL firewall to view them.). For the time being, they'll stay that way, linked here for reference; in the future a finished version of each demo will become a "template" and get migrated to the same server that houses the style guide.</p>
+				<p>The following demos are prototypes, built with Base, in various states of polish. They are all linked from my internal "sandbox" development server (i.e. you must be behind the NYPL firewall to view them.). For the time being, they'll stay that way, linked here for reference; in the future a finished version of each demo will  get migrated to the same server that houses the style guide.</p>
+				
+				<p>The idea is each of these demos represents a certain kind of layout pattern: some layouts serve singular content (like a blog post), some present a variety of content chunks (like a landing page), some present an action to take (like a form). In the future, I'll offer the finished versions here as "templates," from which you can grab and use the markup appropriate for your content type.</p>
 			</div>
 			
 				<ul>
-					<h3>Single page/single purpose content</h3>
-					<li><a href="../prototypes/AV/demo_AV.html">AV content item</a></li>
+					<h3>Single purpose content</h3>
+					<li><a class="warmGrayLighterText" href="">AV content item</a></li>
 					<li><a class="warmGrayLighterText" href="">Informational/"about"</a></li>
-					<li><a href="../prototypes/blogs/demo_blog-post.html">Blog post</a></li>
+					<li><a href="http://janderson.farm.nypl.org/prototypes/blogs/demo_blog-post.html">Blog post</a></li>
 					<li><a class="warmGrayLighterText" href="">Class</a></li>
 					<li><a class="warmGrayLighterText" href="">Event</a></li>
 				</ul>
 				
 				<ul>
 					<h3>Landing page ("promo" purpose content)</h3> 
-					<li><a href="../prototypes/exhibitions/demo_exhibition.html">Exhibition</a></li>
+					<li><a href="http://janderson.farm.nypl.org/prototypes/exhibitions/demo_exhibition.html">Exhibition</a></li>
 					<li><a class="warmGrayLighterText" href="">Location or division</a></li>
-					<li><a href="../prototypes/support/demo_support.html">Support the Library</a></li>
+					<li><a class="warmGrayLighterText" href="">Support the Library</a></li>
 				</ul>
 				
 				<ul>
@@ -1232,7 +1224,7 @@ DEFINE THESE INPUT TYPES LATER
 					<h3>Lists</h3>
 					<li><a class="warmGrayLighterText" href="">AV, blogs, research guides (discrete chunks of content)</a></li>
 					<li><a class="warmGrayLighterText" href="">Exhibitions or programs (content w/ promotional purpose)</a></li>
-					<li><a href="../prototypes/recommendations/demo_recs-adult.html">Recommendations</a></li>
+					<li><a href="http://janderson.farm.nypl.org/prototypes/recommendations/demo_recs-adult.html">Recommendations</a></li>
 				</ul>
 				
 		</section>
