@@ -34,7 +34,7 @@
 		* ------------------------------------
 		*/
 
-.btn, a.btn{
+.btn{
  	@include button-color($beautons);
 	@extend %transition !optional;
 	

@@ -49,7 +49,6 @@ pre {
 .nav--guide{
 	background: rgba($white, .85);
 	display: none; // state on load
-	margin-top: 3rem;
 	
 	position: fixed;
 	z-index: 1002;
@@ -75,8 +74,8 @@ pre {
 .backtotop{
 	display: inline-block;
 	position: fixed;
-	bottom: .5rem;
-	left: 0;	
+	top: .5rem;
+	right: 0;	
 	z-index: 1001;
 	
 	&:before{
@@ -110,9 +109,27 @@ pre {
  * Sections
  */
 
+// header
+.header-hed{
+	position: relative;
+	
+	h1{
+		margin-bottom: 0;
+		text-shadow: 2px 2px 0px #ccc;
+	}
+}
+
+.subtitle{
+	@media screen and (min-width: 768px){
+		position: absolute;
+		left: 20rem;
+		top: 35%;
+	}
+}
+
 // container for the the content
 .content--guide{
-	margin: 0 3.5rem;
+	margin: 4rem 3.5rem 0;
 }
 
 section{
