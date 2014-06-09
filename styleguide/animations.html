@@ -4,9 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0">
     
-	<title>NYPL Base: NAME OF DEMO</title>
+	<title>NYPL Base: animations demo</title>
     
     <link rel="stylesheet" href="../css/nyplbase.min.css">
+    
+    
+    <style>
+    
+    	section{
+	    	position: relative;
+	    	width: 100%;
+    	}
+
+/* This That The Other */ 
+    	.nav--cards{
+	    	float: left;
+    	}
+    	
+    	.nav--cards li{
+	    	position: relative;
+    	}
+    	
+    	.arrow{
+	    	position: absolute;
+	    	top: 15%;
+	    	left: 0;
+	    	-webkit-transition: all;
+    	}
+    	.arrow:active{
+	    	left: 100px;
+    	}
+    
+    	.wrapper--cards{
+	    	position: relative;
+    	}
+    
+    	.card{
+	    	position: absolute;
+	    	left: 150px;
+	    	top: 0;
+    	}
+    	
+		.card2, .card3{
+			display: none;
+		}
+		
+		.active{
+			display: block;
+		}
+		.hidden{
+			display: none;
+		}
+    	
+
+    	
+/* Delayed slideout */
+    	.slideout-thing{
+	    	position: absolute;
+	    	bottom:-200px;
+	    	-webkit-animation: slideout .15s 1.5s forwards;
+    	}
+ 
+     	
+    	@-webkit-keyframes slideout{
+	    	from {bottom: -200px}
+	    	to {bottom: 0}
+	    	
+    	}
+  
+/* Menu slideout */
+		.wrapper--menu-slideout{
+			margin-left: -200px;
+			-webkit-transition: all .5s ease-in;
+		}
+		
+		.menu{
+			background-color: #ccc;
+			width: 200px;
+			height: 450px;
+			float: left;
+		}   
+		
+		.content{
+			background-color: pink;
+			height: 450px;
+			margin-left: 200px;
+		}	
+		
+		.slide-active{
+			margin-left: 0;
+		}
+    
+    </style>
     
 </head>
 
@@ -20,20 +109,74 @@
 
 
 
-	<section>
+	<section class="cf">
 		<h1>This that and the other</h1>
 		
-		<ul class="nav nav--stacked">
-			<li><button class="btn--black"><span class="icon-cog beta"></span></button></li>
-			<li><button>That</button></li>
-			<li><button>The Other</button></li>
+		<ul class="nav--cards nav nav--stacked grid__item one-sixth">
+			<li>
+				<button class="button1 btn--black"><span class="icon-library beta"></span></button>
+				<span class="arrow icon-arrow-right22 alpha"></span>
+			</li>
+			<li><button class="button2 btn--black"><span class="icon-books beta"></span></button></li>
+			<li><button class="button3 btn--black"><span class="icon-reading beta"></span></button></li>
 		</ul>
-	</section>
-	
-	<section>
-		<h1>Delayed slideout</h1>
+
+
+<!--
+		<div class="wrapper--cards">
+			<div class="card card1 grid__item three-sixths warmGrayLightest">
+				<h2>This Headline</h2>
+				<p>as;ldfha jsdlkslkj skdfjk  sdkjflkj ag'p psfgj'r pjs. for reals.</p>
+			</div>
+			
+			<div class="card card2 grid__item three-sixths warmGrayLightest">
+				<h2>That Headline</h2>
+				<p>as;ldfha jsdlkslkj skdfjk  sdkjflkj ag'p psfgj'r pjs. yup.</p>
+			</div>
+			
+			<div class="card card3 grid__item three-sixths warmGrayLightest">
+				<h2>The Other Headline</h2>
+				<p>as;ldfha jsdlkslkj skdfjk  sdkjflkj ag'p psfgj'r pjs. ya heard.</p>
+			</div>
+		</div>
+-->
+		
 	</section>
 
+
+	
+	<section class="cf blueLight">
+		<h1>Delayed slideout</h1>
+		
+		<div class="slideout-thing">			
+			<img class="one-sixth" src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
+			<h2>
+			<button class="btn--donate">Donate now</button>
+		</div>
+	</section>
+
+
+	
+	<section class="cf">
+		<h1>Rollover reveal</h1>
+		
+		<div>
+			<img class="one-quarter" src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
+		</div>
+		
+	</section>
+	
+	
+	
+	<section class="wrapper--menu-slideout">
+		
+		<div class="menu"></div>
+		
+		<div class="content">
+			<span class="button--menu icon-menu2 alpha"></span>
+		</div>
+		
+	</section>	
 
 
 	<footer></footer>
@@ -54,6 +197,14 @@
 $(document).ready(function () {
 	
 	// your functions
+	$(".button--menu").click(function() {
+		$(".wrapper--menu-slideout").toggleClass('slide-active');	
+	});
+	
+	
+	$('.sideToolbar > h2').click(function() {
+		$('.sideToolbar').toggleClass('activateRight');
+	});	
 	
 /* -end- */
  });

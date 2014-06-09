@@ -288,18 +288,17 @@
 }
 
 .tagged{
-	@extend .zeta;
 	@include callout-box(rgba($blue, .25), transparent);
+	@extend %transition;
 	
 	display: inline-block;
 	margin: 0 $half-spacing-unit/3 $half-spacing-unit/3 0;
 	padding: 0 $half-spacing-unit/3;
 	
 	&:hover{
+		background-color: $blue;
 		border-color: $blue;
-		color: $blue;
-		
-		@extend %transition;
+		color: $white;
 	}
 	
 	a{
