@@ -47,11 +47,18 @@ pre {
  
 // fixed nav for the style guide
 .nav--guide{
-	background: rgba($white, .85);
-	display: none; // state on load
+	background-color: rgba($white, .85);
 	
 	position: fixed;
+	left: -999px;
 	z-index: 1002;
+	
+	-webkit-transition: .7s ease-in-out;
+	
+	a:hover{
+		background-color: rgba($blue, .15);
+		color: $black;
+	}
 	
 	> ul > li {
 		@extend .gamma;
@@ -64,10 +71,20 @@ pre {
 	li > ul {
 		margin-left: $half-spacing-unit;
 	}
+	
+	@include media-query(desk){
+		background-color: transparent;
+		left: 0;
+	}
 }
 
 .nav--show{
-	display: block;
+	left: 0;
+}
+
+// currently selected section
+.current{
+	background-color: rgba($blue, .15);
 }
 
 // back to top link styling
@@ -100,6 +117,10 @@ pre {
 		color: lighten($blue, 10%);	
 		@extend %transition;
 	}
+
+	@include media-query(desk){
+		left: -9999px;
+	}	
 }
 
 
@@ -129,7 +150,11 @@ pre {
 
 // container for the the content
 .content--guide{
-	margin: 4rem 3.5rem 0;
+	margin: 3rem 3.5rem 0;
+	
+	@include media-query(desk){
+		margin-left: 250px;
+	}
 }
 
 section{

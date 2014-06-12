@@ -27,7 +27,7 @@
 
 
 
-	<nav class="nav--guide grid__item two-thirds lap-and-up-one-quarter push-half--left epsilon">
+	<nav class="nav--guide push-half--sides epsilon">
 	
 		<ul class="nav nav--stacked">
 			<li><a href="#gridsystem">Grid system</a></li>
@@ -1251,8 +1251,14 @@ DEFINE THESE INPUT TYPES LATER
 
 
 <!-- jQuery -->
+
+<!--
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>
+-->
+
+
+<script src="../js/zepto.min.js"></script>
 
 <!--Script for styling the code snippets 
 
@@ -1277,14 +1283,38 @@ $(document).ready(function () {
 	});
 
 	// hide nav when you click anywhere off of it
-/*
 	$(".content--guide").click(function(e) {
 	    e.stopPropagation();
 	    $( ".nav--guide" ).removeClass( "nav--show" ); 
 	});
-*/
-	
-	
+
+	// smooth scrolling to anchors; original code from: https://gist.github.com/austinpray/5994652
+	function smoothScroll(el, to, duration) {
+	    if (duration < 0) {
+	        return;
+	    }
+	    var difference = to - $(window).scrollTop();
+	    var perTick = difference / duration * 10;
+	    this.scrollToTimerCache = setTimeout(function() {
+	        if (!isNaN(parseInt(perTick, 10))) {
+	            window.scrollTo(0, $(window).scrollTop() + perTick);
+	            smoothScroll(el, to, duration - 10);
+	        }
+	    }.bind(this), 10);
+	}
+	$('.nav--guide a, .backtotop').on('click', function(e) {
+	    e.preventDefault();
+	    smoothScroll($(window), $($(e.currentTarget).attr('href')).offset().top, 200);
+	});
+
+    // add bg color to selected nav item
+	$('.nav--guide a').on('click', function(e) {
+	    if ($(".nav--guide a").hasClass("current")) {
+		$(".nav--guide a").removeClass("current");  
+		  }
+	    $(this).addClass("current");
+	    });
+
 /* -end- */
  });
 </script>
