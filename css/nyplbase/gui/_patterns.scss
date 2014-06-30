@@ -1,4 +1,4 @@
-/*------------------------------------*\
+ /*------------------------------------*\
     $NYPL-DESIGN-PATTERNS
 \*------------------------------------*/
 /**
@@ -115,11 +115,21 @@
 		
 	}
 	
-	img {
+	img{
 		// imgs automatically get the outline
 		@extend .img--outline;
 		// but no left padding as a grid__item
 		padding-left: 0;
+	}
+	
+	p{
+		// grafs are gray
+		color: $warmGrayDarker;
+	}
+	
+	button{
+		@extend .btn--natural;
+		@extend .gradient;
 	}
 }
 
@@ -288,7 +298,7 @@
 }
 
 .tagged{
-	@include callout-box(rgba($blue, .25), transparent);
+	@include callout-box(lighten($blue, 50%), transparent);
 	@extend %transition;
 	
 	display: inline-block;
@@ -307,7 +317,7 @@
 	}
 	
 	&.current{
-		background-color: rgba($blue, .1);
+		background-color: lighten($blue, 40%);
 	}
 }
 
@@ -382,7 +392,6 @@
 .blog p{
 	@include font-size(18px);
 	
-	font-family: $blog-font-family;
 	line-height: 2rem;
 	
 	// positioning
@@ -426,7 +435,7 @@
 
 // comments
 .comment{
-	background-color: rgba($blue, .15);
+	background-color: lighten($blue, 55%);
 	border-radius: $brand-round;
 	padding: $half-spacing-unit/2;
 	width: 150px;

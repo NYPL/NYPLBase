@@ -86,7 +86,7 @@
 	@extend .zeta;
 //	@include extend-icon(icon-arrow-right2, $blue);
 	@extend %transition !optional;
-	@include callout-box(rgba($blue, .15), transparent);
+	@include callout-box(lighten($blue, 50%), transparent);
 	
 	color: $blue;
 	padding: $half-spacing-unit/2;
@@ -114,10 +114,6 @@
 	
 	[data-icon]:before, [class^="icon-"]:before, [class*=" icon-"]:before {
 		vertical-align: baseline;
-	}
-	
-	h1{
-		font-weight: normal;
 	}
 	
 	.asknypl__items{

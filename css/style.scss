@@ -38,7 +38,7 @@
  */
 
 // import some Google fonts for blog experiment -jA
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700|Open+Sans:400italic,400,700,800&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700);
 
 @import "nyplbase/settings/colorlabels";
 @import "nyplbase/settings/fonts";
@@ -88,7 +88,7 @@
  */
 @import "nyplbase/gui/buttons";
 @import "nyplbase/gui/forms";
-@import "nyplbase/gui/header";
+/* @import "nyplbase/gui/header"; */
 @import "nyplbase/gui/icons";
 @import "nyplbase/gui/images";
 @import "nyplbase/gui/nav";
