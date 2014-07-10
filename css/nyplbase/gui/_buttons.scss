@@ -39,6 +39,10 @@
 	@extend %transition !optional;
 	
 	margin: $half-spacing-unit/2;
+	
+	&:hover{
+		color: inherit;
+	}
 }
 
 button{

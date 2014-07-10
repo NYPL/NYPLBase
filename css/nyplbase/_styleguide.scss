@@ -53,7 +53,7 @@ pre {
 	left: -999px;
 	z-index: 1002;
 	
-	-webkit-transition: .7s ease-in-out;
+	@include vendor(transition, .7s ease-in-out);
 	
 	a:hover{
 		background-color: rgba($blue, .15);
