@@ -83,6 +83,7 @@
 	border-bottom: 1px solid $warmGrayLightest;
     color: $blue;
     display: block;
+    letter-spacing: .05rem;
     margin-bottom: .5rem;
     text-transform: uppercase;
     width: 100%;
@@ -135,12 +136,7 @@
 
 
 
-/**
- * Chunks of text that has a large icon illustrating it.
- */
-.chunk--icon{
-	
-}
+
 
 
 
@@ -297,7 +293,7 @@
 	margin-bottom: $half-spacing-unit;
 }
 
-.tagged{
+.tag{
 	@include callout-box(lighten($blue, 50%), transparent);
 	@extend %transition;
 	
@@ -321,12 +317,9 @@
 	}
 }
 
-// MIGHT NOT LAUNCH WITH TAGS
-/*
-.tags{
-	display: none;
-}
-*/
+
+
+
 
 
 /** 

@@ -45,7 +45,9 @@
  * Text color
  * evaluates the background color of an element 
  * in order to pick which text color to use on top of it.
- * Also used for within our button-color mixin.
+ 
+ * Also used in our button-color mixin,
+ * so don't move this mixin around within the code!
  
 	 @include text-on-bg($blue);
  
@@ -72,7 +74,7 @@
 // The following mixin is kind of based on http://tallpixels.com/advanced-sass-mixins/
 
 /*
- * This styles the button based on the color parameter, including text color.
+ * This styles the button, including text color, based on the color parameter.
  * It also concatenates the ".gradient" class so that the mixin
  * can use the background color to evaluate the darker stop color.
 */
@@ -80,14 +82,15 @@
 	background: $color;
 	@include text-on-bg($color);
 
+
 	&.gradient{
 		$toColor: darken($color, $brand-gradient);
 		@include linear-gradient($color, $toColor);		
 	}
 
+
 	&:hover{
-		//opacity: .55;
-		background: lighten($color, .15);
+		background: lighten($color, 10%);
 	}
 }
 

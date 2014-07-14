@@ -38,10 +38,13 @@
  	@include button-color($beautons);
 	@extend %transition !optional;
 	
+	color: $white;
 	margin: $half-spacing-unit/2;
-	
+}
+
+a.btn{
 	&:hover{
-		color: inherit;
+		color: $white;
 	}
 }
 
@@ -60,27 +63,9 @@ button{
 	}
 }
 
-/**
- * For now, in order to override a btn's color settings
- * you have to add a class. Create it here.
- */ 
-
-.btn--greenNeon {
-	@include button-color($greenNeon);
-}
-.btn--orange {
-	@include button-color($orange);
-}
-.btn--black {
-	@include button-color($black);
-}
-
-
-
-
 
 /**
- * These purpose-specific buttons have specific styles.
+ * These purpose-specific buttons have specific colors and styles.
  */ 
 
 .btn--donate {
@@ -92,12 +77,14 @@ button{
 		color: $white;	
 	}
 }
+
 .btn--friends {
 	@include button-color($greenNeon); 
 	
 	color: $black; 
 	text-transform: uppercase;
 }
+
 .btn--sso {
 	@include button-color($warmGrayDarker); 
 	
@@ -110,18 +97,7 @@ button{
 		color: $white;
 	}
 }
-.btn--catalog {
-	@include button-color($indigo); 
-	
-	color: $white; 
-	text-transform: none;
-}
-.btn--nyplorg {
-	@include button-color($blue); 
-	
-	color: $white; 
-	text-transform: none;
-}
+
 
 
 
