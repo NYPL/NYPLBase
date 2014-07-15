@@ -91,9 +91,12 @@
 	color: $blue;
 	line-height: 2rem;
 	padding: $half-spacing-unit/2;
+	text-decoration: none;
 	
 	&:hover{
-		border: 1px solid $blue;
+		//border: 1px solid $blue;
+		background: $blue;
+		color: $white
 	}
 	
 	&::after{

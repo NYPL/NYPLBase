@@ -82,7 +82,6 @@
 	background: $color;
 	@include text-on-bg($color);
 
-
 	&.gradient{
 		$toColor: darken($color, $brand-gradient);
 		@include linear-gradient($color, $toColor);		
