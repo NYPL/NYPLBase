@@ -293,7 +293,7 @@
 	margin-bottom: $half-spacing-unit;
 }
 
-.tag{
+.tagged{
 	@include callout-box(lighten($blue, 50%), transparent);
 	@extend %transition;
 	
