@@ -89,8 +89,9 @@
 	@include callout-box(lighten($blue, 50%), transparent);
 	
 	color: $blue;
+	display: inline-block;
 	line-height: 2rem;
-	padding: $half-spacing-unit/2;
+	padding: $half-spacing-unit/4;
 	text-decoration: none;
 	
 	&:hover{
