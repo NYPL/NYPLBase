@@ -70,7 +70,7 @@
  
 //styles for contextual/targeted appeals
 .appeal{
-	@include callout-box(lighten($warmGrayLightest, 7%), $warmGrayLighter);
+	@include callout-box(#ffffff, $warmGrayLighter);
 	
 	border-width: 3px;
 	border-style: double;
