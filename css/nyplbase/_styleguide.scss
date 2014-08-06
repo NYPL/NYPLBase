@@ -56,7 +56,7 @@ pre {
 	@include vendor(transition, .7s ease-in-out);
 	
 	a:hover{
-		background-color: rgba($blue, .15);
+		background-color: lighten($blue, 50%);
 		color: $black;
 	}
 	
@@ -84,7 +84,7 @@ pre {
 
 // currently selected section
 .current{
-	background-color: rgba($blue, .15);
+	background-color: lighten($blue, 40%);
 }
 
 // back to top link styling

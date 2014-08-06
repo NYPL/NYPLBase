@@ -96,7 +96,7 @@
 	
 	&:hover{
 		//border: 1px solid $blue;
-		background: $blue;
+		background: lighten($blue, 10%);
 		color: $white
 	}
 	
