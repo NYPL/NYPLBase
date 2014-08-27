@@ -15,7 +15,7 @@ body{
 
 // then everything else, alphabetically.
 a{ 
-	color: $black;
+	color: inherit;
 	@extend %transition !optional;
 	
 	&:visited{
@@ -26,7 +26,7 @@ a{
 		color: $blue;
 		
 		img{
-			outline-color: rgba($blue, .5);
+			outline-color: lighten($blue, 50%);
 		}
 	}
 }
@@ -52,6 +52,7 @@ figcaption{
 }
 
 h1,h2,h3,h4,h5,h6 {
+	
 	& a {
 			@extend %transition !optional;
 		

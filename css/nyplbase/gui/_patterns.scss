@@ -64,15 +64,6 @@
 	
 }
 
-.primary{
-	h1, h2{
-		// normalize heds on palm no matter what font class is applied
-		@include media-query(palm){
-			font-size: 1.5em;
-		}
-	}
-}
-
 
 /**
  * Some sections of content need a category/tag as a heading above them.
@@ -103,7 +94,7 @@
 	@extend .grid__item;
 	
 	// nice bottom margin
-	margin-bottom: $base-spacing-unit*2;
+	margin-bottom: $base-spacing-unit*1.5;
 	
 	// positioning
 	position: relative;
@@ -128,10 +119,7 @@
 		color: $warmGrayDarker;
 	}
 	
-	button{
-		@extend .btn--natural;
-		@extend .gradient;
-	}
+
 }
 
 
@@ -248,6 +236,90 @@
 
 }
 
+
+
+
+
+/**
+ * Specific object styling
+ */
+ 
+//styles for contextual/targeted appeals
+.appeal{
+	@include callout-box(#ffffff, $warmGrayLighter);
+	
+	border-width: 3px;
+	border-style: double;
+	text-align: center;
+	
+	p{
+		@extend .beta;
+	}
+}
+
+// styles for "read more"-type links
+.read-more{
+	@extend .zeta;
+//	@include extend-icon(icon-arrow-right2, $blue);
+	@extend %transition !optional;
+	@include button-color(lighten($blue, 50%), $blue);
+	
+	display: inline-block;
+	padding: 0 $half-spacing-unit/2;
+	text-decoration: none;
+	
+	&:hover{
+		border: 1px solid lighten($blue, 50%);
+		background: $white;
+		color: $blue;
+	}
+	
+	&::after{
+		@include nypl-icon();
+		content: "\e72c";
+		margin-left: .35rem;
+		vertical-align: middle;
+	}
+} 
+
+
+
+/**
+ * AskNYPL
+ */
+.asknypl{
+	color: #5e564b;
+	text-align: center;
+
+	
+	[data-icon]:before, [class^="icon-"]:before, [class*=" icon-"]:before {
+		vertical-align: baseline;
+	}
+	
+	.asknypl__items{
+		list-style-type: none;
+		margin: 1.5rem 0 1.5rem 2rem;
+		
+		li{
+			margin-bottom: $half-spacing-unit;
+			margin-bottom: 1.5rem;
+		}
+	}
+	
+	.askchat,.askemail{
+		@extend .gamma;
+		@include button-color(#ece94c, #5e564b);
+		
+		border-radius: $brand-round;
+		padding: 6px;		
+		text-decoration: none;
+		
+		&:hover{
+			background-color: lighten(#ece94c, 20%);
+			color: #5e564b;
+		}
+	}
+}
 
 
 

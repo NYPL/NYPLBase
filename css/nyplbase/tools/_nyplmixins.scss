@@ -75,21 +75,24 @@
 
 /*
  * This styles the button, including text color, based on the color parameter.
- * It also concatenates the ".gradient" class so that the mixin
+ * It also concatenates the ".gradient" class (if used) so that the mixin
  * can use the background color to evaluate the darker stop color.
 */
-@mixin button-color($color){
+@mixin button-color($color, $textcolor, $bordercolor: transparent){
 	background: $color;
-	@include text-on-bg($color);
+	border: 1px solid $bordercolor;
+	color: $textcolor;
 
 	&.gradient{
 		$toColor: darken($color, $brand-gradient);
 		@include linear-gradient($color, $toColor);		
 	}
 
-
+	// override the default hover styles included in button-color mixin
 	&:hover{
-		background: lighten($color, 10%);
+		background: $textcolor;
+		border: 1px solid $color;
+		color: $color;
 	}
 }
 

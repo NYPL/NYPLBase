@@ -69,6 +69,17 @@
     @include font-size($big-size);
 } 
 
+/**
+ * Reset margin-bottom for heds & hed classes
+ */
+h1,.alpha,
+h2,.beta,
+h3,.gamma,
+h4,.delta,
+h5,.epsilon,
+h6,.zeta {
+    margin-bottom: $base-spacing-unit/4;
+}
 
 
 

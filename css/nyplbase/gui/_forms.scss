@@ -66,7 +66,7 @@ input[type="button"] {
 	margin: $half-spacing-unit 0 $half-spacing-unit/2;
 	
 	&.btn--inactive{
-		@include button-color($warmGrayLighter);
+		@include button-color($warmGrayLighter, $white);
 		pointer-events: none;
 	}
 }

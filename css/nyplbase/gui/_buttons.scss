@@ -35,7 +35,7 @@
 		*/
 
 .btn{
- 	@include button-color($beautons);
+ 	@include button-color($beautons, $white);
 	@extend %transition !optional;
 	
 	color: $white;
@@ -43,9 +43,7 @@
 }
 
 a.btn{
-	&:hover{
-		color: $white;
-	}
+	color: $white;
 }
 
 button{
@@ -69,35 +67,9 @@ button{
  */ 
 
 .btn--donate {
-	@include button-color($red); 
-	
-	text-transform: uppercase;
-	
-	&:visited{
-		color: $white;	
-	}
-}
-
-.btn--friends {
-	@include button-color($greenNeon); 
-	
-	color: $black; 
-	text-transform: uppercase;
-}
-
-.btn--sso {
-	@include button-color($warmGrayDarker); 
+	@include button-color($red, $white); 
 	
 	text-transform: uppercase;
 
-	&:visited{
-		color: $white;	
-	}	
-	&:hover{
-		color: $white;
-	}
 }
-
-
-
 
