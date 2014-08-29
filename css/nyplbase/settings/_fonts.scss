@@ -28,22 +28,22 @@
  */
 
 @font-face {
-  @include font-face('Lato', $fontPath, 'lato-lig-webfont');
+  @include font-face('Lato', $fontPath, 'Lato-Lig-webfont');
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  @include font-face('Lato', $fontPath, 'lato-reg-webfont');
+  @include font-face('Lato', $fontPath, 'Lato-Reg-webfont');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  @include font-face('Lato', $fontPath, 'lato-regita-webfont');
+  @include font-face('Lato', $fontPath, 'Lato-RegIta-webfont');
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
-  @include font-face('Lato', $fontPath, 'lato-bol-webfont');
+  @include font-face('Lato', $fontPath, 'Lato-Bol-webfont');
   font-weight: bold;
   font-style: normal;
 }
