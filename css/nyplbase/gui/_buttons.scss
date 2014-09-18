@@ -6,34 +6,6 @@
  * The ".btn" class is extended for form inputs too.
  */
 
-
-		/** NOTE TO SELF ------------------------------------
-		 * Buttons contain styling decisions based on a color choice.
-		 *
-		 * Styling decisions are:
-		 *		- background color, which contains a gradient
-		 *		- text color
-		 *		- hover color
-		 *
-		 * Color choice should IDEALLY come from an added color class:
-		 * 		<a class="btn red">
-		 * rather than redefining a background color in a class used only for buttons.
-		 *
-		 * HOW DO I MAKE .btn PRODUCE THE BG GRADIENT, TEXT COLOR, AND HOVER EFFECT
-		 * BASED ON THE CONCATENATED COLOR CLASS???
-		 
-
-				THIS MIGHT WORK BUT I DON'T KNOW HOW TO USE IT:
-				
-				@mixin color-name(CLASSNAME, $color){
-					.#{CLASSNAME} {
-						background-color: $color;
-					}
-				}
-				
-		* ------------------------------------
-		*/
-
 .btn{
  	@include button-color($beautons, $white);
 	@extend %transition !optional;
@@ -42,7 +14,7 @@
 	margin: $half-spacing-unit/2;
 }
 
-a.btn{
+a.btn, a:visited.btn{
 	color: $white;
 }
 

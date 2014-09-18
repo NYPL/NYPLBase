@@ -32,13 +32,13 @@ img[height]{
  */
 .img--right{
     float:right;
-    margin-bottom:$base-spacing-unit;
+    margin-bottom:$base-spacing-unit/2;
     margin-left:$base-spacing-unit;
 }
 .img--left{
     float:left;
     margin-right:$base-spacing-unit;
-    margin-bottom:$base-spacing-unit;
+    margin-bottom:$base-spacing-unit/2;
 }
 .img--center{
     display:block;
