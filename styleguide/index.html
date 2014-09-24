@@ -30,37 +30,63 @@
 	<nav class="nav--guide push-half--sides epsilon">
 	
 		<ul class="nav nav--stacked">
-			<li><a href="#gridsystem">Grid system</a></li>
-			<li><a href="#elements">Basic elements</a>
-				<ul class="nav nav--stacked">
-					<li><a href="#text">Text</a></li>
-					<li><a href="#links">Links</a></li>
-					<li><a href="#lists">Lists</a></li>
-					<li><a href="#calls-to-action">Buttons</a></li>
-					<li><a href="#forms">Forms</a></li>
-					<li><a href="#images">Images</a></li>
-					<li><a href="#navigational">Nav elements</a></li>
-				</ul>
-			</li>
-			<li><a href="#helpers">Helpers</a>
-				<ul class="nav nav--stacked">
-					<li><a href="#helpclasses">Helper classes</a></li>
-					<li><a href="#mqs">Media queries</a></li>
-					<li><a href="#mixins">Mixins</a></li>
-				</ul>				
-			</li>
+		
 			<li><a href="#branding">Branding</a>
 				<ul class="nav nav--stacked">
-					<li><a href="#branding--general">General notes</a></li>
-					<li><a href="#palette">Color palette</a></li>
-					<li><a href="#icons">Icons</a></li>
-					<li><a href="#logo">Logo</a></li>
-				</ul>				
+					<li><a href="#branding__general">General notes on branding</a></li>
+					<li><a href="#branding__logo">Logo usage</a></li>
+					<li><a href="#branding__palette">Color palette</a></li>
+					<li><a href="#branding__typography">Typography</a>
+						<ul class="nav nav--stacked">
+							<li><a href="#branding__typography__text">Text</a></li>
+							<li><a href="#branding__typography__lists">Lists</a></li>
+						</ul>
+					</li>
+				</ul>
 			</li>
+		
+			<li><a href="#layout">Layout</a>
+				<ul class="nav nav--stacked">
+					<li><a href="#layout__principles">Principles</a></li>
+					<li><a href="#layout__structure">Structure</a></li>
+					<li><a href="#layout__gridsystem">Grid</a></li>
+				</ul>
+			</li>
+			
+			<li><a href="#components">Components</a>
+				<ul class="nav nav--stacked">
+					<li><a href="#components__menus">Menus</a></li>
+					<li><a href="#components__navigational">Navigation elements</a></li>
+					<li><a href="#components__content-dividers">Content dividers</a></li>
+					<li><a href="#components__modals">Modals</a></li>
+					<li><a href="#components__forms">Forms</a></li>
+					<li><a href="#components__images">Images</a></li>
+					<li><a href="#components__icons">Icons</a></li>
+				</ul>
+			</li>
+			
+			<li><a href="#calls-to-action">Calls to action</a>
+				<ul class="nav nav--stacked">
+					<li><a href="#calls-to-action__links">Links</a></li>
+					<li><a href="#calls-to-action__buttons">Buttons</a></li>
+				</ul>
+			</li>
+		
+			<li><a href="#resources">Resources</a>
+				<ul class="nav nav--stacked">
+					<li><a href="#resources__logos">Logos</a></li>
+					<li><a href="#resources__fonts">Fonts</a></li>
+					<li><a href="#resources__icons">Icons</a></li>
+				</ul>
+			</li>
+
 			<li><a href="#coding">Coding</a>
 				<ul class="nav nav--stacked">
-					<li><a href="#structure">How to structure layout</a></li>
-					<li><a href="#patterns">Design patterns</a></li></li>
+					<li><a href="#coding__naming">Note on naming</a></li>
+					<li><a href="#coding__structure">How to structure layout</a></li>
+					<li><a href="#coding__helpclasses">Helper classes</a></li>
+					<li><a href="#coding__mqs">Media queries</a></li>
+					<li><a href="#coding__mixins">Mixins</a></li>
 				</ul>
 						
 			<li><a href="#thanks">Acknowledgements</a></li>
@@ -101,84 +127,84 @@
 				
 				<p class="smallprint text--right">Note: this style guide is a work in progress, and runs off of Base itself, so please be patient with any bugs or other weirdness.<br> Thanks, jennifer Anderson, Senior UX Designer</p></div>
 		</section>
+
+
+		<section id="branding">
+		
+			<h1>Branding</h1>
+
+			<section id="branding__general">
+				<h2>General notes on branding</h2>
+				
+				<div class="notes--guide">
+					<p>In general, the NYPL web style is minimal, with subtle touches. (For example, we do use rounded corners, but at 2px for a gentle effect.) The colors used are flat, except for a subtle top-to-bottom gradient used on buttons.</p>
+					<p>The basis of color on the site is warm grays and white, with accent colors drawn from the primary palette. The primary accent color is <span class="blue whiteText">blue #0090c4</span>. Red is generally reserved, unless the project is not a core site and uses red as a primary palette color. (On the main site, red is specifically reserved for the "Donate" button.)</p>
+					<p>Text-on-background color combinations must provide enough contrast to be readable to users with protonopia; the recommended contrast ratio is 4.5:1 (see <a href="http://www.w3.org/TR/WCAG/#visual-audio-contrast">WCAG level AA</a>). </p>
+					<p>Icons come from Icomoon's "Ultimate" icon set, and may be augmented by approved custom icons. All additional icons must be exported as SVG format for incorporation into the icon font. </p>
+				</div>
+			</section>	
+			
+			<section id="branding__logo">
+				<h2>Logo usage</h2>
+				<p>headers/footers/partnerships on third party websites</p>
+			</section>
+			
+			<section id="branding__palette">
+				<h2>Color palette</h2>
+				
+				<h3>Primary palette colors</h3>
+				
+				<div class="notes--guide">
+					<p>All colors in the palette have an <strong>associated class name</strong>, which are listed below. For example, if you want to give an element a light blue background, add the class <code>.blueLight</code>. The same naming convention applies to <strong>text color classes</strong>, appending "Text"; if you want an element's text to be light blue, add the class <code>.blueLightText</code>.</p>
+					<p class="open-issue">notes about branding usage for these colors</p>
+				</div>
+				
+				<div class="color-block red whiteText">red #d62828</div>
+				<br />
+				<div class="color-block blue whiteText">blue #0090c4</div>
+				
 	
-		<section id="naming">
-			<h2>Note on naming</h2>
-			<div class="notes--guide">			
-				<p>InuitCSS uses the <a href="http://bem.info/method/definitions/">BEM method</a> of <strong>naming its classes</strong>. BEM stands for Block Element Modifier, and it works like this:</p>
 				
-				<p class="text--center gamma">".block__element--modifier"</p>
+				<h3>Secondary palette colors</h3>
+				<div class="notes--guide">
+					<p class="open-issue">notes about branding usage for these colors</p>
+				</div>
+	
+				<div class="color-block orange whiteText">orange #f0731f</div>
+				<br />
+				<div class="color-block green">green #acb737</div>
+				<br />
+				<div class="color-block purple whiteText">purple #aa137e</div>
+				<br />
+	
+	
+				<div class="color-block salmon ">salmon #fd986c</div>
+				<br />
+	
+				<div class="color-block yellowLight ">yellowLight #fbb55d</div>
+				<br />
+	
+				<div class="color-block greenLight ">greenLight #dbdf92</div>
+				<br />
+	
+				<div class="color-block blueLight ">blueLight #c2e7df</div>
+				<br />
+	
+				<div class="color-block purpleLight ">purpleLight #eae7ae</div>
 				
-				<p>in which "block" is the name of the chunk you're working on, "element" is the name of the smaller piece of the chunk, and "modifier" is a descriptor. For example, the class name <code>.nav__item</code> would refer to an item contained in the nav chunk (or "block"). <code>.nav__item--last</code> would refer to the last nav item in the list. You can use just the item and descriptor parts of the convention too, as in <code>.form--horiz</code>.</p>
+				<h3>Warm grays</h3>
+				<div class="color-block warmGrayDarkest whiteText">warmGrayDarkest #5e564b</div>
+				<div class="color-block warmGrayDarker whiteText">warmGrayDarker #7d7872</div>
+				<div class="color-block warmGray ">warmGray #a29d97</div>
+				<div class="color-block warmGrayLighter ">warmGrayLighter #c5c2bb</div>
+				<div class="color-block warmGrayLightest ">warmGrayLightest #e2dedb</div>
 				
-				<p>The exception to this naming convention in Base is the <strong>color classes</strong>, which use intercaps (as in <code>.blueLight</code>).</p> 
-			</div>
+			</section>
 			
-		</section>	
-		
-		<section id="gridsystem">
-
-			<h1>The grid system</h1>
+			<section id="branding__typography">
+				<h2>Typography</h2>
 				
-			<div class="notes--guide">
-				<p>Your content <strong>container</strong> (or any container that will contain elements in the grid) gets a class of <code>.grid</code>. Each <strong>element</strong> that you want to adhere to the grid system gets a class of <code>.grid__item</code>, which sets up, among other things, those elements as inline.</p>
-				<p>Inuit's grid system is not really a traditional grid; it's <strong>based on proportions</strong> rather than columns. (See more at <a href="http://github.com/csswizardry/csswizardry-grids/">csswizardry-grids</a> and <a href="http://csswizardry.com/2013/02/responsive-grid-systems-a-solution/">CSS Wizardry</a>.) For example, if you want an element to take up half of its container, give that element the class <code>.one-half</code>. This way, you don't have to remember the number of columns in your grid!</p>
-				<p>You can also combine these proportion classes with <strong>device contexts</strong> to define at which breakpoint you’d like an element to be a certain size:</p>
-			</div>
-		
-			<pre class="code prettyprint">
-				&lt;div class=&quot;grid__item  one-quarter  lap-one-half  palm-one-whole&quot;&gt; ... &lt;/div&gt;
-			</pre>
-
-<!-- ADD!		
-// centers grid items inside it
-.grid--center
-// gutterless items
-.grid--full			
--->
-
-			<p class="notes--guide">Inuit's grid system relies on the inline setting to avoid the usual "float" hack. This means you can use text-level attributes for easier positioning. One caveat: there's a bug in the whitespace attribute, which means <strong>you need to comment out the space in the code between <code>.grid__item</code> elements</strong>. Kind of a pain? sure, but less hacky. And we at NYPL do not play hackysacks.</p>
-		
-			<pre class="code prettyprint">
-				&lt;div class=&quot;grid&quot;&gt;<br><br>
-			
-			       &lt;div class=&quot;grid__item  one-third&quot;&gt;<br>
-			           &lt;p&gt;One third grid&lt;/p&gt;<br>
-			       &lt;/div&gt;&lt;!--<br><br>
-			
-			    --&gt;&lt;div class=&quot;grid__item  two-thirds&quot;&gt;<br>
-			           &lt;p&gt;Two thirds grid&lt;/p&gt;<br>
-			       &lt;/div&gt;&lt;!--<br><br>
-			
-			    --&gt;&lt;div class=&quot;grid__item  one-half&quot;&gt;<br>
-			           &lt;p&gt;One half grid&lt;/p&gt;<br>
-			       &lt;/div&gt;&lt;!--<br><br>
-			
-			    --&gt;&lt;div class=&quot;grid__item  one-quarter&quot;&gt;<br>
-			           &lt;p&gt;One quarter grid&lt;/p&gt;<br>
-			       &lt;/div&gt;&lt;!--<br><br>
-			
-			    --&gt;&lt;div class=&quot;grid__item  one-quarter&quot;&gt;<br>
-			           &lt;p&gt;One quarter grid&lt;/p&gt;<br>
-			       &lt;/div&gt;<br><br>
-			
-			   &lt;/div&gt;
-
-			 </pre>
-			 
-			 
-			<div class="notes--guide">	 
-				<p class="open-issue">It's possible to nest grid items; d11n on this is coming pending some testing of how nesting <code>.grid__item</code> items is affected by the left margin setting.</p>	 
-			</div>		
-		
-		</section>
-
-
-
-		<h1 id="elements">Basic elements</h1>
-
-
-		<section id="text">
+				<section id="branding__typography__text">
 		
 			<h2>Text</h2>
 			<div class="notes--guide">
@@ -243,476 +269,789 @@
 			
 
 		</section>
-
-
-	
-		<section id="links">
-		
-			<h2>Links</h2>
-			<div class="notes--guide">
-				<p>Links are <strong>underlined</strong>, and change color on hover.</p>
-			</div>
-
-			<h1><a href="">CHAPTER 1. Loomings.</a></h1>
-			<p>Call me <a href="">Ishmael</a>. Some years ago&ndash;never mind how long precisely&ndash;having little or <a href="">no money in my purse</a>, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.</p>
-			
-		</section>	
-	
-			
-		
-		<section id="lists">
-		
-			<h2>Lists</h2>
-			
-			<div class="notes--guide">
-				<p>Our <code>&lt;ul&gt;</code> and <code>&lt;ol&gt;</code> elements adhere to browser <strong>default styles</strong>.</p>
-			</div>
-			
-			
-			<ul>
-				<li>Officers</li>
-				<ul>
-					<li>Ishmael</li>
-					<li>Ahab</li>
-					<li>Starbuck</li>
-				</ul>			
-				<li>Harpooners</li>
-				<ul>
-					<li>Tashtego</li>
-					<li>Daggoo</li>
-					<li>Queequeg</li>
-				</ul>
-			</ul>
-			
-			<ol>
-				<li>Ishmael</li>
-				<li>Ahab</li>
-				<li>Queequeg</li>
-			</ol>
-			
-		</section>
-		
-		
-
-		<section id="calls-to-action">
 				
-			<h2>Buttons/calls-to-action</h2>
-			
-			<div class="notes--guide">
-				<p>Any element (most commonly <code>&lt;a&gt;</code>) used as a <strong>button</strong> gets the <code>.btn</code> class applied. Also, the following elements:
-				<ul><code>
-					<li>&lt;button&gt;</li>
-					<li>&lt;input[type="button"]&gt;</li>
-					<li>&lt;input[type="submit"]&gt;</li>
-				</code></ul>
-				 are styled the same way by default.</p>
-				<p>NYPL buttons should also have the <code>.gradient</code> class added to them. The gradient styling is not applied by default so that it may be omitted from a button if appropriate. (This is much better practice than overriding the default style.)</p>
-				<p>You may also add the <code>.btn--inactive</code> class for a "grayed-out" style.</p>
-			</div>
-			
-			<pre class="code prettyprint">
-				&lt;button class=&quot;gradient&quot;&gt;Get this thing!&lt;/button&gt; <br><br>
-				&lt;button class=&quot;btn--inactive&quot;&gt;Don't get this thing.&lt;/button&gt;
-			</pre>
-			
-			<p>
-				<a class="btn gradient">Get this thing!</a>	
-				<button class="btn--inactive">Don't get this thing.</button>
-			</p>
-			
-			
-			<h3>Sizes</h3>
-			
-			<p class="notes--guide">Use the following alternative <code>.btn--</code> styles to create <strong>buttons of different sizes</strong>.</p>
-			
-			<pre class="code prettyprint">
-				&lt;button class=&quot;gradient btn--small&quot;&gt;small&lt;/button&gt;<br>
-				&lt;button class=&quot;gradient btn--large&quot;&gt;large&lt;/button&gt;<br>
-				&lt;button class=&quot;gradient btn--huge&quot;&gt;huge&lt;/button&gt;
-			</pre>
-			
-			<p>
-				<button class="btn--small gradient">small</button><button class="btn--large gradient">large</button>
-				<button class="btn--huge gradient">huge</button>
-			</p>
-
-			<div class="notes--guide">
-				<p>You can also add the <a href="#text-sizes">text classes</a> for <strong>bigger/smaller text</strong>.</p>
-				<p>Note that the button's padding shrinks or grows proportionally based on the text class. In the above examples, I've only added button size classes; the text size remains the same. Below, I've made some ridiculously mismatched button/text size combos to demonstrate the need to be careful with your classes. (In other words, watch out for Buttons of Unusual Size.)</p>			
-			</div>
-			
-			<pre class="code prettyprint">
-				&lt;button class=&quot;gradient btn--small micro&quot;&gt;small button, micro text&lt;/button&gt;<br>
-				&lt;button class=&quot;gradient btn--huge micro&quot;&gt;huge button, micro text&lt;/button&gt;<br>
-				&lt;button class=&quot;gradient kilo&quot;&gt;regular button, kilo text&lt;/button&gt;
-			</pre>
-			
-			<p>
-				<button class="btn--small gradient micro">small button, micro text</button>
-				<button class="btn--huge gradient micro">huge button, micro text</button>
-				<button class="gradient kilo">regular button, kilo text</button>
-			</p>
-
-			<div class="notes--guide">
-				<p>There's also a class called <code>.btn--natural</code>, which <strong>inherits its type size and padding</strong> from its parent element, which is handy for inline calls-to-action. (Note: the other button and text size classes will have no effect on this style.)</p>			
-			</div>
-			
-			<pre class="code prettyprint">
-				&lt;button class=&quot;gradient btn--natural&quot;&gt;natural&lt;/button&gt;
-			</pre>
-			
-			<p>You make me feel like a <button class="btn--natural gradient">natural</button> woman</p>
-
-			
-			<h3>Specific NYPL use contexts</h3>
-			
-			<div class="notes--guide">
-				<p>Some <strong>NYPL calls-to-action</strong>, like the "Donate" button, have very specific styles. Again: at the moment I don't have a better way to assign these styles, but so far I've got <code>.btn--donate</code> and <code>.btn--friends</code>. This will develop over time, I'm sure.</p>
-			</div>
-
-			<h4>The Donate button</h4>
-			
-			<p>
-				<pre class="code prettyprint ">
-					&lt;button class=&quot;btn--donate&quot;&gt;Donate now&lt;/button&gt;
-				</pre>
-				<button class="btn--donate ">Donate now</button>
-			</p>
-			
-			<h4>Possible Friends-specific button style</h4>
-			
-			<p>
-				<pre class="code prettyprint ">
-					&lt;button class=&quot;btn--friends&quot;&gt;Become a friend&lt;/button&gt;
-				</pre>
-				<button class="btn--friends ">Become a Friend</button>
-			</p>
-			
-			
-			
-			<p class="notes--guide">Note: if you are using any of the additional call-to-action classes listed below on an element that does <strong>not</strong> have the <code>.btn</code> styling applied by default, don't forget to also add <code>.btn</code> class first!.</p>
-			
-			<pre class="code prettyprint">
-				&lt;a class=&quot;btn gradient btn--greenNeon&quot;&gt;greenNeon&lt;/a&gt;<br>
-			</pre>
-			<p>
-				<a class="btn btn--greenNeon gradient">greenNeon</a>
-			</p>
-
-		</section>
-
-
-		
-		<section id="forms">
-		
-			<h2>Forms</h2> 
-			
-			<div class="notes--guide">
-				<p>Below are examples of different configurations of form elements. Text-based inputs are <strong>100% wide by default</strong>, so they can grow or shrink automatically with the available space. </p>
+				<section id="branding__typography__lists">
 				
-				<p>The markup for these forms is very simple and straightforward; I'm not doing anything wacky with element order or nesting that the styling would depend on. <code>&lt;label&gt;</code> elements come before <code>&lt;input&gt;</code> elements, unless that doesn't make sense (for example, checkbox labels come after their inputs in the markup).</p>
-				<p>Adding the class <code>.callout--form</code> to the <code>&lt;form&gt;</code> element gives it that nice warm gray <strong>background and border</strong>, plus a little padding.</p>
-			</div>
-			
-			<h3>Form elements: examples</h3>
-			
-			<div class="grid__item two-thirds hard--left">			
-				<form role="form" id="form__feedback" class="callout--form">
-					<label for="name">Name</label>
-					<input id="name" class="text-input" type="text" placeholder="Name" autocomplete="on">
+					<h2>Lists</h2>
 					
-					<label for="email">Email</label>
-					<input id="email" class="text-input" type="email" placeholder="Email address" autocomplete="on">
+					<div class="notes--guide">
+						<p>Our <code>&lt;ul&gt;</code> and <code>&lt;ol&gt;</code> elements adhere to browser <strong>default styles</strong>.</p>
+					</div>
 					
-					<label for="example-text">Type your message below</label>
-					<textarea id="example-text" class="text-input" rows="5"></textarea>
 					
-					<label for="userhome">Where do you live?</label>
-					<select id="userhome" class="form-control" name="locations">
-						<option value="queens">Queens</option>
-						<optgroup label="Manhattan">
-							<option>Uptown</option>
-							<option>Midtown</option>
-							<option>Downtown</option>
-						</optgroup>
-						<option value="brooklyn">Brooklyn</option>
-						<option value="staten">Staten Island</option>
-						<option value="Bronx">Bronx</option>
-					</select>
-					
-					<fieldset>
-						<legend>I'd like to receive updates:</legend>
-						<ul class="check-list--inline">
-							<li><input id="daily" name="update" type="radio" value="daily" />
-							<label for="daily">Daily</label></li> 
-							
-							<li><input id="weekly" name="update" type="radio" value="weekly" />
-							<label for="weekly">Weekly</label></li>
-							
-							<li><input id="monthly" name="update" type="radio" value="monthly" />
-							<label for="monthly">Monthly</label></li>
+					<ul>
+						<li>Officers</li>
+						<ul>
+							<li>Ishmael</li>
+							<li>Ahab</li>
+							<li>Starbuck</li>
+						</ul>			
+						<li>Harpooners</li>
+						<ul>
+							<li>Tashtego</li>
+							<li>Daggoo</li>
+							<li>Queequeg</li>
 						</ul>
-					</fieldset>
+					</ul>
+					
+					<ol>
+						<li>Ishmael</li>
+						<li>Ahab</li>
+						<li>Queequeg</li>
+					</ol>
+					
+				</section>				
+			
+			</section>
+		
+		</section>
 
-					<input type="submit" value="Send">
-				</form>
-			</div>
+		
+		
+		<section id="layout">
+		
+			<h1>Layout</h1>
+		
+			<section id="layout__principles">
+				<h2>Principles</h2>
+			</section>
+			
+			<section id="layout__structure">
+				<h2>Structure</h2>
+			</section>
+			
+			<section id="layout__gridsystem">
+	
+				<h2>The grid system</h2>
+					
+				<div class="notes--guide">
+					<p>Your content <strong>container</strong> (or any container that will contain elements in the grid) gets a class of <code>.grid</code>. Each <strong>element</strong> that you want to adhere to the grid system gets a class of <code>.grid__item</code>, which sets up, among other things, those elements as inline.</p>
+					<p>Inuit's grid system is not really a traditional grid; it's <strong>based on proportions</strong> rather than columns. (See more at <a href="http://github.com/csswizardry/csswizardry-grids/">csswizardry-grids</a> and <a href="http://csswizardry.com/2013/02/responsive-grid-systems-a-solution/">CSS Wizardry</a>.) For example, if you want an element to take up half of its container, give that element the class <code>.one-half</code>. This way, you don't have to remember the number of columns in your grid!</p>
+					<p>You can also combine these proportion classes with <strong>device contexts</strong> to define at which breakpoint you’d like an element to be a certain size:</p>
+				</div>
+			
+				<pre class="code prettyprint">
+					&lt;div class=&quot;grid__item  one-quarter  lap-one-half  palm-one-whole&quot;&gt; ... &lt;/div&gt;
+				</pre>
+	
+	<!-- ADD!		
+	// centers grid items inside it
+	.grid--center
+	// gutterless items
+	.grid--full			
+	-->
+	
+				<p class="notes--guide">Inuit's grid system relies on the inline setting to avoid the usual "float" hack. This means you can use text-level attributes for easier positioning. One caveat: there's a bug in the whitespace attribute, which means <strong>you need to comment out the space in the code between <code>.grid__item</code> elements</strong>. Kind of a pain? sure, but less hacky. And we at NYPL do not play hackysacks.</p>
+			
+				<pre class="code prettyprint">
+					&lt;div class=&quot;grid&quot;&gt;<br><br>
 				
-			<div class="grid__item one-half hard--left">
-				<form role="form" id="form__login" class="callout--form">
-					<label for="email">Email</label>
+				       &lt;div class=&quot;grid__item  one-third&quot;&gt;<br>
+				           &lt;p&gt;One third grid&lt;/p&gt;<br>
+				       &lt;/div&gt;&lt;!--<br><br>
+				
+				    --&gt;&lt;div class=&quot;grid__item  two-thirds&quot;&gt;<br>
+				           &lt;p&gt;Two thirds grid&lt;/p&gt;<br>
+				       &lt;/div&gt;&lt;!--<br><br>
+				
+				    --&gt;&lt;div class=&quot;grid__item  one-half&quot;&gt;<br>
+				           &lt;p&gt;One half grid&lt;/p&gt;<br>
+				       &lt;/div&gt;&lt;!--<br><br>
+				
+				    --&gt;&lt;div class=&quot;grid__item  one-quarter&quot;&gt;<br>
+				           &lt;p&gt;One quarter grid&lt;/p&gt;<br>
+				       &lt;/div&gt;&lt;!--<br><br>
+				
+				    --&gt;&lt;div class=&quot;grid__item  one-quarter&quot;&gt;<br>
+				           &lt;p&gt;One quarter grid&lt;/p&gt;<br>
+				       &lt;/div&gt;<br><br>
+				
+				   &lt;/div&gt;
+	
+				 </pre>
+				 
+				 
+				<div class="notes--guide">	 
+					<p class="open-issue">It's possible to nest grid items; d11n on this is coming pending some testing of how nesting <code>.grid__item</code> items is affected by the left margin setting.</p>	 
+				</div>		
+			
+			</section>
+		
+		</section>
+
+
+
+		<section id="components">
+		
+			<h1>Components</h1>
+		
+			<section id="components__menus">
+				<h2>Menus</h2>
+				<p class="notes--guide">global nav, sidebars, sub-sites</p>
+			</section>
+		
+			<section id="components__navigational">	
+				
+				<h2>Navigational elements</h2>	
+				
+				<h3>Dropdowns</h3>
+				
+				<p class="warmGrayText">Note to self: this pattern will be created in the header design ("mega-menus" design), then copied here for reference</p>
+	
+				<h3>Breadcrumbs</h3>
+				
+				<div class="notes--guide">
+					<p>The <code>.breadcrumb</code> class extends Inuit's <code>.nav</code> class; adding it to an ol element (it MUST be an ordered list) adds a <code>&raquo;</code> symbol between each element pair.</p>
+				</div>
+				
+				<pre class="code prettyprint">
+					&lt;ol class=&quot;nav  breadcrumb&quot;&gt;<br>
+					&nbsp; &lt;li&gt;&lt;a href=#&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+					&nbsp; &lt;li&gt;&lt;a href=&quot;/voices&quot; title=&quot;Blogs, Videos &amp;amp; Publications&quot;&gt;Blogs, Videos &amp;amp; Publications&lt;/a&gt;&lt;/li&gt;<br>
+					&nbsp; &lt;li&gt;&lt;a href=&quot;/blog&quot; title=&quot;&quot;&gt;Blogs&lt;/a&gt;&lt;/li&gt;<br>
+					&nbsp; &lt;li class=current&gt;&lt;a href=&quot;/voices/blogs/blog-channels&quot; title=&quot;&quot;&gt;Blog Channels&lt;/a&gt;&lt;/li&gt;<br>
+					&lt;/ol&gt;
+				</pre>
+				
+				<ol class="nav  breadcrumb">
+			       <li><a href=#>Home</a></li>
+			       <li><a href="/voices" title="Blogs, Videos &amp; Publications">Blogs, Videos &amp; Publications</a></li>
+			       <li><a href="/blog" title="">Blogs</a></li>
+			       <li><a href="/voices/blogs/blog-channels" title="">Blog Channels</a></li>
+			   </ol>
+				
+				<br><br>
+				
+				<h3>Pagination</h3>
+				
+				<div class="notes--guide">
+					<p>Adding the class <code>.pagination</code> to a list container with the <code>&lt;.nav&gt;</code> class also applied creates the pagination layout. Also use the following classes:
+					<code><ul>
+						<li>pagination__first</li>
+						<li>pagination__last</li>
+						<li>pagination__prev</li>
+						<li>pagination__next</li>
+					</ul></code>
+					on the appropriate elements in your list.
+					</p>
+					<p>(Note: in the example below, the class <code>.active</code> is being applied to the page 5 list item to demonstrate that state, which displays a blue border.)
+				</div>
+				
+				<pre class="code prettyprint">
+					&lt;ol class=&quot;nav pagination&quot;&gt;<br>
+					&nbsp; &lt;li class=&quot;pagination__first&quot;&gt;First&lt;/li&gt;<br>
+					&nbsp; &lt;li class=&quot;pagination__prev&quot;&gt;Previous&lt;/li&gt;<br>
+					&nbsp; &lt;li&gt;&lt;a href=/page/1&gt;1&lt;/a&gt;&lt;/li&gt;<br>
+					&nbsp; &lt;li&gt;&lt;a href=/page/2&gt;2&lt;/a&gt;&lt;/li&gt;<br>
+					&nbsp; &lt;li&gt;&lt;a href=/page/3&gt;3&lt;/a&gt;&lt;/li&gt;<br>
+					&nbsp; &lt;li&gt;&lt;a href=/page/4&gt;4&lt;/a&gt;&lt;/li&gt;<br>
+					&nbsp; &lt;li class=&quot;active&quot;&gt;&lt;a href=/page/5&gt;5&lt;/a&gt;&lt;/li&gt;<br>
+					&nbsp; &lt;li class=&quot;pagination__next&quot;&gt;&lt;a href=/page/next&gt;Next&lt;/a&gt;&lt;/li&gt;<br>
+					&nbsp; &lt;li class=&quot;pagination__last&quot;&gt;&lt;a href=/page/last&gt;Last&lt;/a&gt;&lt;/li&gt;<br>
+					&lt;/ol&gt;
+				</pre>
+				
+				<ol class="nav pagination">
+				   <li class="pagination__first">First</li>
+				   <li class="pagination__prev">Previous</li>
+				   <li><a href=/page/1>1</a></li>
+				   <li><a href=/page/2>2</a></li>
+				   <li><a href=/page/3>3</a></li>
+				   <li><a href=/page/4>4</a></li>
+				   <li class="active"><a href=/page/5>5</a></li>
+				   <li class="pagination__next"><a href=/page/next>Next</a></li>
+				   <li class="pagination__last"><a href=/page/last>Last</a></li>
+				</ol>
+	
+			</section>
+		
+			<section id="components__content-dividers">
+				<h2>Content dividers</h2>
+				<p class="notes--guide">feature boxes, shaded boxes, rules</p>
+			</section>
+
+			<section id="components__modals">
+				<h2>Modals</h2>
+				<p class="notes--guide">ex. hijack light box</p>
+			</section>
+		
+			<section id="components__forms">
+		
+				<h2>Forms</h2> 
+				
+				<div class="notes--guide">
+					<p>Below are examples of different configurations of form elements. Text-based inputs are <strong>100% wide by default</strong>, so they can grow or shrink automatically with the available space. </p>
+					
+					<p>The markup for these forms is very simple and straightforward; I'm not doing anything wacky with element order or nesting that the styling would depend on. <code>&lt;label&gt;</code> elements come before <code>&lt;input&gt;</code> elements, unless that doesn't make sense (for example, checkbox labels come after their inputs in the markup).</p>
+					<p>Adding the class <code>.callout--form</code> to the <code>&lt;form&gt;</code> element gives it that nice warm gray <strong>background and border</strong>, plus a little padding.</p>
+				</div>
+				
+				<h3>Form elements: examples</h3>
+				
+				<div class="grid__item two-thirds hard--left">			
+					<form role="form" id="form__feedback" class="callout--form">
+						<label for="name">Name</label>
+						<input id="name" class="text-input" type="text" placeholder="Name" autocomplete="on">
+						
+						<label for="email">Email</label>
+						<input id="email" class="text-input" type="email" placeholder="Email address" autocomplete="on">
+						
+						<label for="example-text">Type your message below</label>
+						<textarea id="example-text" class="text-input" rows="5"></textarea>
+						
+						<label for="userhome">Where do you live?</label>
+						<select id="userhome" class="form-control" name="locations">
+							<option value="queens">Queens</option>
+							<optgroup label="Manhattan">
+								<option>Uptown</option>
+								<option>Midtown</option>
+								<option>Downtown</option>
+							</optgroup>
+							<option value="brooklyn">Brooklyn</option>
+							<option value="staten">Staten Island</option>
+							<option value="Bronx">Bronx</option>
+						</select>
+						
+						<fieldset>
+							<legend>I'd like to receive updates:</legend>
+							<ul class="check-list--inline">
+								<li><input id="daily" name="update" type="radio" value="daily" />
+								<label for="daily">Daily</label></li> 
+								
+								<li><input id="weekly" name="update" type="radio" value="weekly" />
+								<label for="weekly">Weekly</label></li>
+								
+								<li><input id="monthly" name="update" type="radio" value="monthly" />
+								<label for="monthly">Monthly</label></li>
+							</ul>
+						</fieldset>
+	
+						<input type="submit" value="Send">
+					</form>
+				</div>
+					
+				<div class="grid__item one-half hard--left">
+					<form role="form" id="form__login" class="callout--form">
+						<label for="email">Email</label>
+						<input id="email" class="text-input" type="email" placeholder="Email address" autocomplete="on">
+						
+						<label for="password">Password</label>
+						<input id="password" class="text-input" type="password" placeholder="Password" autocomplete="on">
+						
+						<input type="submit" value="Log in">
+					</form>	
+				</div>
+	
+				<div class="grid__item two-thirds hard--left">				
+					<form role="form" id="form__search" class="callout--form">
+						<label for="search">Search</label>
+						<input id="search" class="text-input" type="search" placeholder="keyword" autocomplete="on">
+						
+						<fieldset>
+							<legend>Type of results:</legend>
+							<ul class="check-list">						
+								<li><input id="image" type="checkbox" value="image" />
+								<label for="image">images</label> </li>
+								
+								<li><input id="video" type="checkbox" value="video" />
+								<label for="video">video</label> </li>
+								
+								<li><input id="transcipts" type="checkbox" value="transcipts" />
+								<label for="transcipts">transcipts</label></li>
+							</ul>
+						</fieldset>
+						
+						<input type="submit" value="search">
+					</form>				
+				</div>
+	
+	<!--
+	DEFINE THESE INPUT TYPES LATER
+						<input type="color" />
+						<input type="file" />
+						<input type="range" />
+						<input type="number" />
+						
+						<input type="date" />
+						<input type="datetime" />
+						<input type="datetime-local" />
+						<input type="month" />
+						<input type="time" />
+						<input type="week" />
+	-->		
+	
+	<!-- ADD!
+	// make inputs styling the same
+	.form-control	
+	// Fixes some positioning on check-lists.
+	.check-list--inline
+	-->
+	
+	
+				<h3>Inline form example</h3>
+					
+				<div class="notes--guide">
+					<p>Adding the class <code>.form--inline</code> to the <code>&lt;form&gt;</code> element <strong>lays out all contained elements inline</strong>, with some comfy padding.</p>
+				</div>
+				
+				<form role="form" id="" class="form--inline" action="" method="">
+					<label class="visuallyhidden" for="email">Email</label>
 					<input id="email" class="text-input" type="email" placeholder="Email address" autocomplete="on">
 					
-					<label for="password">Password</label>
+					<label class="visuallyhidden" for="password">Password</label>
 					<input id="password" class="text-input" type="password" placeholder="Password" autocomplete="on">
 					
-					<input type="submit" value="Log in">
-				</form>	
-			</div>
-
-			<div class="grid__item two-thirds hard--left">				
-				<form role="form" id="form__search" class="callout--form">
-					<label for="search">Search</label>
-					<input id="search" class="text-input" type="search" placeholder="keyword" autocomplete="on">
-					
-					<fieldset>
-						<legend>Type of results:</legend>
-						<ul class="check-list">						
-							<li><input id="image" type="checkbox" value="image" />
-							<label for="image">images</label> </li>
-							
-							<li><input id="video" type="checkbox" value="video" />
-							<label for="video">video</label> </li>
-							
-							<li><input id="transcipts" type="checkbox" value="transcipts" />
-							<label for="transcipts">transcipts</label></li>
-						</ul>
-					</fieldset>
-					
-					<input type="submit" value="search">
-				</form>				
-			</div>
-
-<!--
-DEFINE THESE INPUT TYPES LATER
-					<input type="color" />
-					<input type="file" />
-					<input type="range" />
-					<input type="number" />
-					
-					<input type="date" />
-					<input type="datetime" />
-					<input type="datetime-local" />
-					<input type="month" />
-					<input type="time" />
-					<input type="week" />
--->		
-
-<!-- ADD!
-// make inputs styling the same
-.form-control	
-// Fixes some positioning on check-lists.
-.check-list--inline
--->
-
-
-			<h3>Inline form example</h3>
-				
-			<div class="notes--guide">
-				<p>Adding the class <code>.form--inline</code> to the <code>&lt;form&gt;</code> element <strong>lays out all contained elements inline</strong>, with some comfy padding.</p>
-			</div>
-			
-			<form role="form" id="" class="form--inline" action="" method="">
-				<label class="visuallyhidden" for="email">Email</label>
-				<input id="email" class="text-input" type="email" placeholder="Email address" autocomplete="on">
-				
-				<label class="visuallyhidden" for="password">Password</label>
-				<input id="password" class="text-input" type="password" placeholder="Password" autocomplete="on">
-				
-				<input type="submit" value="submit">
-			</form>
-			
-			
-			<h3>Horizontal form example</h3>
-			
-			<div class="notes--guide">
-				<p>Adding the class <code>.form--horiz</code> to the <code>&lt;form&gt;</code> element creates this <strong>right-aligned label layout</strong>.</p>
-			</div>				
-		
-			<div class="grid__item two-thirds hard--left">
-				<form role="form" id="form__login" class="form--horiz callout--form">
-					<label for="email" class="one-third">Email</label><input id="email" class="two-thirds" type="email" placeholder="Email address" autocomplete="on">
-					
-					<label for="password" class="one-third">Password</label><input id="password" class="two-thirds" type="password" placeholder="Password" autocomplete="on">
-					
-					<input class="one-third push--two-thirds" type="submit" value="Log in">
-				</form>	
-			</div>			
-			
-			<h3>Input states (focus, disabled, validate/error)</h3>
-			
-			<p class="notes--guide">You can use the classes <code>.error</code>, <code>.success</code>, and <code>.disabled</code> to style the corresponding input elements. (Submit inputs get styled as disabled by adding the class <code>.btn--inactive</code>.)</p>
-			
-			<pre class="code prettyprint">
-				&lt;input id=&quot;errorText&quot; type=&quot;text&quot; class=&quot;error&quot;&gt;
-			</pre>
-			
-			<div class="grid__item two-thirds hard--left">
-				<form role="form" id="form__states">
-					<label for="errorText">Error</label>
-					<input id="errorText" type="text" class="error">
-					
-					<label for="successText">Success</label>
-					<input id="successText" type="text" class="success">
-					
-					<label for="disabledText">Disabled</label>
-					<input disabled id="disabledText" type="text" class="disabled">
-					<input disabled type="submit" class="btn--inactive" value="Disabled">
+					<input type="submit" value="submit">
 				</form>
-			</div>			
-
-		</section>
-
-
-
-		<section id="images">
+				
+				
+				<h3>Horizontal form example</h3>
+				
+				<div class="notes--guide">
+					<p>Adding the class <code>.form--horiz</code> to the <code>&lt;form&gt;</code> element creates this <strong>right-aligned label layout</strong>.</p>
+				</div>				
 			
-			<h2>Images</h2>
-			
-			<div class="notes--guide">
-				<p>In InuitCSS, images are set to be <strong>fluid</strong> (i.e. <code>width: 100%;</code>) <strong>by default</strong>. To set an image to be non-fluid, specify width and height attributes in the markup.</p>
-				<p>This is a simple image element, with the class <code>.img--outline</code> applied to give it a soft outline.</p>
-			</div>
-			
-			<div class="grid__item two-thirds hard--left">
-				<img class="img--outline" src="../img/demo/photo_Computers.png" alt="computers in the library">
-			</div>
-
-			<div class="notes--guide">
-				<p>The image-specific helper classes <code>.img--left</code> and <code>.img--right</code> exist in order to float an image left or right within a body of text:</p>
-			</div>
-			
-			<pre class="code prettyprint">
-				&lt;p&gt;&lt;img class=&quot;img--outline img--left&quot; src=&quot;../img/demo/photo_Computers.png&quot; alt=&quot;computers in the library&quot; width=&quot;200px&quot;&gt;Call me Ishmael....<br><br>
-				&lt;p&gt;&lt;img class=&quot;img--outline img--right&quot; src=&quot;../img/demo/photo_Computers.png&quot; alt=&quot;computers in the library&quot; width=&quot;200px&quot;&gt;Call me Ishmael....
-			</pre>
-			
-			<div>
-				<p class="grid__item two-thirds"><img class="img--outline img--left" src="../img/demo/photo_Computers.png" alt="computers in the library" width="200px">Call me Ishmael. Some years ago&mdash;never mind how long precisely&mdash;having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.</p>
-	
-				<p><img class="img--outline img--right" src="../img/demo/photo_Computers.png" alt="computers in the library" width="200px">It is a way I have of driving off the spleen and regulating the circulation. Whenever I find myself growing grim about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily pausing before coffin warehouses, and bringing up the rear of every funeral I meet; and especially whenever my hypos get such an upper hand of me, that it requires a strong moral principle to prevent me from deliberately stepping into the street, and methodically knocking people's hats off&mdash;then, I account it high time to get to sea as soon as I can.</p>
-			</div>
-
-
-			<br><br>
-			
-			<div class="grid__item one-third hard--left">
-				<figure>
-					<img src="../img/demo/nyplphotobooth_jA_orig.jpg">
-					<figcaption>Here is a lovely NYPL employee, showing both her work pride and her guns.</figcaption>
-				</figure>
-			</div><!--
-			
-			--><p class="notes--guide grid__item one-half push--left">Here's an example of <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code>. <br><br>(Note: <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> are only used for <strong>true captions</strong>, not just any old picture with text next to it.)</p>
-					
-			<h3>Thumbnails</h3>
-			
-			<div class="notes--guide">
-				<p>Adding the class <code>.thumbnails</code> to a container of <code>&lt;img&gt;</code> elements lays out 100x100px images.</p>
-			</div>
-			<div class="thumbnails">
-				<img src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
-				<img src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
-				<img src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
-				<img src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
-				<img src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
-			</div>
+				<div class="grid__item two-thirds hard--left">
+					<form role="form" id="form__login" class="form--horiz callout--form">
+						<label for="email" class="one-third">Email</label><input id="email" class="two-thirds" type="email" placeholder="Email address" autocomplete="on">
 						
+						<label for="password" class="one-third">Password</label><input id="password" class="two-thirds" type="password" placeholder="Password" autocomplete="on">
+						
+						<input class="one-third push--two-thirds" type="submit" value="Log in">
+					</form>	
+				</div>			
+				
+				<h3>Input states (focus, disabled, validate/error)</h3>
+				
+				<p class="notes--guide">You can use the classes <code>.error</code>, <code>.success</code>, and <code>.disabled</code> to style the corresponding input elements. (Submit inputs get styled as disabled by adding the class <code>.btn--inactive</code>.)</p>
+				
+				<pre class="code prettyprint">
+					&lt;input id=&quot;errorText&quot; type=&quot;text&quot; class=&quot;error&quot;&gt;
+				</pre>
+				
+				<div class="grid__item two-thirds hard--left">
+					<form role="form" id="form__states">
+						<label for="errorText">Error</label>
+						<input id="errorText" type="text" class="error">
+						
+						<label for="successText">Success</label>
+						<input id="successText" type="text" class="success">
+						
+						<label for="disabledText">Disabled</label>
+						<input disabled id="disabledText" type="text" class="disabled">
+						<input disabled type="submit" class="btn--inactive" value="Disabled">
+					</form>
+				</div>			
+	
+			</section>
+		
+			<section id="components__images">
+				
+				<h2>Images</h2>
+				
+				<div class="notes--guide">
+					<p>In InuitCSS, images are set to be <strong>fluid</strong> (i.e. <code>width: 100%;</code>) <strong>by default</strong>. To set an image to be non-fluid, specify width and height attributes in the markup.</p>
+					<p>This is a simple image element, with the class <code>.img--outline</code> applied to give it a soft outline.</p>
+				</div>
+				
+				<div class="grid__item two-thirds hard--left">
+					<img class="img--outline" src="../img/demo/photo_Computers.png" alt="computers in the library">
+				</div>
+	
+				<div class="notes--guide">
+					<p>The image-specific helper classes <code>.img--left</code> and <code>.img--right</code> exist in order to float an image left or right within a body of text:</p>
+				</div>
+				
+				<pre class="code prettyprint">
+					&lt;p&gt;&lt;img class=&quot;img--outline img--left&quot; src=&quot;../img/demo/photo_Computers.png&quot; alt=&quot;computers in the library&quot; width=&quot;200px&quot;&gt;Call me Ishmael....<br><br>
+					&lt;p&gt;&lt;img class=&quot;img--outline img--right&quot; src=&quot;../img/demo/photo_Computers.png&quot; alt=&quot;computers in the library&quot; width=&quot;200px&quot;&gt;Call me Ishmael....
+				</pre>
+				
+				<div>
+					<p class="grid__item two-thirds"><img class="img--outline img--left" src="../img/demo/photo_Computers.png" alt="computers in the library" width="200px">Call me Ishmael. Some years ago&mdash;never mind how long precisely&mdash;having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.</p>
+		
+					<p><img class="img--outline img--right" src="../img/demo/photo_Computers.png" alt="computers in the library" width="200px">It is a way I have of driving off the spleen and regulating the circulation. Whenever I find myself growing grim about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily pausing before coffin warehouses, and bringing up the rear of every funeral I meet; and especially whenever my hypos get such an upper hand of me, that it requires a strong moral principle to prevent me from deliberately stepping into the street, and methodically knocking people's hats off&mdash;then, I account it high time to get to sea as soon as I can.</p>
+				</div>
+	
+	
+				<br><br>
+				
+				<div class="grid__item one-third hard--left">
+					<figure>
+						<img src="../img/demo/nyplphotobooth_jA_orig.jpg">
+						<figcaption>Here is a lovely NYPL employee, showing both her work pride and her guns.</figcaption>
+					</figure>
+				</div><!--
+				
+				--><p class="notes--guide grid__item one-half push--left">Here's an example of <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code>. <br><br>(Note: <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> are only used for <strong>true captions</strong>, not just any old picture with text next to it.)</p>
+						
+				<h3>Thumbnails</h3>
+				
+				<div class="notes--guide">
+					<p>Adding the class <code>.thumbnails</code> to a container of <code>&lt;img&gt;</code> elements lays out 100x100px images.</p>
+				</div>
+				<div class="thumbnails">
+					<img src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
+					<img src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
+					<img src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
+					<img src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
+					<img src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
+				</div>
+							
+			</section>
+				
+			<section id="components__icons">
+		
+				<h2>Icons</h2>
+				
+				<div class="notes--guide">
+					<p>We use a custom export of <a href="http://icomoon.io/"><strong>Icomoon</strong>'s</a> proprietary icons, which are available for use under the <a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License</a>. Included as part of the icon set are two icons of the "lion mark" (just the lion part) logo. (More on how to use those further on in the guide!)</p>
+					<p><span class="beta">This is the <a href="../fonts/icons-demo/demo.html"><strong>current set</strong></a>,</span> which is handy reference for choosing icons.</p>
+				</div>
+	
+	
+	
+				<h3>How to use the icons</h3>
+				
+				<h4>Class name</h4>
+				
+				<pre class="code prettyprint">
+					&lt;p class=&quot;icon-cog&quot;&gt;This is some text&lt;/p&gt;
+				</pre>
+				
+				<p class="icon-cog">This is some text</p>
+				
+				<h4>Data-icon attribute</h4>
+				
+				<pre class="code prettyprint">
+					&lt;p aria-hidden=&quot;true&quot; data-icon=&quot;&amp;#xf013;&quot;&gt;This is also some text&lt;/p&gt;
+				</pre>
+				
+				<p class="fs1" aria-hidden="true" data-icon="&#xe690;">This is also some text</p>
+				
+	
+				
+				
+				<h4>Sizes</h4>
+				
+				<div class="notes--guide">
+					<p>If you simply apply either an icon class or a data-icon attribute to an element, the icon that is attached will render at the <strong>same font size as its containing element</strong>. You can add font size classes to any element to affect the size of the text.</p>
+				</div>	
+				
+				<pre class="code prettyprint">
+					&lt;ul class=&quot;nav grid__item four-fifths&quot;&gt;<br>
+					&nbsp; &lt;li class=&quot;zeta icon-cog&quot;&gt;List item here&lt;/li&gt;<br>
+					&nbsp; &lt;li class=&quot;episilon icon-bookmark&quot;&gt;Another item here&lt;/li&gt;<br>
+					&nbsp; &lt;li class=&quot;gamma icon-book&quot;&gt;Last one&lt;/li&gt;<br>
+					&lt;/ul&gt;
+				</pre>		
+				
+				<ul class="nav grid__item four-fifths">
+					<li class="zeta icon-cog">List item here</li>
+					<li class="episilon icon-bookmark">Another item here</li>
+					<li class="gamma icon-book">Last one</li>
+				</ul>
+				
+				<div class="notes--guide">
+					<p>You can combine 2 elements (such as a span and a paragraph), one containing the icon and one containing some content, and give each a <strong>different font size</strong> class. You can also give them <strong>different color classes</strong> (see <a href="#palette">color section</a> for class names).</p>
+				</div>
+				
+				<pre class="code prettyprint grid__item one-whole">
+					&lt;span class=&quot;giga blueText&quot; aria-hidden=&quot;true&quot; data-icon=&quot;&amp;#xe61d;&quot;&gt;&lt;/span&gt;
+					&lt;p class=&quot;grid__item four-eighths gamma&quot;&gt;This large icon illustrates this chunk of content.&lt;/p&gt;
+				</pre>
+				
+				<div class="grid__item one-half">
+					<span class="giga blueText" aria-hidden="true" data-icon="&#xe61d;"></span>
+					<p class="grid__item four-eighths gamma">The large icon illustrates this chunk of content.</p>
+				</div>
+	
+	
+				<h4>The logo icon</h4>
+				
+					<p class="notes--guide">This is the logo (without the "New York Public Library" text, it's referred to as the "lion mark"), conveniently available as part of our icon font! Because it's an icon font, changing the color of the lion mark is as easy as <strong>applying a text color</strong>.</p>
+					<p class="one-whole push--one-quarter giga" aria-hidden="true" data-icon="&#xe600;"></p>
+		
+					<p class="notes--guide">See? All I did was change the color of the text of the element with the icon. <strong>Now it's blue!</strong></p>
+					<p class="one-whole push--one-quarter giga blueText" aria-hidden="true" data-icon="&#xe600;"></p>
+				
+					<div class="notes--guide">
+						<p>We also have a version of the lion mark in reverse. Here it is, no styling applied.</p>
+						<p>But remember, what you see here is totally wrong. Bad, wrong, no-no. <strong>Never</strong> use the lion mark with black/dark fills. The thing to remember is: <strong>the fill is always lighter than the background!</strong></p>
+					</div>
+					<p class="one-whole push--one-quarter giga" aria-hidden="true" data-icon="&#xe601;"></p>
+					
+					<p class="notes--guide">The trick is to apply a color <strong>to the reverse version</strong> of the lion mark that is <em>lighter</em> than the background it sits on. See?</p>
+					<p class="one-whole push--one-quarter giga whiteText black" aria-hidden="true" data-icon="&#xe601;"></p>
+					
+			</section>
+		
 		</section>
 
 
-			
-		<section id="navigational">	
-			
-			<h2>Navigational elements</h2>	
-			
-			<h3>Dropdowns</h3>
-			
-			<p class="warmGrayText">Note to self: this pattern will be created in the header design ("mega-menus" design), then copied here for reference</p>
 
-			<h3>Breadcrumbs</h3>
+		<section id="calls-to-action">
+		
+			<h1>Calls to action</h1>
+		
+			<section id="calls-to-action__links">
+				<h2>Links</h2>
+				<div class="notes--guide">
+					<p>Links are <strong>underlined</strong>, and change color on hover.</p>
+				</div>
+	
+				<h1><a href="">CHAPTER 1. Loomings.</a></h1>
+				<p>Call me <a href="">Ishmael</a>. Some years ago&ndash;never mind how long precisely&ndash;having little or <a href="">no money in my purse</a>, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.</p>
+			</section>
 			
-			<div class="notes--guide">
-				<p>The <code>.breadcrumb</code> class extends Inuit's <code>.nav</code> class; adding it to an ol element (it MUST be an ordered list) adds a <code>&raquo;</code> symbol between each element pair.</p>
-			</div>
-			
-			<pre class="code prettyprint">
-				&lt;ol class=&quot;nav  breadcrumb&quot;&gt;<br>
-				&nbsp; &lt;li&gt;&lt;a href=#&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
-				&nbsp; &lt;li&gt;&lt;a href=&quot;/voices&quot; title=&quot;Blogs, Videos &amp;amp; Publications&quot;&gt;Blogs, Videos &amp;amp; Publications&lt;/a&gt;&lt;/li&gt;<br>
-				&nbsp; &lt;li&gt;&lt;a href=&quot;/blog&quot; title=&quot;&quot;&gt;Blogs&lt;/a&gt;&lt;/li&gt;<br>
-				&nbsp; &lt;li class=current&gt;&lt;a href=&quot;/voices/blogs/blog-channels&quot; title=&quot;&quot;&gt;Blog Channels&lt;/a&gt;&lt;/li&gt;<br>
-				&lt;/ol&gt;
-			</pre>
-			
-			<ol class="nav  breadcrumb">
-		       <li><a href=#>Home</a></li>
-		       <li><a href="/voices" title="Blogs, Videos &amp; Publications">Blogs, Videos &amp; Publications</a></li>
-		       <li><a href="/blog" title="">Blogs</a></li>
-		       <li><a href="/voices/blogs/blog-channels" title="">Blog Channels</a></li>
-		   </ol>
-			
-			<br><br>
-			
-			<h3>Pagination</h3>
-			
-			<div class="notes--guide">
-				<p>Adding the class <code>.pagination</code> to a list container with the <code>&lt;.nav&gt;</code> class also applied creates the pagination layout. Also use the following classes:
-				<code><ul>
-					<li>pagination__first</li>
-					<li>pagination__last</li>
-					<li>pagination__prev</li>
-					<li>pagination__next</li>
-				</ul></code>
-				on the appropriate elements in your list.
+			<section id="calls-to-action__buttons">
+				<h2>Buttons</h2>
+				
+				<div class="notes--guide">
+					<p>Any element (most commonly <code>&lt;a&gt;</code>) used as a <strong>button</strong> gets the <code>.btn</code> class applied. Also, the following elements:
+					<ul><code>
+						<li>&lt;button&gt;</li>
+						<li>&lt;input[type="button"]&gt;</li>
+						<li>&lt;input[type="submit"]&gt;</li>
+					</code></ul>
+					 are styled the same way by default.</p>
+					<p>NYPL buttons should also have the <code>.gradient</code> class added to them. The gradient styling is not applied by default so that it may be omitted from a button if appropriate. (This is much better practice than overriding the default style.)</p>
+					<p>You may also add the <code>.btn--inactive</code> class for a "grayed-out" style.</p>
+				</div>
+				
+				<pre class="code prettyprint">
+					&lt;button class=&quot;gradient&quot;&gt;Get this thing!&lt;/button&gt; <br><br>
+					&lt;button class=&quot;btn--inactive&quot;&gt;Don't get this thing.&lt;/button&gt;
+				</pre>
+				
+				<p>
+					<a class="btn gradient">Get this thing!</a>	
+					<button class="btn--inactive">Don't get this thing.</button>
 				</p>
-				<p>(Note: in the example below, the class <code>.active</code> is being applied to the page 5 list item to demonstrate that state, which displays a blue border.)
-			</div>
+				
+				
+				<h3>Sizes</h3>
+				
+				<p class="notes--guide">Use the following alternative <code>.btn--</code> styles to create <strong>buttons of different sizes</strong>.</p>
+				
+				<pre class="code prettyprint">
+					&lt;button class=&quot;gradient btn--small&quot;&gt;small&lt;/button&gt;<br>
+					&lt;button class=&quot;gradient btn--large&quot;&gt;large&lt;/button&gt;<br>
+					&lt;button class=&quot;gradient btn--huge&quot;&gt;huge&lt;/button&gt;
+				</pre>
+				
+				<p>
+					<button class="btn--small gradient">small</button><button class="btn--large gradient">large</button>
+					<button class="btn--huge gradient">huge</button>
+				</p>
+	
+				<div class="notes--guide">
+					<p>You can also add the <a href="#text-sizes">text classes</a> for <strong>bigger/smaller text</strong>.</p>
+					<p>Note that the button's padding shrinks or grows proportionally based on the text class. In the above examples, I've only added button size classes; the text size remains the same. Below, I've made some ridiculously mismatched button/text size combos to demonstrate the need to be careful with your classes. (In other words, watch out for Buttons of Unusual Size.)</p>			
+				</div>
+				
+				<pre class="code prettyprint">
+					&lt;button class=&quot;gradient btn--small micro&quot;&gt;small button, micro text&lt;/button&gt;<br>
+					&lt;button class=&quot;gradient btn--huge micro&quot;&gt;huge button, micro text&lt;/button&gt;<br>
+					&lt;button class=&quot;gradient kilo&quot;&gt;regular button, kilo text&lt;/button&gt;
+				</pre>
+				
+				<p>
+					<button class="btn--small gradient micro">small button, micro text</button>
+					<button class="btn--huge gradient micro">huge button, micro text</button>
+					<button class="gradient kilo">regular button, kilo text</button>
+				</p>
+	
+				<div class="notes--guide">
+					<p>There's also a class called <code>.btn--natural</code>, which <strong>inherits its type size and padding</strong> from its parent element, which is handy for inline calls-to-action. (Note: the other button and text size classes will have no effect on this style.)</p>			
+				</div>
+				
+				<pre class="code prettyprint">
+					&lt;button class=&quot;gradient btn--natural&quot;&gt;natural&lt;/button&gt;
+				</pre>
+				
+				<p>You make me feel like a <button class="btn--natural gradient">natural</button> woman</p>
+	
+				
+				<h3>Specific NYPL use contexts</h3>
+				
+				<div class="notes--guide">
+					<p>Some <strong>NYPL calls-to-action</strong>, like the "Donate" button, have very specific styles. Again: at the moment I don't have a better way to assign these styles, but so far I've got <code>.btn--donate</code> and <code>.btn--friends</code>. This will develop over time, I'm sure.</p>
+				</div>
+	
+				<h4>The Donate button</h4>
+				
+				<p>
+					<pre class="code prettyprint ">
+						&lt;button class=&quot;btn--donate&quot;&gt;Donate now&lt;/button&gt;
+					</pre>
+					<button class="btn--donate ">Donate now</button>
+				</p>
+				
+				<h4>Possible Friends-specific button style</h4>
+				
+				<p>
+					<pre class="code prettyprint ">
+						&lt;button class=&quot;btn--friends&quot;&gt;Become a friend&lt;/button&gt;
+					</pre>
+					<button class="btn--friends ">Become a Friend</button>
+				</p>
+				
+				
+				
+				<p class="notes--guide">Note: if you are using any of the additional call-to-action classes listed below on an element that does <strong>not</strong> have the <code>.btn</code> styling applied by default, don't forget to also add <code>.btn</code> class first!.</p>
+				
+				<pre class="code prettyprint">
+					&lt;a class=&quot;btn gradient btn--greenNeon&quot;&gt;greenNeon&lt;/a&gt;<br>
+				</pre>
+				<p>
+					<a class="btn btn--greenNeon gradient">greenNeon</a>
+				</p>
+				
 			
-			<pre class="code prettyprint">
-				&lt;ol class=&quot;nav pagination&quot;&gt;<br>
-				&nbsp; &lt;li class=&quot;pagination__first&quot;&gt;First&lt;/li&gt;<br>
-				&nbsp; &lt;li class=&quot;pagination__prev&quot;&gt;Previous&lt;/li&gt;<br>
-				&nbsp; &lt;li&gt;&lt;a href=/page/1&gt;1&lt;/a&gt;&lt;/li&gt;<br>
-				&nbsp; &lt;li&gt;&lt;a href=/page/2&gt;2&lt;/a&gt;&lt;/li&gt;<br>
-				&nbsp; &lt;li&gt;&lt;a href=/page/3&gt;3&lt;/a&gt;&lt;/li&gt;<br>
-				&nbsp; &lt;li&gt;&lt;a href=/page/4&gt;4&lt;/a&gt;&lt;/li&gt;<br>
-				&nbsp; &lt;li class=&quot;active&quot;&gt;&lt;a href=/page/5&gt;5&lt;/a&gt;&lt;/li&gt;<br>
-				&nbsp; &lt;li class=&quot;pagination__next&quot;&gt;&lt;a href=/page/next&gt;Next&lt;/a&gt;&lt;/li&gt;<br>
-				&nbsp; &lt;li class=&quot;pagination__last&quot;&gt;&lt;a href=/page/last&gt;Last&lt;/a&gt;&lt;/li&gt;<br>
-				&lt;/ol&gt;
-			</pre>
+			</section><!-- end buttons -->
 			
-			<ol class="nav pagination">
-			   <li class="pagination__first">First</li>
-			   <li class="pagination__prev">Previous</li>
-			   <li><a href=/page/1>1</a></li>
-			   <li><a href=/page/2>2</a></li>
-			   <li><a href=/page/3>3</a></li>
-			   <li><a href=/page/4>4</a></li>
-			   <li class="active"><a href=/page/5>5</a></li>
-			   <li class="pagination__next"><a href=/page/next>Next</a></li>
-			   <li class="pagination__last"><a href=/page/last>Last</a></li>
-			</ol>
+		</section><!-- end calls-to-action -->
 
+
+
+		<section id="resources">
+		
+			<h1>Resources</h1>
+			
+			<section id="resources__logos">
+				<h2>Logos</h2>
+			</section>
+			
+			<section id="resources__fonts">
+				<h2>Fonts</h2>
+			</section>
+			
+			<section id="resources__icons">
+				<h2>Icons</h2>
+			</section>
+		
 		</section>
 
 
 
 
-		<h1 id="helpers">Helpers</h1>
 
-		<section id="helpclasses">
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+		
+		
+		<h1 id="coding">Coding</h1>
+		
+		
+		<section id="coding__naming">
+			<h2>Note on naming</h2>
+			<div class="notes--guide">			
+				<p>InuitCSS uses the <a href="http://bem.info/method/definitions/">BEM method</a> of <strong>naming its classes</strong>. BEM stands for Block Element Modifier, and it works like this:</p>
+				
+				<p class="text--center gamma">".block__element--modifier"</p>
+				
+				<p>in which "block" is the name of the chunk you're working on, "element" is the name of the smaller piece of the chunk, and "modifier" is a descriptor. For example, the class name <code>.nav__item</code> would refer to an item contained in the nav chunk (or "block"). <code>.nav__item--last</code> would refer to the last nav item in the list. You can use just the item and descriptor parts of the convention too, as in <code>.form--horiz</code>.</p>
+				
+				<p>The exception to this naming convention in Base is the <strong>color classes</strong>, which use intercaps (as in <code>.blueLight</code>).</p> 
+			</div>
+			
+		</section>		
+		
+		<section id="coding__structure">
+			<h2>How to structure layout</h2>
+
+			<p class="notes--guide">First, give the <code>body</code> a class of <code>.grid--center</code> (this will work with some other classes to center its contained elements):</p>
+			
+			<pre class="code prettyprint">&lt;body class=&quot;grid--center&quot;&gt;</pre>
+
+
+			<p class="notes--guide">Then start with <code>sections</code> (which have a set max-width so that the content doesn't stretch unreasonably).</p>
+			
+			<pre class="code prettyprint">
+				&lt;section&gt;<br>
+				&lt;/section&gt;
+			</pre>
+			
+			<p class="notes--guide">Each <code>section</code> is given a class of <code>.primary</code>, <code>.secondary</code>, or <code>.tertiary</code>, to designate what priority of content they contain. (<code>Section</code>s contain <code>.grid__item</code>s, so those <code>section</code> class names also extend the class <code>.grid</code>.)</p>
+			
+			<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
+			&lt;/section&gt;</pre>
+
+			<p class="notes--guide">To build a chunk of content, start with a <code>div</code> and the class name <code>.chunk</code> (<code>.chunk</code> extends the class <code>.grid__item</code>):</p>
+			
+			<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
+			&nbsp; &lt;div class=&quot;chunk&quot;&gt;<br>
+			&nbsp; &lt;/div&gt;<br>
+			&lt;/section&gt;</pre> 
+			
+			<p class="notes--guide">You can then add grid classes to tell the chunk how to behave in different device contexts:</p>
+			
+			<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
+			&nbsp; &lt;div class=&quot;chunk one-whole lap-and-up-one-half desk-one-third&quot;&gt;<br>
+			&nbsp; &lt;/div&gt;<br>
+			&lt;/section&gt;</pre>	
+			
+			
+			
+			<p class="notes--guide">Your section doesn't have to contain <code>div</code>s; maybe the more appropriate containers are article and sidebar, in which case your code might start like this:</p>
+			
+			<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
+			&nbsp; &lt;article class=&quot;grid__item one-whole desk-two-thirds&quot;&gt;&lt;/article&gt;<br>
+			&nbsp; &lt;sidebar class=&quot;grid__item one-whole desk-one-third&quot;&gt;&lt;/sidebar&gt;<br>
+			&lt;/section&gt;</pre>
+				
+			
+			<p class="notes--guide">Elements within the chunk can respond to the context too (don't forget to comment out the code whitespace between elements you want to align in the grid system):</p>
+			
+			<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
+			&nbsp; &lt;div class=&quot;chunk one-whole lap-and-up-one-half desk-one-third&quot;&gt;<br>
+			&nbsp; &nbsp; &lt;img class=&quot;one-whole&quot;&gt;<br>
+			&nbsp; &nbsp; &lt;h2 class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/h2&gt;&lt;!--<br>
+			&nbsp; &nbsp; --&gt;&lt;p class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/p&gt;<br>
+			&nbsp; &lt;/div&gt;<br>
+			&lt;/section&gt;</pre>	
+
+			<p class="notes--guide">Keep building the structure of the page in this way.</p>
+
+			<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
+			&nbsp; &lt;div class=&quot;chunk one-whole lap-and-up-one-half desk-one-third&quot;&gt;<br>
+			&nbsp; &nbsp; &lt;img class=&quot;one-whole&quot;&gt;<br>
+			&nbsp; &nbsp; &lt;h2 class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/h2&gt;&lt;!--<br>
+			&nbsp; &nbsp; --&gt;&lt;p class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/p&gt;<br>
+			&nbsp; &lt;/div&gt;&lt;!--<br>
+				<br>
+			&nbsp; --&gt;&lt;div class=&quot;chunk one-whole lap-and-up-one-half desk-one-third&quot;&gt;<br>
+			&nbsp; &nbsp; &lt;img class=&quot;one-whole&quot;&gt;<br>
+			&nbsp; &nbsp; &lt;h2 class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/h2&gt;&lt;!--<br>
+			&nbsp; &nbsp; --&gt;&lt;p class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/p&gt;<br>
+			&nbsp; &lt;/div&gt;&lt;!--<br>
+				<br>
+			&nbsp; --&gt;&lt;div class=&quot;chunk one-whole lap-and-up-one-half desk-one-third&quot;&gt;<br>
+			&nbsp; &nbsp; &lt;img class=&quot;one-whole&quot;&gt;<br>
+			&nbsp; &nbsp; &lt;h2 class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/h2&gt;&lt;!--<br>
+			&nbsp; &nbsp; --&gt;&lt;p class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/p&gt;<br>
+			&nbsp; &lt;/div&gt;<br>
+			&lt;/section&gt;</pre>
+			
+		</section>
+
+		<section id="coding__helpclasses">
 			<h2>Helper classes</h2>
 
 			<p class="notes--guide">Inuit recommends to only use a helper class if an element/component <strong>doesn’t already have a class</strong> to which you could apply this styling, e.g. if you need to float <code>.main-nav</code> left then add <code>float:left;</code> to that ruleset as opposed to adding the <code>.float--left</code> class to the markup. Also note that many of these classes are declared <code>!important</code> because they are intended to <strong>override other selectors</strong>.</p>
@@ -861,7 +1200,7 @@ DEFINE THESE INPUT TYPES LATER
 
 		</section>
 
-		<section id="mqs">
+		<section id="coding__mqs">
 			<h2>Media queries</h2>
 			<p class="notes--guide">You can use the following breakpoints:</p>
 			<pre class="code">
@@ -881,7 +1220,7 @@ DEFINE THESE INPUT TYPES LATER
 			
 		</section>
 
-		<section id="mixins">
+		<section id="coding__mixins">
 			<h2>Mixins</h2>
 			<p class="notes--guide">If you're working with the Sass, you can take advantage of variables, media queries, and some handy mixins.</p>
 			
@@ -910,267 +1249,29 @@ DEFINE THESE INPUT TYPES LATER
 
 
 
-		<h1 id="branding">Branding</h1>
-		
-		<section id="branding--general">
-			<h2>General notes on branding</h2>
-			
-			<div class="notes--guide">
-				<p>In general, the NYPL web style is minimal, with subtle touches. (For example, we do use rounded corners, but at 2px for a gentle effect.) The colors used are flat, except for a subtle top-to-bottom gradient used on buttons.</p>
-				<p>The basis of color on the site is warm grays and white, with accent colors drawn from the primary palette. The primary accent color is <span class="blue whiteText">blue #0090c4</span>. Red is generally reserved, unless the project is not a core site and uses red as a primary palette color. (On the main site, red is specifically reserved for the "Donate" button.)</p>
-				<p>Text-on-background color combinations must provide enough contrast to be readable to users with protonopia; the recommended contrast ratio is 4.5:1 (see <a href="http://www.w3.org/TR/WCAG/#visual-audio-contrast">WCAG level AA</a>). </p>
-				<p>Icons come from Icomoon's "Ultimate" icon set, and may be augmented by approved custom icons. All additional icons must be exported as SVG format for incorporation into the icon font. </p>
-			</div>
-		</section>
-
-		<section id="palette">
-			<h2>Color palette</h2>
-			
-			<h3>Primary palette colors</h3>
-			
-			<div class="notes--guide">
-				<p>All colors in the palette have an <strong>associated class name</strong>, which are listed below. For example, if you want to give an element a light blue background, add the class <code>.blueLight</code>. The same naming convention applies to <strong>text color classes</strong>, appending "Text"; if you want an element's text to be light blue, add the class <code>.blueLightText</code>.</p>
-				<p class="open-issue">notes about branding usage for these colors</p>
-			</div>
-			
-			<div class="color-block red whiteText">red #d62828</div>
-			<div class="color-block orange whiteText">orange #f0731f</div>
-			<div class="color-block green">green #acb737</div>
-			<div class="color-block blue whiteText">blue #0090c4</div>
-			<div class="color-block purple whiteText">purple #aa137e</div>
-			
-			<h3>Secondary palette colors</h3>
-			<div class="notes--guide">
-				<p class="open-issue">notes about branding usage for these colors</p>
-			</div>
-			<div class="color-block redDarkest whiteText">redDarkest #690b0b</div>
-			<div class="color-block redDarker whiteText">redDarker #9c191e</div>
-			<div class="color-block pink ">pink #ff5b64</div>
-			<div class="color-block salmon ">salmon #fd986c</div>
-			<br />
-			<div class="color-block orangeDarkest whiteText">orangeDarkest #89380b</div>
-			<div class="color-block orangeDarker whiteText">orangeDarker #c9491a</div>
-			<div class="color-block yellow ">yellow #ffac1e</div>
-			<div class="color-block yellowLight ">yellowLight #fbb55d</div>
-			<br />
-			<div class="color-block greenDarkest whiteText">greenDarkest #645723</div>
-			<div class="color-block greenDarker whiteText">greenDarker #858434</div>
-			<div class="color-block greenNeon ">greenNeon #ece94c</div>
-			<div class="color-block greenLight ">greenLight #dbdf92</div>
-			<br />
-			<div class="color-block indigo whiteText">indigo #3c3449</div>
-			<div class="color-block blueDarker whiteText">blueDarker #015d90</div>
-			<div class="color-block blueNeon ">blueNeon #7edcdb</div>
-			<div class="color-block blueLight ">blueLight #c2e7df</div>
-			<br />
-			<div class="color-block purpleDarkest whiteText">purpleDarkest #5b2439</div>
-			<div class="color-block purpleDarker whiteText">purpleDarker #7f2352</div>
-			<div class="color-block purpleNeon ">purpleNeon #eb4197</div>
-			<div class="color-block purpleLight ">purpleLight #eae7ae</div>
-			
-			<h3>Warm grays</h3>
-			<div class="color-block warmGrayDarkest whiteText">warmGrayDarkest #5e564b</div>
-			<div class="color-block warmGrayDarker whiteText">warmGrayDarker #7d7872</div>
-			<div class="color-block warmGray ">warmGray #a29d97</div>
-			<div class="color-block warmGrayLighter ">warmGrayLighter #c5c2bb</div>
-			<div class="color-block warmGrayLightest ">warmGrayLightest #e2dedb</div>
-			<h3>Cool grays</h3>
-			<div class="color-block coolGrayDarkest whiteText">coolGrayDarkest #62656c</div>
-			<div class="color-block coolGrayDarker whiteText">coolGrayDarker #858e95</div>
-			<div class="color-block coolGray ">coolGray #acb1b7</div>
-			<div class="color-block coolGrayLighter ">coolGrayLighter #cbccd0</div>
-			<div class="color-block coolGrayLightest ">coolGrayLightest #dedede</div>
-			
-		</section>
 
 
 
 
 
-		
-		<section id="icons">
-		
-			<h2>Icons</h2>
-			
-			<div class="notes--guide">
-				<p>We use a custom export of <a href="http://icomoon.io/"><strong>Icomoon</strong>'s</a> proprietary icons, which are available for use under the <a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License</a>. Included as part of the icon set are two icons of the "lion mark" (just the lion part) logo. (More on how to use those further on in the guide!)</p>
-				<p><span class="beta">This is the <a href="../fonts/icons-demo/demo.html"><strong>current set</strong></a>,</span> which is handy reference for choosing icons.</p>
-			</div>
 
 
 
-			<h3>How to use the icons</h3>
-			
-			<h4>Class name</h4>
-			
-			<pre class="code prettyprint">
-				&lt;p class=&quot;icon-cog&quot;&gt;This is some text&lt;/p&gt;
-			</pre>
-			
-			<p class="icon-cog">This is some text</p>
-			
-			<h4>Data-icon attribute</h4>
-			
-			<pre class="code prettyprint">
-				&lt;p aria-hidden=&quot;true&quot; data-icon=&quot;&amp;#xf013;&quot;&gt;This is also some text&lt;/p&gt;
-			</pre>
-			
-			<p class="fs1" aria-hidden="true" data-icon="&#xe690;">This is also some text</p>
-			
-
-			
-			
-			<h4>Sizes</h4>
-			
-			<div class="notes--guide">
-				<p>If you simply apply either an icon class or a data-icon attribute to an element, the icon that is attached will render at the <strong>same font size as its containing element</strong>. You can add font size classes to any element to affect the size of the text.</p>
-			</div>	
-			
-			<pre class="code prettyprint">
-				&lt;ul class=&quot;nav grid__item four-fifths&quot;&gt;<br>
-				&nbsp; &lt;li class=&quot;zeta icon-cog&quot;&gt;List item here&lt;/li&gt;<br>
-				&nbsp; &lt;li class=&quot;episilon icon-bookmark&quot;&gt;Another item here&lt;/li&gt;<br>
-				&nbsp; &lt;li class=&quot;gamma icon-book&quot;&gt;Last one&lt;/li&gt;<br>
-				&lt;/ul&gt;
-			</pre>		
-			
-			<ul class="nav grid__item four-fifths">
-				<li class="zeta icon-cog">List item here</li>
-				<li class="episilon icon-bookmark">Another item here</li>
-				<li class="gamma icon-book">Last one</li>
-			</ul>
-			
-			<div class="notes--guide">
-				<p>You can combine 2 elements (such as a span and a paragraph), one containing the icon and one containing some content, and give each a <strong>different font size</strong> class. You can also give them <strong>different color classes</strong> (see <a href="#palette">color section</a> for class names).</p>
-			</div>
-			
-			<pre class="code prettyprint grid__item one-whole">
-				&lt;span class=&quot;giga blueText&quot; aria-hidden=&quot;true&quot; data-icon=&quot;&amp;#xe61d;&quot;&gt;&lt;/span&gt;
-				&lt;p class=&quot;grid__item four-eighths gamma&quot;&gt;This large icon illustrates this chunk of content.&lt;/p&gt;
-			</pre>
-			
-			<div class="grid__item one-half">
-				<span class="giga blueText" aria-hidden="true" data-icon="&#xe61d;"></span>
-				<p class="grid__item four-eighths gamma">The large icon illustrates this chunk of content.</p>
-			</div>
-
-		</section>	
-		
 
 
-		<section id="logo">
-			<h2>Logo</h2>
-			<div class="notes--guide">
-				<p class="open-issue">consult on the usage rules we need here</p>
-			</div>
-
-			<h4>The logo icon</h4>
-			
-				<p class="notes--guide">This is the logo (without the "New York Public Library" text, it's referred to as the "lion mark"), conveniently available as part of our icon font! Because it's an icon font, changing the color of the lion mark is as easy as <strong>applying a text color</strong>.</p>
-				<p class="one-whole push--one-quarter giga" aria-hidden="true" data-icon="&#xe600;"></p>
-	
-				<p class="notes--guide">See? All I did was change the color of the text of the element with the icon. <strong>Now it's blue!</strong></p>
-				<p class="one-whole push--one-quarter giga blueText" aria-hidden="true" data-icon="&#xe600;"></p>
-			
-				<div class="notes--guide">
-					<p>We also have a version of the lion mark in reverse. Here it is, no styling applied.</p>
-					<p>But remember, what you see here is totally wrong. Bad, wrong, no-no. <strong>Never</strong> use the lion mark with black/dark fills. The thing to remember is: <strong>the fill is always lighter than the background!</strong></p>
-				</div>
-				<p class="one-whole push--one-quarter giga" aria-hidden="true" data-icon="&#xe601;"></p>
-				
-				<p class="notes--guide">The trick is to apply a color <strong>to the reverse version</strong> of the lion mark that is <em>lighter</em> than the background it sits on. See?</p>
-				<p class="one-whole push--one-quarter giga whiteText black" aria-hidden="true" data-icon="&#xe601;"></p>
-				
-		</section>
-
-		
-		
-		<h1 id="coding">Coding</h1>
-		
-		<section id="structure">
-			<h2>How to structure layout</h2>
-
-			<p class="notes--guide">First, give the <code>body</code> a class of <code>.grid--center</code> (this will work with some other classes to center its contained elements):</p>
-			
-			<pre class="code prettyprint">&lt;body class=&quot;grid--center&quot;&gt;</pre>
 
 
-			<p class="notes--guide">Then start with <code>sections</code> (which have a set max-width so that the content doesn't stretch unreasonably).</p>
-			
-			<pre class="code prettyprint">
-				&lt;section&gt;<br>
-				&lt;/section&gt;
-			</pre>
-			
-			<p class="notes--guide">Each <code>section</code> is given a class of <code>.primary</code>, <code>.secondary</code>, or <code>.tertiary</code>, to designate what priority of content they contain. (<code>Section</code>s contain <code>.grid__item</code>s, so those <code>section</code> class names also extend the class <code>.grid</code>.)</p>
-			
-			<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
-			&lt;/section&gt;</pre>
 
-			<p class="notes--guide">To build a chunk of content, start with a <code>div</code> and the class name <code>.chunk</code> (<code>.chunk</code> extends the class <code>.grid__item</code>):</p>
-			
-			<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
-			&nbsp; &lt;div class=&quot;chunk&quot;&gt;<br>
-			&nbsp; &lt;/div&gt;<br>
-			&lt;/section&gt;</pre> 
-			
-			<p class="notes--guide">You can then add grid classes to tell the chunk how to behave in different device contexts:</p>
-			
-			<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
-			&nbsp; &lt;div class=&quot;chunk one-whole lap-and-up-one-half desk-one-third&quot;&gt;<br>
-			&nbsp; &lt;/div&gt;<br>
-			&lt;/section&gt;</pre>	
-			
-			
-			
-			<p class="notes--guide">Your section doesn't have to contain <code>div</code>s; maybe the more appropriate containers are article and sidebar, in which case your code might start like this:</p>
-			
-			<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
-			&nbsp; &lt;article class=&quot;grid__item one-whole desk-two-thirds&quot;&gt;&lt;/article&gt;<br>
-			&nbsp; &lt;sidebar class=&quot;grid__item one-whole desk-one-third&quot;&gt;&lt;/sidebar&gt;<br>
-			&lt;/section&gt;</pre>
-				
-			
-			<p class="notes--guide">Elements within the chunk can respond to the context too (don't forget to comment out the code whitespace between elements you want to align in the grid system):</p>
-			
-			<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
-			&nbsp; &lt;div class=&quot;chunk one-whole lap-and-up-one-half desk-one-third&quot;&gt;<br>
-			&nbsp; &nbsp; &lt;img class=&quot;one-whole&quot;&gt;<br>
-			&nbsp; &nbsp; &lt;h2 class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/h2&gt;&lt;!--<br>
-			&nbsp; &nbsp; --&gt;&lt;p class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/p&gt;<br>
-			&nbsp; &lt;/div&gt;<br>
-			&lt;/section&gt;</pre>	
 
-			<p class="notes--guide">Keep building the structure of the page in this way.</p>
 
-			<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
-			&nbsp; &lt;div class=&quot;chunk one-whole lap-and-up-one-half desk-one-third&quot;&gt;<br>
-			&nbsp; &nbsp; &lt;img class=&quot;one-whole&quot;&gt;<br>
-			&nbsp; &nbsp; &lt;h2 class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/h2&gt;&lt;!--<br>
-			&nbsp; &nbsp; --&gt;&lt;p class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/p&gt;<br>
-			&nbsp; &lt;/div&gt;&lt;!--<br>
-				<br>
-			&nbsp; --&gt;&lt;div class=&quot;chunk one-whole lap-and-up-one-half desk-one-third&quot;&gt;<br>
-			&nbsp; &nbsp; &lt;img class=&quot;one-whole&quot;&gt;<br>
-			&nbsp; &nbsp; &lt;h2 class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/h2&gt;&lt;!--<br>
-			&nbsp; &nbsp; --&gt;&lt;p class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/p&gt;<br>
-			&nbsp; &lt;/div&gt;&lt;!--<br>
-				<br>
-			&nbsp; --&gt;&lt;div class=&quot;chunk one-whole lap-and-up-one-half desk-one-third&quot;&gt;<br>
-			&nbsp; &nbsp; &lt;img class=&quot;one-whole&quot;&gt;<br>
-			&nbsp; &nbsp; &lt;h2 class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/h2&gt;&lt;!--<br>
-			&nbsp; &nbsp; --&gt;&lt;p class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/p&gt;<br>
-			&nbsp; &lt;/div&gt;<br>
-			&lt;/section&gt;</pre>
-			
-		</section>
+
 
 
 		<section id="patterns">
 			<h2>Design patterns</h2>
 			
 			<div class="notes--guide">
-				<p>Here there be dragons...well, unfinished guidance anyway. The following page of design chunks represents NYPLBase's current pattern library. <strong>This collection will be continually refined as patterns emerge and solidify.</strong></p>
+				<p>The following page of design chunks represents NYPLBase's current pattern library. <strong>This collection will be continually refined as patterns emerge and solidify.</strong></p>
 			</div>
 			<p class="beta"><a href="patterns.html">General pattern collection</a></p>
 				

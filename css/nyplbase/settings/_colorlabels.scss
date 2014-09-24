@@ -17,83 +17,37 @@
 // Primary palette colors
 // -------------------------
 .red {background-color: $red !important;}
-.orange {background-color: $orange !important;}
-.green {background-color: $green !important;}
 .blue {background-color: $blue !important;}
-.purple {background-color: $purple !important;}
 
 	.redText {color: $red !important;}
-	.orangeText {color: $orange !important;}
-	.greenText {color: $green !important;}
 	.blueText {color: $blue !important;}
-	.purpleText {color: $purple !important;}
 
 
 // Secondary palette colors
 // -------------------------
-.redDarkest {background-color: $redDarkest !important;}
-.redDarker {background-color: $redDarker !important;}
-.pink {background-color: $pink !important;}
-.salmon {background-color: $salmon !important;}
+.orange {background-color: $orange !important;}
+.green {background-color: $green !important;}
+.purple {background-color: $purple !important;}
 
-	.redDarkestText {color: $redDarkest !important;}
-	.redDarkerText {color: $redDarker !important;}
-	.pinkText {color: $pink !important;}
+	.orangeText {color: $orange !important;}
+	.greenText {color: $green !important;}
+	.purpleText {color: $purple !important;}
+
+.salmon {background-color: $salmon !important;}
 	.salmonText {color: $salmon !important;}
 
-.orangeDarkest {background-color: $orangeDarkest !important;}
-.orangeDarker {background-color: $orangeDarker !important;}
-.yellow {background-color: $yellow !important;}
 .yellowLight {background-color: $yellowLight !important;}
-
-	.orangeDarkestText {color: $orangeDarkest !important;}
-	.orangeDarkerText {color: $orangeDarker !important;}
-	.yellowText {color: $yellow !important;}
 	.yellowLightText {color: $yellowLight !important;}
 
-.greenDarkest {background-color: $greenDarkest !important;}
-.greenDarker {background-color: $greenDarker !important;}
-.greenNeon {background-color: $greenNeon !important;}
 .greenLight{background-color: $greenLight !important;}
-
-	.greenDarkestText {color: $greenDarkest !important;}
-	.greenDarkerText {color: $greenDarker !important;}
-	.greenNeonText {color: $greenNeon !important;}
 	.greenLightText {color: $greenLight !important;}
 
-.indigo {background-color: $indigo !important;}
-.blueDarker {background-color: $blueDarker !important;}
-.blueNeon {background-color: $blueNeon !important;}
 .blueLight {background-color: $blueLight !important;}
-
-	.indigoText {color: $indigo !important;}
-	.blueDarkerText {color: $blueDarker !important;}
-	.blueNeonText {color: $blueNeon !important;}
 	.blueLightText {color: $blueLight !important;}
 
-.purpleDarkest {background-color: $purpleDarkest !important;}
-.purpleDarker {background-color: $purpleDarker !important;}
-.purpleNeon {background-color: $purpleNeon !important;}
 .purpleLight {background-color: $purpleLight !important;}
-
-	.purpleDarkestText {color: $purpleDarkest !important;}
-	.purpleDarkerText {color: $purpleDarker !important;}
-	.purpleNeonText {color: $purpleNeon !important;}
 	.purpleLightText {color: $purpleLight !important;}
 
-// Cool grays
-// -------------------------
-.coolGrayDarkest {background-color: $coolGrayDarkest !important;}
-.coolGrayDarker {background-color: $coolGrayDarker !important;}
-.coolGray {background-color: $coolGray !important;}
-.coolGrayLighter {background-color: $coolGrayLighter !important;}
-.coolGrayLightest {background-color: $coolGrayLightest !important;}
-
-	.coolGrayDarkestText {color: $coolGrayDarkest !important;}
-	.coolGrayDarkerText {color: $coolGrayDarker !important;}
-	.coolGrayText {color: $coolGray !important;}
-	.coolGrayLighterText {color: $coolGrayLighter !important;}
-	.coolGrayLightestText {color: $coolGrayLightest !important;}
 
 // Warm grays
 // -------------------------

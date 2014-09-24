@@ -106,45 +106,24 @@ $micro-size:        10px;
 // Primary palette colors
 // -------------------------
 $red:					#d62828;
-$orange:				#f0731f;
-$green:					#acb737;
 $blue:					#0090c4;
-$purple:				#aa137e;
 
 // Secondary palette colors
 // -------------------------
-$redDarkest:			#690b0b;
-$redDarker:				#9c191e;
-$pink:					#ff5b64;
+$orange:				#f0731f;
+$green:					#acb737;
+$purple:				#aa137e;
+
 $salmon:				#fd986c;
 
-$orangeDarkest:			#89380b;
-$orangeDarker:			#c9491a;
-$yellow:				#ffac1e;
+
 $yellowLight:			#fbb55d;
 
-$greenDarkest:			#645723;
-$greenDarker:			#858434;
-$greenNeon:				#ece94c;
 $greenLight:			#dbdf92;
 
-$indigo:				#3c3449;
-$blueDarker:			#015d90;
-$blueNeon:				#7edcdb;
 $blueLight:				#c2e7df;
 
-$purpleDarkest:			#5b2439;
-$purpleDarker:			#7f2352;
-$purpleNeon:			#eb4197;
 $purpleLight:			#eaa7ae;
-
-// Cool grays
-// -------------------------
-$coolGrayDarkest:		#62656c;
-$coolGrayDarker:		#858e95;
-$coolGray:				#acb1b7;
-$coolGrayLighter:		#cbccd0;
-$coolGrayLightest:		#dedede;
 
 // Warm grays
 // -------------------------
@@ -285,7 +264,7 @@ $lap-end:               $desk-start - 1px;
  * Set the background colors for beauton button functions.
  */
 $beautons:              $blue;
-$beautons-inactive:     $coolGrayLightest;
+$beautons-inactive:     $warmGrayLightest;
 
 $beautons-positive:     $green;
 $beautons-negative:     $red;

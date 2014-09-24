@@ -136,7 +136,6 @@ pre {
 	
 	h1{
 		margin-bottom: 0;
-		text-shadow: 2px 2px 0px #ccc;
 	}
 }
 
@@ -158,15 +157,24 @@ pre {
 }
 
 section{
-	.style-guide &{ // space between the sections
+	.style-guide &{ // space between the sections in the style guide
 		border-bottom: 1px solid $warmGrayLighter;
 		margin-bottom: $base-spacing-unit * 2;
 		padding-bottom: $base-spacing-unit;		
+		
+		& section {
+			border-bottom: none;
+			margin-bottom: inherit;
+			padding-bottom: inherit;
+		}
 	}
-	&#forms form{ // space between example forms
-	margin-bottom: $base-spacing-unit;
+
+	
+	&#components__forms form{ // space between example forms
+		margin-bottom: $base-spacing-unit;
 	}
 }
+
 
 // notes
 .notes--guide{
