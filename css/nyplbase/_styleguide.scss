@@ -29,24 +29,22 @@ pre {
 }
 
 
-// FOR HEADER IFRAME IN DEMOS
-.container--header{
-	width: 100%;
-	height: 80px;
-	border: 0;
-	
-	@include media-query(tablet-and-up){
-		height: 200px;
-	}
-}
-
 
 /**
  * Navigation
  */
  
-// fixed nav for the style guide
-.nav--guide{
+.styleguide__nav{
+	padding-left: 24px;
+	
+	ul{
+		border-bottom: 1px solid #e2dedb;
+	}
+}
+
+
+// subnav for each part of the guide
+.styleguide__subnav{
 	background-color: rgba($white, .85);
 	
 	position: fixed;
@@ -91,8 +89,8 @@ pre {
 .backtotop{
 	display: inline-block;
 	position: fixed;
-	top: .5rem;
-	right: 0;	
+	bottom: .5rem;
+	left: 0;	
 	z-index: 1001;
 	
 	&:before{
@@ -151,6 +149,7 @@ pre {
 .content--guide{
 	margin: 3rem 3.5rem 0;
 	
+	// space for left nav
 	@include media-query(desk){
 		margin-left: 250px;
 	}
@@ -205,9 +204,8 @@ section{
 .color-block {
 	padding: $half-spacing-unit;
 	margin-right: 6px;
-//	margin-bottom: 24px;
-//	display: inline-block;
 	font-size: 16px;
+	float: left;
 }
 
 // a little space on the headings in the palette

@@ -1,16 +1,16 @@
 @font-face {
-	font-family: 'NYPL-icomoon';
-	src:url('../NYPL-icomoon.eot?-4i91hb');
-	src:url('../NYPL-icomoon.eot?#iefix-4i91hb') format('embedded-opentype'),
-		url('../NYPL-icomoon.woff?-4i91hb') format('woff'),
-		url('../NYPL-icomoon.ttf?-4i91hb') format('truetype'),
-		url('../NYPL-icomoon.svg?-4i91hb#NYPL-icomoon') format('svg');
+	font-family: 'icomoon';
+	src:url('../NYPL-icomoon.eot?-irnwv0');
+	src:url('../NYPL-icomoon.eot?#iefix-irnwv0') format('embedded-opentype'),
+		url('../NYPL-icomoon.woff?-irnwv0') format('woff'),
+		url('../NYPL-icomoon.ttf?-irnwv0') format('truetype'),
+		url('../NYPL-icomoon.svg?-irnwv0#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-	font-family: 'NYPL-icomoon';
+	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
@@ -23,10 +23,10 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-NYPL_mark1_black_pos:before {
+.icon-NYPL:before {
 	content: "\e600";
 }
-.icon-NYPL_mark1_white_rev:before {
+.icon-NYPL_rev:before {
 	content: "\e601";
 }
 .icon-home:before {

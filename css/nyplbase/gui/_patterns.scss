@@ -58,9 +58,11 @@
 	// fix alignment from body.grid--center
 	display: inline-block;
 	text-align: left;
+	width: 100%;
 
 	// prevent content from stretching to 100% available width
 	max-width: $desk-start;
+	
 	
 }
 
