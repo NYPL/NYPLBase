@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<title>NYPL Base: Style Guide </title>
+    
+    <link rel="stylesheet" href="../css/nyplbase.min.css">
+    
+</head>
+<body class="grid style-guide">
+
+	<!-- TOP ANCHOR -->
+	<div id="top"></div>
+	
+	<!-- BACK TO TOP -->
+	<a class="backtotop icon-arrow-up32 alpha" href="#top"><span class="visuallyhidden">Back to top</span></a>
+
+	<!-- MENU BUTTON -->
+	<a class="menu__button icon-menu2 big"></a>
+
+	
+	<nav class="styleguide__nav">
+		<ul class="nav nav--block">
+			<li><a href="index.html">NYPLBase</li>
+			<li><a href="styleguide__branding.html">Branding</li>
+			<li><a href="styleguide__layout.html">Layout</li>
+			<li><a href="styleguide__components.html">Components</li>
+			<li><a href="styleguide__calls.html">Calls to action</li>
+			<li><a href="styleguide__coding.html">Coding</li>
+			<li><a href="styleguide__resources.html">Resources</li>
+			<li><a href="styleguide__about.html">About</a></li>
+		</ul>
+	</nav>
+	
+	<div class="content--guide ">
+
+
+
+		<nav class="styleguide__subnav push-half--sides">	
+		<ul class="nav nav--stacked">
+		
+
+			<li><a href="#layout">Layout</a>
+				<ul class="nav nav--stacked">
+					<li><a href="#layout__principles">Principles</a></li>
+					<li><a href="#layout__structure">Structure</a></li>
+					<li><a href="#layout__gridsystem">Grid</a></li>
+				</ul>
+			</li>
+
+		</ul>
+		
+	</nav>
+
+		<section id="layout">
+		
+			<h1>Layout</h1>
+		
+			<section id="layout__principles">
+				<h2>Principles</h2>
+			</section>
+			
+			<section id="layout__structure">
+				<h2>Structure</h2>
+			</section>
+			
+			<section id="layout__gridsystem">
+	
+				<h2>The grid system</h2>
+					
+				<div class="notes--guide">
+					<p>Your content <strong>container</strong> (or any container that will contain elements in the grid) gets a class of <code>.grid</code>. Each <strong>element</strong> that you want to adhere to the grid system gets a class of <code>.grid__item</code>, which sets up, among other things, those elements as inline.</p>
+					<p>Inuit's grid system is not really a traditional grid; it's <strong>based on proportions</strong> rather than columns. (See more at <a href="http://github.com/csswizardry/csswizardry-grids/">csswizardry-grids</a> and <a href="http://csswizardry.com/2013/02/responsive-grid-systems-a-solution/">CSS Wizardry</a>.) For example, if you want an element to take up half of its container, give that element the class <code>.one-half</code>. This way, you don't have to remember the number of columns in your grid!</p>
+					<p>You can also combine these proportion classes with <strong>device contexts</strong> to define at which breakpoint you’d like an element to be a certain size:</p>
+				</div>
+			
+				<pre class="code prettyprint">
+					&lt;div class=&quot;grid__item  one-quarter  lap-one-half  palm-one-whole&quot;&gt; ... &lt;/div&gt;
+				</pre>
+	
+	<!-- ADD!		
+	// centers grid items inside it
+	.grid--center
+	// gutterless items
+	.grid--full			
+	-->
+	
+				<p class="notes--guide">Inuit's grid system relies on the inline setting to avoid the usual "float" hack. This means you can use text-level attributes for easier positioning. One caveat: there's a bug in the whitespace attribute, which means <strong>you need to comment out the space in the code between <code>.grid__item</code> elements</strong>. Kind of a pain? sure, but less hacky. And we at NYPL do not play hackysacks.</p>
+			
+				<pre class="code prettyprint">
+					&lt;div class=&quot;grid&quot;&gt;<br><br>
+				
+				       &lt;div class=&quot;grid__item  one-third&quot;&gt;<br>
+				           &lt;p&gt;One third grid&lt;/p&gt;<br>
+				       &lt;/div&gt;&lt;!--<br><br>
+				
+				    --&gt;&lt;div class=&quot;grid__item  two-thirds&quot;&gt;<br>
+				           &lt;p&gt;Two thirds grid&lt;/p&gt;<br>
+				       &lt;/div&gt;&lt;!--<br><br>
+				
+				    --&gt;&lt;div class=&quot;grid__item  one-half&quot;&gt;<br>
+				           &lt;p&gt;One half grid&lt;/p&gt;<br>
+				       &lt;/div&gt;&lt;!--<br><br>
+				
+				    --&gt;&lt;div class=&quot;grid__item  one-quarter&quot;&gt;<br>
+				           &lt;p&gt;One quarter grid&lt;/p&gt;<br>
+				       &lt;/div&gt;&lt;!--<br><br>
+				
+				    --&gt;&lt;div class=&quot;grid__item  one-quarter&quot;&gt;<br>
+				           &lt;p&gt;One quarter grid&lt;/p&gt;<br>
+				       &lt;/div&gt;<br><br>
+				
+				   &lt;/div&gt;
+	
+				 </pre>
+				 
+				 
+				<div class="notes--guide">	 
+					<p class="open-issue">It's possible to nest grid items; d11n on this is coming pending some testing of how nesting <code>.grid__item</code> items is affected by the left margin setting.</p>	 
+				</div>		
+			
+			</section>
+		
+		</section>
+		
+				<section id="patterns">
+			<h2>Design patterns</h2>
+			
+			<div class="notes--guide">
+				<p>The following page of design chunks represents NYPLBase's current pattern library. <strong>This collection will be continually refined as patterns emerge and solidify.</strong></p>
+			</div>
+			<p class="beta"><a href="patterns.html">General pattern collection</a></p>
+				
+			<div class="notes--guide">
+				<p>The following demos are prototypes, built with Base, in various states of polish. They are all linked from my internal "sandbox" development server (i.e. you must be behind the NYPL firewall to view them.). For the time being, they'll stay that way, linked here for reference; in the future a finished version of each demo will  get migrated to the same server that houses the style guide.</p>
+				
+				<p>The idea is each of these demos represents a certain kind of layout pattern: some layouts serve singular content (like a blog post), some present a variety of content chunks (like a landing page), some present an action to take (like a form). In the future, I'll offer the finished versions here as "templates," from which you can grab and use the markup appropriate for your content type.</p>
+			</div>
+			
+				<ul>
+					<h3>Single purpose content</h3>
+					<li><a class="warmGrayLighterText">AV content item</a></li>
+					<li><a class="warmGrayLighterText">Informational/"about"</a></li>
+					<li><a href="http://janderson.farm.nypl.org/NYPLBase/prototypes/blogs/demo_blog-post.html">Blog post</a></li>
+					<li><a class="warmGrayLighterText">Class</a></li>
+					<li><a class="warmGrayLighterText">Event</a></li>
+				</ul>
+				
+				<ul>
+					<h3>Landing page ("promo" purpose content)</h3> 
+					<li><a href="http://janderson.farm.nypl.org/NYPLBase/prototypes/exhibitions/demo_exhibition.html">Exhibition</a></li>
+					<li><a class="" href="http://janderson.farm.nypl.org/NYPLBase/prototypes/preservation/demo_preservation.html">Location or division</a></li>
+					<li><a class="warmGrayLighterText">Support the Library</a></li>
+				</ul>
+				
+				<ul>
+					<h3>Take action/form</h3>
+					<li><a class="warmGrayLighterText">Search & results</a></li>
+				</ul>
+				
+				<ul>
+					<h3>Lists</h3>
+					<li><a class="warmGrayLighterText">AV, blogs, research guides (discrete chunks of content)</a></li>
+					<li><a class="warmGrayLighterText">Exhibitions or programs (content w/ promotional purpose)</a></li>
+					<li><a href="http://janderson.farm.nypl.org/NYPLBase/prototypes/recommendations/demo_recs-adult.html">Recommendations</a></li>
+				</ul>
+				
+		</section>
+
+
+<footer></footer>
+
+
+<!-- Zepto -->
+<script src="../js/zepto.min.js"></script>
+
+<!--Script for styling the code snippets 
+
+	NOTE: it doesn't escape tags!!! gotta convert to entities :(
+	Here's a good tool: http://www.accessify.com/tools-and-wizards/developer-tools/quick-escape/default.php 
+-->	
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>	
+
+<!-- Specific to style guide -->
+<script src="js/nyplbase__styleguide.js"></script>
+
+</body></html>

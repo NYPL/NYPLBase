@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<title>NYPL Base: Style Guide </title>
+    
+    <link rel="stylesheet" href="../css/nyplbase.min.css">
+    
+</head>
+<body class="grid style-guide">
+
+	<!-- TOP ANCHOR -->
+	<div id="top"></div>
+	
+	<!-- BACK TO TOP -->
+	<a class="backtotop icon-arrow-up32 alpha" href="#top"><span class="visuallyhidden">Back to top</span></a>
+
+	<!-- MENU BUTTON -->
+	<a class="menu__button icon-menu2 big"></a>
+
+	
+	<nav class="styleguide__nav">
+		<ul class="nav nav--block">
+			<li><a href="index.html">NYPLBase</li>
+			<li><a href="styleguide__branding.html">Branding</li>
+			<li><a href="styleguide__layout.html">Layout</li>
+			<li><a href="styleguide__components.html">Components</li>
+			<li><a href="styleguide__calls.html">Calls to action</li>
+			<li><a href="styleguide__coding.html">Coding</li>
+			<li><a href="styleguide__resources.html">Resources</li>
+			<li><a href="styleguide__about.html">About</a></li>
+		</ul>
+	</nav>
+	
+	<div class="content--guide ">
+
+
+
+		<nav class="styleguide__subnav push-half--sides">	
+		<ul class="nav nav--stacked">
+			
+			<li><a href="#calls-to-action">Calls to action</a>
+				<ul class="nav nav--stacked">
+					<li><a href="#calls-to-action__links">Links</a></li>
+					<li><a href="#calls-to-action__buttons">Buttons</a></li>
+				</ul>
+			</li>
+		
+
+		</ul>
+		
+	</nav>
+		
+		<section id="calls-to-action">
+		
+			<h1>Calls to action</h1>
+		
+			<section id="calls-to-action__links">
+				<h2>Links</h2>
+				<div class="notes--guide">
+					<p>Links are <strong>underlined</strong>, and change color on hover.</p>
+				</div>
+	
+				<h1><a href="">CHAPTER 1. Loomings.</a></h1>
+				<p>Call me <a href="">Ishmael</a>. Some years ago&ndash;never mind how long precisely&ndash;having little or <a href="">no money in my purse</a>, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.</p>
+			</section>
+			
+			<section id="calls-to-action__buttons">
+				<h2>Buttons</h2>
+				
+				<div class="notes--guide">
+					<p>Any element (most commonly <code>&lt;a&gt;</code>) used as a <strong>button</strong> gets the <code>.btn</code> class applied. Also, the following elements:
+					<ul><code>
+						<li>&lt;button&gt;</li>
+						<li>&lt;input[type="button"]&gt;</li>
+						<li>&lt;input[type="submit"]&gt;</li>
+					</code></ul>
+					 are styled the same way by default.</p>
+					<p>NYPL buttons should also have the <code>.gradient</code> class added to them. The gradient styling is not applied by default so that it may be omitted from a button if appropriate. (This is much better practice than overriding the default style.)</p>
+					<p>You may also add the <code>.btn--inactive</code> class for a "grayed-out" style.</p>
+				</div>
+				
+				<pre class="code prettyprint">
+					&lt;button class=&quot;gradient&quot;&gt;Get this thing!&lt;/button&gt; <br><br>
+					&lt;button class=&quot;btn--inactive&quot;&gt;Don't get this thing.&lt;/button&gt;
+				</pre>
+				
+				<p>
+					<a class="btn gradient">Get this thing!</a>	
+					<button class="btn--inactive">Don't get this thing.</button>
+				</p>
+				
+				
+				<h3>Sizes</h3>
+				
+				<p class="notes--guide">Use the following alternative <code>.btn--</code> styles to create <strong>buttons of different sizes</strong>.</p>
+				
+				<pre class="code prettyprint">
+					&lt;button class=&quot;gradient btn--small&quot;&gt;small&lt;/button&gt;<br>
+					&lt;button class=&quot;gradient btn--large&quot;&gt;large&lt;/button&gt;<br>
+					&lt;button class=&quot;gradient btn--huge&quot;&gt;huge&lt;/button&gt;
+				</pre>
+				
+				<p>
+					<button class="btn--small gradient">small</button><button class="btn--large gradient">large</button>
+					<button class="btn--huge gradient">huge</button>
+				</p>
+	
+				<div class="notes--guide">
+					<p>You can also add the <a href="#text-sizes">text classes</a> for <strong>bigger/smaller text</strong>.</p>
+					<p>Note that the button's padding shrinks or grows proportionally based on the text class. In the above examples, I've only added button size classes; the text size remains the same. Below, I've made some ridiculously mismatched button/text size combos to demonstrate the need to be careful with your classes. (In other words, watch out for Buttons of Unusual Size.)</p>			
+				</div>
+				
+				<pre class="code prettyprint">
+					&lt;button class=&quot;gradient btn--small micro&quot;&gt;small button, micro text&lt;/button&gt;<br>
+					&lt;button class=&quot;gradient btn--huge micro&quot;&gt;huge button, micro text&lt;/button&gt;<br>
+					&lt;button class=&quot;gradient kilo&quot;&gt;regular button, kilo text&lt;/button&gt;
+				</pre>
+				
+				<p>
+					<button class="btn--small gradient micro">small button, micro text</button>
+					<button class="btn--huge gradient micro">huge button, micro text</button>
+					<button class="gradient kilo">regular button, kilo text</button>
+				</p>
+	
+				<div class="notes--guide">
+					<p>There's also a class called <code>.btn--natural</code>, which <strong>inherits its type size and padding</strong> from its parent element, which is handy for inline calls-to-action. (Note: the other button and text size classes will have no effect on this style.)</p>			
+				</div>
+				
+				<pre class="code prettyprint">
+					&lt;button class=&quot;gradient btn--natural&quot;&gt;natural&lt;/button&gt;
+				</pre>
+				
+				<p>You make me feel like a <button class="btn--natural gradient">natural</button> woman</p>
+	
+				
+				<h3>Specific NYPL use contexts</h3>
+				
+				<div class="notes--guide">
+					<p>Some <strong>NYPL calls-to-action</strong>, like the "Donate" button, have very specific styles. Again: at the moment I don't have a better way to assign these styles, but so far I've got <code>.btn--donate</code> and <code>.btn--friends</code>. This will develop over time, I'm sure.</p>
+				</div>
+	
+				<h4>The Donate button</h4>
+				
+				<p>
+					<pre class="code prettyprint ">
+						&lt;button class=&quot;btn--donate&quot;&gt;Donate now&lt;/button&gt;
+					</pre>
+					<button class="btn--donate ">Donate now</button>
+				</p>
+				
+				<h4>Possible Friends-specific button style</h4>
+				
+				<p>
+					<pre class="code prettyprint ">
+						&lt;button class=&quot;btn--friends&quot;&gt;Become a friend&lt;/button&gt;
+					</pre>
+					<button class="btn--friends ">Become a Friend</button>
+				</p>
+				
+				
+				
+				<p class="notes--guide">Note: if you are using any of the additional call-to-action classes listed below on an element that does <strong>not</strong> have the <code>.btn</code> styling applied by default, don't forget to also add <code>.btn</code> class first!.</p>
+				
+				<pre class="code prettyprint">
+					&lt;a class=&quot;btn gradient btn--greenNeon&quot;&gt;greenNeon&lt;/a&gt;<br>
+				</pre>
+				<p>
+					<a class="btn btn--greenNeon gradient">greenNeon</a>
+				</p>
+				
+			
+			</section>
+			
+		</section>
+		
+<footer></footer>
+
+
+<!-- Zepto -->
+<script src="../js/zepto.min.js"></script>
+
+<!--Script for styling the code snippets 
+
+	NOTE: it doesn't escape tags!!! gotta convert to entities :(
+	Here's a good tool: http://www.accessify.com/tools-and-wizards/developer-tools/quick-escape/default.php 
+-->	
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>	
+
+<!-- Specific to style guide -->
+<script src="js/nyplbase__styleguide.js"></script>
+
+</body></html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<title>NYPL Base: Style Guide </title>
+    
+    <link rel="stylesheet" href="../css/nyplbase.min.css">
+    
+</head>
+<body class="grid style-guide">
+
+	<!-- TOP ANCHOR -->
+	<div id="top"></div>
+	
+	<!-- BACK TO TOP -->
+	<a class="backtotop icon-arrow-up32 alpha" href="#top"><span class="visuallyhidden">Back to top</span></a>
+
+	<!-- MENU BUTTON -->
+	<a class="menu__button icon-menu2 big"></a>
+
+	
+	<nav class="styleguide__nav">
+		<ul class="nav nav--block">
+			<li><a href="index.html">NYPLBase</li>
+			<li><a href="styleguide__branding.html">Branding</li>
+			<li><a href="styleguide__layout.html">Layout</li>
+			<li><a href="styleguide__components.html">Components</li>
+			<li><a href="styleguide__calls.html">Calls to action</li>
+			<li><a href="styleguide__coding.html">Coding</li>
+			<li><a href="styleguide__resources.html">Resources</li>
+			<li><a href="styleguide__about.html">About</a></li>
+		</ul>
+	</nav>
+	
+	<div class="content--guide ">
+
+
+
+		<nav class="styleguide__subnav push-half--sides">
+	
+		<ul class="nav nav--stacked">
+
+			<li><a href="#branding">Branding</a>
+				<ul class="nav nav--stacked">
+					<li><a href="#branding__general">General notes on branding</a></li>
+					<li><a href="#branding__logo">Logo usage</a></li>
+					<li><a href="#branding__palette">Color palette</a></li>
+					<li><a href="#branding__typography">Typography</a>
+						<ul class="nav nav--stacked">
+							<li><a href="#branding__typography__text">Text</a></li>
+							<li><a href="#branding__typography__lists">Lists</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+
+		</ul>
+		
+	</nav>
+
+		<section id="branding">
+		
+			<h1>Branding</h1>
+
+			<section id="branding__general">
+				<h2>General notes on branding</h2>
+				
+				<div class="notes--guide">
+					<p>In general, the NYPL web style is minimal, with subtle touches. (For example, we do use rounded corners, but at 2px for a gentle effect.) The colors used are flat, except for a subtle top-to-bottom gradient used on buttons.</p>
+					<p>The basis of color on the site is warm grays and white, with accent colors drawn from the primary palette. The primary accent color is <span class="blue whiteText">blue #0090c4</span>. Red is generally reserved, unless the project is not a core site and uses red as a primary palette color. (On the main site, red is specifically reserved for the "Donate" button.)</p>
+					<p>Text-on-background color combinations must provide enough contrast to be readable to users with protonopia; the recommended contrast ratio is 4.5:1 (see <a href="http://www.w3.org/TR/WCAG/#visual-audio-contrast">WCAG level AA</a>). </p>
+					<p>Icons come from Icomoon's "Ultimate" icon set, and may be augmented by approved custom icons. All additional icons must be exported as SVG format for incorporation into the icon font. </p>
+				</div>
+			</section>	
+			
+			<section id="branding__logo">
+				<h2>Logo usage</h2>
+				<p>headers/footers/partnerships on third party websites</p>
+			</section>
+			
+			<section id="branding__palette">
+				<h2>Color palette</h2>
+				
+				<h3>Primary palette colors</h3>
+				
+				<div class="notes--guide">
+					<p>All colors in the palette have an <strong>associated class name</strong>, which are listed below. For example, if you want to give an element a light blue background, add the class <code>.blueLight</code>. The same naming convention applies to <strong>text color classes</strong>, appending "Text"; if you want an element's text to be light blue, add the class <code>.blueLightText</code>.</p>
+					<p class="open-issue">notes about branding usage for these colors</p>
+				</div>
+				<div class="cf">
+					<div class="color-block red whiteText">red #d62828</div>
+					<div class="color-block blue whiteText">blue #0090c4</div>
+				</div>	
+				
+				<h3>Secondary palette colors</h3>
+				<div class="notes--guide">
+					<p class="open-issue">notes about branding usage for these colors</p>
+				</div>
+
+				<div class="cf">
+					<div class="color-block orange whiteText">orange #f0731f</div>
+					<div class="color-block green">green #acb737</div>
+					<div class="color-block purple whiteText">purple #aa137e</div>
+				</div>
+				<br>
+				<div class="cf">
+					<div class="color-block salmon ">salmon #fd986c</div>
+					<div class="color-block yellowLight ">yellowLight #fbb55d</div>
+					<div class="color-block greenLight ">greenLight #dbdf92</div>
+					<div class="color-block blueLight ">blueLight #c2e7df</div>
+					<div class="color-block purpleLight ">purpleLight #eae7ae</div>
+				</div>
+				
+				<h3>Warm grays</h3>
+				<div class="cf">
+					<div class="color-block warmGrayDarkest whiteText">warmGrayDarkest #5e564b</div>
+					<div class="color-block warmGrayDarker whiteText">warmGrayDarker #7d7872</div>
+					<div class="color-block warmGray ">warmGray #a29d97</div>
+					<div class="color-block warmGrayLighter ">warmGrayLighter #c5c2bb</div>
+					<div class="color-block warmGrayLightest ">warmGrayLightest #e2dedb</div>
+				</div>
+				
+			</section>
+			
+			<section id="branding__typography">
+				<h2>Typography</h2>
+				
+				<section id="branding__typography__text">
+		
+			<h2>Text</h2>
+			<div class="notes--guide">
+				<p>NYPL's <strong >default</strong> body text is set to <strong>16px, with a 24px line height</strong> (or 1rem, 1.5rem line height). The heds and type size classes are set to the standard diatonic typographic scale (see Robert Bringhurst, <cite><a href="http://en.wikipedia.org/wiki/The_Elements_of_Typographic_Style">The Elements of Typographic Style</a></cite>).</p>
+				<p>Paragraphs are set to a <strong>maximum width of 50rem</strong>, to prevent an unreadably long line.</p>
+				<p>NYPL's core web typeface is <a href="http://www.latofonts.com/"><strong>Lato</strong></a>.</p>
+				<p class="open-issue">Consider "real" bold/italic font usage vs. "fake bold/italic"; performance issues of many font weights being downloaded</p>
+			</div>
+			
+			<h1>Heading 1</h1>
+			<h2>Heading 2</h2>
+			<h3>Heading 3</h3>
+			<h4>Heading 4</h4>
+			<h5>Heading 5</h5>
+			<h6>Heading 6</h6>
+			
+			<p class="notes--guide">Use the class <code>.lede</code> or <code>.lead</code> for the <strong>first graf</strong>, if you want.</p>
+			<p class="lede">Call me Ishmael. Some years ago&mdash;never mind how long precisely&mdash;having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.</p>
+
+			<p>It is a way I have of driving off the spleen and regulating the circulation. Whenever I find myself growing grim about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily pausing before coffin warehouses, and bringing up the rear of every funeral I meet; and especially whenever my hypos get such an upper hand of me, that it requires a strong moral principle to prevent me from deliberately stepping into the street, and methodically knocking people's hats off&mdash;then, I account it high time to get to sea as soon as I can.</p>
+			
+			<h5>em and strong</h5>
+			<p class="notes--guide">The <code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code>, and <code>&lt;blockquote&gt;</code> element default styles have also been set.</p>
+			<p>This is my substitute for <em>pistol and ball</em>. With a philosophical flourish Cato <strong>throws</strong> himself upon his sword; I quietly take to the ship.</strong>
+			<h5>Block quotes</h5>
+			<blockquote>There is nothing surprising in this. If they but knew it, almost all men in their degree, some time or other, cherish very nearly the same feelings towards the ocean with me.</blockquote>
+			</p>
+			
+			
+			
+			<h2 id="type-styling">Notes on using type styles</h2>
+			
+			<p class="open-issue">add notes on specific uses of uppercase, bold, etc.</p>
+			
+			<div class="notes--guide" id="text-sizes">
+				<p>Inuit comes with a set of <strong>classes that affect font size</strong> only. The first six classes (<code>.alpha</code> through <code>.zeta</code>) correspond to the six heading element settings. Then there are additional very large and very small classes, all listed below.</p>
+			</div>
+
+			<div class="grid__item one-third">
+				<h3 class="purpleText">Basic styles</h3>
+				<p class="alpha">alpha</p>
+				<p class="beta">beta</p>
+				<p class="gamma">gamma</p>
+				<p class="delta">delta</p>
+				<p class="epsilon">epsilon</p>
+				<p class="zeta">zeta</p>
+			</div><!--
+		
+			--><div class="grid__item one-third">
+				<h3 class="purpleText">Large styles</h3>
+				<p class="big">big</p>
+				<p class="kilo">kilo</p>
+				<p class="mega">mega</p>
+				<p class="giga">giga</p>
+			</div><!--
+			 
+			--><div class="grid__item one-third">
+				<h3 class="purpleText">Small styles</h3>
+				<p class="smallprint">smallprint or milli</p>
+				<p class="micro">micro</p>
+			</div>
+			
+
+		</section>
+				
+				<section id="branding__typography__lists">
+				
+					<h2>Lists</h2>
+					
+					<div class="notes--guide">
+						<p>Our <code>&lt;ul&gt;</code> and <code>&lt;ol&gt;</code> elements adhere to browser <strong>default styles</strong>.</p>
+					</div>
+					
+					
+					<ul>
+						<li>Officers</li>
+						<ul>
+							<li>Ishmael</li>
+							<li>Ahab</li>
+							<li>Starbuck</li>
+						</ul>			
+						<li>Harpooners</li>
+						<ul>
+							<li>Tashtego</li>
+							<li>Daggoo</li>
+							<li>Queequeg</li>
+						</ul>
+					</ul>
+					
+					<ol>
+						<li>Ishmael</li>
+						<li>Ahab</li>
+						<li>Queequeg</li>
+					</ol>
+					
+				</section>				
+			
+			</section>
+		
+		</section>
+
+
+<footer></footer>
+
+
+<!-- Zepto -->
+<script src="../js/zepto.min.js"></script>
+
+<!--Script for styling the code snippets 
+
+	NOTE: it doesn't escape tags!!! gotta convert to entities :(
+	Here's a good tool: http://www.accessify.com/tools-and-wizards/developer-tools/quick-escape/default.php 
+-->	
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>	
+
+<!-- Specific to style guide -->
+<script src="js/nyplbase__styleguide.js"></script>
+
+</body></html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<title>NYPL Base: Style Guide </title>
+    
+    <link rel="stylesheet" href="../css/nyplbase.min.css">
+    
+</head>
+<body class="grid style-guide">
+
+	<!-- TOP ANCHOR -->
+	<div id="top"></div>
+	
+	<!-- BACK TO TOP -->
+	<a class="backtotop icon-arrow-up32 alpha" href="#top"><span class="visuallyhidden">Back to top</span></a>
+
+	<!-- MENU BUTTON -->
+	<a class="menu__button icon-menu2 big"></a>
+
+	
+	<nav class="styleguide__nav">
+		<ul class="nav nav--block">
+			<li><a href="index.html">NYPLBase</li>
+			<li><a href="styleguide__branding.html">Branding</li>
+			<li><a href="styleguide__layout.html">Layout</li>
+			<li><a href="styleguide__components.html">Components</li>
+			<li><a href="styleguide__calls.html">Calls to action</li>
+			<li><a href="styleguide__coding.html">Coding</li>
+			<li><a href="styleguide__resources.html">Resources</li>
+			<li><a href="styleguide__about.html">About</a></li>
+		</ul>
+	</nav>
+	
+	<div class="content--guide ">
+
+
+
+		<nav class="styleguide__subnav push-half--sides">
+		
+			<ul class="nav nav--stacked">
+			
+				<li><a href="#about">About</a></li>
+				
+			
+				<li><a href="#thanks">Acknowledgements</a></li>
+	
+			</ul>
+			
+		</nav>
+
+
+
+
+		<section id="about">
+			<div >
+				<p>NYPL Base is a project of the Web team at The New York Public Library, in close collaboration with its Digital Media and Creative Services teams. To achieve consistency among our digital properties, we needed to be able to easily experiment, develop, codify, and disseminate our design, so we created this rapid prototyping system, or "living style guide."</p>
+
+				<p>The best-known example of this kind of toolset is <a href="http://getbootstrap.com">Twitter Bootstrap</a>, which was developed by Mark Otto and Jacob Thornton at Twitter as a way to keep their properties and internal tools consistent. Since the release of an open-source version of their project, you can download the Bootstrap package and override the styles to suit your own project. However, overrides can take a lot of time and repeated code, so NYPL Base was designed to provide even greater customization and flexibility.</p> 
+				
+				<p>During development, several frameworks were research and <a href="http://inuitcss.com">InuitCSS</a> was selected because:
+				<ul>
+					<li>It’s built on principles of object-oriented development, which makes it modular</li>
+					<li>It uses proportional (rather than column-based) layouts, which makes it more flexible</li>
+					<li>It does not include styling or branding of any kind, which eliminates the need for overrides</li>
+					<li>It’s device-agnostic and responsive</li>
+				</ul>
+				</p>
+				
+				<p>The project was named NYPLBase (or familiarly, "Base") because this code provides a "base" for all our web properties. Color palette, typeface, default styles, and a bit of structure is all built into this code package. We can use it internally to rapid-prototype and test right away, we can use it as design reference, we can build a sustainable, adaptable pattern library, and we save time and money on projects because our brand is built in. Future redesigns will benefit from sustainable, consistent branding, time and money saved internally, and a smaller learning curve for our consulting agency partners. And even if you're not working directly with code, you can still use the style guide.</p>
+				
+				<p>Please note that NYPL Base is still in infancy and our web team is working directly in the code for Base so that fixes to the core can be made as we go. Please be patient with bugs or glitches and let us know so that we can improve the site. In the future, we plan to accept pull requests on GitHub from trusted colleagues and hope that, when appropriate, others can contribute back to the project, so that this code will improve, iterate, and grow.</p> 
+				
+				<div>Please direct any questions or comments about NYPL Base to <a href="mailto:jenniferanderson@nypl.org">Jennifer Anderson, Senior UX Designer</a>.</div>
+			</div>
+		</section>
+			
+					<section id="thanks">
+			<h2>Acknowledgements</h2>
+			<p>I owe being able to even <em>conceive</em> of a distributable rapid prototyping system (RaProSys? that's terrible) to <a href="http://twitter.com/mdo"><strong>Mark Otto</strong></a> and <a href="http://twitter.com/fat"><strong>Jacob Thornton</strong></a>, makers of <a href="http://getbootstrap.com/">Bootstrap</a>.</p>
+			<p>Massive amounts to <a href="https://twitter.com/csswizardry"><strong>Harry Roberts</strong></a> and his <a href="http://csswizardry.com/">css wizardry</a> for creating Inuit; I stand on his beefy shoulders and no mistake. The burliness of the Sass in this system is all about Harry's excellent work.</p>
+			<p>Big thanks to <a href="http://github.com/beefoo"><strong>Brian Foo</strong></a>, whose <a href="https://drrstyleguide.herokuapp.com/">DRR Bootstrap</a> (maintained by <a href="https://twitter.com/nypl_labs">NYPL Labs</a>) provided a great starting point. Also, BFoo taught me more than a few sassy Sass tricks.</p>
+			<p>Finally to <a href="https://github.com/seanredmond"><strong>Sean Redmond</strong></a>, who gave me room to do this exactly how I wanted, and never made me feel bad for not knowing all my command line commands. Thanks man.</p>
+			<p>Thank you!</p><span class="icon-skull alpha "></span> jA
+		</section>
+		
+		
+	</div>
+<footer></footer>
+
+
+<!-- Zepto -->
+<script src="../js/zepto.min.js"></script>
+
+<!--Script for styling the code snippets 
+
+	NOTE: it doesn't escape tags!!! gotta convert to entities :(
+	Here's a good tool: http://www.accessify.com/tools-and-wizards/developer-tools/quick-escape/default.php 
+-->	
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>	
+
+<!-- Specific to style guide -->
+<script src="js/nyplbase__styleguide.js"></script>
+
+</body></html>

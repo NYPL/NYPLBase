@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<title>NYPL Base: Style Guide </title>
+    
+    <link rel="stylesheet" href="../css/nyplbase.min.css">
+    
+</head>
+<body class="grid style-guide">
+
+	<!-- TOP ANCHOR -->
+	<div id="top"></div>
+	
+	<!-- BACK TO TOP -->
+	<a class="backtotop icon-arrow-up32 alpha" href="#top"><span class="visuallyhidden">Back to top</span></a>
+
+	<!-- MENU BUTTON -->
+	<a class="menu__button icon-menu2 big"></a>
+
+	
+	<nav class="styleguide__nav">
+		<ul class="nav nav--block">
+			<li><a href="index.html">NYPLBase</li>
+			<li><a href="styleguide__branding.html">Branding</li>
+			<li><a href="styleguide__layout.html">Layout</li>
+			<li><a href="styleguide__components.html">Components</li>
+			<li><a href="styleguide__calls.html">Calls to action</li>
+			<li><a href="styleguide__coding.html">Coding</li>
+			<li><a href="styleguide__resources.html">Resources</li>
+			<li><a href="styleguide__about.html">About</a></li>
+		</ul>
+	</nav>
+	
+	<div class="content--guide ">
+
+
+
+		<nav class="styleguide__subnav push-half--sides">
+		
+				<ul class="nav nav--stacked">
+				
+		
+		
+					<li><a href="#coding">Coding</a>
+						<ul class="nav nav--stacked">
+							<li><a href="#coding__naming">Note on naming</a></li>
+							<li><a href="#coding__structure">How to structure layout</a></li>
+							<li><a href="#coding__helpclasses">Helper classes</a></li>
+							<li><a href="#coding__mqs">Media queries</a></li>
+							<li><a href="#coding__mixins">Mixins</a></li>
+						</ul>
+								
+				
+		
+				</ul>
+				
+			</nav>
+		
+		<h1 id="coding">Coding</h1>
+		
+		<section id="coding">
+			<section id="coding__naming">
+				<h2>Note on naming</h2>
+				<div class="notes--guide">			
+					<p>InuitCSS uses the <a href="http://bem.info/method/definitions/">BEM method</a> of <strong>naming its classes</strong>. BEM stands for Block Element Modifier, and it works like this:</p>
+					
+					<p class="text--center gamma">".block__element--modifier"</p>
+					
+					<p>in which "block" is the name of the chunk you're working on, "element" is the name of the smaller piece of the chunk, and "modifier" is a descriptor. For example, the class name <code>.nav__item</code> would refer to an item contained in the nav chunk (or "block"). <code>.nav__item--last</code> would refer to the last nav item in the list. You can use just the item and descriptor parts of the convention too, as in <code>.form--horiz</code>.</p>
+					
+					<p>The exception to this naming convention in Base is the <strong>color classes</strong>, which use intercaps (as in <code>.blueLight</code>).</p> 
+				</div>
+				
+			</section>		
+			
+			<section id="coding__structure">
+				<h2>How to structure layout</h2>
+	
+				<p class="notes--guide">First, give the <code>body</code> a class of <code>.grid--center</code> (this will work with some other classes to center its contained elements):</p>
+				
+				<pre class="code prettyprint">&lt;body class=&quot;grid--center&quot;&gt;</pre>
+	
+	
+				<p class="notes--guide">Then start with <code>sections</code> (which have a set max-width so that the content doesn't stretch unreasonably).</p>
+				
+				<pre class="code prettyprint">
+					&lt;section&gt;<br>
+					&lt;/section&gt;
+				</pre>
+				
+				<p class="notes--guide">Each <code>section</code> is given a class of <code>.primary</code>, <code>.secondary</code>, or <code>.tertiary</code>, to designate what priority of content they contain. (<code>Section</code>s contain <code>.grid__item</code>s, so those <code>section</code> class names also extend the class <code>.grid</code>.)</p>
+				
+				<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
+				&lt;/section&gt;</pre>
+	
+				<p class="notes--guide">To build a chunk of content, start with a <code>div</code> and the class name <code>.chunk</code> (<code>.chunk</code> extends the class <code>.grid__item</code>):</p>
+				
+				<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
+				&nbsp; &lt;div class=&quot;chunk&quot;&gt;<br>
+				&nbsp; &lt;/div&gt;<br>
+				&lt;/section&gt;</pre> 
+				
+				<p class="notes--guide">You can then add grid classes to tell the chunk how to behave in different device contexts:</p>
+				
+				<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
+				&nbsp; &lt;div class=&quot;chunk one-whole lap-and-up-one-half desk-one-third&quot;&gt;<br>
+				&nbsp; &lt;/div&gt;<br>
+				&lt;/section&gt;</pre>	
+				
+				
+				
+				<p class="notes--guide">Your section doesn't have to contain <code>div</code>s; maybe the more appropriate containers are article and sidebar, in which case your code might start like this:</p>
+				
+				<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
+				&nbsp; &lt;article class=&quot;grid__item one-whole desk-two-thirds&quot;&gt;&lt;/article&gt;<br>
+				&nbsp; &lt;sidebar class=&quot;grid__item one-whole desk-one-third&quot;&gt;&lt;/sidebar&gt;<br>
+				&lt;/section&gt;</pre>
+					
+				
+				<p class="notes--guide">Elements within the chunk can respond to the context too (don't forget to comment out the code whitespace between elements you want to align in the grid system):</p>
+				
+				<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
+				&nbsp; &lt;div class=&quot;chunk one-whole lap-and-up-one-half desk-one-third&quot;&gt;<br>
+				&nbsp; &nbsp; &lt;img class=&quot;one-whole&quot;&gt;<br>
+				&nbsp; &nbsp; &lt;h2 class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/h2&gt;&lt;!--<br>
+				&nbsp; &nbsp; --&gt;&lt;p class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/p&gt;<br>
+				&nbsp; &lt;/div&gt;<br>
+				&lt;/section&gt;</pre>	
+	
+				<p class="notes--guide">Keep building the structure of the page in this way.</p>
+	
+				<pre class="code prettyprint">&lt;section class=&quot;primary&quot;&gt;<br>
+				&nbsp; &lt;div class=&quot;chunk one-whole lap-and-up-one-half desk-one-third&quot;&gt;<br>
+				&nbsp; &nbsp; &lt;img class=&quot;one-whole&quot;&gt;<br>
+				&nbsp; &nbsp; &lt;h2 class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/h2&gt;&lt;!--<br>
+				&nbsp; &nbsp; --&gt;&lt;p class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/p&gt;<br>
+				&nbsp; &lt;/div&gt;&lt;!--<br>
+					<br>
+				&nbsp; --&gt;&lt;div class=&quot;chunk one-whole lap-and-up-one-half desk-one-third&quot;&gt;<br>
+				&nbsp; &nbsp; &lt;img class=&quot;one-whole&quot;&gt;<br>
+				&nbsp; &nbsp; &lt;h2 class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/h2&gt;&lt;!--<br>
+				&nbsp; &nbsp; --&gt;&lt;p class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/p&gt;<br>
+				&nbsp; &lt;/div&gt;&lt;!--<br>
+					<br>
+				&nbsp; --&gt;&lt;div class=&quot;chunk one-whole lap-and-up-one-half desk-one-third&quot;&gt;<br>
+				&nbsp; &nbsp; &lt;img class=&quot;one-whole&quot;&gt;<br>
+				&nbsp; &nbsp; &lt;h2 class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/h2&gt;&lt;!--<br>
+				&nbsp; &nbsp; --&gt;&lt;p class=&quot;grid__item one-whole desk-one-half&quot;&gt;&lt;/p&gt;<br>
+				&nbsp; &lt;/div&gt;<br>
+				&lt;/section&gt;</pre>
+				
+			</section>
+	
+			<section id="coding__helpclasses">
+				<h2>Helper classes</h2>
+	
+				<p class="notes--guide">Inuit recommends to only use a helper class if an element/component <strong>doesn’t already have a class</strong> to which you could apply this styling, e.g. if you need to float <code>.main-nav</code> left then add <code>float:left;</code> to that ruleset as opposed to adding the <code>.float--left</code> class to the markup. Also note that many of these classes are declared <code>!important</code> because they are intended to <strong>override other selectors</strong>.</p>
+	
+	
+				<div class="">
+					<div class="code grid__item one-whole lap-and-up-one-third">
+						<h3>Image positions (floats)</h3>
+						<code>
+							.img--right<br>
+							.img--left<br>
+							.img--center<br>
+						</code>
+					</div><!--
+					--><div class="code grid__item one-whole lap-and-up-one-third">
+						 <h3>Clearfix</h3>
+						<code>
+							.cf<br>
+							<p class="notes--guide brand-face">You can use this class in the markup, but Inuit recommends extending it with Sass to avoid over-usage.</p>
+						</code>
+					</div><!--
+					--><div class="code grid__item one-whole lap-and-up-one-third">
+						<h3>Hide from view</h3>
+						<code>
+							.accessibility<br>
+							.visuallyhidden<br>
+							<p class="notes--guide brand-face">Both these classes do the same thing, which is to hide the element from view but not from screen readers.</p>
+						</code>
+					</div>
+				</div>
+				
+				<br>
+	
+				<div class="">
+					<div class="code grid__item one-whole lap-and-up-one-third">
+						<h3>Add/remove floats</h3>
+						<code>
+							.float--right<br>
+							.float--left<br>
+							.float--none<br>
+						</code>
+					</div><!--
+					--><div class="code grid__item one-whole lap-and-up-one-third">
+						 <h3>Text alignment</h3>
+						<code>
+							.text--left<br>
+							.text--center<br>
+							.text--right<br>
+						</code>
+					</div><!--
+					--><div class="code grid__item one-whole lap-and-up-one-third">
+						<h3>Font weights</h3>
+						<code>
+							.weight--light<br>
+							.weight--normal<br>
+							.weight--semibold<br>
+						</code>
+					</div>
+				</div>
+				
+				<br>
+				
+				<div class="code">
+					<h3>Add/remove margins</h4>
+					<div class="grid__item one-whole lap-and-up-one-third">
+						<h4>Add</h4>
+						<code>
+							.push<br>
+							.push--top<br> 
+							.push--right<br>
+							.push--bottom<br>
+							.push--left<br>
+							.push--ends <br>   
+							.push--sides<br>
+						</code>
+					</div><!--
+					--><div class="grid__item one-whole lap-and-up-one-third">
+						<h4>Add half space</h4>
+						<code>
+							.push-half<br>      
+							.push-half--top<br> 
+							.push-half--right<br>
+							.push-half--bottom<br> 
+							.push-half--left<br>   
+							.push-half--ends<br>   
+							.push-half--sides<br>
+						</code>
+					</div><!--
+					--><div class="grid__item one-whole lap-and-up-one-third">
+						<h4>Remove</h4>
+						<code>
+							.flush<br>       
+							.flush--top<br>    
+							.flush--right<br>  
+							.flush--bottom<br> 
+							.flush--left<br>   
+							.flush--ends<br>   
+							.flush--sides<br>
+						</code>
+					</div>
+				</div>
+				<br>
+				<div class="code">
+					<h3>Add/remove paddings</h3>
+					<div class="grid__item one-whole lap-and-up-one-third">
+						<h4>Add</h3>
+						 <code>
+							.soft<br>        
+							.soft--top<br>    
+							.soft--right<br>  
+							.soft--bottom<br> 
+							.soft--left<br>   
+							.soft--ends<br>   
+							.soft--sides<br>  
+						</code>
+					</div><!--
+					--><div class="grid__item one-whole lap-and-up-one-third">
+						<h4>Add half space</h4>
+						<code>
+							.soft-half<br>   
+							.soft-half--top<br> 
+							.soft-half--right<br>  
+							.soft-half--bottom<br> 
+							.soft-half--left<br>   
+							.soft-half--ends<br>   
+							.soft-half--sides<br>  
+						</code>
+					</div><!--
+					--><div class="grid__item one-whole lap-and-up-one-third">
+						<h4>Remove</h4>
+						<code>
+							.hard<br>          
+							.hard--top<br>     
+							.hard--right<br>   
+							.hard--bottom<br>  
+							.hard--left<br>
+							.hard--ends<br>
+							.hard--sides<br>
+						</code>
+					</div>
+				</div>   
+				<br>
+				
+				<p class="notes--guide">Prepending the width classes with either pull-- or push-- will move the element with that class to the left (pull) or right(push).</p>
+				<pre class="code prettyprint">&lt;div class=&quot;pull--one-third&quot;&gt;This element is moved over&lt;/div&gt;</pre>
+	
+			</section>
+	
+			<section id="coding__mqs">
+				<h2>Media queries</h2>
+				<p class="notes--guide">You can use the following breakpoints:</p>
+				<pre class="code">
+				palm<br>
+				tablet<br>
+				tablet-and-up<br>
+				lap<br>
+				lap-and-up<br>
+				portable<br>
+				desk<br>
+				desk-wide<br>
+				</pre>
+				
+				<p class="notes--guide">and the following <code>@include</code> in your Sass to take advantage of Inuit's media query mixin:</p>
+				
+				<pre class="code prettyprint">@include media-query(palm){ [styles here] }</pre>		
+				
+			</section>
+	
+			<section id="coding__mixins">
+				<h2>Mixins</h2>
+				<p class="notes--guide">If you're working with the Sass, you can take advantage of variables, media queries, and some handy mixins.</p>
+				
+				<h3>Create type</h3>
+				<p class="notes--guide">Create a fully formed type style (sizing and vertical rhythm) by passing in a single value, e.g.:</p>
+				<pre class="code prettyprint">@include font-size(10px);</pre>		
+				
+				<h3>CSS vendor prefixes</h3>
+				<p class="notes--guide">Create vendor-prefixed CSS in one go:</p>
+				<pre class="code prettyprint">@include vendor(border-radius, 4px);</pre>		
+				
+				<h3>CSS keyframes</h3>
+				<p class="notes--guide">Create CSS keyframe animations for all vendors in one go:</p>
+				<pre class="code prettyprint">   
+				.foo{<br>
+				&nbsp;&nbsp;&nbsp;@include vendor(animation, shrink 3s);<br>
+				}<br>
+				
+			   @include keyframe(shrink){<br>
+			   &nbsp;&nbsp;&nbsp;from{<br>
+			   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size:5em;<br>
+			   &nbsp;&nbsp;&nbsp;}<br>
+			   }</pre>		
+									
+			</section>
+		</section>
+		
+<footer></footer>
+
+
+<!-- Zepto -->
+<script src="../js/zepto.min.js"></script>
+
+<!--Script for styling the code snippets 
+
+	NOTE: it doesn't escape tags!!! gotta convert to entities :(
+	Here's a good tool: http://www.accessify.com/tools-and-wizards/developer-tools/quick-escape/default.php 
+-->	
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>	
+
+<!-- Specific to style guide -->
+<script src="js/nyplbase__styleguide.js"></script>
+
+</body></html>

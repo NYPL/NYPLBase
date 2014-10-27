@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<title>NYPL Base: Style Guide </title>
+    
+    <link rel="stylesheet" href="../css/nyplbase.min.css">
+    
+</head>
+<body class="grid style-guide">
+
+	<!-- TOP ANCHOR -->
+	<div id="top"></div>
+	
+	<!-- BACK TO TOP -->
+	<a class="backtotop icon-arrow-up32 alpha" href="#top"><span class="visuallyhidden">Back to top</span></a>
+
+	<!-- MENU BUTTON -->
+	<a class="menu__button icon-menu2 big"></a>
+
+	
+	<nav class="styleguide__nav">
+		<ul class="nav nav--block">
+			<li><a href="index.html">NYPLBase</li>
+			<li><a href="styleguide__branding.html">Branding</li>
+			<li><a href="styleguide__layout.html">Layout</li>
+			<li><a href="styleguide__components.html">Components</li>
+			<li><a href="styleguide__calls.html">Calls to action</li>
+			<li><a href="styleguide__coding.html">Coding</li>
+			<li><a href="styleguide__resources.html">Resources</li>
+			<li><a href="styleguide__about.html">About</a></li>
+		</ul>
+	</nav>
+	
+	<div class="content--guide ">
+
+
+
+		<nav class="styleguide__subnav push-half--sides">	
+		<ul class="nav nav--stacked">
+
+			<li><a href="#components">Components</a>
+				<ul class="nav nav--stacked">
+					<li><a href="#components__menus">Menus</a></li>
+					<li><a href="#components__navigational">Navigation elements</a></li>
+					<li><a href="#components__content-dividers">Content dividers</a></li>
+					<li><a href="#components__modals">Modals</a></li>
+					<li><a href="#components__forms">Forms</a></li>
+					<li><a href="#components__images">Images</a></li>
+					<li><a href="#components__icons">Icons</a></li>
+				</ul>
+			</li>
+
+		</ul>
+		
+	</nav>
+		
+		<section id="components">
+		
+			<h1>Components</h1>
+		
+			<section id="components__menus">
+				<h2>Menus</h2>
+				<p class="notes--guide">global nav, sidebars, sub-sites</p>
+			</section>
+		
+			<section id="components__navigational">	
+				
+				<h2>Navigational elements</h2>	
+				
+				<h3>Pagination</h3>
+				
+				<div class="notes--guide">
+					<p>Adding the class <code>.pagination</code> to a list container with the <code>&lt;.nav&gt;</code> class also applied creates the pagination layout. Also use the following classes:
+					<code><ul>
+						<li>pagination__first</li>
+						<li>pagination__last</li>
+						<li>pagination__prev</li>
+						<li>pagination__next</li>
+					</ul></code>
+					on the appropriate elements in your list.
+					</p>
+					<p>(Note: in the example below, the class <code>.active</code> is being applied to the page 5 list item to demonstrate that state, which displays a blue border.)
+				</div>
+				
+				<pre class="code prettyprint">
+					&lt;ol class=&quot;nav pagination&quot;&gt;<br>
+					&nbsp; &lt;li class=&quot;pagination__first&quot;&gt;First&lt;/li&gt;<br>
+					&nbsp; &lt;li class=&quot;pagination__prev&quot;&gt;Previous&lt;/li&gt;<br>
+					&nbsp; &lt;li&gt;&lt;a href=/page/1&gt;1&lt;/a&gt;&lt;/li&gt;<br>
+					&nbsp; &lt;li&gt;&lt;a href=/page/2&gt;2&lt;/a&gt;&lt;/li&gt;<br>
+					&nbsp; &lt;li&gt;&lt;a href=/page/3&gt;3&lt;/a&gt;&lt;/li&gt;<br>
+					&nbsp; &lt;li&gt;&lt;a href=/page/4&gt;4&lt;/a&gt;&lt;/li&gt;<br>
+					&nbsp; &lt;li class=&quot;active&quot;&gt;&lt;a href=/page/5&gt;5&lt;/a&gt;&lt;/li&gt;<br>
+					&nbsp; &lt;li class=&quot;pagination__next&quot;&gt;&lt;a href=/page/next&gt;Next&lt;/a&gt;&lt;/li&gt;<br>
+					&nbsp; &lt;li class=&quot;pagination__last&quot;&gt;&lt;a href=/page/last&gt;Last&lt;/a&gt;&lt;/li&gt;<br>
+					&lt;/ol&gt;
+				</pre>
+				
+				<ol class="nav pagination">
+				   <li class="pagination__first">First</li>
+				   <li class="pagination__prev">Previous</li>
+				   <li><a href=/page/1>1</a></li>
+				   <li><a href=/page/2>2</a></li>
+				   <li><a href=/page/3>3</a></li>
+				   <li><a href=/page/4>4</a></li>
+				   <li class="active"><a href=/page/5>5</a></li>
+				   <li class="pagination__next"><a href=/page/next>Next</a></li>
+				   <li class="pagination__last"><a href=/page/last>Last</a></li>
+				</ol>
+	
+			</section>
+		
+			<section id="components__content-dividers">
+				<h2>Content dividers</h2>
+				<p class="notes--guide">feature boxes, shaded boxes, rules</p>
+			</section>
+
+			<section id="components__modals">
+				<h2>Modals</h2>
+				<p class="notes--guide">ex. hijack light box</p>
+			</section>
+		
+			<section id="components__forms">
+		
+				<h2>Forms</h2> 
+				
+				<div class="notes--guide">
+					<p>Below are examples of different configurations of form elements. Text-based inputs are <strong>100% wide by default</strong>, so they can grow or shrink automatically with the available space. </p>
+					
+					<p>The markup for these forms is very simple and straightforward; I'm not doing anything wacky with element order or nesting that the styling would depend on. <code>&lt;label&gt;</code> elements come before <code>&lt;input&gt;</code> elements, unless that doesn't make sense (for example, checkbox labels come after their inputs in the markup).</p>
+					<p>Adding the class <code>.callout--form</code> to the <code>&lt;form&gt;</code> element gives it that nice warm gray <strong>background and border</strong>, plus a little padding.</p>
+				</div>
+				
+				<h3>Form elements: examples</h3>
+				
+				<div class="grid__item two-thirds hard--left">			
+					<form role="form" id="form__feedback" class="callout--form">
+						<label for="name">Name</label>
+						<input id="name" class="text-input" type="text" placeholder="Name" autocomplete="on">
+						
+						<label for="email">Email</label>
+						<input id="email" class="text-input" type="email" placeholder="Email address" autocomplete="on">
+						
+						<label for="example-text">Type your message below</label>
+						<textarea id="example-text" class="text-input" rows="5"></textarea>
+						
+						<label for="userhome">Where do you live?</label>
+						<select id="userhome" class="form-control" name="locations">
+							<option value="queens">Queens</option>
+							<optgroup label="Manhattan">
+								<option>Uptown</option>
+								<option>Midtown</option>
+								<option>Downtown</option>
+							</optgroup>
+							<option value="brooklyn">Brooklyn</option>
+							<option value="staten">Staten Island</option>
+							<option value="Bronx">Bronx</option>
+						</select>
+						
+						<fieldset>
+							<legend>I'd like to receive updates:</legend>
+							<ul class="check-list--inline">
+								<li><input id="daily" name="update" type="radio" value="daily" />
+								<label for="daily">Daily</label></li> 
+								
+								<li><input id="weekly" name="update" type="radio" value="weekly" />
+								<label for="weekly">Weekly</label></li>
+								
+								<li><input id="monthly" name="update" type="radio" value="monthly" />
+								<label for="monthly">Monthly</label></li>
+							</ul>
+						</fieldset>
+	
+						<input type="submit" value="Send">
+					</form>
+				</div>
+					
+				<div class="grid__item one-half hard--left">
+					<form role="form" id="form__login" class="callout--form">
+						<label for="email">Email</label>
+						<input id="email" class="text-input" type="email" placeholder="Email address" autocomplete="on">
+						
+						<label for="password">Password</label>
+						<input id="password" class="text-input" type="password" placeholder="Password" autocomplete="on">
+						
+						<input type="submit" value="Log in">
+					</form>	
+				</div>
+	
+				<div class="grid__item two-thirds hard--left">				
+					<form role="form" id="form__search" class="callout--form">
+						<label for="search">Search</label>
+						<input id="search" class="text-input" type="search" placeholder="keyword" autocomplete="on">
+						
+						<fieldset>
+							<legend>Type of results:</legend>
+							<ul class="check-list">						
+								<li><input id="image" type="checkbox" value="image" />
+								<label for="image">images</label> </li>
+								
+								<li><input id="video" type="checkbox" value="video" />
+								<label for="video">video</label> </li>
+								
+								<li><input id="transcipts" type="checkbox" value="transcipts" />
+								<label for="transcipts">transcipts</label></li>
+							</ul>
+						</fieldset>
+						
+						<input type="submit" value="search">
+					</form>				
+				</div>
+	
+	<!--
+	DEFINE THESE INPUT TYPES LATER
+						<input type="color" />
+						<input type="file" />
+						<input type="range" />
+						<input type="number" />
+						
+						<input type="date" />
+						<input type="datetime" />
+						<input type="datetime-local" />
+						<input type="month" />
+						<input type="time" />
+						<input type="week" />
+	-->		
+	
+	<!-- ADD!
+	// make inputs styling the same
+	.form-control	
+	// Fixes some positioning on check-lists.
+	.check-list--inline
+	-->
+	
+	
+				<h3>Inline form example</h3>
+					
+				<div class="notes--guide">
+					<p>Adding the class <code>.form--inline</code> to the <code>&lt;form&gt;</code> element <strong>lays out all contained elements inline</strong>, with some comfy padding.</p>
+				</div>
+				
+				<form role="form" id="" class="form--inline" action="" method="">
+					<label class="visuallyhidden" for="email">Email</label>
+					<input id="email" class="text-input" type="email" placeholder="Email address" autocomplete="on">
+					
+					<label class="visuallyhidden" for="password">Password</label>
+					<input id="password" class="text-input" type="password" placeholder="Password" autocomplete="on">
+					
+					<input type="submit" value="submit">
+				</form>
+				
+				
+				<h3>Horizontal form example</h3>
+				
+				<div class="notes--guide">
+					<p>Adding the class <code>.form--horiz</code> to the <code>&lt;form&gt;</code> element creates this <strong>right-aligned label layout</strong>.</p>
+				</div>				
+			
+				<div class="grid__item two-thirds hard--left">
+					<form role="form" id="form__login" class="form--horiz callout--form">
+						<label for="email" class="one-third">Email</label><input id="email" class="two-thirds" type="email" placeholder="Email address" autocomplete="on">
+						
+						<label for="password" class="one-third">Password</label><input id="password" class="two-thirds" type="password" placeholder="Password" autocomplete="on">
+						
+						<input class="one-third push--two-thirds" type="submit" value="Log in">
+					</form>	
+				</div>			
+				
+				<h3>Input states (focus, disabled, validate/error)</h3>
+				
+				<p class="notes--guide">You can use the classes <code>.error</code>, <code>.success</code>, and <code>.disabled</code> to style the corresponding input elements. (Submit inputs get styled as disabled by adding the class <code>.btn--inactive</code>.)</p>
+				
+				<pre class="code prettyprint">
+					&lt;input id=&quot;errorText&quot; type=&quot;text&quot; class=&quot;error&quot;&gt;
+				</pre>
+				
+				<div class="grid__item two-thirds hard--left">
+					<form role="form" id="form__states">
+						<label for="errorText">Error</label>
+						<input id="errorText" type="text" class="error">
+						
+						<label for="successText">Success</label>
+						<input id="successText" type="text" class="success">
+						
+						<label for="disabledText">Disabled</label>
+						<input disabled id="disabledText" type="text" class="disabled">
+						<input disabled type="submit" class="btn--inactive" value="Disabled">
+					</form>
+				</div>			
+	
+			</section>
+		
+			<section id="components__images">
+				
+				<h2>Images</h2>
+				
+				<div class="notes--guide">
+					<p>In InuitCSS, images are set to be <strong>fluid</strong> (i.e. <code>width: 100%;</code>) <strong>by default</strong>. To set an image to be non-fluid, specify width and height attributes in the markup.</p>
+					<p>This is a simple image element, with the class <code>.img--outline</code> applied to give it a soft outline.</p>
+				</div>
+				
+				<div class="grid__item two-thirds hard--left">
+					<img class="img--outline" src="../img/demo/photo_Computers.png" alt="computers in the library">
+				</div>
+	
+				<div class="notes--guide">
+					<p>The image-specific helper classes <code>.img--left</code> and <code>.img--right</code> exist in order to float an image left or right within a body of text:</p>
+				</div>
+				
+				<pre class="code prettyprint">
+					&lt;p&gt;&lt;img class=&quot;img--outline img--left&quot; src=&quot;../img/demo/photo_Computers.png&quot; alt=&quot;computers in the library&quot; width=&quot;200px&quot;&gt;Call me Ishmael....<br><br>
+					&lt;p&gt;&lt;img class=&quot;img--outline img--right&quot; src=&quot;../img/demo/photo_Computers.png&quot; alt=&quot;computers in the library&quot; width=&quot;200px&quot;&gt;Call me Ishmael....
+				</pre>
+				
+				<div>
+					<p class="grid__item two-thirds"><img class="img--outline img--left" src="../img/demo/photo_Computers.png" alt="computers in the library" width="200px">Call me Ishmael. Some years ago&mdash;never mind how long precisely&mdash;having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.</p>
+		
+					<p><img class="img--outline img--right" src="../img/demo/photo_Computers.png" alt="computers in the library" width="200px">It is a way I have of driving off the spleen and regulating the circulation. Whenever I find myself growing grim about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily pausing before coffin warehouses, and bringing up the rear of every funeral I meet; and especially whenever my hypos get such an upper hand of me, that it requires a strong moral principle to prevent me from deliberately stepping into the street, and methodically knocking people's hats off&mdash;then, I account it high time to get to sea as soon as I can.</p>
+				</div>
+	
+	
+				<br><br>
+				
+				<div class="grid__item one-third hard--left">
+					<figure>
+						<img src="../img/demo/nyplphotobooth_jA_orig.jpg">
+						<figcaption>Here is a lovely NYPL employee, showing both her work pride and her guns.</figcaption>
+					</figure>
+				</div><!--
+				
+				--><p class="notes--guide grid__item one-half push--left">Here's an example of <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code>. <br><br>(Note: <code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code> are only used for <strong>true captions</strong>, not just any old picture with text next to it.)</p>
+						
+				<h3>Thumbnails</h3>
+				
+				<div class="notes--guide">
+					<p>Adding the class <code>.thumbnails</code> to a container of <code>&lt;img&gt;</code> elements lays out 100x100px images.</p>
+				</div>
+				<div class="thumbnails">
+					<img src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
+					<img src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
+					<img src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
+					<img src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
+					<img src="../img/demo/nyplphotobooth_jA_orig.jpg" alt="nyplphotobooth_jA_orig">
+				</div>
+							
+			</section>
+				
+			<section id="components__icons">
+		
+				<h2>Icons</h2>
+				
+				<div class="notes--guide">
+					<p>We use a custom export of <a href="http://icomoon.io/"><strong>Icomoon</strong>'s</a> proprietary icons, which are available for use under the <a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License</a>. Included as part of the icon set are two icons of the "lion mark" (just the lion part) logo. (More on how to use those further on in the guide!)</p>
+					<p><span class="beta">This is the <a href="../fonts/icons-demo/demo.html"><strong>current set</strong></a>,</span> which is handy reference for choosing icons.</p>
+				</div>
+	
+	
+	
+				<h3>How to use the icons</h3>
+				
+				<h4>Class name</h4>
+				
+				<pre class="code prettyprint">
+					&lt;p class=&quot;icon-cog&quot;&gt;This is some text&lt;/p&gt;
+				</pre>
+				
+				<p class="icon-cog">This is some text</p>
+				
+				<h4>Data-icon attribute</h4>
+				
+				<pre class="code prettyprint">
+					&lt;p aria-hidden=&quot;true&quot; data-icon=&quot;&amp;#xf013;&quot;&gt;This is also some text&lt;/p&gt;
+				</pre>
+				
+				<p class="fs1" aria-hidden="true" data-icon="&#xe690;">This is also some text</p>
+				
+	
+				
+				
+				<h4>Sizes</h4>
+				
+				<div class="notes--guide">
+					<p>If you simply apply either an icon class or a data-icon attribute to an element, the icon that is attached will render at the <strong>same font size as its containing element</strong>. You can add font size classes to any element to affect the size of the text.</p>
+				</div>	
+				
+				<pre class="code prettyprint">
+					&lt;ul class=&quot;nav grid__item four-fifths&quot;&gt;<br>
+					&nbsp; &lt;li class=&quot;zeta icon-cog&quot;&gt;List item here&lt;/li&gt;<br>
+					&nbsp; &lt;li class=&quot;episilon icon-bookmark&quot;&gt;Another item here&lt;/li&gt;<br>
+					&nbsp; &lt;li class=&quot;gamma icon-book&quot;&gt;Last one&lt;/li&gt;<br>
+					&lt;/ul&gt;
+				</pre>		
+				
+				<ul class="nav grid__item four-fifths">
+					<li class="zeta icon-cog">List item here</li>
+					<li class="episilon icon-bookmark">Another item here</li>
+					<li class="gamma icon-book">Last one</li>
+				</ul>
+				
+				<div class="notes--guide">
+					<p>You can combine 2 elements (such as a span and a paragraph), one containing the icon and one containing some content, and give each a <strong>different font size</strong> class. You can also give them <strong>different color classes</strong> (see <a href="#palette">color section</a> for class names).</p>
+				</div>
+				
+				<pre class="code prettyprint grid__item one-whole">
+					&lt;span class=&quot;giga blueText&quot; aria-hidden=&quot;true&quot; data-icon=&quot;&amp;#xe61d;&quot;&gt;&lt;/span&gt;
+					&lt;p class=&quot;grid__item four-eighths gamma&quot;&gt;This large icon illustrates this chunk of content.&lt;/p&gt;
+				</pre>
+				
+				<div class="grid__item one-half">
+					<span class="giga blueText" aria-hidden="true" data-icon="&#xe61d;"></span>
+					<p class="grid__item four-eighths gamma">The large icon illustrates this chunk of content.</p>
+				</div>
+	
+	
+				<h4>The logo icon</h4>
+				
+					<p class="notes--guide">This is the logo (without the "New York Public Library" text, it's referred to as the "lion mark"), conveniently available as part of our icon font! Because it's an icon font, changing the color of the lion mark is as easy as <strong>applying a text color</strong>.</p>
+					<p class="one-whole push--one-quarter giga" aria-hidden="true" data-icon="&#xe600;"></p>
+		
+					<p class="notes--guide">See? All I did was change the color of the text of the element with the icon. <strong>Now it's blue!</strong></p>
+					<p class="one-whole push--one-quarter giga blueText" aria-hidden="true" data-icon="&#xe600;"></p>
+				
+					<div class="notes--guide">
+						<p>We also have a version of the lion mark in reverse. Here it is, no styling applied.</p>
+						<p>But remember, what you see here is totally wrong. Bad, wrong, no-no. <strong>Never</strong> use the lion mark with black/dark fills. The thing to remember is: <strong>the fill is always lighter than the background!</strong></p>
+					</div>
+					<p class="one-whole push--one-quarter giga" aria-hidden="true" data-icon="&#xe601;"></p>
+					
+					<p class="notes--guide">The trick is to apply a color <strong>to the reverse version</strong> of the lion mark that is <em>lighter</em> than the background it sits on. See?</p>
+					<p class="one-whole push--one-quarter giga whiteText black" aria-hidden="true" data-icon="&#xe601;"></p>
+					
+			</section>
+		
+		</section>
+		
+<footer></footer>
+
+
+<!-- Zepto -->
+<script src="../js/zepto.min.js"></script>
+
+<!--Script for styling the code snippets 
+
+	NOTE: it doesn't escape tags!!! gotta convert to entities :(
+	Here's a good tool: http://www.accessify.com/tools-and-wizards/developer-tools/quick-escape/default.php 
+-->	
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>	
+
+<!-- Specific to style guide -->
+<script src="js/nyplbase__styleguide.js"></script>
+
+</body></html>

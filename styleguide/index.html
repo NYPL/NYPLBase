@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<title>NYPL Base: Style Guide </title>
+    
+    <link rel="stylesheet" href="../css/nyplbase.min.css">
+    
+</head>
+<body class="grid style-guide">
+
+	<!-- TOP ANCHOR -->
+	<div id="top"></div>
+	
+	<!-- BACK TO TOP -->
+	<a class="backtotop icon-arrow-up32 alpha" href="#top"><span class="visuallyhidden">Back to top</span></a>
+
+	<!-- MENU BUTTON -->
+	<a class="menu__button icon-menu2 big"></a>
+
+	
+	<nav class="styleguide__nav">
+		<ul class="nav nav--block">
+			<li><a href="index.html">NYPLBase</li>
+			<li><a href="styleguide__branding.html">Branding</li>
+			<li><a href="styleguide__layout.html">Layout</li>
+			<li><a href="styleguide__components.html">Components</li>
+			<li><a href="styleguide__calls.html">Calls to action</li>
+			<li><a href="styleguide__coding.html">Coding</li>
+			<li><a href="styleguide__resources.html">Resources</li>
+			<li><a href="styleguide__about.html">About</a></li>
+		</ul>
+	</nav>
+	
+	<div class="content--guide ">
+
+
+
+		<header class="header-hed ">
+			<h1 class="kilo ">NYPLBase</h1>
+			<p class="subtitle ">The Library's rapid prototyping system and design pattern library</p>
+		</header>
+
+
+		<section id="from-designer">
+			<h2>Note from the designer</h2>
+			<div class="zeta">
+				<p>The Library's various web properties have long been in need of some design and branding unification. To achieve that consistency, we need to be able to easily experiment, develop, codify, and disseminate our design. What we needed was a rapid prototyping system, or what is sometimes called a "<strong>living style guide</strong>."</p>
+				
+				<p>The best-known example of this kind of toolset is <a href="http://getbootstrap.com">Twitter Bootstrap</a>, which was developed by Mark Otto and Jacob Thornton at Twitter as a way to keep their properties and internal tools consistent. Since the release of an open-source version of their project, you can download the Bootstrap package and override the styles to suit your own project; however, I felt we needed more customization and flexibility than overrides could provide. (Also, overrides can take a lot of time and repeated code.)</p>
+	
+				<p>I researched several frameworks and chose <a href="http://inuitcss.com">InuitCSS</a>, because:</p>
+				<ul>
+					<li>it’s built on principles of object-oriented development, which makes it <strong>modular</strong></li>
+					<li>it uses proportional (rather than column-based) layouts, which makes it more <strong>flexible</strong></li>
+					<li>it does not include styling or branding of any kind, which <strong>eliminates the need for overrides</strong></li>
+					<li>it’s device-agnostic and <strong>responsive</strong></li>
+				</ul>
+					
+				<p>Some slightly esoteric/goofy names were in the running for this project, but I went with NYPLBase (or familiarly, "Base") because this code provides a "base" <strong>for all our web properties</strong>. Color palette, typeface, default styles, and a bit of structure is all built into this code package. We can use it internally to rapid-prototype and test right away, we can use it as design reference, we can build a sustainable, adaptable pattern library, and we save time and money on projects because our brand is built in. Future redesigns will benefit from sustainable, consistent branding, time and money saved internally, and a smaller learning curve for our consulting agency partners. And even if you're not working directly with code, you can still use the style guide.</p>
+				
+				<p>Currently I'm using Base to build and test design patterns, and consulting with our Marketing team to make sure the branding is expressed correctly. I'm working directly in the code for Base so that <strong>I can make fixes to the core as I go</strong>. At the moment, I'm the only developer allowed to work like this. At some point I will start accepting pull requests on GitHub from Trusted Colleagues; I imagine once Labs gets ahold of it, they will unearth the need for many more design patterns. and all those ppl will be able (again, when appropriate) to contribute back to the project, so that this code will improve, iterate, and grow.</p>
+				
+				<p class="smallprint text--right">Note: this style guide is a work in progress, and runs off of Base itself, so please be patient with any bugs or other weirdness.<br> Thanks, jennifer Anderson, Senior UX Designer</p></div>
+		</section>
+
+	</div>
+
+
+<footer></footer>
+
+
+
+<!-- jQuery -->
+
+<!--
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>
+-->
+
+
+<script src="../js/zepto.min.js"></script>
+
+<!--Script for styling the code snippets 
+
+	NOTE: it doesn't escape tags!!! gotta convert to entities :(
+	Here's a good tool: http://www.accessify.com/tools-and-wizards/developer-tools/quick-escape/default.php 
+-->	
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>	
+
+
+<script>
+$(document).ready(function () {
+	
+
+	// show/hide nav
+	$( ".menu__button" ).click(function() {
+	  $( ".nav--guide" ).toggleClass( "nav--show" );
+	});
+	
+	// hide nav after clicking link
+	$(".nav--guide a").click(function() {
+		$( ".nav--guide" ).removeClass( "nav--show" ); 
+	});
+
+	// hide nav when you click anywhere off of it
+	$(".content--guide").click(function(e) {
+	    e.stopPropagation();
+	    $( ".nav--guide" ).removeClass( "nav--show" ); 
+	});
+
+	// smooth scrolling to anchors; original code from: https://gist.github.com/austinpray/5994652
+	function smoothScroll(el, to, duration) {
+	    if (duration < 0) {
+	        return;
+	    }
+	    var difference = to - $(window).scrollTop();
+	    var perTick = difference / duration * 10;
+	    this.scrollToTimerCache = setTimeout(function() {
+	        if (!isNaN(parseInt(perTick, 10))) {
+	            window.scrollTo(0, $(window).scrollTop() + perTick);
+	            smoothScroll(el, to, duration - 10);
+	        }
+	    }.bind(this), 10);
+	}
+	$('.nav--guide a, .backtotop').on('click', function(e) {
+	    e.preventDefault();
+	    smoothScroll($(window), $($(e.currentTarget).attr('href')).offset().top, 200);
+	});
+
+    // add bg color to selected nav item
+	$('.nav--guide a').on('click', function(e) {
+	    if ($(".nav--guide a").hasClass("current")) {
+		$(".nav--guide a").removeClass("current");  
+		  }
+	    $(this).addClass("current");
+	    });
+
+/* -end- */
+ });
+</script>
+
+</body></html>
