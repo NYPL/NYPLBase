@@ -1,0 +1,140 @@
+/** 
+ * Blogs demo
+ */
+// reduce width of blog post to the measure
+.blog{
+	max-width: $measure;
+}
+
+.blog__header{
+	background-color: #111;
+	background-image: url("../prototypes/img/nypl-header-mobile.png");
+	
+	@include media-query(lap-and-up){
+		background-image: url("../prototypes/img/nypl-header-short.png");
+		background-size: contain; 
+	}
+	
+	background-repeat: no-repeat;
+	background-position: top center;
+	height: 50px;
+	margin-bottom: $base-spacing-unit*2;
+	
+	img{
+		display: inline !important;
+	}
+}
+
+.blog__title{
+	@extend .text--center;
+	
+	color: $green;
+	font-family: $blog-font-family--display;
+	text-shadow: 2px 2px 1px $warmGrayLightest;
+	
+	@include media-query(lap-and-up){
+		@include font-size(50px);
+	}
+}
+.blog__about{	
+	font-style: italic;
+	margin-bottom: $base-spacing-unit;
+}
+
+.blog__tags{
+	margin: $base-spacing-unit 0;	
+}
+
+.blog__img{
+	position: relative	
+}
+
+.blog__img--pinterest{
+	color: $white;
+	
+	// positioning
+	position: absolute;
+	bottom: 24px;
+	left: 0;
+}
+
+.blog p{
+	@include font-size(18px);
+	
+	line-height: 2rem;
+	
+	// positioning
+	position: relative;
+	
+	&:hover .comment__button{
+		left: -60px;
+	}
+}
+
+// social media buttons block
+.share{
+	@extend .gamma;
+	@extend .text--center;
+		
+	li{
+		list-style-type: none;
+		
+		a{
+			color: $blue;
+			
+			&:hover{
+				color: darken($blue, 10%);
+			}
+		}
+	}
+	
+	@include media-query(desk){
+		@include font-size(28px);
+		line-height: 1.3;
+		
+		// positioning 
+		position: fixed;
+		right: 1%;
+		
+		li{
+			display: list-item;	
+		}
+	}
+}
+
+// comments
+.comment{
+	background-color: lighten($blue, 55%);
+	border-radius: $brand-round;
+	padding: $half-spacing-unit/2;
+	width: 150px;
+	
+	// positioning
+	position: absolute;
+	left: -170px;
+	
+	&.show{
+		left: -160px;
+	}
+
+}
+
+.comment__button{
+	color: $warmGrayLightest;
+	
+	// positioning
+	position: absolute;
+	left: -9999px;
+	
+	&:hover{
+		color: rgba($blue, .5);
+	}
+
+}
+
+.comment__comment{
+	resize: none;
+	height: 200px;
+}
+
+

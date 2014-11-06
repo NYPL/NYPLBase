@@ -18,6 +18,10 @@ a.btn, a:visited.btn{
 	color: $white;
 }
 
+a:hover.btn{
+	color: $beautons;
+}
+
 button{
 	@extend .btn;
 }
