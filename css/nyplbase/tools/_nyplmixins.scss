@@ -89,11 +89,12 @@
 	}
 
 	// override the default hover styles included in button-color mixin
-	&:hover{
+	&:hover, a &{
 		background: $textcolor;
 		border: 1px solid $color;
 		color: $color;
 	}
+
 }
 
 

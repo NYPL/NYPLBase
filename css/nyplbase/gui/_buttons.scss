@@ -6,7 +6,7 @@
  * The ".btn" class is extended for form inputs too.
  */
 
-.btn{
+.btn, a.btn{
  	@include button-color($beautons, $white);
 	@extend %transition !optional;
 	
@@ -14,17 +14,16 @@
 	margin: $half-spacing-unit/2;
 }
 
+/*
 a.btn, a:visited.btn{
 	color: $white;
 }
-
-a:hover.btn{
-	color: $beautons;
-}
+*/
 
 button{
 	@extend .btn;
 }
+
 
 
 .btn--inactive {
@@ -38,11 +37,12 @@ button{
 }
 
 
+
 /**
  * These purpose-specific buttons have specific colors and styles.
  */ 
 
-.btn--donate {
+a.btn--donate {
 	@include button-color($red, $white); 
 	
 	text-transform: uppercase;
