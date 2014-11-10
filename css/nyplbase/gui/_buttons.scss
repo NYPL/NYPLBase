@@ -42,7 +42,7 @@ button{
  * These purpose-specific buttons have specific colors and styles.
  */ 
 
-a.btn--donate {
+.btn--donate, a.btn--donate {
 	@include button-color($red, $white); 
 	
 	text-transform: uppercase;
