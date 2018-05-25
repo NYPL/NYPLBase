@@ -70,7 +70,7 @@
 .hdg{
 	@extend .zeta;
 	border-bottom: 1px solid $warmGrayLightest;
-    color: #135772;
+    color: $nyplBlueDark;
     display: block;
     letter-spacing: .05rem;
     margin-bottom: .5rem;
@@ -114,7 +114,7 @@
 	
 	p{
 		// grafs are gray
-		color: #54514a;
+		color: $nyplGrayBrown;
 	}
 	
 
@@ -260,21 +260,21 @@
 	@extend .zeta;
 //	@include extend-icon(icon-arrow-right2, $blue);
 	@extend %transition !optional;
-	@include button-color(#fff, #1b7fa7, #1b7fa7);
+	@include button-color($white, $nyplBlue, $nyplBlue);
 
 	display: inline-block;
 	padding: 0 $half-spacing-unit/2;
 	text-decoration: none;
 	
 	&:hover{
-		border: 1px solid #1b7fa7;
-		background: #fff;
-		color: #1b7fa7;
+		border: 1px solid $nyplBlue;
+		background: $white;
+		color: $nyplBlue;
 	}
 
 	&:visited{
-		border: 1px solid #333;
-		color: #333;
+		border: 1px solid $black;
+		color: $black;
 	}
 	
 	&::after{
