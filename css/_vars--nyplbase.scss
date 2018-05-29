@@ -103,6 +103,12 @@ $micro-size:        10px;
 /*------------------------------------*\
     $COLORS
 \*------------------------------------*/
+/**
+ * The color vars that start with "nypl" are the colors that follow the same value from
+ * NYPL Design Toolkit for better accessibility performance.
+ * https://nypl.github.io/design-toolkit/sections/color-a11y.html
+ */
+
 // Primary palette colors
 // -------------------------
 $red:					#d62828;
@@ -127,6 +133,8 @@ $purpleLight:			#eaa7ae;
 
 $blueDarker:			darken($blue, 20%);
 $indigo:				#3c3449;
+$nyplBlueDark: #135772;
+$nyplBlue: #1b7fa7;
 
 // Warm grays
 // -------------------------
@@ -135,6 +143,7 @@ $warmGrayDarker:		#7d7872;
 $warmGray:				#a29d97;
 $warmGrayLighter:		#c5c2bb;
 $warmGrayLightest:		#e2dedb;
+$nyplGrayBrown: #54514a;
 
 
 $white:					#ffffff;
