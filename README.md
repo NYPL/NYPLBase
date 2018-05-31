@@ -21,9 +21,9 @@ After the changes are approved, we need to update the changes to the repo of `UX
 
 https://bitbucket.org/NYPL/ux-static/src/master/
 
-In `UX-Static`, find the folder named, `nyplbase`. Under `nyplbase`, you will see the folders of different versions. Create a new folder with a new version. In each folder, there are three different folders that contains images, fonts, and CSS stylesheets. Copy the contents of the previous folder to the new folder that we just created. And in the CSS folder, paste the CSS min files we just compiled from NYPLBase. Push the changes.
+In `UX-Static`, find the folder named, `nyplbase`. Under `nyplbase`, you will see the folders of different versions. Create a new folder with the new version. In each folder, there are three different folders that contain images, fonts, and CSS stylesheets. Copy the contents from the folder of previous version to the new folder that we just created. And in the CSS folder, paste the CSS min files we compiled from NYPLBase. Push the changes.
 
 After pushing the changes, we need to deploy UX-Static with Jenkins. You can find the interfaces here
 https://ci-sa.prod.aws.nypl.org/jenkins/view/Website%20Management%20(WWW)/search/?q=ux-static
 
-There are two deployment jobs. One is for staging and one is for master, that both integrate with the branches of `UX-Static` repo respectively. Running the job on staging deployment will deploy the staging branch, for example.
+There are two deployment jobs. One is for staging and one is for master. They both integrate with the branches of `UX-Static` repo respectively. Running the job on staging deployment will deploy the staging branch, for example.
