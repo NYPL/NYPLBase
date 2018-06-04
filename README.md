@@ -1,5 +1,5 @@
 # NYPLBase #
-========
+
 NYPLBase (or familiarly, "Base") provides a "base" for all NYPL web properties. Color palette, typeface, default styles, and a bit of structure is all built into this code package. (For those familiar with Twitter Bootstrap, it's like the Library's own Bootstrap but with fewer options.)
 
 The idea is that anyone who's building a web project for the Library, whether one of our internal dev teams, or an external consultant group, can download and use this code as the style base, and not have to worry about getting our brand right--it's already in there. Even if you're not using the code, you can still look at the demo page as a style guide.
