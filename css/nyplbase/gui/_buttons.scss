@@ -49,3 +49,16 @@ button{
 
 }
 
+/**
+* The rules for .btn focus are for better accessibility performance.
+* The rules override the focus styles from _beautons.scss
+* The update is made on June 2018.
+*/
+.btn {
+	&:focus {
+		outline: 5px solid $focus-color;
+		overflow: visible;
+		box-shadow: 1px 1px 2px 2px darken($focus-color, 10%);
+	}
+}
+
