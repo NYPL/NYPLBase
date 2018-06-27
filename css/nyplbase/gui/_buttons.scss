@@ -58,7 +58,7 @@ button{
 	&:focus {
 		outline: 5px solid $focus-color;
 		overflow: visible;
-		box-shadow: 1px 1px 2px 2px darken($focus-color, 10%);
+		box-shadow: 1px 1px 2px 2px $focus-color;
 	}
 }
 

@@ -29,6 +29,15 @@ a{
 			outline-color: lighten($blue, 50%);
 		}
 	}
+
+	$focus-width: 0.125em;
+
+	&:focus {
+		box-shadow: 1px 1px 1px 1px $focus-color;
+		outline-color: $focus-color;
+		outline-style: solid;
+		outline-width: $focus-width;
+	}
 }
 
 blockquote{
